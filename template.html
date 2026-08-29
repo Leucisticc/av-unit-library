@@ -120,6 +120,7 @@ body.dragging{cursor:col-resize;user-select:none}body.dragging #list,body.draggi
 .dd label .arr{margin-left:auto;color:var(--muted);padding-left:10px}
 .dd .flyrow{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:6px;cursor:default;font-size:13px}
 .dd .fly .fly .flyrow{padding-left:28px;font-size:12px}
+.dd .fly .fly>.menu2{position:fixed;left:auto;top:auto;margin:0}
 .dd .flyrow:hover{background:var(--panel2)}
 .dd .flyrow .arr{margin-left:auto;color:var(--muted)}
 .gl{display:inline-flex;align-items:center;gap:6px}.gl img{width:18px;height:18px;object-fit:contain}
@@ -233,7 +234,7 @@ const RARITY = DATA.rarity, ELEM = DATA.elements, GM = DATA.groupsMeta, RARITIES
 const TABS_ORDER = ['Normal','Seasonal','Other'];
 const gname = g => (GM[g] && GM[g].name) || g.replace(/([a-z])([A-Z])/g,'$1 $2');
 const gicon = g => GM[g] && GM[g].icon ? `<img src="${GM[g].icon}" alt="">` : '';
-const glab = g => esc(gname(g));
+const glab = g => `<span class="gl">${gicon(g)}<span${GM[g] && GM[g].gradient ? ` class="gtx" style="background-image:${GM[g].gradient}"` : ''}>${esc(gname(g))}</span></span>`;
 const HIDDEN_GROUPS = new Set(['Swap','Domain']);
 const isDark = () => document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
 const rStyle = (r, u) => { const st = RARITY[(u && u.rarityStyle) || r] || RARITY.Unknown; return `--rg:${isDark() ? st.gradient : st.solid}`; };
@@ -477,7 +478,7 @@ function renderDropdowns(q){
     const rowHtml = v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : key==='rarity' ? `<span class="rn" style="${rStyle(v)}">${esc(v)}</span>` : key==='group' ? glab(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`;
     let body;
     if (key === 'group'){
-      body = TABS_ORDER.map(tab => { const gs = vals.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab); return gs.length ? `<div class="fly" data-fly="group-${tab}"><div class="flyrow">${tab === 'Other' ? 'Other groups' : tab + ' groups'}<span class="arr">▸</span></div><div class="menu2">${gs.map(rowHtml).join('')}</div></div>` : ''; }).join('');
+      body = TABS_ORDER.map(tab => { const gs = vals.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab); return gs.length ? `<div class="fly" data-fly="group-${tab}"><div class="flyrow">${tab}<span class="arr">▸</span></div><div class="menu2">${gs.map(rowHtml).join('')}</div></div>` : ''; }).join('');
     } else body = vals.map(rowHtml).join('');
     html += `<div class="dd${openKey===key?' open':''}" data-key="${key}"><button type="button">${label}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
       ${body}
@@ -510,11 +511,12 @@ function targetFly(q, key, pickKey, title){
   const picked = unit && BY_SLUG[unit];
   const active = on.size + (picked ? 1 : 0);
   const sub = (id, title, inner) => `<div class="fly" data-fly="${id}"><div class="flyrow">${title}<span class="arr">▸</span></div><div class="menu2">${inner}</div></div>`;
-  const byTab = tab => groups.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab);
+  const allGroups = uniq([...Object.keys(GM), ...groups]).filter(g => !HIDDEN_GROUPS.has(g));
+  const byTab = tab => allGroups.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab);
   return `<div class="fly${state.fly===key?' open':''}" data-fly="${key}">${title.replace('<span class="arr">▸</span>', `${active?`<span class="n">${active}</span>`:''}<span class="arr">▸</span>`)}<div class="menu2">
     <div class="subhead">${key==='selftarget' ? 'affects which unit' : 'who gets it'}</div>${row('all', key==='selftarget' ? 'Any unit' : 'All allies (no restriction)')}
     ${sub(key+'-el', 'By element', elems.map(e => row(e, elem(e))).join(''))}
-    ${TABS_ORDER.map(tab => byTab(tab).length ? sub(key+'-'+tab, (tab === 'Other' ? 'Other groups' : tab + ' groups'), byTab(tab).map(t => row(t, GM[t] ? glab(t) : esc(glabel(t)))).join('')) : '').join('')}
+    ${TABS_ORDER.map(tab => byTab(tab).length ? sub(key+'-'+tab, tab, byTab(tab).map(t => row(t, GM[t] ? glab(t) : esc(glabel(t)))).join('')) : '').join('')}
     ${cnt.unspecified ? `<div class="subhead">unknown</div>${row('Unspecified', 'Target not stated in text')}` : ''}
     <div class="subhead">a specific unit</div>
     <div class="upick" data-pick="${pickKey}">${picked ? `<span class="picked"><span class="rn" style="${rStyle(picked.rarity)}">${esc(picked.name)}</span><span class="x" data-unpick="${pickKey}" title="remove">✕</span></span>` : `<input type="search" class="upick-in" placeholder="type a unit name…" autocomplete="off"><div class="upicklist"></div>`}</div>
@@ -591,6 +593,16 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
   apply();
 })();
 document.addEventListener('click', e => { if (!e.target.closest('.dd')) document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); });
+// nested panels are position:fixed — place them beside their row when hovered
+$('#dds').addEventListener('mouseover', e => {
+  const fly = e.target.closest('.fly .fly'); if (!fly) return;
+  const m = fly.querySelector(':scope > .menu2'), r = fly.querySelector(':scope > .flyrow').getBoundingClientRect();
+  const z = parseFloat(document.body.style.zoom) || 1;
+  const vw = window.innerWidth / z, vh = window.innerHeight / z, mw = 300, mh = Math.min(m.scrollHeight || 400, vh * 0.7);
+  const left = (r.right / z + 2 + mw > vw) ? (r.left / z - mw - 2) : (r.right / z + 2);
+  const top = Math.max(8, Math.min(r.top / z - 6, vh - mh - 8));
+  m.style.left = left + 'px'; m.style.top = top + 'px'; m.style.width = mw + 'px';
+});
 // a flyout pinned open by a click inside it unpins when the pointer leaves it
 $('#dds').addEventListener('mouseout', e => { const f = e.target.closest('.fly'); if (f && !f.contains(e.relatedTarget) && state.fly === f.dataset.fly){ state.fly = null; f.classList.remove('open'); } });
 $('#q').addEventListener('input', e => { state.q = e.target.value; writeHash(); render(); });
