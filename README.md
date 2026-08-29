@@ -9,7 +9,7 @@ not from scraping pages.
 
 ## Use
 
-Open `dist/index.html` in a browser. Query syntax:
+Open `dist/index.html` in a browser (pictures live in `dist/img/`, keep them together). Query syntax:
 
 | Token | Meaning |
 |-------|---------|

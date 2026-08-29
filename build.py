@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import base64
 import json
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -32,9 +33,10 @@ def make_data() -> dict:
     overrides = load_overrides()
     units = apply_tags(build_units(), overrides)
     memoria = apply_tags(build_memoria(), overrides, groups=sorted({g for u in units for g in u["groups"]}), prefix="memoria:")
-    for mem in memoria:
-        p = ICON_DIR / "memoria" / f"{mem['name']}.png"
-        mem["icon"] = _icon(f"memoria/{mem['name']}.png") if p.exists() else None
+    # Pictures ship as files next to index.html (447 units inlined would be ~10 MB of base64).
+    for kind, items in (("units", units), ("memoria", memoria)):
+        for it in items:
+            it["icon"] = f"img/{kind}/{it['name']}.png" if (ICON_DIR / kind / f"{it['name']}.png").exists() else None
     return {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "groups": TAG_GROUPS,
@@ -65,6 +67,11 @@ def build(refresh: bool = False) -> Path:
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__DATA__*/", payload)
     DIST.parent.mkdir(exist_ok=True)
     DIST.write_text(html, encoding="utf-8")
+    for kind in ("units", "memoria"):
+        src, dst = ICON_DIR / kind, DIST.parent / "img" / kind
+        if src.exists():
+            shutil.rmtree(dst, ignore_errors=True)
+            shutil.copytree(src, dst)
     print(f"[Build] {len(data['units'])} units -> {DIST.relative_to(ROOT)} ({DIST.stat().st_size // 1024} KB)")
     return DIST
 

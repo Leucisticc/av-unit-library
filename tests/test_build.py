@@ -11,7 +11,9 @@ def test_build_outputs():
     assert m, "embedded data block missing"
     data = json.loads(m.group(1).replace("<\\/", "</"))
     assert len(data["units"]) >= 370
-    assert len(data["memoria"]) >= 70 and data["memoria"][0]["icon"].startswith("data:image/png")
+    assert len(data["memoria"]) >= 70 and data["memoria"][0]["icon"].startswith("img/memoria/")
+    assert data["units"][0]["icon"].startswith("img/units/")
+    assert (ROOT / "dist" / data["units"][0]["icon"]).exists()
     assert "bleed" in data["tags"] and data["tags"]["bleed"]["patterns"]
     assert data["negations"]
     assert data["tags"]["bleed"]["icon"].startswith("data:image/png;base64,")

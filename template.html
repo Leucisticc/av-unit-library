@@ -30,8 +30,8 @@ header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 
 .tab .n{font:11px "IBM Plex Mono",monospace;color:var(--muted)}
 .tab.on{border-color:var(--accent);color:var(--text);background:color-mix(in srgb,var(--accent) 12%,transparent)}
 .tab.on .n{color:var(--accent)}
-.u .pic,.dh .pic{width:40px;height:40px;object-fit:contain;border-radius:6px;background:var(--panel2);flex:none}
-.dh .pic{width:72px;height:72px}
+.u .pic,.dh .pic{width:48px;height:48px;object-fit:contain;border-radius:6px;background:var(--panel2);flex:none}
+.dh .pic{width:96px;height:96px;border-radius:10px}
 .u{display:flex;gap:10px;align-items:flex-start}.u>div{min-width:0;flex:1}
 .spec{font:600 10px "Chakra Petch",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amp);border:1px solid var(--amp);border-radius:4px;padding:1px 6px}
 .stat{font-family:"IBM Plex Mono",monospace}
@@ -364,7 +364,7 @@ function render(){
   $('#tabn-memoria').textContent = MEMORIA.filter(u => matches(u, q)).length;
   state.sel = Math.max(0, visible.findIndex(u=>u.slug===state.unit));
   $('#rows').innerHTML = visible.map((u,i) => `
-    <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">${u.icon?`<img class="pic" src="${u.icon}" alt="">`:''}<div>
+    <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="" loading="lazy">`:''}<div>
       <div class="n"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</div>
       <div class="m">${u.kind==='memoria' ? (u.exclusiveUnits.length ? 'Specialty: ' + u.exclusiveUnits.map(esc).join(', ') : u.elements.length ? 'Specialty: ' + u.elements.map(elem).join(' ') : 'Universal') : u.elements.map(elem).join(' ') + (u.state==='Evolved'?' · Evolved':'')}</div>
       <div class="s">${snippet(u, q)}</div>
@@ -388,7 +388,7 @@ function renderDetail(q){
     : `<span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}`;
   $('#detail').innerHTML = `
     <span class="back" data-back>← back to list</span>
-    <div class="dh"><h2>${u.icon?`<img class="pic" src="${u.icon}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
+    <div class="dh"><h2>${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
     <div class="meta">${meta}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">wiki ↗</a></div>
     <div class="tagrow">${u.tags.map(tagPill).join('')}</div>
     ${u.passives.some(p=>p.source!=='familiar')?'<h3 class="sec">Passives</h3>'+u.passives.filter(p=>p.source!=='familiar').map(card).join(''):''}

@@ -82,27 +82,42 @@ def fetch_icons(dest: Path = ICON_DIR) -> dict[str, str]:
     return names
 
 
-def fetch_memoria_icons(dest: Path = ICON_DIR / "memoria") -> None:
-    """Download every memoria's picture (File:<name>.png) as an 80px thumbnail."""
-    from luaparse import parse_module
+def fetch_pictures(names: list[str], dest: Path, size: int = 128, label: str = "pictures") -> list[str]:
+    """Download File:<name>.png for each name as a <size>px thumbnail into dest/<name>.png.
+    Skips files already present. Returns the names that have no picture on the wiki."""
     dest.mkdir(parents=True, exist_ok=True)
-    data = parse_module(raw_path("MemoriaData/data").read_text(encoding="utf-8"))
-    names = [k for k, v in data.items() if isinstance(v, dict)]
-    for i in range(0, len(names), 25):
-        chunk = names[i:i + 25]
-        info = _api({"action": "query", "prop": "imageinfo", "iiprop": "url", "iiurlwidth": "120",
+    todo = [n for n in names if not (dest / f"{n}.png").exists()]
+    missing: list[str] = []
+    for i in range(0, len(todo), 40):
+        chunk = todo[i:i + 40]
+        info = _api({"action": "query", "prop": "imageinfo", "iiprop": "url", "iiurlwidth": str(size * 2),
                      "titles": "|".join(f"File:{n}.png" for n in chunk)})
-        for page in info["query"]["pages"]:
-            if "imageinfo" not in page:
-                print(f"[Fetch] No picture for memoria {page['title'][5:-4]}")
+        norm = {p.get("title", "")[5:-4].lower(): p for p in info["query"]["pages"]}
+        for n in chunk:
+            page = norm.get(n.lower())
+            if not page or "imageinfo" not in page:
+                missing.append(n)
                 continue
-            name = page["title"][5:-4]
-            tmp = dest / ("_" + name + ".png")
+            tmp = dest / ("_" + n + ".png")
             url = page["imageinfo"][0].get("thumburl") or page["imageinfo"][0]["url"]
             subprocess.run(["curl", "-sSfL", "-A", UA, "-o", str(tmp), url], check=True)
-            subprocess.run(["sips", "-Z", "80", str(tmp), "--out", str(dest / (name + ".png"))], check=True, capture_output=True)
+            subprocess.run(["sips", "-Z", str(size), str(tmp), "--out", str(dest / (n + ".png"))], check=True, capture_output=True)
             tmp.unlink()
-    print(f"[Fetch] {len(names)} memoria pictures")
+    print(f"[Fetch] {len(todo) - len(missing)} {label} fetched, {len(missing)} missing")
+    return missing
+
+
+def fetch_memoria_icons() -> None:
+    from luaparse import parse_module
+    data = parse_module(raw_path("MemoriaData/data").read_text(encoding="utf-8"))
+    fetch_pictures([k for k, v in data.items() if isinstance(v, dict)], ICON_DIR / "memoria", label="memoria pictures")
+
+
+def fetch_unit_icons() -> None:
+    from model import build_units
+    missing = fetch_pictures([u["name"] for u in build_units()], ICON_DIR / "units", label="unit pictures")
+    if missing:
+        print("[Fetch] Units without a wiki picture: " + ", ".join(missing))
 
 
 def fetch_all(dest: Path = RAW_DIR) -> None:
@@ -113,6 +128,7 @@ def fetch_all(dest: Path = RAW_DIR) -> None:
         print(f"[Fetch] {m} -> {len(text)} chars")
     fetch_icons()
     fetch_memoria_icons()
+    fetch_unit_icons()
 
 
 if __name__ == "__main__":
