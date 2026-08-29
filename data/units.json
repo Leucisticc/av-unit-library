@@ -1239,7 +1239,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ackers (Levy)"
+     ]
     },
     {
      "name": "Warrior's Blood",
@@ -1261,7 +1263,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ackers (Levy)"
+   ],
    "icon": "img/units/Ackers (Levy).png"
   },
   {
@@ -1339,7 +1343,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Agony"
+     ]
     },
     {
      "name": "Looming Threat",
@@ -1360,7 +1366,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Agony"
+   ],
    "icon": "img/units/Agony.png"
   },
   {
@@ -1390,7 +1398,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Agony Shinobi"
+     ]
     }
    ],
    "abilities": [],
@@ -1401,7 +1411,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Agony Shinobi"
+   ],
    "icon": "img/units/Agony Shinobi.png"
   },
   {
@@ -1431,7 +1443,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Agony Shinobi (Force)"
+     ]
     },
     {
      "name": "Accept Pain",
@@ -1444,7 +1458,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Agony Shinobi (Force)"
+     ]
     },
     {
      "name": "Know Pain",
@@ -1496,7 +1512,9 @@
    "buffTargets": [
     "Ninjutsu"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Agony Shinobi (Force)"
+   ],
    "icon": "img/units/Agony Shinobi (Force).png"
   },
   {
@@ -1524,7 +1542,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Akazo"
+     ]
     }
    ],
    "abilities": [],
@@ -1533,7 +1553,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Akazo"
+   ],
    "icon": "img/units/Akazo.png"
   },
   {
@@ -1561,7 +1583,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Akazo (Destructive)"
+     ]
     },
     {
      "name": "Compass Needle",
@@ -1573,7 +1597,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Akazo (Destructive)"
+     ]
     }
    ],
    "abilities": [
@@ -1588,7 +1614,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Akazo (Destructive)"
+     ]
     }
    ],
    "tags": [
@@ -1597,7 +1625,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Akazo (Destructive)"
+   ],
    "icon": "img/units/Akazo (Destructive).png"
   },
   {
@@ -1783,7 +1813,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ali (Djinn)"
+     ]
     },
     {
      "name": "Mage of Burning Desire",
@@ -1822,7 +1854,9 @@
     "dr-bypass"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ali (Djinn)"
+   ],
    "icon": "img/units/Ali (Djinn).png"
   },
   {
@@ -2034,7 +2068,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Alocard (Vampire King)"
+     ]
     },
     {
      "name": "Vampiric Thralls",
@@ -2060,7 +2096,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Alocard (Vampire King)"
+     ]
     },
     {
      "name": "Grievous Wounds",
@@ -2110,7 +2148,9 @@
     "slow"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Alocard (Vampire King)"
+   ],
    "icon": "img/units/Alocard (Vampire King).png"
   },
   {
@@ -2146,7 +2186,9 @@
      "buffTargets": [
       "DemonController"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Apathetic Savior"
+     ]
     }
    ],
    "abilities": [
@@ -2173,7 +2215,9 @@
    "buffTargets": [
     "DemonController"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Apathetic Savior"
+   ],
    "icon": "img/units/Apathetic Savior.png"
   },
   {
@@ -2209,7 +2253,9 @@
      "buffTargets": [
       "DemonController"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Apathetic Savior (Door)"
+     ]
     },
     {
      "name": "Look Into My Eyes",
@@ -2227,7 +2273,9 @@
      "buffTargets": [
       "DemonController"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Apathetic Savior (Door)"
+     ]
     },
     {
      "name": "1 More!",
@@ -2301,7 +2349,9 @@
     "DemonController",
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Apathetic Savior (Door)"
+   ],
    "icon": "img/units/Apathetic Savior (Door).png"
   },
   {
@@ -2381,7 +2431,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Arbiter (Of the Void)"
+     ]
     }
    ],
    "abilities": [
@@ -2405,7 +2457,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Arbiter (Of the Void)"
+   ],
    "icon": "img/units/Arbiter (Of the Void).png"
   },
   {
@@ -2489,7 +2543,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Arc (True Ancestor)"
+     ]
     }
    ],
    "abilities": [
@@ -2528,7 +2584,9 @@
     "summon"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Arc (True Ancestor)"
+   ],
    "icon": "img/units/Arc (True Ancestor).png"
   },
   {
@@ -2557,7 +2615,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Archer"
+     ]
     }
    ],
    "abilities": [],
@@ -2567,7 +2627,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Archer"
+   ],
    "icon": "img/units/Archer.png"
   },
   {
@@ -2596,7 +2658,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Archer (Counter Spirit)"
+     ]
     },
     {
      "name": "Shattered Ideal of Self",
@@ -2629,7 +2693,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Archer (Counter Spirit)"
+   ],
    "icon": "img/units/Archer (Counter Spirit).png"
   },
   {
@@ -2707,7 +2773,9 @@
      "buffTargets": [
       "Giant"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Arin (Rumbling)"
+     ]
     },
     {
      "name": "Harbinger of Doom",
@@ -2732,7 +2800,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Arin (Rumbling)"
+     ]
     }
    ],
    "tags": [
@@ -2746,7 +2816,9 @@
    "buffTargets": [
     "Giant"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Arin (Rumbling)"
+   ],
    "icon": "img/units/Arin (Rumbling).png"
   },
   {
@@ -2775,7 +2847,9 @@
       "dr-bypass"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Armored Mage"
+     ]
     }
    ],
    "abilities": [],
@@ -2785,7 +2859,9 @@
     "dr-bypass"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Armored Mage"
+   ],
    "icon": "img/units/Armored Mage.png"
   },
   {
@@ -2814,7 +2890,9 @@
       "dr-bypass"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Armored Mage (Requip)"
+     ]
     },
     {
      "name": "Requip!",
@@ -2830,7 +2908,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Armored Mage (Requip)"
+     ]
     },
     {
      "name": "Burning Heart",
@@ -2870,7 +2950,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Armored Mage (Requip)"
+   ],
    "icon": "img/units/Armored Mage (Requip).png"
   },
   {
@@ -2958,7 +3040,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Astolfo (Rider of Black)"
+     ]
     },
     {
      "name": "Soul Seperation",
@@ -3018,7 +3102,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Astolfo (Rider of Black)"
+   ],
    "icon": "img/units/Astolfo (Rider of Black).png"
   },
   {
@@ -3241,7 +3327,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Bean"
+     ]
     },
     {
      "name": "Razor Teeth",
@@ -3263,7 +3351,9 @@
     "bleed"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Bean"
+   ],
    "icon": "img/units/Bean.png"
   },
   {
@@ -3304,7 +3394,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Beast Pirate (Half-Dragon)"
+     ]
     },
     {
      "name": "Dragon King",
@@ -3317,7 +3409,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Beast Pirate (Half-Dragon)"
+     ]
     }
    ],
    "abilities": [
@@ -3340,7 +3434,9 @@
     "slow"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Beast Pirate (Half-Dragon)"
+   ],
    "icon": "img/units/Beast Pirate (Half-Dragon).png"
   },
   {
@@ -3401,7 +3497,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Black Hole (Ninjutsu)"
+     ]
     },
     {
      "name": "Ninja's Armory",
@@ -3416,7 +3514,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Black Hole (Ninjutsu)"
+     ]
     }
    ],
    "abilities": [],
@@ -3429,7 +3529,9 @@
     "spa-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Black Hole (Ninjutsu)"
+   ],
    "icon": "img/units/Black Hole (Ninjutsu).png"
   },
   {
@@ -3583,7 +3685,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Boo (Evil)"
+     ]
     },
     {
      "name": "Innocence Lost",
@@ -3611,7 +3715,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Boo (Evil)"
+     ]
     },
     {
      "name": "Insurmountable Foe",
@@ -3637,7 +3743,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Boo (Evil)"
+     ]
     }
    ],
    "abilities": [
@@ -3668,7 +3776,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Boo (Evil)"
+   ],
    "icon": "img/units/Boo (Evil).png"
   },
   {
@@ -3709,7 +3819,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Boockleo (Evil)"
+     ]
     },
     {
      "name": "PRODUCE!!",
@@ -3775,7 +3887,9 @@
    "buffTargets": [
     "DragonSphere"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Boockleo (Evil)"
+   ],
    "icon": "img/units/Boockleo (Evil).png"
   },
   {
@@ -3816,7 +3930,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Boohon (Evil)"
+     ]
     },
     {
      "name": "PRODUCE!!",
@@ -3882,7 +3998,9 @@
    "buffTargets": [
     "DragonSphere"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Boohon (Evil)"
+   ],
    "icon": "img/units/Boohon (Evil).png"
   },
   {
@@ -3923,7 +4041,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Bootonks (Evil)"
+     ]
     },
     {
      "name": "PRODUCE!!",
@@ -3970,7 +4090,9 @@
     "summon"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Bootonks (Evil)"
+   ],
    "icon": "img/units/Bootonks (Evil).png"
   },
   {
@@ -4109,7 +4231,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Bounty Hunter (King of Hell)"
+     ]
     }
    ],
    "abilities": [],
@@ -4124,7 +4248,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Bounty Hunter (King of Hell)"
+   ],
    "icon": "img/units/Bounty Hunter (King of Hell).png"
   },
   {
@@ -4195,7 +4321,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brisket (Yo-Yo)"
+     ]
     },
     {
      "name": "I'm Not There",
@@ -4247,7 +4375,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brisket (Yo-Yo)"
+     ]
     }
    ],
    "abilities": [
@@ -4282,7 +4412,9 @@
    "buffTargets": [
     "Spark"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Brisket (Yo-Yo)"
+   ],
    "icon": "img/units/Brisket (Yo-Yo).png"
   },
   {
@@ -4311,7 +4443,9 @@
       "cleanse-self"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brolzi Super (Wrathful)"
+     ]
     },
     {
      "name": "Unrestrained Power",
@@ -4324,7 +4458,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brolzi Super (Wrathful)"
+     ]
     },
     {
      "name": "Innocent Rage",
@@ -4338,7 +4474,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brolzi Super (Wrathful)"
+     ]
     }
    ],
    "abilities": [
@@ -4353,7 +4491,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Brolzi Super (Wrathful)"
+     ]
     }
    ],
    "tags": [
@@ -4366,7 +4506,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Brolzi Super (Wrathful)"
+   ],
    "icon": "img/units/Brolzi Super (Wrathful).png"
   },
   {
@@ -4787,7 +4929,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cat God (Destruction)"
+     ]
     }
    ],
    "abilities": [
@@ -4812,7 +4956,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cat God (Destruction)"
+   ],
    "icon": "img/units/Cat God (Destruction).png"
   },
   {
@@ -4838,7 +4984,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cha-In"
+     ]
     }
    ],
    "abilities": [],
@@ -4847,7 +4995,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cha-In"
+   ],
    "icon": "img/units/Cha-In.png"
   },
   {
@@ -4875,7 +5025,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cha-In (Blade Dancer)"
+     ]
     },
     {
      "name": "Dance! Dance! Dance!",
@@ -4893,7 +5045,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cha-In (Blade Dancer)"
+   ],
    "icon": "img/units/Cha-In (Blade Dancer).png"
   },
   {
@@ -5001,7 +5155,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Chaso (Blood Curse)"
+     ]
     }
    ],
    "abilities": [],
@@ -5015,7 +5171,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Chaso (Blood Curse)"
+   ],
    "icon": "img/units/Chaso (Blood Curse).png"
   },
   {
@@ -5346,7 +5504,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Company Captain (Hybrid)"
+     ]
     }
    ],
    "abilities": [],
@@ -5360,7 +5520,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Company Captain (Hybrid)"
+   ],
    "icon": "img/units/Company Captain (Hybrid).png"
   },
   {
@@ -5427,7 +5589,9 @@
       "cleanse-self"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Conqueror vs Invulnerable"
+     ]
     }
    ],
    "tags": [
@@ -5441,7 +5605,9 @@
     "cleanse-self"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Conqueror vs Invulnerable"
+   ],
    "icon": "img/units/Conqueror vs Invulnerable.png"
   },
   {
@@ -5470,7 +5636,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cu Chulainn"
+     ]
     }
    ],
    "abilities": [],
@@ -5480,7 +5648,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cu Chulainn"
+   ],
    "icon": "img/units/Cu Chulainn.png"
   },
   {
@@ -5509,7 +5679,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cu Chulainn (Child of Light)"
+     ]
     },
     {
      "name": "Fate Piercer",
@@ -5523,7 +5695,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cu Chulainn (Child of Light)"
+     ]
     }
    ],
    "abilities": [],
@@ -5535,7 +5709,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cu Chulainn (Child of Light)"
+   ],
    "icon": "img/units/Cu Chulainn (Child of Light).png"
   },
   {
@@ -5563,7 +5739,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Copycat"
+     ]
     }
    ],
    "abilities": [],
@@ -5574,7 +5752,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Copycat"
+   ],
    "icon": "img/units/Cursed Copycat.png"
   },
   {
@@ -5602,7 +5782,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Copycat (Pure)"
+     ]
     },
     {
      "name": "The Attached One",
@@ -5634,7 +5816,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Copycat (Pure)"
+     ]
     }
    ],
    "abilities": [
@@ -5678,7 +5862,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Copycat (Pure)"
+   ],
    "icon": "img/units/Cursed Copycat (Pure).png"
   },
   {
@@ -5850,7 +6036,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Gourmet (Full)"
+     ]
     }
    ],
    "abilities": [
@@ -5887,7 +6075,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Gourmet (Full)"
+   ],
    "icon": "img/units/Cursed Gourmet (Full).png"
   },
   {
@@ -5920,7 +6110,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Lawyer"
+     ]
     }
    ],
    "abilities": [],
@@ -5936,7 +6128,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Lawyer"
+   ],
    "icon": "img/units/Cursed Lawyer.png"
   },
   {
@@ -5969,7 +6163,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Lawyer (Tired)"
+     ]
     },
     {
      "name": "Jury",
@@ -5981,7 +6177,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Lawyer (Tired)"
+     ]
     }
    ],
    "abilities": [
@@ -5997,7 +6195,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Lawyer (Tired)"
+     ]
     }
    ],
    "tags": [
@@ -6012,7 +6212,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Lawyer (Tired)"
+   ],
    "icon": "img/units/Cursed Lawyer (Tired).png"
   },
   {
@@ -6039,7 +6241,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Shinobi"
+     ]
     }
    ],
    "abilities": [],
@@ -6049,7 +6253,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Shinobi"
+   ],
    "icon": "img/units/Cursed Shinobi.png"
   },
   {
@@ -6078,7 +6284,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Cursed Shinobi (Black Flames)"
+     ]
     },
     {
      "name": "The Cursed Shinobi",
@@ -6102,7 +6310,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Cursed Shinobi (Black Flames)"
+   ],
    "icon": "img/units/Cursed Shinobi (Black Flames).png"
   },
   {
@@ -6271,7 +6481,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dave (Cyber Psycho)"
+     ]
     },
     {
      "name": "The Legend",
@@ -6284,7 +6496,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dave (Cyber Psycho)"
+     ]
     },
     {
      "name": "Immortalized",
@@ -6299,7 +6513,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dave (Cyber Psycho)"
+     ]
     },
     {
      "name": "Will Always Protect You",
@@ -6324,7 +6540,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Dave (Cyber Psycho)"
+   ],
    "icon": "img/units/Dave (Cyber Psycho).png"
   },
   {
@@ -6353,7 +6571,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dawntay"
+     ]
     }
    ],
    "abilities": [],
@@ -6363,7 +6583,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Dawntay"
+   ],
    "icon": "img/units/Dawntay.png"
   },
   {
@@ -6392,7 +6614,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dawntay (Jackpot)"
+     ]
     },
     {
      "name": "Smokin'",
@@ -6408,7 +6632,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dawntay (Jackpot)"
+     ]
     },
     {
      "name": "In Debt",
@@ -6421,7 +6647,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dawntay (Jackpot)"
+     ]
     },
     {
      "name": "Don't Say It",
@@ -6459,7 +6687,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Dawntay (Jackpot)"
+   ],
    "icon": "img/units/Dawntay (Jackpot).png"
   },
   {
@@ -6485,7 +6715,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Deceiver"
+     ]
     }
    ],
    "abilities": [],
@@ -6494,7 +6726,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Deceiver"
+   ],
    "icon": "img/units/Deceiver.png"
   },
   {
@@ -6520,7 +6754,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Deceiver (Monster)"
+     ]
     },
     {
      "name": "Monstrous Revival",
@@ -6576,7 +6812,9 @@
    "buffTargets": [
     "Cosmic"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Deceiver (Monster)"
+   ],
    "icon": "img/units/Deceiver (Monster).png"
   },
   {
@@ -6710,7 +6948,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Delusional Demon (Blood)"
+     ]
     }
    ],
    "abilities": [
@@ -6727,7 +6967,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Delusional Demon (Blood)"
+     ]
     }
    ],
    "tags": [
@@ -6742,7 +6984,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Delusional Demon (Blood)"
+   ],
    "icon": "img/units/Delusional Demon (Blood).png"
   },
   {
@@ -6833,7 +7077,9 @@
       "dr-bypass"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Hunter (Contract)"
+     ]
     }
    ],
    "abilities": [],
@@ -6849,7 +7095,9 @@
    "buffTargets": [
     "DemonHunter"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Demon Hunter (Contract)"
+   ],
    "icon": "img/units/Demon Hunter (Contract).png"
   },
   {
@@ -6878,7 +7126,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Hybrid"
+     ]
     }
    ],
    "abilities": [],
@@ -6888,7 +7138,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Demon Hybrid"
+   ],
    "icon": "img/units/Demon Hybrid.png"
   },
   {
@@ -6917,7 +7169,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Hybrid (Chainsaw)"
+     ]
     },
     {
      "name": "Perpetual Motion Machine",
@@ -6930,7 +7184,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Hybrid (Chainsaw)"
+     ]
     },
     {
      "name": "One True Love",
@@ -6953,7 +7209,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Demon Hybrid (Chainsaw)"
+   ],
    "icon": "img/units/Demon Hybrid (Chainsaw).png"
   },
   {
@@ -6985,7 +7243,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Leader"
+     ]
     }
    ],
    "abilities": [],
@@ -6998,7 +7258,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Demon Leader"
+   ],
    "icon": "img/units/Demon Leader.png"
   },
   {
@@ -7030,7 +7292,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Leader (Control)"
+     ]
     },
     {
      "name": "Tied by Desire",
@@ -7045,7 +7309,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Demon Leader (Control)"
+     ]
     },
     {
      "name": "Bark For Me",
@@ -7088,7 +7354,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Demon Leader (Control)"
+   ],
    "icon": "img/units/Demon Leader (Control).png"
   },
   {
@@ -7187,7 +7455,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Devoted Demon"
+     ]
     }
    ],
    "abilities": [],
@@ -7198,7 +7468,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Devoted Demon"
+   ],
    "icon": "img/units/Devoted Demon.png"
   },
   {
@@ -7226,7 +7498,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Devoted Demon (Obsessed)"
+     ]
     },
     {
      "name": "Obsessed Lover",
@@ -7250,7 +7524,9 @@
     "affection"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Devoted Demon (Obsessed)"
+   ],
    "icon": "img/units/Devoted Demon (Obsessed).png"
   },
   {
@@ -7279,7 +7555,9 @@
       "income"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Diablo"
+     ]
     }
    ],
    "abilities": [],
@@ -7291,7 +7569,9 @@
     "income"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Diablo"
+   ],
    "icon": "img/units/Diablo.png"
   },
   {
@@ -7320,7 +7600,9 @@
       "income"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Diablo (Renacimiento)"
+     ]
     },
     {
      "name": "Javelin Toss",
@@ -7344,7 +7626,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Diablo (Renacimiento)"
+     ]
     }
    ],
    "abilities": [],
@@ -7358,7 +7642,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Diablo (Renacimiento)"
+   ],
    "icon": "img/units/Diablo (Renacimiento).png"
   },
   {
@@ -7440,7 +7726,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Diogo (Alternate)"
+     ]
     }
    ],
    "tags": [
@@ -7450,7 +7738,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Diogo (Alternate)"
+   ],
    "icon": "img/units/Diogo (Alternate).png"
   },
   {
@@ -7479,7 +7769,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Divalo (Requiem)"
+     ]
     },
     {
      "name": "Epitaph of Tomorrow",
@@ -7517,7 +7809,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Divalo (Requiem)"
+     ]
     }
    ],
    "tags": [
@@ -7530,7 +7824,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Divalo (Requiem)"
+   ],
    "icon": "img/units/Divalo (Requiem).png"
   },
   {
@@ -7556,7 +7852,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Divine General (Adaptation)"
+     ]
     },
     {
      "name": "Relentless Divine Shikigami",
@@ -7569,7 +7867,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Divine General (Adaptation)"
+     ]
     },
     {
      "name": "8 Handled General",
@@ -7593,7 +7893,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Divine General (Adaptation)"
+   ],
    "icon": "img/units/Divine General (Adaptation).png"
   },
   {
@@ -7620,7 +7922,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dodara"
+     ]
     }
    ],
    "abilities": [],
@@ -7630,7 +7934,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Dodara"
+   ],
    "icon": "img/units/Dodara.png"
   },
   {
@@ -7657,7 +7963,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Dodara (Explosive)"
+     ]
     },
     {
      "name": "Art is an Explosion!",
@@ -7687,7 +7995,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Dodara (Explosive)"
+   ],
    "icon": "img/units/Dodara (Explosive).png"
   },
   {
@@ -7897,7 +8207,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain"
+     ]
     }
    ],
    "abilities": [
@@ -7914,7 +8226,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain"
+     ]
     }
    ],
    "tags": [
@@ -7925,7 +8239,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Elastic Captain"
+   ],
    "icon": "img/units/Elastic Captain.png"
   },
   {
@@ -7956,7 +8272,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Cog 4th)"
+     ]
     },
     {
      "name": "King of Pirates",
@@ -8005,7 +8323,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Cog 4th)"
+     ]
     },
     {
      "name": "Cog 5th",
@@ -8034,7 +8354,9 @@
    "buffTargets": [
     "Pirates"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Elastic Captain (Cog 4th)"
+   ],
    "icon": "img/units/Elastic Captain (Cog 4th).png"
   },
   {
@@ -8068,7 +8390,9 @@
       "income"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Cog 5th)"
+     ]
     },
     {
      "name": "Toon Force",
@@ -8083,7 +8407,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Cog 5th)"
+     ]
     },
     {
      "name": "Sun God's Transformation",
@@ -8096,7 +8422,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Cog 5th)"
+     ]
     }
    ],
    "abilities": [
@@ -8157,7 +8485,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Elastic Captain (Cog 5th)"
+   ],
    "icon": "img/units/Elastic Captain (Cog 5th).png"
   },
   {
@@ -8188,7 +8518,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Pirate)"
+     ]
     },
     {
      "name": "King of Pirates",
@@ -8237,7 +8569,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Captain (Pirate)"
+     ]
     }
    ],
    "tags": [
@@ -8256,7 +8590,9 @@
    "buffTargets": [
     "Pirates"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Elastic Captain (Pirate)"
+   ],
    "icon": "img/units/Elastic Captain (Pirate).png"
   },
   {
@@ -8284,7 +8620,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Elastic Pirate"
+     ]
     }
    ],
    "abilities": [],
@@ -8293,7 +8631,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Elastic Pirate"
+   ],
    "icon": "img/units/Elastic Pirate.png"
   },
   {
@@ -8373,7 +8713,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Emmie (Ice Witch)"
+     ]
     }
    ],
    "abilities": [],
@@ -8385,7 +8727,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Emmie (Ice Witch)"
+   ],
    "icon": "img/units/Emmie (Ice Witch).png"
   },
   {
@@ -8477,7 +8821,9 @@
       "stocks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Envoy of Destruction (Resistance)"
+     ]
     }
    ],
    "abilities": [
@@ -8510,7 +8856,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Envoy of Destruction (Resistance)"
+   ],
    "icon": "img/units/Envoy of Destruction (Resistance).png"
   },
   {
@@ -8584,7 +8932,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Explosive Demon (Bomb)"
+     ]
     }
    ],
    "abilities": [],
@@ -8594,7 +8944,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Explosive Demon (Bomb)"
+   ],
    "icon": "img/units/Explosive Demon (Bomb).png"
   },
   {
@@ -8621,7 +8973,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fallen Angel"
+     ]
     }
    ],
    "abilities": [],
@@ -8631,7 +8985,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fallen Angel"
+   ],
    "icon": "img/units/Fallen Angel.png"
   },
   {
@@ -8658,7 +9014,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fallen Angel (Pistols)"
+     ]
     },
     {
      "name": "Avoider of Violence",
@@ -8671,7 +9029,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fallen Angel (Pistols)"
+     ]
     }
    ],
    "abilities": [
@@ -8696,7 +9056,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fallen Angel (Pistols)"
+   ],
    "icon": "img/units/Fallen Angel (Pistols).png"
   },
   {
@@ -8722,7 +9084,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fastest Shinobi"
+     ]
     }
    ],
    "abilities": [],
@@ -8731,7 +9095,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fastest Shinobi"
+   ],
    "icon": "img/units/Fastest Shinobi.png"
   },
   {
@@ -8760,7 +9126,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fastest Shinobi (Flash)"
+     ]
     },
     {
      "name": "Father and Son Tag Team",
@@ -8778,7 +9146,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fastest Shinobi (Flash)"
+   ],
    "icon": "img/units/Fastest Shinobi (Flash).png"
   },
   {
@@ -8807,7 +9177,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fire Foot"
+     ]
     }
    ],
    "abilities": [],
@@ -8817,7 +9189,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fire Foot"
+   ],
    "icon": "img/units/Fire Foot.png"
   },
   {
@@ -8846,7 +9220,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fire Foot (Chef)"
+     ]
     },
     {
      "name": "Master Chef",
@@ -8879,7 +9255,9 @@
     "wanted"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fire Foot (Chef)"
+   ],
    "icon": "img/units/Fire Foot (Chef).png"
   },
   {
@@ -9006,7 +9384,9 @@
       "shield-pierce"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran"
+     ]
     }
    ],
    "abilities": [],
@@ -9016,7 +9396,9 @@
     "shield-pierce"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Friran"
+   ],
    "icon": "img/units/Friran.png"
   },
   {
@@ -9043,7 +9425,9 @@
       "shield-pierce"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran (Teacher)"
+     ]
     },
     {
      "name": "Collector of Trinkets",
@@ -9056,7 +9440,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran (Teacher)"
+     ]
     },
     {
      "name": "Wayward Journey",
@@ -9080,7 +9466,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran (Teacher)"
+     ]
     },
     {
      "name": "Grand Adventure",
@@ -9093,7 +9481,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran (Teacher)"
+     ]
     },
     {
      "name": "Hurried Response",
@@ -9106,7 +9496,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Friran (Teacher)"
+     ]
     }
    ],
    "abilities": [
@@ -9128,7 +9520,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Friran (Teacher)"
+   ],
    "icon": "img/units/Friran (Teacher).png"
   },
   {
@@ -9236,7 +9630,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Fruit Eater (He Wins)"
+     ]
     }
    ],
    "tags": [
@@ -9254,7 +9650,9 @@
     "all",
     "Swap"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Fruit Eater (He Wins)"
+   ],
    "icon": "img/units/Fruit Eater (He Wins).png"
   },
   {
@@ -9401,7 +9799,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gear Boy"
+     ]
     }
    ],
    "abilities": [
@@ -9425,7 +9825,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gear Boy"
+   ],
    "icon": "img/units/Gear Boy.png"
   },
   {
@@ -9454,7 +9856,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gear Boy (Hungry)"
+     ]
     },
     {
      "name": "Greek Cancel",
@@ -9467,7 +9871,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gear Boy (Hungry)"
+     ]
     }
    ],
    "abilities": [
@@ -9504,7 +9910,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gear Boy (Hungry)"
+   ],
    "icon": "img/units/Gear Boy (Hungry).png"
   },
   {
@@ -9793,7 +10201,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ghoul"
+     ]
     }
    ],
    "abilities": [],
@@ -9803,7 +10213,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ghoul"
+   ],
    "icon": "img/units/Ghoul.png"
   },
   {
@@ -9833,7 +10245,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ghoul (Winged)"
+     ]
     },
     {
      "name": "Shard Thrower",
@@ -9852,7 +10266,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ghoul (Winged)"
+   ],
    "icon": "img/units/Ghoul (Winged).png"
   },
   {
@@ -9884,7 +10300,9 @@
      "buffTargets": [
       "Giant"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Giant Queen"
+     ]
     }
    ],
    "abilities": [],
@@ -9897,7 +10315,9 @@
    "buffTargets": [
     "Giant"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Giant Queen"
+   ],
    "icon": "img/units/Giant Queen.png"
   },
   {
@@ -9929,7 +10349,9 @@
      "buffTargets": [
       "Giant"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Giant Queen (Founder)"
+     ]
     },
     {
      "name": "Flesh of the Queen",
@@ -9969,7 +10391,9 @@
    "buffTargets": [
     "Giant"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Giant Queen (Founder)"
+   ],
    "icon": "img/units/Giant Queen (Founder).png"
   },
   {
@@ -9998,7 +10422,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gilgamesh"
+     ]
     }
    ],
    "abilities": [],
@@ -10008,7 +10434,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gilgamesh"
+   ],
    "icon": "img/units/Gilgamesh.png"
   },
   {
@@ -10037,7 +10465,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
     },
     {
      "name": "Myriad Treasures",
@@ -10050,7 +10480,9 @@
       "dr-bypass"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
     },
     {
      "name": "Enuma Elish",
@@ -10072,7 +10504,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
     },
     {
      "name": "King of Heroes",
@@ -10114,7 +10548,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
     }
    ],
    "tags": [
@@ -10129,7 +10565,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gilgamesh (King of Heroes)"
+   ],
    "icon": "img/units/Gilgamesh (King of Heroes).png"
   },
   {
@@ -10238,7 +10676,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Giyu"
+     ]
     },
     {
      "name": "Change Now",
@@ -10268,7 +10708,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Giyu"
+   ],
    "icon": "img/units/Giyu.png"
   },
   {
@@ -10353,7 +10795,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Goblin Killer (Trapper)"
+     ]
     },
     {
      "name": "No Survivors",
@@ -10366,7 +10810,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Goblin Killer (Trapper)"
+     ]
     },
     {
      "name": "The Strength of Friends",
@@ -10395,7 +10841,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Goblin Killer (Trapper)"
+   ],
    "icon": "img/units/Goblin Killer (Trapper).png"
   },
   {
@@ -10425,7 +10873,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "God"
+     ]
     }
    ],
    "abilities": [
@@ -10446,7 +10896,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "God"
+   ],
    "icon": "img/units/God.png"
   },
   {
@@ -10477,7 +10929,9 @@
       "active-ability"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "God (Above Heaven)"
+     ]
     },
     {
      "name": "The One Above",
@@ -10498,7 +10952,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "God (Above Heaven)"
+     ]
     }
    ],
    "abilities": [
@@ -10535,7 +10991,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "God (Above Heaven)"
+   ],
    "icon": "img/units/God (Above Heaven).png"
   },
   {
@@ -10565,7 +11023,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "God (Standless)"
+     ]
     },
     {
      "name": "Your Reality is Mine!",
@@ -10622,7 +11082,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "God (Standless)"
+   ],
    "icon": "img/units/God (Standless).png"
   },
   {
@@ -10648,7 +11110,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Goi"
+     ]
     },
     {
      "name": "Hunters Patience",
@@ -10666,7 +11130,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Goi"
+   ],
    "icon": "img/units/Goi.png"
   },
   {
@@ -10701,7 +11167,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Graceful Pilot (Mecha)"
+     ]
     },
     {
      "name": "Mecha Control",
@@ -10714,7 +11182,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Graceful Pilot (Mecha)"
+     ]
     }
    ],
    "abilities": [
@@ -10745,7 +11215,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Graceful Pilot (Mecha)"
+   ],
    "icon": "img/units/Graceful Pilot (Mecha).png"
   },
   {
@@ -10784,7 +11256,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Grim Wow"
+     ]
     }
    ],
    "abilities": [],
@@ -10794,7 +11268,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Grim Wow"
+   ],
    "icon": "img/units/Grim Wow.png"
   },
   {
@@ -10821,7 +11297,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gujo"
+     ]
     }
    ],
    "abilities": [],
@@ -10831,7 +11309,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gujo"
+   ],
    "icon": "img/units/Gujo.png"
   },
   {
@@ -10858,7 +11338,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gujo (Infinity)"
+     ]
     },
     {
      "name": "Limitless",
@@ -10879,7 +11361,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gujo (Infinity)"
+     ]
     },
     {
      "name": "Split Second Decision",
@@ -10902,7 +11386,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Gujo (Infinity)"
+     ]
     },
     {
      "name": "Gifted Genius",
@@ -10938,7 +11424,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Gujo (Infinity)"
+   ],
    "icon": "img/units/Gujo (Infinity).png"
   },
   {
@@ -11116,7 +11604,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hebano (Clematis)"
+     ]
     },
     {
      "name": "Burning Passion",
@@ -11145,7 +11635,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hebano (Clematis)"
+     ]
     }
    ],
    "abilities": [],
@@ -11162,7 +11654,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hebano (Clematis)"
+   ],
    "icon": "img/units/Hebano (Clematis).png"
   },
   {
@@ -11264,7 +11758,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hei (Black Dragon)"
+     ]
     },
     {
      "name": "Ancient Assassination Technique",
@@ -11288,7 +11784,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hei (Black Dragon)"
+   ],
    "icon": "img/units/Hei (Black Dragon).png"
   },
   {
@@ -11317,7 +11815,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hellkiller"
+     ]
     }
    ],
    "abilities": [],
@@ -11326,7 +11826,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hellkiller"
+   ],
    "icon": "img/units/Hellkiller.png"
   },
   {
@@ -11355,7 +11857,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hellkiller (Slayer)"
+     ]
     },
     {
      "name": "Glory Kill",
@@ -11384,7 +11888,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hellkiller (Slayer)"
+   ],
    "icon": "img/units/Hellkiller (Slayer).png"
   },
   {
@@ -11462,7 +11968,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Hercool and Mr Boo"
+     ]
     }
    ],
    "abilities": [],
@@ -11476,7 +11984,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hercool and Mr Boo"
+   ],
    "icon": "img/units/Hercool and Mr Boo.png"
   },
   {
@@ -11520,7 +12030,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "History's Strongest"
+     ]
     },
     {
      "name": "Strongest in History",
@@ -11559,7 +12071,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "History's Strongest"
+     ]
     },
     {
      "name": "Sinister Sanctum",
@@ -11573,7 +12087,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "History's Strongest"
+     ]
     }
    ],
    "tags": [
@@ -11589,7 +12105,9 @@
     "shield-pierce"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "History's Strongest"
+   ],
    "icon": "img/units/History's Strongest.png"
   },
   {
@@ -11618,7 +12136,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hollowseph"
+     ]
     }
    ],
    "abilities": [
@@ -11638,7 +12158,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hollowseph"
+   ],
    "icon": "img/units/Hollowseph.png"
   },
   {
@@ -11667,7 +12189,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Hollowseph (Pure)"
+     ]
     },
     {
      "name": "Lord of Shades",
@@ -11696,7 +12220,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Hollowseph (Pure)"
+   ],
    "icon": "img/units/Hollowseph (Pure).png"
   },
   {
@@ -11742,7 +12268,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Horsegirls (Racers)"
+     ]
     }
    ],
    "abilities": [
@@ -11762,7 +12290,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Horsegirls (Racers)"
+   ],
    "icon": "img/units/Horsegirls (Racers).png"
   },
   {
@@ -11907,7 +12437,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ice Queen (Release)"
+     ]
     },
     {
      "name": "Frozen Cancellation",
@@ -11924,7 +12456,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ice Queen (Release)"
+     ]
     }
    ],
    "abilities": [
@@ -11961,7 +12495,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ice Queen (Release)"
+   ],
    "icon": "img/units/Ice Queen (Release).png"
   },
   {
@@ -11989,7 +12525,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ichiga"
+     ]
     }
    ],
    "abilities": [],
@@ -11998,7 +12536,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ichiga"
+   ],
    "icon": "img/units/Ichiga.png"
   },
   {
@@ -12029,7 +12569,9 @@
       "stocks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ichiga (Savior)"
+     ]
     },
     {
      "name": "Save the AV Society",
@@ -12041,7 +12583,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ichiga (Savior)"
+     ]
     }
    ],
    "abilities": [
@@ -12065,7 +12609,9 @@
     "stocks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ichiga (Savior)"
+   ],
    "icon": "img/units/Ichiga (Savior).png"
   },
   {
@@ -12095,7 +12641,9 @@
       "stocks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ichiga (True Release)"
+     ]
     }
    ],
    "abilities": [],
@@ -12106,7 +12654,9 @@
     "stocks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ichiga (True Release)"
+   ],
    "icon": "img/units/Ichiga (True Release).png"
   },
   {
@@ -12133,7 +12683,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Igros"
+     ]
     }
    ],
    "abilities": [],
@@ -12143,7 +12695,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Igros"
+   ],
    "icon": "img/units/Igros.png"
   },
   {
@@ -12172,7 +12726,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Igros (Elite Knight)"
+     ]
     },
     {
      "name": "Strongest Shadow",
@@ -12185,7 +12741,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Igros (Elite Knight)"
+     ]
     },
     {
      "name": "Shadow Commander",
@@ -12198,7 +12756,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Igros (Elite Knight)"
+     ]
     }
    ],
    "abilities": [],
@@ -12210,7 +12770,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Igros (Elite Knight)"
+   ],
    "icon": "img/units/Igros (Elite Knight).png"
   },
   {
@@ -12236,7 +12798,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Inamuki"
+     ]
     },
     {
      "name": "Blast Away",
@@ -12257,7 +12821,9 @@
     "repulse"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Inamuki"
+   ],
    "icon": "img/units/Inamuki.png"
   },
   {
@@ -12332,7 +12898,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Investigation Leader"
+     ]
     }
    ],
    "abilities": [
@@ -12353,7 +12921,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Investigation Leader"
+   ],
    "icon": "img/units/Investigation Leader.png"
   },
   {
@@ -12383,7 +12953,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Investigation Leader (Truth)"
+     ]
     },
     {
      "name": "Its Time to Make History",
@@ -12420,7 +12992,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Investigation Leader (Truth)"
+     ]
     },
     {
      "name": "Myriad Truths",
@@ -12443,7 +13017,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Investigation Leader (Truth)"
+   ],
    "icon": "img/units/Investigation Leader (Truth).png"
   },
   {
@@ -12486,7 +13062,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Iscanur (Pride)"
+     ]
     },
     {
      "name": "Sunshine",
@@ -12511,7 +13089,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Iscanur (Pride)"
+     ]
     },
     {
      "name": "Controller of the Sun",
@@ -12525,7 +13105,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Iscanur (Pride)"
+     ]
     },
     {
      "name": "Prideful Blaze",
@@ -12563,7 +13145,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Iscanur (Pride)"
+     ]
     }
    ],
    "tags": [
@@ -12577,7 +13161,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Iscanur (Pride)"
+   ],
    "icon": "img/units/Iscanur (Pride).png"
   },
   {
@@ -12605,7 +13191,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Isdead"
+     ]
     }
    ],
    "abilities": [],
@@ -12616,7 +13204,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Isdead"
+   ],
    "icon": "img/units/Isdead.png"
   },
   {
@@ -12644,7 +13234,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Isdead (Romantic)"
+     ]
     },
     {
      "name": "Blooming Love",
@@ -12680,7 +13272,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Isdead (Romantic)"
+     ]
     },
     {
      "name": "Backed Into a Corner",
@@ -12693,7 +13287,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Isdead (Romantic)"
+     ]
     },
     {
      "name": "Leader of Ice",
@@ -12706,7 +13302,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Isdead (Romantic)"
+     ]
     }
    ],
    "abilities": [
@@ -12762,7 +13360,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Isdead (Romantic)"
+   ],
    "icon": "img/units/Isdead (Romantic).png"
   },
   {
@@ -12790,7 +13390,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ishtar"
+     ]
     }
    ],
    "abilities": [],
@@ -12799,7 +13401,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ishtar"
+   ],
    "icon": "img/units/Ishtar.png"
   },
   {
@@ -12827,7 +13431,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ishtar (Divinity)"
+     ]
     },
     {
      "name": "From Heaven towards the Earth",
@@ -12840,7 +13446,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ishtar (Divinity)"
+     ]
     }
    ],
    "abilities": [
@@ -12857,7 +13465,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ishtar (Divinity)"
+     ]
     }
    ],
    "tags": [
@@ -12867,7 +13477,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ishtar (Divinity)"
+   ],
    "icon": "img/units/Ishtar (Divinity).png"
   },
   {
@@ -12896,7 +13508,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Itaduri"
+     ]
     }
    ],
    "abilities": [],
@@ -12906,7 +13520,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Itaduri"
+   ],
    "icon": "img/units/Itaduri.png"
   },
   {
@@ -12933,7 +13549,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Itochi"
+     ]
     },
     {
      "name": "Eternal Flame",
@@ -12955,7 +13573,9 @@
     "burn"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Itochi"
+   ],
    "icon": "img/units/Itochi.png"
   },
   {
@@ -13061,7 +13681,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Jag-o (Volcanic)"
+     ]
     }
    ],
    "abilities": [
@@ -13078,7 +13700,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Jag-o (Volcanic)"
+     ]
     }
    ],
    "tags": [
@@ -13090,7 +13714,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Jag-o (Volcanic)"
+   ],
    "icon": "img/units/Jag-o (Volcanic).png"
   },
   {
@@ -13199,7 +13825,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Joe"
+     ]
     }
    ],
    "abilities": [],
@@ -13209,7 +13837,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Joe"
+   ],
    "icon": "img/units/Joe.png"
   },
   {
@@ -13237,7 +13867,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Johnni"
+     ]
     }
    ],
    "abilities": [],
@@ -13246,7 +13878,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Johnni"
+   ],
    "icon": "img/units/Johnni.png"
   },
   {
@@ -13274,7 +13908,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Johnni (Infinite Spin)"
+     ]
     },
     {
      "name": "The Golden Ratio",
@@ -13300,7 +13936,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Johnni (Infinite Spin)"
+     ]
     }
    ],
    "tags": [
@@ -13311,7 +13949,9 @@
     "dmg-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Johnni (Infinite Spin)"
+   ],
    "icon": "img/units/Johnni (Infinite Spin).png"
   },
   {
@@ -13367,7 +14007,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Julias"
+     ]
     }
    ],
    "abilities": [],
@@ -13377,7 +14019,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Julias"
+   ],
    "icon": "img/units/Julias.png"
   },
   {
@@ -13404,7 +14048,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Julias (Eisplosion)"
+     ]
     },
     {
      "name": "Chilling Contempt",
@@ -13417,7 +14063,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Julias (Eisplosion)"
+     ]
     }
    ],
    "abilities": [],
@@ -13429,7 +14077,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Julias (Eisplosion)"
+   ],
    "icon": "img/units/Julias (Eisplosion).png"
   },
   {
@@ -13510,7 +14160,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Karem (Chilled)"
+     ]
     }
    ],
    "abilities": [],
@@ -13523,7 +14175,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Karem (Chilled)"
+   ],
    "icon": "img/units/Karem (Chilled).png"
   },
   {
@@ -13555,7 +14209,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kazzy"
+     ]
     }
    ],
    "abilities": [],
@@ -13568,7 +14224,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kazzy"
+   ],
    "icon": "img/units/Kazzy.png"
   },
   {
@@ -13600,7 +14258,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kazzy (Queen)"
+     ]
     },
     {
      "name": "I Use This to Go Fishing",
@@ -13651,7 +14311,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kazzy (Queen)"
+   ],
    "icon": "img/units/Kazzy (Queen).png"
   },
   {
@@ -13679,7 +14341,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kempache"
+     ]
     }
    ],
    "abilities": [],
@@ -13688,7 +14352,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kempache"
+   ],
    "icon": "img/units/Kempache.png"
   },
   {
@@ -13716,7 +14382,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kempache (Feral)"
+     ]
     },
     {
      "name": "Feral Rage",
@@ -13739,7 +14407,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kempache (Feral)"
+   ],
    "icon": "img/units/Kempache (Feral).png"
   },
   {
@@ -13767,7 +14437,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kid Boo (Evil)"
+     ]
     },
     {
      "name": "Absolute Demon",
@@ -13797,7 +14469,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kid Boo (Evil)"
+   ],
    "icon": "img/units/Kid Boo (Evil).png"
   },
   {
@@ -13832,7 +14506,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kinaru"
+     ]
     }
    ],
    "abilities": [],
@@ -13841,7 +14517,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kinaru"
+   ],
    "icon": "img/units/Kinaru.png"
   },
   {
@@ -13867,7 +14545,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Kinnua"
+     ]
     },
     {
      "name": "Lightning Strike",
@@ -13888,7 +14568,9 @@
     "stun"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Kinnua"
+   ],
    "icon": "img/units/Kinnua.png"
   },
   {
@@ -14009,7 +14691,9 @@
       "has-domain"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Koguro (Unsealed)"
+     ]
     },
     {
      "name": "God of Shinobi",
@@ -14033,7 +14717,9 @@
       "has-domain"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Koguro (Unsealed)"
+     ]
     }
    ],
    "abilities": [
@@ -14068,7 +14754,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Koguro (Unsealed)"
+   ],
    "icon": "img/units/Koguro (Unsealed).png"
   },
   {
@@ -14178,7 +14866,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Legendary Super Brolzi"
+     ]
     },
     {
      "name": "Instinctive Destruction",
@@ -14193,7 +14883,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Legendary Super Brolzi"
+     ]
     }
    ],
    "abilities": [],
@@ -14205,7 +14897,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Legendary Super Brolzi"
+   ],
    "icon": "img/units/Legendary Super Brolzi.png"
   },
   {
@@ -14294,7 +14988,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Leo (Fangs)"
+     ]
     },
     {
      "name": "The Fire Mage Cometh",
@@ -14307,7 +15003,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Leo (Fangs)"
+     ]
     },
     {
      "name": "It Takes Guts",
@@ -14334,7 +15032,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Leo (Fangs)"
+     ]
     }
    ],
    "abilities": [
@@ -14350,7 +15050,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Leo (Fangs)"
+     ]
     }
    ],
    "tags": [
@@ -14362,7 +15064,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Leo (Fangs)"
+   ],
    "icon": "img/units/Leo (Fangs).png"
   },
   {
@@ -14389,7 +15093,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lethal Bee"
+     ]
     },
     {
      "name": "Master of Tentacles",
@@ -14411,7 +15117,9 @@
     "repulse"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lethal Bee"
+   ],
    "icon": "img/units/Lethal Bee.png"
   },
   {
@@ -14495,7 +15203,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lfelt (Love)"
+     ]
     },
     {
      "name": "Okizeme",
@@ -14534,7 +15244,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lfelt (Love)"
+     ]
     },
     {
      "name": "Video Game Idol",
@@ -14591,7 +15303,9 @@
    "buffTargets": [
     "VideoGames"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lfelt (Love)"
+   ],
    "icon": "img/units/Lfelt (Love).png"
   },
   {
@@ -14639,7 +15353,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lich King (Ruler)"
+     ]
     }
    ],
    "abilities": [
@@ -14680,7 +15396,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lich King (Ruler)"
+   ],
    "icon": "img/units/Lich King (Ruler).png"
   },
   {
@@ -14709,7 +15427,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lilia"
+     ]
     }
    ],
    "abilities": [],
@@ -14719,7 +15439,9 @@
     "summon"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lilia"
+   ],
    "icon": "img/units/Lilia.png"
   },
   {
@@ -14748,7 +15470,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lilia and Berserker"
+     ]
     },
     {
      "name": "Berserker!",
@@ -14784,7 +15508,9 @@
     "revive"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lilia and Berserker"
+   ],
    "icon": "img/units/Lilia and Berserker.png"
   },
   {
@@ -14923,7 +15649,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lord"
+     ]
     }
    ],
    "abilities": [],
@@ -14935,7 +15663,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lord"
+   ],
    "icon": "img/units/Lord.png"
   },
   {
@@ -14964,7 +15694,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lord (Fairy)"
+     ]
     },
     {
      "name": "Sloth",
@@ -14979,7 +15711,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lord (Fairy)"
+     ]
     }
    ],
    "abilities": [],
@@ -14992,7 +15726,9 @@
     "slow"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lord (Fairy)"
+   ],
    "icon": "img/units/Lord (Fairy).png"
   },
   {
@@ -15064,7 +15800,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lord Friezo (Emperor)"
+     ]
     }
    ],
    "abilities": [
@@ -15087,7 +15825,9 @@
     "summon"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lord Friezo (Emperor)"
+   ],
    "icon": "img/units/Lord Friezo (Emperor).png"
   },
   {
@@ -15119,7 +15859,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Lord of Shadows"
+     ]
     },
     {
      "name": "Lord of Shadows",
@@ -15163,7 +15905,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Lord of Shadows"
+   ],
    "icon": "img/units/Lord of Shadows.png"
   },
   {
@@ -15270,7 +16014,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Luce (Hacker)"
+     ]
     }
    ],
    "abilities": [],
@@ -15283,7 +16029,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Luce (Hacker)"
+   ],
    "icon": "img/units/Luce (Hacker).png"
   },
   {
@@ -15314,7 +16062,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Manipulator"
+     ]
     }
    ],
    "abilities": [],
@@ -15326,7 +16076,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Manipulator"
+   ],
    "icon": "img/units/Manipulator.png"
   },
   {
@@ -15357,7 +16109,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Manipulator (Spider)"
+     ]
     },
     {
      "name": "Spider's Web",
@@ -15381,7 +16135,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Manipulator (Spider)"
+   ],
    "icon": "img/units/Manipulator (Spider).png"
   },
   {
@@ -15454,7 +16210,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Marlin (Gluttony)"
+     ]
     }
    ],
    "abilities": [
@@ -15480,7 +16238,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Marlin (Gluttony)"
+   ],
    "icon": "img/units/Marlin (Gluttony).png"
   },
   {
@@ -15507,7 +16267,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mechamar"
+     ]
     },
     {
      "name": "Stored Energy",
@@ -15520,7 +16282,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mechamar"
+     ]
     }
    ],
    "abilities": [],
@@ -15531,7 +16295,9 @@
     "dmg-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Mechamar"
+   ],
    "icon": "img/units/Mechamar.png"
   },
   {
@@ -15559,7 +16325,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medea"
+     ]
     }
    ],
    "abilities": [],
@@ -15568,7 +16336,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Medea"
+   ],
    "icon": "img/units/Medea.png"
   },
   {
@@ -15596,7 +16366,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
     },
     {
      "name": "Oathbreaker",
@@ -15610,7 +16382,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
     }
    ],
    "abilities": [
@@ -15627,7 +16401,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
     }
    ],
    "tags": [
@@ -15638,7 +16414,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Medea (Witch of Betrayal)"
+   ],
    "icon": "img/units/Medea (Witch of Betrayal).png"
   },
   {
@@ -15669,7 +16447,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medusa"
+     ]
     }
    ],
    "abilities": [],
@@ -15681,7 +16461,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Medusa"
+   ],
    "icon": "img/units/Medusa.png"
   },
   {
@@ -15712,7 +16494,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medusa (Gorgon)"
+     ]
     },
     {
      "name": "Mystic Gaze",
@@ -15725,7 +16509,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medusa (Gorgon)"
+     ]
     }
    ],
    "abilities": [
@@ -15743,7 +16529,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Medusa (Gorgon)"
+     ]
     }
    ],
    "tags": [
@@ -15758,7 +16546,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Medusa (Gorgon)"
+   ],
    "icon": "img/units/Medusa (Gorgon).png"
   },
   {
@@ -15787,7 +16577,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mimi"
+     ]
     }
    ],
    "abilities": [],
@@ -15797,7 +16589,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Mimi"
+   ],
    "icon": "img/units/Mimi.png"
   },
   {
@@ -15826,7 +16620,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mimi (Psychic)"
+     ]
     },
     {
      "name": "Psychokinesis",
@@ -15838,7 +16634,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mimi (Psychic)"
+     ]
     }
    ],
    "abilities": [],
@@ -15848,7 +16646,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Mimi (Psychic)"
+   ],
    "icon": "img/units/Mimi (Psychic).png"
   },
   {
@@ -15876,7 +16676,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Mohato"
+     ]
     },
     {
      "name": "Stored Souls",
@@ -15896,7 +16698,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Mohato"
+   ],
    "icon": "img/units/Mohato.png"
   },
   {
@@ -15924,7 +16728,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Monkey King (Awakened)"
+     ]
     },
     {
      "name": "Monkey Clones",
@@ -15938,7 +16744,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Monkey King (Awakened)"
+     ]
     },
     {
      "name": "Soul Strike",
@@ -15976,7 +16784,9 @@
     "cost-reduction"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Monkey King (Awakened)"
+   ],
    "icon": "img/units/Monkey King (Awakened).png"
   },
   {
@@ -16047,7 +16857,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Nazuka"
+     ]
     }
    ],
    "abilities": [],
@@ -16058,7 +16870,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Nazuka"
+   ],
    "icon": "img/units/Nazuka.png"
   },
   {
@@ -16141,7 +16955,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Newsman (Forecast)"
+     ]
     },
     {
      "name": "Meteorologist",
@@ -16169,7 +16985,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Newsman (Forecast)"
+     ]
     }
    ],
    "abilities": [],
@@ -16182,7 +17000,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Newsman (Forecast)"
+   ],
    "icon": "img/units/Newsman (Forecast).png"
   },
   {
@@ -16209,7 +17029,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Nobaba"
+     ]
     },
     {
      "name": "Cursed Nails",
@@ -16231,7 +17053,9 @@
     "bleed"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Nobaba"
+   ],
    "icon": "img/units/Nobaba.png"
   },
   {
@@ -16257,7 +17081,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Noruto"
+     ]
     }
    ],
    "abilities": [],
@@ -16266,7 +17092,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Noruto"
+   ],
    "icon": "img/units/Noruto.png"
   },
   {
@@ -16292,7 +17120,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Noruto (Sage)"
+     ]
     }
    ],
    "abilities": [],
@@ -16301,7 +17131,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Noruto (Sage)"
+   ],
    "icon": "img/units/Noruto (Sage).png"
   },
   {
@@ -16327,7 +17159,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Noruto (Six Tails)"
+     ]
     },
     {
      "name": "Blistering Rage",
@@ -16339,7 +17173,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Noruto (Six Tails)"
+     ]
     }
    ],
    "abilities": [],
@@ -16349,7 +17185,9 @@
     "dmg-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Noruto (Six Tails)"
+   ],
    "icon": "img/units/Noruto (Six Tails).png"
   },
   {
@@ -16457,7 +17295,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "NotGoodGuy (Free)"
+     ]
     }
    ],
    "tags": [
@@ -16471,7 +17311,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "NotGoodGuy (Free)"
+   ],
    "icon": "img/units/NotGoodGuy (Free).png"
   },
   {
@@ -16497,7 +17339,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Obita"
+     ]
     }
    ],
    "abilities": [],
@@ -16506,7 +17350,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Obita"
+   ],
    "icon": "img/units/Obita.png"
   },
   {
@@ -16532,7 +17378,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Obita (Awakened)"
+     ]
     },
     {
      "name": "Curse of Hatred",
@@ -16582,7 +17430,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Obita (Awakened)"
+     ]
     }
    ],
    "abilities": [],
@@ -16596,7 +17446,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Obita (Awakened)"
+   ],
    "icon": "img/units/Obita (Awakened).png"
   },
   {
@@ -16622,7 +17474,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Octopus"
+     ]
     },
     {
      "name": "Flea Shooter",
@@ -16643,7 +17497,9 @@
     "slow"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Octopus"
+   ],
    "icon": "img/units/Octopus.png"
   },
   {
@@ -16672,7 +17528,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Okorun"
+     ]
     }
    ],
    "abilities": [],
@@ -16682,7 +17540,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Okorun"
+   ],
    "icon": "img/units/Okorun.png"
   },
   {
@@ -16711,7 +17571,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Okorun (Turbo)"
+     ]
     },
     {
      "name": "Running out of Time",
@@ -16723,7 +17585,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Okorun (Turbo)"
+     ]
     }
    ],
    "abilities": [],
@@ -16733,7 +17597,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Okorun (Turbo)"
+   ],
    "icon": "img/units/Okorun (Turbo).png"
   },
   {
@@ -16926,7 +17792,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Phantom Thief"
+     ]
     }
    ],
    "abilities": [
@@ -16949,7 +17817,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Phantom Thief"
+   ],
    "icon": "img/units/Phantom Thief.png"
   },
   {
@@ -16981,7 +17851,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Phantom Thief (Jester)"
+     ]
     },
     {
      "name": "See It Coming",
@@ -17051,7 +17923,9 @@
     "shield-pierce"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Phantom Thief (Jester)"
+   ],
    "icon": "img/units/Phantom Thief (Jester).png"
   },
   {
@@ -17285,7 +18159,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Preacher"
+     ]
     }
    ],
    "abilities": [],
@@ -17296,7 +18172,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Preacher"
+   ],
    "icon": "img/units/Preacher.png"
   },
   {
@@ -17324,7 +18202,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Preacher (Hidden Weapon)"
+     ]
     },
     {
      "name": "Finding Eden",
@@ -17344,7 +18224,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Preacher (Hidden Weapon)"
+   ],
    "icon": "img/units/Preacher (Hidden Weapon).png"
   },
   {
@@ -17494,7 +18376,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Pweeny (Boxer)"
+     ]
     }
    ],
    "abilities": [],
@@ -17503,7 +18387,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Pweeny (Boxer)"
+   ],
    "icon": "img/units/Pweeny (Boxer).png"
   },
   {
@@ -17605,7 +18491,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Quetzalcoatl (Sun God)"
+     ]
     },
     {
      "name": "Sun God's Sacrifice",
@@ -17623,7 +18511,9 @@
      "buffTargets": [
       "Fire"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Quetzalcoatl (Sun God)"
+     ]
     },
     {
      "name": "Noble Phantoms",
@@ -17651,7 +18541,9 @@
    "buffTargets": [
     "Fire"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Quetzalcoatl (Sun God)"
+   ],
    "icon": "img/units/Quetzalcoatl (Sun God).png"
   },
   {
@@ -17682,7 +18574,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rabbit Hero"
+     ]
     }
    ],
    "abilities": [],
@@ -17694,7 +18588,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rabbit Hero"
+   ],
    "icon": "img/units/Rabbit Hero.png"
   },
   {
@@ -17725,7 +18621,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rabbit Hero (Guts)"
+     ]
     },
     {
      "name": "Animal Instincts",
@@ -17751,7 +18649,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rabbit Hero (Guts)"
+   ],
    "icon": "img/units/Rabbit Hero (Guts).png"
   },
   {
@@ -17781,7 +18681,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Raging Oni"
+     ]
     },
     {
      "name": "Battle of Wills",
@@ -17808,7 +18710,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Raging Oni"
+     ]
     }
    ],
    "abilities": [
@@ -17836,7 +18740,9 @@
     "slow"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Raging Oni"
+   ],
    "icon": "img/units/Raging Oni.png"
   },
   {
@@ -17867,7 +18773,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Raging Oni vs Wrath God"
+     ]
     },
     {
      "name": "Discipline",
@@ -17881,7 +18789,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Raging Oni vs Wrath God"
+     ]
     },
     {
      "name": "Battle of Wills",
@@ -17934,7 +18844,9 @@
     "corruption"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Raging Oni vs Wrath God"
+   ],
    "icon": "img/units/Raging Oni vs Wrath God.png"
   },
   {
@@ -18014,7 +18926,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Reaper (Scissors)"
+     ]
     }
    ],
    "abilities": [],
@@ -18028,7 +18942,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Reaper (Scissors)"
+   ],
    "icon": "img/units/Reaper (Scissors).png"
   },
   {
@@ -18062,7 +18978,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Reasonable Person"
+     ]
     }
    ],
    "abilities": [],
@@ -18077,7 +18995,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Reasonable Person"
+   ],
    "icon": "img/units/Reasonable Person.png"
   },
   {
@@ -18111,7 +19031,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Reasonable Person (Calm)"
+     ]
     },
     {
      "name": "God Killer",
@@ -18158,7 +19080,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Reasonable Person (Calm)"
+   ],
    "icon": "img/units/Reasonable Person (Calm).png"
   },
   {
@@ -18201,7 +19125,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rebel Fighter (Gauntlet)"
+     ]
     },
     {
      "name": "Combo Attacker",
@@ -18216,7 +19142,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rebel Fighter (Gauntlet)"
+     ]
     }
    ],
    "abilities": [
@@ -18246,7 +19174,9 @@
     "active-ability"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rebel Fighter (Gauntlet)"
+   ],
    "icon": "img/units/Rebel Fighter (Gauntlet).png"
   },
   {
@@ -18281,7 +19211,9 @@
      "buffTargets": [
       "Passion"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Reckless Gambler"
+     ]
     }
    ],
    "abilities": [],
@@ -18299,7 +19231,9 @@
    "buffTargets": [
     "Passion"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Reckless Gambler"
+   ],
    "icon": "img/units/Reckless Gambler.png"
   },
   {
@@ -18334,7 +19268,9 @@
      "buffTargets": [
       "Passion"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Reckless Gambler (Cursed)"
+     ]
     },
     {
      "name": "The Immortal Gambler",
@@ -18361,7 +19297,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Reckless Gambler (Cursed)"
+     ]
     }
    ],
    "abilities": [
@@ -18395,7 +19333,9 @@
    "buffTargets": [
     "Passion"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Reckless Gambler (Cursed)"
+   ],
    "icon": "img/units/Reckless Gambler (Cursed).png"
   },
   {
@@ -18425,7 +19365,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Regnaw"
+     ]
     }
    ],
    "abilities": [],
@@ -18435,7 +19377,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Regnaw"
+   ],
    "icon": "img/units/Regnaw.png"
   },
   {
@@ -18465,7 +19409,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Regnaw (Rage)"
+     ]
     },
     {
      "name": "Generational Knowledge",
@@ -18496,7 +19442,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Regnaw (Rage)"
+   ],
    "icon": "img/units/Regnaw (Rage).png"
   },
   {
@@ -18700,7 +19648,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rideon vs Samuel"
+     ]
     }
    ],
    "abilities": [],
@@ -18709,7 +19659,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rideon vs Samuel"
+   ],
    "icon": "img/units/Rideon vs Samuel.png"
   },
   {
@@ -18738,7 +19690,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rideon vs Samuel (Duel)"
+     ]
     },
     {
      "name": "Truth Goes Unspoken",
@@ -18756,7 +19710,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rideon vs Samuel (Duel)"
+   ],
    "icon": "img/units/Rideon vs Samuel (Duel).png"
   },
   {
@@ -18831,7 +19787,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Riner (Reinforced Giant)"
+     ]
     }
    ],
    "abilities": [],
@@ -18842,7 +19800,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Riner (Reinforced Giant)"
+   ],
    "icon": "img/units/Riner (Reinforced Giant).png"
   },
   {
@@ -18950,7 +19910,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rogita (Super 4)"
+     ]
     },
     {
      "name": "The Monkey King",
@@ -18995,7 +19957,9 @@
     "spa-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rogita (Super 4)"
+   ],
    "icon": "img/units/Rogita (Super 4).png"
   },
   {
@@ -19022,7 +19986,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rogita (Super 4) (Clone)"
+     ]
     },
     {
      "name": "The Monkey King",
@@ -19056,7 +20022,9 @@
     "spa-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rogita (Super 4) (Clone)"
+   ],
    "icon": "img/units/Rogita (Super 4) (Clone).png"
   },
   {
@@ -19111,7 +20079,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rogita (Super)"
+     ]
     }
    ],
    "abilities": [],
@@ -19125,7 +20095,9 @@
    "buffTargets": [
     "Fused"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rogita (Super)"
+   ],
    "icon": "img/units/Rogita (Super).png"
   },
   {
@@ -19184,7 +20156,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku"
+     ]
     }
    ],
    "abilities": [],
@@ -19193,7 +20167,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Roku"
+   ],
    "icon": "img/units/Roku.png"
   },
   {
@@ -19222,7 +20198,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku (Angel)"
+     ]
     }
    ],
    "abilities": [],
@@ -19232,7 +20210,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Roku (Angel)"
+   ],
    "icon": "img/units/Roku (Angel).png"
   },
   {
@@ -19269,7 +20249,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku (Dark)"
+     ]
     }
    ],
    "abilities": [],
@@ -19278,7 +20260,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Roku (Dark)"
+   ],
    "icon": "img/units/Roku (Dark).png"
   },
   {
@@ -19308,7 +20292,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku (Super 3)"
+     ]
     },
     {
      "name": "The Hero Arrives",
@@ -19322,7 +20308,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku (Super 3)"
+     ]
     },
     {
      "name": "Here It Comes",
@@ -19346,7 +20334,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Roku (Super 3)"
+     ]
     },
     {
      "name": "Even Further",
@@ -19400,7 +20390,9 @@
    "buffTargets": [
     "Blast"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Roku (Super 3)"
+   ],
    "icon": "img/units/Roku (Super 3).png"
   },
   {
@@ -19518,7 +20510,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rudie"
+     ]
     }
    ],
    "abilities": [],
@@ -19528,7 +20522,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rudie"
+   ],
    "icon": "img/units/Rudie.png"
   },
   {
@@ -19558,7 +20554,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rudie (Prodigy)"
+     ]
     },
     {
      "name": "Family Man",
@@ -19575,7 +20573,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Rudie (Prodigy)"
+     ]
     }
    ],
    "abilities": [
@@ -19602,7 +20602,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rudie (Prodigy)"
+   ],
    "icon": "img/units/Rudie (Prodigy).png"
   },
   {
@@ -19630,7 +20632,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rukio"
+     ]
     }
    ],
    "abilities": [],
@@ -19639,7 +20643,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rukio"
+   ],
    "icon": "img/units/Rukio.png"
   },
   {
@@ -19813,7 +20819,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Rummie (Scythe)"
+     ]
     }
    ],
    "abilities": [],
@@ -19824,7 +20832,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Rummie (Scythe)"
+   ],
    "icon": "img/units/Rummie (Scythe).png"
   },
   {
@@ -19855,7 +20865,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber"
+     ]
     }
    ],
    "abilities": [],
@@ -19867,7 +20879,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saber"
+   ],
    "icon": "img/units/Saber.png"
   },
   {
@@ -19896,7 +20910,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (A.W.E.)"
+     ]
     }
    ],
    "abilities": [],
@@ -19906,7 +20922,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saber (A.W.E.)"
+   ],
    "icon": "img/units/Saber (A.W.E.).png"
   },
   {
@@ -19936,7 +20954,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Alternate)"
+     ]
     }
    ],
    "abilities": [],
@@ -19947,7 +20967,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saber (Alternate)"
+   ],
    "icon": "img/units/Saber (Alternate).png"
   },
   {
@@ -19977,7 +20999,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Black Tyrant)"
+     ]
     },
     {
      "name": "Summoned Servant",
@@ -20002,7 +21026,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Black Tyrant)"
+     ]
     },
     {
      "name": "Wrongs Righted",
@@ -20018,7 +21044,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Black Tyrant)"
+     ]
     },
     {
      "name": "Corrupted Knight",
@@ -20031,7 +21059,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Black Tyrant)"
+     ]
     },
     {
      "name": "Twisted Protector",
@@ -20044,7 +21074,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (Black Tyrant)"
+     ]
     }
    ],
    "abilities": [],
@@ -20058,7 +21090,9 @@
     "aura-of-corruption"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saber (Black Tyrant)"
+   ],
    "icon": "img/units/Saber (Black Tyrant).png"
   },
   {
@@ -20089,7 +21123,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
     },
     {
      "name": "King of Knights",
@@ -20103,7 +21139,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
     },
     {
      "name": "Excalibur",
@@ -20115,7 +21153,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
     }
    ],
    "abilities": [
@@ -20131,7 +21171,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
     }
    ],
    "tags": [
@@ -20144,7 +21186,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saber (King of Knights)"
+   ],
    "icon": "img/units/Saber (King of Knights).png"
   },
   {
@@ -20173,7 +21217,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saiko"
+     ]
     }
    ],
    "abilities": [],
@@ -20183,7 +21229,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saiko"
+   ],
    "icon": "img/units/Saiko.png"
   },
   {
@@ -20212,7 +21260,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Saiko (Spirit Medium)"
+     ]
     },
     {
      "name": "Blazing Barriers",
@@ -20234,7 +21284,9 @@
     "burn"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Saiko (Spirit Medium)"
+   ],
    "icon": "img/units/Saiko (Spirit Medium).png"
   },
   {
@@ -20360,7 +21412,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Savior (Moonless)"
+     ]
     },
     {
      "name": "Shining Bright for Everyone",
@@ -20377,7 +21431,9 @@
       "cleanse-self"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Savior (Moonless)"
+     ]
     }
    ],
    "abilities": [
@@ -20405,7 +21461,9 @@
     "stocks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Savior (Moonless)"
+   ],
    "icon": "img/units/Savior (Moonless).png"
   },
   {
@@ -20435,7 +21493,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Savior (Rebirth)"
+     ]
     },
     {
      "name": "Terrifying Arrival",
@@ -20453,7 +21513,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Savior (Rebirth)"
+     ]
     },
     {
      "name": "Uncontrolled Protector",
@@ -20469,7 +21531,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Savior (Rebirth)"
+     ]
     }
    ],
    "abilities": [],
@@ -20487,7 +21551,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Savior (Rebirth)"
+   ],
    "icon": "img/units/Savior (Rebirth).png"
   },
   {
@@ -20516,7 +21582,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Scrap Pirate"
+     ]
     }
    ],
    "abilities": [],
@@ -20526,7 +21594,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Scrap Pirate"
+   ],
    "icon": "img/units/Scrap Pirate.png"
   },
   {
@@ -20555,7 +21625,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Scrap Pirate (Metal)"
+     ]
     },
     {
      "name": "Magnetic Captain",
@@ -20588,7 +21660,9 @@
     "range-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Scrap Pirate (Metal)"
+   ],
    "icon": "img/units/Scrap Pirate (Metal).png"
   },
   {
@@ -20614,7 +21688,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Seban"
+     ]
     },
     {
      "name": "Sloppy Fighting",
@@ -20635,7 +21711,9 @@
     "spa-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Seban"
+   ],
    "icon": "img/units/Seban.png"
   },
   {
@@ -20796,7 +21874,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Shero (Hero of Justice)"
+     ]
     }
    ],
    "abilities": [
@@ -20817,7 +21897,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Shero (Hero of Justice)"
+   ],
    "icon": "img/units/Shero (Hero of Justice).png"
   },
   {
@@ -20863,7 +21945,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Shinobi God (Infinite Dreams)"
+     ]
     },
     {
      "name": "Wood-Style Clones",
@@ -20900,7 +21984,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Shinobi God (Infinite Dreams)"
+   ],
    "icon": "img/units/Shinobi God (Infinite Dreams).png"
   },
   {
@@ -20990,7 +22076,9 @@
       "active-ability"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Shinobi Sage (Friendship)"
+     ]
     },
     {
      "name": "Reliable",
@@ -21033,7 +22121,9 @@
    "buffTargets": [
     "Ninjutsu"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Shinobi Sage (Friendship)"
+   ],
    "icon": "img/units/Shinobi Sage (Friendship).png"
   },
   {
@@ -21059,7 +22149,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Shinzi"
+     ]
     }
    ],
    "abilities": [],
@@ -21068,7 +22160,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Shinzi"
+   ],
    "icon": "img/units/Shinzi.png"
   },
   {
@@ -21215,7 +22309,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Slime"
+     ]
     }
    ],
    "abilities": [],
@@ -21225,7 +22321,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Slime"
+   ],
    "icon": "img/units/Slime.png"
   },
   {
@@ -21255,7 +22353,9 @@
       "clone"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Slime (King)"
+     ]
     },
     {
      "name": "Great Sage",
@@ -21280,7 +22380,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Slime (King)"
+     ]
     }
    ],
    "abilities": [
@@ -21307,7 +22409,9 @@
     "income"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Slime (King)"
+   ],
    "icon": "img/units/Slime (King).png"
   },
   {
@@ -21340,7 +22444,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Smith John"
+     ]
     },
     {
      "name": "Undercover Agent",
@@ -21377,7 +22483,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Smith John"
+     ]
     },
     {
      "name": "Becoming Nuclear",
@@ -21390,7 +22498,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Smith John"
+     ]
     },
     {
      "name": "Insanity in Power",
@@ -21403,7 +22513,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Smith John"
+     ]
     }
    ],
    "abilities": [
@@ -21432,7 +22544,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Smith John"
+   ],
    "icon": "img/units/Smith John.png"
   },
   {
@@ -21519,7 +22633,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Soburo (Contract)"
+     ]
     },
     {
      "name": "Return To Zero",
@@ -21531,7 +22647,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Soburo (Contract)"
+     ]
     }
    ],
    "abilities": [
@@ -21556,7 +22674,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Soburo (Contract)"
+   ],
    "icon": "img/units/Soburo (Contract).png"
   },
   {
@@ -21586,7 +22706,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sokora"
+     ]
     }
    ],
    "abilities": [],
@@ -21597,7 +22719,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sokora"
+   ],
    "icon": "img/units/Sokora.png"
   },
   {
@@ -21627,7 +22751,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sokora (Angra Mainyu)"
+     ]
     },
     {
      "name": "Unending Corruption",
@@ -21640,7 +22766,9 @@
       "active-ability"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sokora (Angra Mainyu)"
+     ]
     },
     {
      "name": "Spreading Corruption",
@@ -21676,7 +22804,9 @@
     "spa-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sokora (Angra Mainyu)"
+   ],
    "icon": "img/units/Sokora (Angra Mainyu).png"
   },
   {
@@ -21811,7 +22941,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Song Jinwu and Igros"
+     ]
     },
     {
      "name": "The Monarch",
@@ -21846,7 +22978,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Song Jinwu and Igros"
+   ],
    "icon": "img/units/Song Jinwu and Igros.png"
   },
   {
@@ -21872,7 +23006,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosora"
+     ]
     }
    ],
    "abilities": [],
@@ -21881,7 +23017,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sosora"
+   ],
    "icon": "img/units/Sosora.png"
   },
   {
@@ -21907,7 +23045,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosora (Puppeteer)"
+     ]
     },
     {
      "name": "Sea of Flames",
@@ -21928,7 +23068,9 @@
     "burn"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sosora (Puppeteer)"
+   ],
    "icon": "img/units/Sosora (Puppeteer).png"
   },
   {
@@ -21964,7 +23106,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosuke"
+     ]
     }
    ],
    "abilities": [],
@@ -21973,7 +23117,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sosuke"
+   ],
    "icon": "img/units/Sosuke.png"
   },
   {
@@ -21999,7 +23145,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosuke (Hebi)"
+     ]
     }
    ],
    "abilities": [],
@@ -22008,7 +23156,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sosuke (Hebi)"
+   ],
    "icon": "img/units/Sosuke (Hebi).png"
   },
   {
@@ -22034,7 +23184,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosuke (Storm)"
+     ]
     },
     {
      "name": "Lightning Powered Assault",
@@ -22048,7 +23200,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosuke (Storm)"
+     ]
     },
     {
      "name": "Rogue Shinobi",
@@ -22061,7 +23215,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sosuke (Storm)"
+     ]
     },
     {
      "name": "Wielder of Lightning",
@@ -22095,7 +23251,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sosuke (Storm)"
+   ],
    "icon": "img/units/Sosuke (Storm).png"
   },
   {
@@ -22159,7 +23317,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Star Crusader (Platinum)"
+     ]
     },
     {
      "name": "Ora-Ora",
@@ -22226,7 +23386,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Star Crusader (Platinum)"
+   ],
    "icon": "img/units/Star Crusader (Platinum).png"
   },
   {
@@ -22251,7 +23413,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Stone Lee"
+     ]
     },
     {
      "name": "Taijutsu Specialist",
@@ -22271,7 +23435,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Stone Lee"
+   ],
    "icon": "img/units/Stone Lee.png"
   },
   {
@@ -22303,7 +23469,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Strongest Shinobi"
+     ]
     }
    ],
    "abilities": [],
@@ -22316,7 +23484,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Strongest Shinobi"
+   ],
    "icon": "img/units/Strongest Shinobi.png"
   },
   {
@@ -22348,7 +23518,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Strongest Shinobi (Martial)"
+     ]
     },
     {
      "name": "Declared The Strongest",
@@ -22361,7 +23533,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Strongest Shinobi (Martial)"
+     ]
     },
     {
      "name": "8th Gate",
@@ -22375,7 +23549,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Strongest Shinobi (Martial)"
+     ]
     }
    ],
    "abilities": [],
@@ -22391,7 +23567,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Strongest Shinobi (Martial)"
+   ],
    "icon": "img/units/Strongest Shinobi (Martial).png"
   },
   {
@@ -22422,7 +23600,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Student (Enraged)"
+     ]
     },
     {
      "name": "Burst of Anger",
@@ -22436,7 +23616,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Student (Enraged)"
+     ]
     },
     {
      "name": "Time Traveller Arrives",
@@ -22466,7 +23648,9 @@
    "buffTargets": [
     "DragonSphere"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Student (Enraged)"
+   ],
    "icon": "img/units/Student (Enraged).png"
   },
   {
@@ -22506,7 +23690,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sukono"
+     ]
     },
     {
      "name": "Divine Flames",
@@ -22519,7 +23705,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sukono"
+     ]
     },
     {
      "name": "The King of Curses",
@@ -22548,7 +23736,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sukono"
+     ]
     },
     {
      "name": "Chef's Preparations",
@@ -22577,7 +23767,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sukono"
+     ]
     }
    ],
    "tags": [
@@ -22595,7 +23787,9 @@
    "buffTargets": [
     "Curse"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sukono"
+   ],
    "icon": "img/units/Sukono.png"
   },
   {
@@ -22636,7 +23830,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Super Boo (Evil)"
+     ]
     },
     {
      "name": "PRODUCE!!",
@@ -22672,7 +23868,9 @@
     "summon"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Super Boo (Evil)"
+   ],
    "icon": "img/units/Super Boo (Evil).png"
   },
   {
@@ -22703,7 +23901,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Super Vogito"
+     ]
     },
     {
      "name": "Alright!",
@@ -22716,7 +23916,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Super Vogito"
+     ]
     },
     {
      "name": "Enough!",
@@ -22754,7 +23956,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Super Vogito"
+   ],
    "icon": "img/units/Super Vogito.png"
   },
   {
@@ -22784,7 +23988,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Sword Hunter (Void)"
+     ]
     },
     {
      "name": "Illumination",
@@ -22801,7 +24007,9 @@
      "buffTargets": [
       "all"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Sword Hunter (Void)"
+     ]
     }
    ],
    "abilities": [],
@@ -22818,7 +24026,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Sword Hunter (Void)"
+   ],
    "icon": "img/units/Sword Hunter (Void).png"
   },
   {
@@ -22879,7 +24089,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Teacher (Final Stand)"
+     ]
     },
     {
      "name": "One Armed Combatant",
@@ -22893,7 +24105,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Teacher (Final Stand)"
+     ]
     },
     {
      "name": "The Teacher's Anger",
@@ -22911,7 +24125,9 @@
      "buffTargets": [
       "DragonSphere"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Teacher (Final Stand)"
+     ]
     }
    ],
    "abilities": [],
@@ -22927,7 +24143,9 @@
    "buffTargets": [
     "DragonSphere"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Teacher (Final Stand)"
+   ],
    "icon": "img/units/Teacher (Final Stand).png"
   },
   {
@@ -23043,7 +24261,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tengon"
+     ]
     }
    ],
    "abilities": [],
@@ -23052,7 +24272,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Tengon"
+   ],
    "icon": "img/units/Tengon.png"
   },
   {
@@ -23080,7 +24302,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tengon (Flashiness)"
+     ]
     },
     {
      "name": "Rhythm of Battle",
@@ -23092,7 +24316,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tengon (Flashiness)"
+     ]
     },
     {
      "name": "Sound Blitz",
@@ -23106,7 +24332,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tengon (Flashiness)"
+     ]
     },
     {
      "name": "God of Sound",
@@ -23119,7 +24347,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tengon (Flashiness)"
+     ]
     },
     {
      "name": "Firework's Blast",
@@ -23153,7 +24383,9 @@
     "Fire",
     "Blast"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Tengon (Flashiness)"
+   ],
    "icon": "img/units/Tengon (Flashiness).png"
   },
   {
@@ -23266,7 +24498,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Falcon (of Darkness)"
+     ]
     },
     {
      "name": "Ethereal Body",
@@ -23302,7 +24536,9 @@
     "dr-bypass"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "The Falcon (of Darkness)"
+   ],
    "icon": "img/units/The Falcon (of Darkness).png"
   },
   {
@@ -23344,7 +24580,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Falcon (of Light)"
+     ]
     },
     {
      "name": "Ethereal Body",
@@ -23368,7 +24606,9 @@
       "summon"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Falcon (of Light)"
+     ]
     },
     {
      "name": "The White Falcon",
@@ -23415,7 +24655,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "The Falcon (of Light)"
+   ],
    "icon": "img/units/The Falcon (of Light).png"
   },
   {
@@ -23484,7 +24726,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The King"
+     ]
     }
    ],
    "abilities": [],
@@ -23492,7 +24736,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "The King"
+   ],
    "icon": "img/units/The King.png"
   },
   {
@@ -23519,7 +24765,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The King (Apostle)"
+     ]
     },
     {
      "name": "Fated Savior",
@@ -23539,7 +24787,9 @@
     "cleanse-allies"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "The King (Apostle)"
+   ],
    "icon": "img/units/The King (Apostle).png"
   },
   {
@@ -23567,7 +24817,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Smith"
+     ]
     }
    ],
    "abilities": [
@@ -23594,7 +24846,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "The Smith"
+   ],
    "icon": "img/units/The Smith.png"
   },
   {
@@ -23622,7 +24876,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Smith (Forged)"
+     ]
     },
     {
      "name": "Master Craftsman",
@@ -23668,7 +24924,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "The Smith (Forged)"
+   ],
    "icon": "img/units/The Smith (Forged).png"
   },
   {
@@ -23728,7 +24986,9 @@
       "income"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Struggler (Rampage)"
+     ]
     },
     {
      "name": "The Struggler",
@@ -23742,7 +25002,9 @@
       "stacks"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "The Struggler (Rampage)"
+     ]
     },
     {
      "name": "Beast of Darkness",
@@ -23782,7 +25044,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "The Struggler (Rampage)"
+   ],
    "icon": "img/units/The Struggler (Rampage).png"
   },
   {
@@ -23961,7 +25225,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Time Goddess (Crazed)"
+     ]
     },
     {
      "name": "Crazed Time Goddess",
@@ -24027,7 +25293,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Time Goddess (Crazed)"
+   ],
    "icon": "img/units/Time Goddess (Crazed).png"
   },
   {
@@ -24196,7 +25464,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Today's Strongest"
+     ]
     },
     {
      "name": "Strongest of Today",
@@ -24267,7 +25537,9 @@
     "aoe"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Today's Strongest"
+   ],
    "icon": "img/units/Today's Strongest.png"
   },
   {
@@ -24327,7 +25599,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Today's Strongest vs History's Strongest"
+     ]
     }
    ],
    "abilities": [
@@ -24357,7 +25631,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Today's Strongest vs History's Strongest"
+   ],
    "icon": "img/units/Today's Strongest vs History's Strongest.png"
   },
   {
@@ -24433,7 +25709,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Todu (Unleashed)"
+     ]
     },
     {
      "name": "Boogie Technique",
@@ -24475,7 +25753,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Todu (Unleashed)"
+     ]
     }
    ],
    "abilities": [
@@ -24501,7 +25781,9 @@
    "buffTargets": [
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Todu (Unleashed)"
+   ],
    "icon": "img/units/Todu (Unleashed).png"
   },
   {
@@ -24529,7 +25811,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Top Chef"
+     ]
     }
    ],
    "abilities": [],
@@ -24538,7 +25822,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Top Chef"
+   ],
    "icon": "img/units/Top Chef.png"
   },
   {
@@ -24719,7 +26005,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Trash Gamer (Twin Blades)"
+     ]
     }
    ],
    "abilities": [
@@ -24741,7 +26029,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Trash Gamer (Twin Blades)"
+   ],
    "icon": "img/units/Trash Gamer (Twin Blades).png"
   },
   {
@@ -24768,7 +26058,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tuji"
+     ]
     }
    ],
    "abilities": [],
@@ -24778,7 +26070,9 @@
     "bonus-vs"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Tuji"
+   ],
    "icon": "img/units/Tuji.png"
   },
   {
@@ -24805,7 +26099,9 @@
       "bonus-vs"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tuji (Sorcerer Killer)"
+     ]
     },
     {
      "name": "Challenging Infinity",
@@ -24819,7 +26115,9 @@
       "shield-pierce"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tuji (Sorcerer Killer)"
+     ]
     },
     {
      "name": "Cursed Inventory",
@@ -24843,7 +26141,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tuji (Sorcerer Killer)"
+     ]
     },
     {
      "name": "Strategic Weakpoint",
@@ -24887,7 +26187,9 @@
       "has-domain"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Tuji (Sorcerer Killer)"
+     ]
     }
    ],
    "tags": [
@@ -24901,7 +26203,9 @@
     "nullify"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Tuji (Sorcerer Killer)"
+   ],
    "icon": "img/units/Tuji (Sorcerer Killer).png"
   },
   {
@@ -24939,7 +26243,9 @@
       "follow-up"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Ultimate Rohan"
+     ]
     }
    ],
    "abilities": [],
@@ -24949,7 +26255,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Ultimate Rohan"
+   ],
    "icon": "img/units/Ultimate Rohan.png"
   },
   {
@@ -24981,7 +26289,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Unstable"
+     ]
     }
    ],
    "abilities": [],
@@ -24993,7 +26303,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Unstable"
+   ],
    "icon": "img/units/Unstable.png"
   },
   {
@@ -25025,7 +26337,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Unstable (Psychosis)"
+     ]
     },
     {
      "name": "Evil Takes Over",
@@ -25049,7 +26363,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Unstable (Psychosis)"
+     ]
     }
    ],
    "abilities": [],
@@ -25062,7 +26378,9 @@
     "repulse"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Unstable (Psychosis)"
+   ],
    "icon": "img/units/Unstable (Psychosis).png"
   },
   {
@@ -25090,7 +26408,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Valentine"
+     ]
     }
    ],
    "abilities": [],
@@ -25099,7 +26419,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Valentine"
+   ],
    "icon": "img/units/Valentine.png"
   },
   {
@@ -25160,7 +26482,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Valentine (Love Train)"
+     ]
     },
     {
      "name": "A Gift From the Other Side",
@@ -25172,7 +26496,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Valentine (Love Train)"
+     ]
     },
     {
      "name": "Ticket to Ride",
@@ -25184,7 +26510,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Valentine (Love Train)"
+     ]
     },
     {
      "name": "Election Won",
@@ -25197,7 +26525,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Valentine (Love Train)"
+     ]
     },
     {
      "name": "Invulnerable",
@@ -25246,7 +26576,9 @@
     "clone"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Valentine (Love Train)"
+   ],
    "icon": "img/units/Valentine (Love Train).png"
   },
   {
@@ -25277,7 +26609,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vigil"
+     ]
     }
    ],
    "abilities": [],
@@ -25289,7 +26623,9 @@
     "meter"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vigil"
+   ],
    "icon": "img/units/Vigil.png"
   },
   {
@@ -25351,7 +26687,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vigil (Power)"
+     ]
     },
     {
      "name": "You Shall Die!",
@@ -25375,7 +26713,9 @@
     "follow-up"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vigil (Power)"
+   ],
    "icon": "img/units/Vigil (Power).png"
   },
   {
@@ -25403,7 +26743,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita"
+     ]
     }
    ],
    "abilities": [],
@@ -25412,7 +26754,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vogita"
+   ],
    "icon": "img/units/Vogita.png"
   },
   {
@@ -25442,7 +26786,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita (Angel)"
+     ]
     },
     {
      "name": "The Villain Arrives",
@@ -25456,7 +26802,9 @@
       "aoe"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita (Angel)"
+     ]
     },
     {
      "name": "The Prince of Pride",
@@ -25468,7 +26816,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita (Angel)"
+     ]
     }
    ],
    "abilities": [
@@ -25493,7 +26843,9 @@
     "swap"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vogita (Angel)"
+   ],
    "icon": "img/units/Vogita (Angel).png"
   },
   {
@@ -25521,7 +26873,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita Super"
+     ]
     }
    ],
    "abilities": [],
@@ -25530,7 +26884,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vogita Super"
+   ],
    "icon": "img/units/Vogita Super.png"
   },
   {
@@ -25558,7 +26914,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Vogita Super (Awakened)"
+     ]
     },
     {
      "name": "Overwhelming Power",
@@ -25576,7 +26934,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Vogita Super (Awakened)"
+   ],
    "icon": "img/units/Vogita Super (Awakened).png"
   },
   {
@@ -25800,7 +27160,9 @@
       "dr-bypass"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "World Destroyer (Old)"
+     ]
     },
     {
      "name": "Father to Many",
@@ -25845,7 +27207,9 @@
     "repulse"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "World Destroyer (Old)"
+   ],
    "icon": "img/units/World Destroyer (Old).png"
   },
   {
@@ -25876,7 +27240,9 @@
       "meter"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Wrath God"
+     ]
     },
     {
      "name": "Divine Anger",
@@ -25889,7 +27255,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Wrath God"
+     ]
     },
     {
      "name": "Battle of Wills",
@@ -25918,7 +27286,9 @@
     "corruption"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Wrath God"
+   ],
    "icon": "img/units/Wrath God.png"
   },
   {
@@ -25946,7 +27316,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yehowach"
+     ]
     }
    ],
    "abilities": [],
@@ -25955,7 +27327,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Yehowach"
+   ],
    "icon": "img/units/Yehowach.png"
   },
   {
@@ -25983,7 +27357,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yehowach (Almighty)"
+     ]
     },
     {
      "name": "The Man Who Saw the Future",
@@ -26004,7 +27380,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yehowach (Almighty)"
+     ]
     },
     {
      "name": "Return of the King",
@@ -26017,7 +27395,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yehowach (Almighty)"
+     ]
     },
     {
      "name": "The King Giveth",
@@ -26046,7 +27426,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yehowach (Almighty)"
+     ]
     }
    ],
    "abilities": [
@@ -26079,7 +27461,9 @@
     "Peroxide",
     "all"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Yehowach (Almighty)"
+   ],
    "icon": "img/units/Yehowach (Almighty).png"
   },
   {
@@ -26109,7 +27493,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yomomata"
+     ]
     }
    ],
    "abilities": [],
@@ -26120,7 +27506,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Yomomata"
+   ],
    "icon": "img/units/Yomomata.png"
   },
   {
@@ -26150,7 +27538,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yomomata (Captain)"
+     ]
     },
     {
      "name": "South",
@@ -26162,7 +27552,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yomomata (Captain)"
+     ]
     },
     {
      "name": "Release",
@@ -26187,7 +27579,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Yomomata (Captain)"
+     ]
     },
     {
      "name": "Long Lost Cruelty",
@@ -26239,7 +27633,9 @@
     "stacks"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Yomomata (Captain)"
+   ],
    "icon": "img/units/Yomomata (Captain).png"
   },
   {
@@ -26354,7 +27750,9 @@
      "buffTargets": [
       "Giant"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Zak"
+     ]
     }
    ],
    "abilities": [],
@@ -26367,7 +27765,9 @@
    "buffTargets": [
     "Giant"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Zak"
+   ],
    "icon": "img/units/Zak.png"
   },
   {
@@ -26399,7 +27799,9 @@
      "buffTargets": [
       "Giant"
      ],
-     "selfTargets": []
+     "selfTargets": [
+      "Zak (Ape Giant)"
+     ]
     },
     {
      "name": "Curse of the Shifter",
@@ -26412,7 +27814,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Zak (Ape Giant)"
+     ]
     }
    ],
    "abilities": [
@@ -26436,7 +27840,9 @@
    "buffTargets": [
     "Giant"
    ],
-   "selfTargets": [],
+   "selfTargets": [
+    "Zak (Ape Giant)"
+   ],
    "icon": "img/units/Zak (Ape Giant).png"
   },
   {
@@ -26507,7 +27913,9 @@
       "self-buff"
      ],
      "buffTargets": [],
-     "selfTargets": []
+     "selfTargets": [
+      "Zion (Burdelyon)"
+     ]
     }
    ],
    "abilities": [],
@@ -26518,7 +27926,9 @@
     "self-buff"
    ],
    "buffTargets": [],
-   "selfTargets": [],
+   "selfTargets": [
+    "Zion (Burdelyon)"
+   ],
    "icon": "img/units/Zion (Burdelyon).png"
   }
  ],

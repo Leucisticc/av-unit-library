@@ -113,9 +113,9 @@ main{flex:1;display:grid;grid-template-columns:var(--listw,380px) 6px minmax(0,1
 .dd .uhit .m{font-size:11px}
 .dd .picked{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid var(--accent);border-radius:6px;font-size:13px}
 .dd .fly{position:relative}
-.dd .flyrow{display:flex;align-items:center;gap:8px;padding:5px 8px 5px 28px;border-radius:6px;cursor:pointer;font-size:12px;color:var(--accent)}
-.dd .flyrow:hover{background:var(--panel2)}
-.dd .flyrow .arr{margin-left:auto;color:var(--muted)}
+.dd label .arr{margin-left:auto;color:var(--muted);padding-left:10px}
+.dd label .n{font:11px "IBM Plex Mono",monospace;color:var(--accent);margin-left:6px}
+.dd label .arr+.x{margin-left:6px}
 .dd .menu2{display:none;position:absolute;left:100%;top:-6px;margin-left:2px;min-width:240px}
 .dd .fly:hover>.menu2,.dd .fly.open>.menu2{display:block}
 .dd.flip .menu2{left:auto;right:100%;margin-left:0;margin-right:2px}
@@ -183,7 +183,7 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
     <h3>Filters</h3>
     <ul>
       <li><b>Damage over Time, Crowd Control, Damage Amplification, Other Effects</b> — every status effect on the wiki's Status Effects page, in its groups. Tick an effect to show units that <em>apply</em> it. Unit-specific effects (Stone, Despair, Infinite Spin…) also carry the general effect they do (Stun, Slow, Repulse…). Units that only react to it ("deals more damage to Bleeding enemies") are not included — look under Mechanics → <em>Conditional Bonus Damage</em> for those.</li>
-      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it. Hover "who gets it" under Buffs allies to narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit. On the Memoria tab, Buffs self has the same flyout ("which unit can wear it"): a universal passive works on anyone, an Exclusive passive only on its unit or element.</li>
+      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it. Hover <em>Buffs allies</em> or <em>Buffs self</em> for a side panel that narrows to an element, a group, or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit. For Buffs self the panel asks which unit is <em>affected</em>: a memoria's universal passive affects anyone wearing it, an Exclusive or conditional one (Cosmic units only…) affects only those; a unit's own self-buff affects only that unit. To find memoria a unit can simply wear, exclude Exclusive instead.</li>
       <li><b>Mechanics</b> — summons, meters, stacks, ignoring damage reduction, anti-shield, hits-everything.</li>
       <li><b>Element, Rarity, State, Group</b> — the unit itself. State is <em>Unevolved</em> (has an evolution), <em>Evolved</em>, or <em>No evolution</em>.</li>
     </ul>
@@ -450,7 +450,7 @@ function renderDropdowns(q){
     const on = new Set((q.include[gid]||[]).flat()), neg = new Set(q.exclude[gid]||[]);
     const rows = Object.entries(TAGS).filter(([,t]) => t.group === gid);
     html += `<div class="dd fx${openKey===gid?' open':''}" data-key="${gid}" style="--c:var(--${gid})"><button type="button">${esc(glabel)}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
-      ${rows.map(([tid,t]) => `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>` + (tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', 'who gets it') : tid==='self-buff' && state.tab==='memoria' ? targetFly(q, 'selftarget', 'selfunit', 'which unit can wear it') : '')).join('')}
+      ${rows.map(([tid,t]) => { const lab = `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}${tid==='ally-buff'||tid==='self-buff'?'<span class="arr">▸</span>':''}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>`; return tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', lab) : tid==='self-buff' ? targetFly(q, 'selftarget', 'selfunit', lab) : lab; }).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
@@ -484,8 +484,8 @@ function targetFly(q, key, pickKey, title){
   const glabel = t => t === 'Swap' ? 'Swap units' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
   const picked = unit && BY_SLUG[unit];
   const active = on.size + (picked ? 1 : 0);
-  return `<div class="fly${state.fly===key?' open':''}" data-fly="${key}"><div class="flyrow">${title}${active?` <span class="n">${active}</span>`:''}<span class="arr">▸</span></div><div class="menu menu2">
-    <div class="subhead">any</div>${row('all', key==='selftarget' ? 'Any unit (universal passive)' : 'All allies (no restriction)')}
+  return `<div class="fly${state.fly===key?' open':''}" data-fly="${key}">${title.replace('<span class="arr">▸</span>', `${active?`<span class="n">${active}</span>`:''}<span class="arr">▸</span>`)}<div class="menu menu2">
+    <div class="subhead">${key==='selftarget' ? 'affects which unit' : 'who gets it'}</div>${row('all', key==='selftarget' ? 'Any unit' : 'All allies (no restriction)')}
     <div class="subhead">by element</div>${elems.map(e => row(e, elem(e))).join('')}
     <div class="subhead">by group</div>${groups.map(t => row(t, esc(glabel(t)))).join('')}
     ${cnt.unspecified ? `<div class="subhead">unknown</div>${row('Unspecified', 'Target not stated in text')}` : ''}
@@ -510,7 +510,6 @@ $('#dds').addEventListener('keydown', e => { if (e.target.classList.contains('up
 $('#dds').addEventListener('click', e => {
   const dd = e.target.closest('.dd'); if (!dd) return;
   if (e.target.classList.contains('upick-in')) return;
-  const flyrow = e.target.closest('.flyrow'); if (flyrow){ const k = flyrow.parentElement.dataset.fly; state.fly = state.fly === k ? null : k; renderDropdowns(parseQuery(state.q)); document.querySelector(`.dd[data-key=${dd.dataset.key}]`)?.classList.add('open'); return; }
   const hit = e.target.closest('.uhit[data-slug]'); if (hit){ const pk = hit.closest('.upick').dataset.pick; state.fly = pk === 'selfunit' ? 'selftarget' : 'bufftarget'; setKeyValues(pk, [hit.dataset.slug]); const need = pk === 'selfunit' ? 'self-buff' : 'ally-buff'; if (!(parseQuery(state.q).include.buffs||[]).flat().includes(need)) toggleToken('buffs:' + need); dd.classList.add('open'); return; }
   const un = e.target.closest('[data-unpick]'); if (un){ setKeyValues(un.dataset.unpick, []); dd.classList.add('open'); return; }
   if (e.target.closest('.dd>button')){ const was = dd.classList.contains('open'); document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); if (!was) dd.classList.add('open'); return; }
@@ -555,6 +554,8 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
   apply();
 })();
 document.addEventListener('click', e => { if (!e.target.closest('.dd')) document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); });
+// a flyout pinned open by a click inside it unpins when the pointer leaves it
+$('#dds').addEventListener('mouseout', e => { const f = e.target.closest('.fly'); if (f && !f.contains(e.relatedTarget) && state.fly === f.dataset.fly){ state.fly = null; f.classList.remove('open'); } });
 $('#q').addEventListener('input', e => { state.q = e.target.value; writeHash(); render(); });
 $('#pills').addEventListener('click', e => { const p = e.target.closest('.pill'); if (p) toggleToken(p.dataset.tok); });
 $('#rows').addEventListener('click', e => { const r = e.target.closest('.u'); if (r) select(visible[+r.dataset.i].slug); });

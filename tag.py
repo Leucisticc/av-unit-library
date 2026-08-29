@@ -167,9 +167,12 @@ def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = No
         for entry in u["passives"] + u["abilities"]:
             # Who a self-buff can end up on. Units: only themselves. Memoria: the wearer —
             # anyone for the universal passive, the Specialty unit(s)/element(s) otherwise.
-            if "self-buff" in entry["tags"] and u.get("kind") == "memoria" and "selfTargets" not in entry:
-                entry["selfTargets"] = (u["exclusiveUnits"] or u["elements"] or ["all"]) if entry.get("specialty") else ["all"]
-            elif "self-buff" not in entry["tags"] or u.get("kind") != "memoria":
+            if "self-buff" in entry["tags"] and "selfTargets" not in entry:
+                if u.get("kind") == "memoria":
+                    entry["selfTargets"] = (u["exclusiveUnits"] or u["elements"] or ["all"]) if entry.get("specialty") else ["all"]
+                else:
+                    entry["selfTargets"] = [u["name"]]   # a unit's self-buff only ever affects itself
+            elif "self-buff" not in entry["tags"]:
                 entry["selfTargets"] = []
             for t in entry["selfTargets"]:
                 if t not in self_targets:
