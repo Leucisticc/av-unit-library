@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AV Unit Library</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+ --bg:#f2f4f8;--panel:#ffffff;--panel2:#e9edf4;--line:#d3d9e4;--text:#171b26;--muted:#5f6a80;--accent:#b8821a;--accent-ink:#fff;--hl:#ffe08a;--hl-ink:#2a1e00;
+ --dot:#c8402f;--cc:#6b46d6;--amp:#c26a12;--effect:#1a74b8;--buffs:#1f8a4c;--mech:#0f766e;
+ --Rare:#3f6fd6;--Epic:#8a4fd6;--Legendary:#b8821a;--Mythic:#c8402f;--Secret:#3a3f4d;--Vanguard:#0f8a9a;--Exclusive:#c2378f;--Unknown:#6b7280;
+ --radius:8px;--shadow:0 1px 2px rgba(10,14,25,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#0b0d12;--panel:#131722;--panel2:#1a2030;--line:#262e40;--text:#e7eaf2;--muted:#8791a6;--accent:#e9b44c;--accent-ink:#1a1204;--hl:#e9b44c;--hl-ink:#1a1204;
+ --dot:#ff8a7a;--cc:#b99cff;--amp:#f0b06a;--effect:#6fc6ff;--buffs:#7ddb9f;--mech:#4fd1c5;
+ --Rare:#8fb4ff;--Epic:#c9a0ff;--Legendary:#f0c86a;--Mythic:#ff8a7a;--Secret:#f2f4f8;--Vanguard:#7ee8f2;--Exclusive:#ff9edc;--Unknown:#9aa3b5;--shadow:none}}
+:root[data-theme="dark"]{
+ --bg:#0b0d12;--panel:#131722;--panel2:#1a2030;--line:#262e40;--text:#e7eaf2;--muted:#8791a6;--accent:#e9b44c;--accent-ink:#1a1204;--hl:#e9b44c;--hl-ink:#1a1204;
+ --dot:#ff8a7a;--cc:#b99cff;--amp:#f0b06a;--effect:#6fc6ff;--buffs:#7ddb9f;--mech:#4fd1c5;
+ --Rare:#8fb4ff;--Epic:#c9a0ff;--Legendary:#f0c86a;--Mythic:#ff8a7a;--Secret:#f2f4f8;--Vanguard:#7ee8f2;--Exclusive:#ff9edc;--Unknown:#9aa3b5;--shadow:none}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.5 "IBM Plex Sans",system-ui,sans-serif;display:flex;flex-direction:column;height:100vh;overflow:hidden}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 20px 14px;display:flex;flex-direction:column;gap:12px;flex:none}
+.brand{display:flex;align-items:baseline;gap:14px;padding-right:96px;min-height:34px}
+.topbtns{position:absolute;top:12px;right:20px;display:flex;gap:8px;z-index:5}
+.brand h1{font:700 18px/1 "Chakra Petch",sans-serif;letter-spacing:.06em;text-transform:uppercase;margin:0}
+.brand .sub{color:var(--muted);font-size:12px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#dds{gap:10px 8px}
+#q{flex:1;min-width:300px;padding:10px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--text);font:15px "IBM Plex Mono",monospace;outline:none}
+#q:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.dd{position:relative}
+.dd>button{padding:9px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--text);font:13px "IBM Plex Sans",sans-serif;cursor:pointer;display:flex;gap:6px;align-items:center}
+.dd>button:hover,.dd.open>button{border-color:var(--accent)}
+.dd>button .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent)}
+.dd>button::after{content:"▾";color:var(--muted);font-size:11px}
+.dd .menu{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:240px;
+z-index:20;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.25);padding:6px;max-height:320px;overflow:auto}
+.dd.open .menu{display:block}
+.dd.flip .menu{left:auto;right:0}
+.dd label{display:flex;gap:8px;align-items:center;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:13px;white-space:nowrap}
+.dd label img,.t img,.pill img{width:18px;height:18px;object-fit:contain;flex:none}
+.dd label .x{margin-left:auto;color:var(--muted);font-size:11px;padding-left:10px;cursor:pointer}
+.dd label .x:hover{color:var(--dot)}
+.dd.fx>button{border-left:3px solid var(--c)}
+.t{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:1px 8px 1px 4px;border-radius:999px;border:1px solid var(--c);color:var(--c);cursor:pointer;line-height:1.5}
+.t:not(:has(img)){padding-left:8px}
+.pill{display:inline-flex;align-items:center;gap:5px}
+.dd label:hover{background:var(--panel2)}
+.dd input{accent-color:var(--accent);margin:0}
+.dd .clr{display:block;width:100%;margin-top:4px;padding:5px;border:0;border-top:1px solid var(--line);background:none;color:var(--muted);font-size:12px;cursor:pointer;text-align:left}
+mark.tg{background:color-mix(in srgb,var(--c) 30%,transparent);color:inherit;box-shadow:inset 0 -2px 0 var(--c);border-radius:2px;padding:0 2px}
+select{padding:8px 10px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--text);font:13px "IBM Plex Sans",sans-serif}
+select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.help{color:var(--muted);font-size:12px}
+.help code{font-family:"IBM Plex Mono",monospace;background:var(--panel2);padding:0 5px;border-radius:4px}
+kbd{font-family:"IBM Plex Mono",monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;font-size:11px}
+.chips{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+.chips .g{font:600 11px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--c);margin:0 4px 0 10px;padding-left:8px;border-left:2px solid var(--c)}
+.chips .g:first-child{margin-left:0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:999px;padding:2px 10px;font-size:12px;cursor:pointer;user-select:none;line-height:1.5}
+.chip:hover{border-color:var(--c)}
+.chip.on{border-color:var(--c);color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);font-weight:500}
+.chip.neg{text-decoration:line-through;opacity:.75}
+.chip:focus-visible{outline:2px solid var(--accent)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;min-height:0}
+.pills:empty{display:none}
+.pill{font:12px "IBM Plex Mono",monospace;border-radius:6px;padding:2px 8px;background:var(--panel2);border:1px solid var(--line);cursor:pointer}
+.pill b{color:var(--accent);font-weight:500}.pill:hover{border-color:var(--applies)}
+main{flex:1;display:grid;grid-template-columns:380px minmax(0,1fr);min-height:0}
+#list{overflow:auto;border-right:1px solid var(--line);background:var(--bg)}
+#count{padding:8px 14px;color:var(--muted);font-size:12px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:1}
+.u{padding:9px 14px 9px 12px;width:100%;box-sizing:border-box;border-bottom:1px solid var(--line);cursor:pointer;border-left:3px solid transparent}
+.u:hover{background:var(--panel)}
+.u.sel{background:var(--panel);border-left-color:var(--accent)}
+.u .n{font:600 15px "Chakra Petch",sans-serif;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.u .m{color:var(--muted);font-size:12px}
+.u .s{color:var(--muted);font-size:12px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r{font:600 10px "Chakra Petch",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:1px 6px;border-radius:4px;border:1px solid var(--line);background:var(--rg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rn{background:var(--rg);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.el{display:inline-flex;align-items:center;gap:4px;color:var(--ec);font-weight:500}
+.el img{width:14px;height:14px;object-fit:contain}
+.dd label.sub{padding-left:28px;font-size:12px}
+.dd label.sub img{width:15px;height:15px}
+.dd label.dim{opacity:.45}
+.dd .cnt{margin-left:auto;padding-left:10px;font:11px "IBM Plex Mono",monospace;color:var(--muted)}
+.dd .upick{padding:4px 8px 6px 28px}
+.dd .upick input{width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:13px "IBM Plex Sans",sans-serif;outline:none}
+.dd .upick input:focus{border-color:var(--accent)}
+.dd .uhit{padding:5px 8px;border-radius:6px;cursor:pointer;font-size:13px;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.dd .uhit:hover{background:var(--panel2)}
+.dd .uhit .m{font-size:11px}
+.dd .picked{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid var(--accent);border-radius:6px;font-size:13px}
+.dd .subhead{padding:6px 8px 2px 28px;font:600 10px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+#help{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);font:700 16px "Chakra Petch",sans-serif;cursor:pointer;flex:none}
+#help:hover,#help.open{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+#helpbox,#creditbox{display:none;position:absolute;right:20px;top:54px;z-index:30;width:min(560px,calc(100vw - 32px));background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.35);padding:16px 20px;font-size:13px;line-height:1.55;max-height:80vh;overflow:auto}
+#helpbox.open,#creditbox.open{display:block}
+#creditbox{width:320px;padding:22px 22px 18px;text-align:center}
+#creditbox .av{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent);margin-bottom:12px}
+#creditbox .nm{font:700 22px "Chakra Petch",sans-serif;letter-spacing:.04em}
+#creditbox .rl{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin:2px 0 16px}
+#creditbox .lk{display:flex;flex-direction:column;gap:8px}
+#creditbox .lk a,#creditbox .lk button{display:flex;align-items:center;gap:10px;justify-content:center;padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);text-decoration:none;font:500 13px "IBM Plex Sans",sans-serif;cursor:pointer}
+#creditbox .lk a:hover,#creditbox .lk button:hover{border-color:var(--accent)}
+#creditbox .lk svg{width:18px;height:18px;flex:none}
+#creditbox .lk .mono{color:var(--accent)}
+#credits{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center;padding:0}
+#credits svg{width:18px;height:22px}
+#credits:hover,#credits.open{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+#helpbox h3{margin:14px 0 4px;font:600 12px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+#helpbox h3:first-child{margin-top:0}
+#helpbox p{margin:0 0 6px}
+#helpbox code{font-family:"IBM Plex Mono",monospace;background:var(--panel2);padding:0 5px;border-radius:4px}
+#helpbox ul{margin:0 0 6px;padding-left:18px}
+header{position:relative}
+#detail{overflow:auto;padding:20px 28px 40px;background:var(--panel)}
+.dh h2{font:700 26px/1.1 "Chakra Petch",sans-serif;margin:0 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;text-wrap:balance}
+.meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:10px}
+.meta a{color:var(--accent);cursor:pointer;text-decoration:none}.meta a:hover{text-decoration:underline}
+.tagrow{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px}
+h3.sec{font:600 12px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:22px 0 10px;display:flex;align-items:center;gap:10px}
+h3.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
+.card h4{margin:0 0 6px;font:600 15px "Chakra Petch",sans-serif;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card .src{font:12px "IBM Plex Mono",monospace;color:var(--muted);font-weight:400}
+.card p{margin:0;white-space:pre-wrap;max-width:72ch}
+.t:hover{background:color-mix(in srgb,var(--c) 14%,transparent)}
+.rfx{display:inline-flex;align-items:center;gap:3px;color:var(--c,inherit);font-weight:600}
+.rfx img{width:16px;height:16px;object-fit:contain;vertical-align:-3px}
+.rgrp{font-weight:600;color:var(--accent)}
+.rnum{color:#00fe6c;font-weight:600}
+:root:not([data-theme="dark"]) .rnum{color:#0a8f3c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rnum{color:#00fe6c}}
+.rhead{font-weight:700}
+mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
+.empty{color:var(--muted);padding:60px 20px;text-align:center;max-width:46ch;margin:0 auto}
+.empty b{font-family:"Chakra Petch",sans-serif;color:var(--text);display:block;font-size:18px;margin-bottom:8px}
+.back{display:none;margin-bottom:12px;color:var(--accent);cursor:pointer;font-size:13px}
+@media (max-width:760px){main{grid-template-columns:1fr}#detail{display:none}body.showing #list{display:none}body.showing #detail{display:block}.back{display:inline-block}}
+@media (prefers-reduced-motion:no-preference){.chip,.u,.t{transition:background .12s,border-color .12s}}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbtns"><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
+  <div class="brand"><h1>AV Unit Library</h1><span class="sub">passives &amp; abilities of every Anime Vanguards unit · wiki data <span id="gen" class="mono"></span></span></div>
+  <div class="bar">
+    <input id="q" placeholder="unit name or a word from a passive, or use the filters below" autocomplete="off" spellcheck="false" aria-label="Search and filter">
+  </div>
+  <div id="dds" class="bar"></div>
+  <div id="pills" class="pills"></div>
+  <div id="creditbox" role="dialog" aria-label="Credits"></div>
+  <div id="helpbox" role="dialog" aria-label="How to use">
+    <h3>What this is</h3>
+    <p>Every Anime Vanguards unit with the full text of its passives and active abilities, pulled from the wiki. Each passive is tagged with the status effects it applies and the buffs it gives, so you can find units by what they do instead of guessing keywords.</p>
+    <h3>Filters</h3>
+    <ul>
+      <li><b>Damage over Time, Crowd Control, Damage Amplification, Other Effects</b> — the wiki's status-effect groups. Tick an effect to show units that <em>apply</em> it. Units that only react to it ("deals more damage to Bleeding enemies") are not included — look under Mechanics → <em>Bonus dmg vs condition</em> for those.</li>
+      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it; under Buffs allies you can narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit.</li>
+      <li><b>Mechanics</b> — summons, meters, stacks, ignoring damage reduction, anti-shield, hits-everything.</li>
+      <li><b>Element, Rarity, State, Group</b> — the unit itself. State is <em>Unevolved</em> (has an evolution), <em>Evolved</em>, or <em>No evolution</em>.</li>
+    </ul>
+    <p>Ticking several boxes in one dropdown means <b>any of them</b>. Using several dropdowns means <b>all of them</b>. Click ✕ on a row to exclude that effect instead.</p>
+    <h3>Search box</h3>
+    <p>Plain words search unit names and passive / ability text (not trivia). The filters write short codes into the same box, so you can also type them:</p>
+    <ul>
+      <li><code>dot:bleed</code> applies Bleed · <code>dot:bleed+burn</code> Bleed <b>or</b> Burn · <code>dot:bleed dot:burn</code> Bleed <b>and</b> Burn</li>
+      <li><code>buffs:ally-buff bufftarget:fire</code> buffs Fire allies · <code>buffsunit:sukono</code> buffs that reach Sukono · <code>cc:repulse -element:fire</code> repulses, not Fire</li>
+      <li>Codes: <code>dot cc amp effect buffs mech bufftarget buffsunit element rarity state group</code>; <code>tag:x</code> matches any group; <code>-</code> in front excludes.</li>
+    </ul>
+    <h3>Reading a unit</h3>
+    <p>Click a unit to see all its passives, familiar passives and actives. While a filter is on, the exact words that earned the tag are underlined in that group's colour, so you can check the tag yourself. Tag pills on a card are clickable — they add that filter.</p>
+    <h3>Keys</h3>
+    <p><kbd>/</kbd> focus search · <kbd>Esc</kbd> clear · <kbd>↑</kbd> <kbd>↓</kbd> move through the list · back button returns to the previous view</p>
+  </div>
+</header>
+<main>
+  <div id="list"><div id="count"></div><div id="rows"></div></div>
+  <div id="detail"></div>
+</main>
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const TAGS = DATA.tags, GROUPS = DATA.groups, UNITS = DATA.units;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm = s => s.toLowerCase().replace(/ /g,'_');
+const KEYS = new Set([...Object.keys(GROUPS),'tag','element','rarity','state','group','bufftarget','buffsunit']);
+const BY_SLUG = Object.fromEntries(UNITS.map(u => [norm(u.slug), u]));
+const RARITY = DATA.rarity, ELEM = DATA.elements;
+const isDark = () => document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+const rStyle = r => { const st = RARITY[r] || RARITY.Unknown; return `--rg:${isDark() ? st.gradient : st.solid}`; };
+const elem = e => { const x = ELEM[e] || ELEM.Unknown; return `<span class="el" style="--ec:${x.color}"><img src="${x.icon}" alt="">${esc(e)}</span>`; };
+const META = new Set(['element','rarity','state','group']);
+const $dds = () => $('#dds');
+$('#gen').textContent = DATA.generated;
+
+function parseQuery(str){
+  const q = {text:[], include:{}, exclude:{}};
+  for (const tok of str.trim().split(/\s+/).filter(Boolean)){
+    const m = tok.match(/^(-?)([a-z]+):(.+)$/i);
+    if (m && KEYS.has(m[2].toLowerCase())){
+      const key = m[2].toLowerCase(), vals = m[3].toLowerCase().split('+').filter(Boolean);
+      if (m[1]) (q.exclude[key] ||= []).push(...vals); else (q.include[key] ||= []).push(vals);
+    } else q.text.push(tok.toLowerCase());
+  }
+  return q;
+}
+function unitValues(u, key){
+  switch(key){
+    case 'element': return u.elements.map(norm);
+    case 'rarity': return [norm(u.rarity)];
+    case 'state': return [norm(u.state)];
+    case 'group': return u.groups.map(norm);
+    case 'tag': return u.tags;
+    case 'bufftarget': return u.buffTargets.map(norm);
+    case 'buffsunit': return buffReach(u);
+    default: return u.tags.filter(t => TAGS[t] && TAGS[t].group === key);
+  }
+}
+// every unit slug this unit's ally buffs can reach: all allies, by element, by group, or by name
+function buffReach(u){
+  if (u._reach) return u._reach;
+  const t = new Set(u.buffTargets.map(norm)); const out = [];
+  if (t.size) for (const v of UNITS){
+    if (v === u) continue;
+    if (t.has('all') || v.elements.some(e => t.has(norm(e))) || v.groups.some(g => t.has(norm(g))) || t.has(norm(v.name)) || (t.has('swap') && v.tags.includes('swap'))) out.push(norm(v.slug));
+  }
+  return u._reach = out;
+}
+const unitText = u => u._text ||= [u.name, ...[...u.passives, ...u.abilities].map(e => e.name + ' ' + e.desc)].join('\n').toLowerCase();
+function matches(u, q){
+  for (const [key, sets] of Object.entries(q.include)){ const have = unitValues(u, key); for (const set of sets) if (!set.some(v => have.includes(v))) return false; }
+  for (const [key, vals] of Object.entries(q.exclude)){ const have = unitValues(u, key); if (vals.some(v => have.includes(v))) return false; }
+  const t = unitText(u); return q.text.every(w => t.includes(w));
+}
+const NEG = DATA.negations.map(p => new RegExp(p,'i'));
+const RULES = Object.fromEntries(Object.entries(TAGS).map(([k,t]) => [k, t.patterns.map(p => new RegExp(p,'gi'))]));
+const SUPPRESS = Object.fromEntries(Object.entries(TAGS).map(([k,t]) => [k, (t.suppress||[]).map(p => new RegExp(p,'i'))]));
+function clauseBefore(text, start, width, stops){
+  let w = text.slice(Math.max(0, start - width), start), cut = -1;
+  for (const c of stops) cut = Math.max(cut, w.lastIndexOf(c));
+  return cut >= 0 ? w.slice(cut + 1) : w;
+}
+function dropped(text, start, tid){
+  const n = clauseBefore(text, start, 40, '.;\n');
+  for (const r of NEG){ const m = r.exec(n); if (m && !/\b(?:inflicts?|appl(?:y|ies)|gains?|grants?|becomes?|buffs?)\b/i.test(n.slice(m.index + m[0].length))) return true; }
+  const s = SUPPRESS[tid]; if (!s.length) return false;
+  const w = clauseBefore(text, start, 60, '.;'); return s.some(r => r.test(w));
+}
+function tagSpans(text, tids){
+  // mirrors tag.py: pattern hit minus negation / suppress context
+  const spans = [];
+  for (const tid of tids) for (const re of RULES[tid]||[]){
+    re.lastIndex = 0; let m;
+    while ((m = re.exec(text))){ if (!dropped(text, m.index, tid)) spans.push([m.index, m.index+m[0].length, tid]); if (!m[0]) re.lastIndex++; }
+  }
+  return spans.sort((a,b)=>a[0]-b[0]);
+}
+// Parse ⟦kind|a|b⟧ tokens into segments; each segment carries its visible text so
+// highlight spans computed on the plain text can be mapped back onto the rich render.
+const FX_BY_LABEL = Object.fromEntries(Object.entries(TAGS).filter(([,t]) => t.icon).map(([id,t]) => [t.label.toLowerCase(), id]));
+const FX_ALIAS = {'black flame':'black-flames','black flames':'black-flames','bleeding':'bleed','burning':'burn','burned':'burn','slowed':'slow','stunned':'stun','frozen':'freeze','freezes':'freeze','nullified':'nullify','cleaved':'cleave','stoned':'stone','time stop':'timestop','timestop':'timestop','tethered':'tethered','petrified':'petrified'};
+const fxId = name => { const k = name.toLowerCase(); return FX_BY_LABEL[k] || FX_ALIAS[k] || null; };
+function richSegments(rich){
+  const segs = []; const re = /\u27e6([^\u27e7]*)\u27e7/g; let i = 0, m;
+  while ((m = re.exec(rich))){
+    if (m.index > i) segs.push({text: rich.slice(i, m.index)});
+    const [kind, a, b] = m[1].split('|');
+    const text = kind === 'fx' ? (b ?? a) : kind === 'grp' ? (b ?? a) : kind === 'rar' || kind === 'ct' || kind === 'c' ? (b ?? '') : a;
+    segs.push({text, kind, a, b}); i = m.index + m[0].length;
+  }
+  if (i < rich.length) segs.push({text: rich.slice(i)});
+  return segs;
+}
+const CT_COLOR = {Nature:'#00fe6c', TitleBlue:'#6bf5fa', Fire:'#f88f2d'};
+function wrapSeg(seg, inner){
+  switch (seg.kind){
+    case 'fx': { const id = fxId(seg.a); const t = id && TAGS[id]; return t ? `<span class="rfx" style="--c:var(--${t.group})">${icon(t)}${inner}</span>` : `<span class="rfx">${inner}</span>`; }
+    case 'el': { const x = ELEM[seg.a] || ELEM.Unknown; return `<span class="el" style="--ec:${x.color}"><img src="${x.icon}" alt="">${inner}</span>`; }
+    case 'grp': return `<span class="rgrp">${inner}</span>`;
+    case 'rar': return `<span class="rn" style="${rStyle(seg.a)}">${inner}</span>`;
+    case 'ct': return `<span class="rnum" style="color:${CT_COLOR[seg.a] || 'var(--accent)'}">${inner}</span>`;
+    case 'num': return `<span class="rnum">${inner}</span>`;
+    case 'c': return `<span class="rhead" style="color:#${seg.a}">${inner}</span>`;
+    case 'ref': return `<span class="rgrp">${inner}</span>`;
+    default: return inner;
+  }
+}
+function wordSpans(text, words){
+  const out = [], low = text.toLowerCase();
+  for (const w of words.filter(Boolean)){ let i = 0; while ((i = low.indexOf(w, i)) >= 0){ out.push([i, i + w.length, null]); i += w.length; } }
+  return out;
+}
+// Render rich text; `plain` must equal the concatenated visible text of `rich`.
+function renderRich(rich, plain, words, tids){
+  const spans = [...tagSpans(plain, tids), ...wordSpans(plain, words)].sort((a,b) => a[0]-b[0]);
+  const segs = richSegments(rich);
+  let pos = 0, html = '';
+  for (const seg of segs){
+    const start = pos, end = pos + seg.text.length; let inner = '', i = start;
+    for (const [a,b,tid] of spans){
+      if (b <= start || a >= end) continue;
+      const sa = Math.max(a, start), sb = Math.min(b, end);
+      if (sa < i) continue;
+      inner += esc(plain.slice(i, sa));
+      const piece = esc(plain.slice(sa, sb));
+      inner += tid ? `<mark class="tg" style="--c:var(--${TAGS[tid].group})" title="${esc(TAGS[tid].label)}">${piece}</mark>` : `<mark>${piece}</mark>`;
+      i = sb;
+    }
+    inner += esc(plain.slice(i, end));
+    html += wrapSeg(seg, inner); pos = end;
+  }
+  return html;
+}
+function hlTags(text, words, tids){ return renderRich(text, text, words, tids); }
+function hl(text, words){
+  let out = esc(text);
+  for (const w of words.filter(Boolean)) out = out.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','ig'), '<mark>$1</mark>');
+  return out;
+}
+function snippet(u, q){
+  const words = q.text, wantTags = Object.entries(q.include).filter(([k])=>!META.has(k)).flatMap(([,s])=>s.flat());
+  const one = e => e.desc.replace(/\n/g,' ');
+  for (const e of [...u.passives, ...u.abilities]){
+    const low = (e.name+' '+e.desc).toLowerCase(), w = words.find(x => low.includes(x));
+    if (w){ const i = one(e).toLowerCase().indexOf(w); return hl(one(e).slice(Math.max(0,i-36), i+90), words); }
+    if (wantTags.length && e.tags.some(t=>wantTags.includes(t))) { const sp = tagSpans(one(e), wantTags)[0]; const st = sp ? Math.max(0, sp[0]-36) : 0; return hlTags(one(e).slice(st, st+130), words, wantTags); }
+  }
+  const f = u.passives[0] || u.abilities[0]; return f ? esc(f.name + ' — ' + one(f).slice(0,110)) : '';
+}
+let state = {q:'', unit:null, sel:0}, visible = [];
+function readHash(){ const p = new URLSearchParams(location.hash.slice(1)); state.q = p.get('q') || ''; state.unit = p.get('unit'); $('#q').value = state.q; }
+function writeHash(){ const p = new URLSearchParams(); if (state.q) p.set('q', state.q); if (state.unit) p.set('unit', state.unit); history.replaceState(null, '', '#' + p.toString()); }
+function setQuery(q){ state.q = q.replace(/\s+/g,' ').trim(); $('#q').value = state.q; writeHash(); render(); }
+function toggleToken(tok){ const toks = state.q.split(/\s+/).filter(Boolean), i = toks.indexOf(tok); if (i >= 0) toks.splice(i,1); else toks.push(tok); setQuery(toks.join(' ')); }
+const rarity = r => `<span class="r" style="${rStyle(r)}">${esc(r)}</span>`;
+function render(){
+  const q = parseQuery(state.q);
+  visible = UNITS.filter(u => matches(u, q));
+  $('#count').innerHTML = `<b class="mono">${visible.length}</b> of ${UNITS.length} units`;
+  state.sel = Math.max(0, visible.findIndex(u=>u.slug===state.unit));
+  $('#rows').innerHTML = visible.map((u,i) => `
+    <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">
+      <div class="n"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</div>
+      <div class="m">${u.elements.map(elem).join(' ')}${u.state==='Evolved'?' · Evolved':''}</div>
+      <div class="s">${snippet(u, q)}</div>
+    </div>`).join('');
+  renderPills(); renderDropdowns(q); renderDetail(q);
+}
+function renderPills(){
+  const toks = state.q.split(/\s+/).filter(t => /^-?[a-z]+:/i.test(t));
+  $('#pills').innerHTML = toks.map(t => { const i = t.indexOf(':'); let k = t.slice(0,i), v = t.slice(i+1); if (k.replace('-','') === 'buffsunit' && BY_SLUG[v.toLowerCase()]) { k = k.replace('buffsunit','buffs unit'); v = BY_SLUG[v.toLowerCase()].name; } return `<span class="pill" data-tok="${esc(t)}" title="remove"><b>${esc(k)}</b>:${esc(v)} ✕</span>`; }).join('');
+}
+const tagPill = tid => { const t = TAGS[tid]; return t ? `<span class="t" style="--c:var(--${t.group})" data-tok="${t.group}:${tid}" title="${esc(GROUPS[t.group])}">${icon(t)}${esc(t.label)}</span>` : ''; };
+const activeTags = q => Object.entries(q.include).filter(([k])=>!META.has(k)).flatMap(([,s])=>s.flat()).filter(t=>TAGS[t]);
+function renderDetail(q){
+  const u = UNITS.find(x => x.slug === state.unit);
+  document.body.classList.toggle('showing', !!u);
+  if (!u){ $('#detail').innerHTML = `<div class="empty"><b>Pick a unit</b>Filter with the dropdowns above, or type <code>cc:repulse effect:tethered</code> to find every push-and-pull unit.</div>`; return; }
+  const card = e => `<div class="card"><h4>${esc(e.name)}${e.cooldown!=null?`<span class="src">CD ${e.cooldown}s${e.cooldownType?' · '+esc(e.cooldownType):''}</span>`:''}${e.tags.map(tagPill).join(' ')}</h4><p>${renderRich(e.rich || e.desc, e.desc, q.text, activeTags(q))}</p></div>`;
+  const link = n => `<a data-unit="${esc(n.replace(/ /g,'_'))}">${esc(n)}</a>`;
+  $('#detail').innerHTML = `
+    <span class="back" data-back>← back to list</span>
+    <div class="dh"><h2><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
+    <div class="meta"><span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">wiki ↗</a></div>
+    <div class="tagrow">${u.tags.map(tagPill).join('')}</div>
+    ${u.passives.some(p=>p.source!=='familiar')?'<h3 class="sec">Passives</h3>'+u.passives.filter(p=>p.source!=='familiar').map(card).join(''):''}
+    ${u.passives.some(p=>p.source==='familiar')?`<h3 class="sec">Vanguard Familiar · ${esc(u.passives.find(p=>p.source==='familiar').familiar)}</h3>`+u.passives.filter(p=>p.source==='familiar').map(card).join(''):''}
+    ${u.abilities.length?'<h3 class="sec">Active abilities</h3>'+u.abilities.map(card).join(''):''}`;
+  $('#detail').scrollTop = 0;
+}
+function select(slug){ state.unit = slug; writeHash(); render(); const el = $('.u.sel'); if (el) el.scrollIntoView({block:'nearest'}); }
+const DD = [['element','Element',u=>u.elements],['rarity','Rarity',u=>[u.rarity]],['state','State',u=>[u.state]],['group','Group',u=>u.groups]];
+const uniq = a => [...new Set(a)].sort();
+const icon = t => t.icon ? `<img src="${t.icon}" alt="">` : '';
+function renderDropdowns(q){
+  const openKey = document.querySelector('.dd.open')?.dataset.key;
+  let html = '';
+  for (const [gid, glabel] of Object.entries(GROUPS)){
+    const on = new Set((q.include[gid]||[]).flat()), neg = new Set(q.exclude[gid]||[]);
+    const rows = Object.entries(TAGS).filter(([,t]) => t.group === gid);
+    html += `<div class="dd fx${openKey===gid?' open':''}" data-key="${gid}" style="--c:var(--${gid})"><button type="button">${esc(glabel)}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
+      ${rows.map(([tid,t]) => `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>` + (tid==='ally-buff' ? buffTargetRows(q) : '')).join('')}
+      ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
+  }
+  for (const [key,label,get] of DD){
+    const vals = uniq(UNITS.flatMap(get)), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
+    html += `<div class="dd${openKey===key?' open':''}" data-key="${key}"><button type="button">${label}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
+      ${vals.map(v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`).join('')}
+      ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
+  }
+  $('#dds').innerHTML = html;
+  fitMenus();
+}
+function fitMenus(){
+  for (const dd of document.querySelectorAll('.dd')){
+    dd.classList.remove('flip');
+    const m = dd.querySelector('.menu'); if (!m) continue;
+    const wasOpen = dd.classList.contains('open'); if (!wasOpen) m.style.display = 'block';
+    const r = m.getBoundingClientRect();
+    if (r.right > window.innerWidth - 8) dd.classList.add('flip');
+    if (!wasOpen) m.style.display = '';
+  }
+}
+window.addEventListener('resize', fitMenus);
+const TARGET_COUNT = (() => { const c = {}; for (const u of UNITS) for (const t of u.buffTargets) c[norm(t)] = (c[norm(t)]||0) + 1; return c; })();
+function buffTargetRows(q){
+  const on = new Set((q.include.bufftarget||[]).flat()), unit = (q.include.buffsunit||[]).flat()[0];
+  const row = (t, lab) => { const n = TARGET_COUNT[norm(t)]||0; return `<label class="sub${n?'':' dim'}"><input type="checkbox" data-key="bufftarget" value="${esc(norm(t))}"${on.has(norm(t))?' checked':''}> ${lab}<span class="cnt">${n}</span></label>`; };
+  const elems = Object.keys(ELEM).filter(e => e !== 'Unknown');
+  const groups = DATA.buffTargets.filter(t => t !== 'all' && t !== 'Unspecified' && !ELEM[t]);
+  const glabel = t => t === 'Swap' ? 'Swap units (can swap to a counterpart)' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
+  const picked = unit && BY_SLUG[unit];
+  return `<div class="subhead">who gets it</div>${row('all','All allies (no restriction)')}
+    <div class="subhead">by element</div>${elems.map(e => row(e, elem(e))).join('')}
+    <div class="subhead">by group / named set</div>${groups.map(t => row(t, esc(glabel(t)))).join('')}
+    ${TARGET_COUNT.unspecified ? row('Unspecified', 'Target not stated in text') : ''}
+    <div class="subhead">a specific unit</div>
+    <div class="upick">${picked ? `<span class="picked"><span class="rn" style="${rStyle(picked.rarity)}">${esc(picked.name)}</span><span class="x" data-unpick title="remove">✕</span></span>` : `<input type="search" id="upick" placeholder="type a unit name…" autocomplete="off"><div id="upicklist"></div>`}</div>`;
+}
+function unitPickList(qs){
+  const box = $('#upicklist'); if (!box) return;
+  const w = qs.trim().toLowerCase(); if (!w){ box.innerHTML = ''; return; }
+  const hits = UNITS.filter(u => u.name.toLowerCase().includes(w)).slice(0, 8);
+  box.innerHTML = hits.map(u => `<div class="uhit" data-slug="${esc(norm(u.slug))}"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> <span class="m">${u.elements.map(elem).join(' ')}</span></div>`).join('') || '<div class="uhit dim">no match</div>';
+}
+function setKeyValues(key, vals){
+  // replace every non-negated key: token with one key:a+b token (negated ones stay)
+  const toks = state.q.split(/\s+/).filter(Boolean).filter(t => !new RegExp('^'+key+':','i').test(t));
+  if (vals.length) toks.push(key + ':' + vals.join('+'));
+  setQuery(toks.join(' '));
+}
+$('#dds').addEventListener('input', e => { if (e.target.id === 'upick') unitPickList(e.target.value); });
+$('#dds').addEventListener('keydown', e => { if (e.target.id === 'upick' && e.key === 'Enter'){ const h = $('#upicklist .uhit[data-slug]'); if (h) h.click(); } });
+$('#dds').addEventListener('click', e => {
+  const dd = e.target.closest('.dd'); if (!dd) return;
+  if (e.target.id === 'upick') return;
+  const hit = e.target.closest('.uhit[data-slug]'); if (hit){ setKeyValues('buffsunit', [hit.dataset.slug]); if (!(parseQuery(state.q).include.buffs||[]).flat().includes('ally-buff')) toggleToken('buffs:ally-buff'); dd.classList.add('open'); return; }
+  if (e.target.closest('[data-unpick]')){ setKeyValues('buffsunit', []); dd.classList.add('open'); return; }
+  if (e.target.closest('.dd>button')){ const was = dd.classList.contains('open'); document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); if (!was) dd.classList.add('open'); return; }
+  if (e.target.closest('.clr')){ const k = dd.dataset.key; const toks = state.q.split(/\s+/).filter(Boolean).filter(t => !new RegExp('^-?'+k+':','i').test(t)); setQuery(toks.join(' ')); document.querySelector(`.dd[data-key=${k}]`)?.classList.add('open'); return; }
+  const x = e.target.closest('.x'); if (x){ e.preventDefault(); toggleToken('-' + dd.dataset.key + ':' + x.dataset.neg); document.querySelector(`.dd[data-key=${dd.dataset.key}]`)?.classList.add('open'); }
+});
+$('#dds').addEventListener('change', e => {
+  const dd = e.target.closest('.dd'); if (!dd || e.target.type!=='checkbox') return;
+  const key = e.target.dataset.key || dd.dataset.key;
+  const vals = [...dd.querySelectorAll(`input:checked`)].filter(i => (i.dataset.key || dd.dataset.key) === key).map(i=>i.value);
+  setKeyValues(key, vals);
+  if (key === 'bufftarget' && vals.length && !(parseQuery(state.q).include.buffs||[]).flat().includes('ally-buff')) toggleToken('buffs:ally-buff');
+  dd.classList.add('open');
+});
+const CR = DATA.credits;
+$('#credits').innerHTML = CR.icon;
+$('#creditbox').innerHTML = `<img class="av" src="${CR.avatar}" alt=""><div class="nm">${esc(CR.name)}</div><div class="rl">${esc(CR.role)}</div>
+  <div class="lk">
+    <button type="button" id="copydc" title="copy Discord username"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 5.6A16 16 0 0 0 15.7 4.4l-.2.4a15 15 0 0 1 3.6 1.8 13 13 0 0 0-14.2 0 15 15 0 0 1 3.6-1.8l-.2-.4a16 16 0 0 0-3.9 1.2C1.9 9.3 1.2 12.9 1.5 16.4a16 16 0 0 0 4.8 2.4l1-1.6a10 10 0 0 1-1.6-.8l.4-.3a11.5 11.5 0 0 0 11.8 0l.4.3-1.6.8 1 1.6a16 16 0 0 0 4.8-2.4c.4-4-.7-7.6-2.9-10.8ZM8.7 14.3c-.9 0-1.7-.9-1.7-2s.8-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Zm6.6 0c-.9 0-1.7-.9-1.7-2s.8-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Z"/></svg>Discord <span class="mono">${esc(CR.discord)}</span></button>
+    <a href="${esc(CR.github)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub <span class="mono">${esc(CR.github.replace('https://github.com/',''))}</span></a>
+  </div>`;
+const boxes = {help: $('#helpbox'), credits: $('#creditbox')};
+function toggleBox(which){ for (const [k, el] of Object.entries(boxes)){ const on = k === which && !el.classList.contains('open'); el.classList.toggle('open', on); $('#'+k).classList.toggle('open', on); } }
+$('#help').addEventListener('click', e => { e.stopPropagation(); toggleBox('help'); });
+$('#credits').addEventListener('click', e => { e.stopPropagation(); toggleBox('credits'); });
+$('#copydc').addEventListener('click', async e => { try { await navigator.clipboard.writeText(CR.discord); e.currentTarget.querySelector('.mono').textContent = 'copied!'; setTimeout(() => e.target.closest('button').querySelector('.mono').textContent = CR.discord, 1200); } catch {} });
+document.addEventListener('click', e => { if (!e.target.closest('#helpbox,#creditbox,#help,#credits')) toggleBox(null); });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+document.addEventListener('click', e => { if (!e.target.closest('.dd')) document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); });
+$('#q').addEventListener('input', e => { state.q = e.target.value; writeHash(); render(); });
+$('#pills').addEventListener('click', e => { const p = e.target.closest('.pill'); if (p) toggleToken(p.dataset.tok); });
+$('#rows').addEventListener('click', e => { const r = e.target.closest('.u'); if (r) select(visible[+r.dataset.i].slug); });
+$('#detail').addEventListener('click', e => {
+  if (e.target.closest('[data-back]')) { state.unit = null; writeHash(); render(); return; }
+  const t = e.target.closest('.t'); if (t) return toggleToken(t.dataset.tok);
+  const a = e.target.closest('a[data-unit]'); if (a) select(a.dataset.unit);
+});
+document.addEventListener('keydown', e => {
+  const inQ = document.activeElement === $('#q');
+  if (e.key === '/' && !inQ){ e.preventDefault(); $('#q').focus(); $('#q').select(); }
+  else if (e.key === 'Escape'){ setQuery(''); $('#q').blur(); }
+  else if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && visible.length){
+    e.preventDefault(); select(visible[Math.min(visible.length-1, Math.max(0, state.sel + (e.key==='ArrowDown'?1:-1)))].slug);
+  }
+});
+window.addEventListener('hashchange', () => { readHash(); render(); });
+readHash(); render();
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+ "Cat|Stupid Cat": {
+  "remove": [
+   "self-buff",
+   "dmg-buff"
+  ]
+ },
+ "Cat (Stupid)|Stupid Cat": {
+  "remove": [
+   "self-buff",
+   "dmg-buff"
+  ]
+ },
+ "Ice Queen (Release)|Queen of Ice": {
+  "remove": [
+   "self-buff"
+  ]
+ },
+ "Orehimi|You Will Not Die!": {
+  "remove": [
+   "self-buff"
+  ],
+  "add": [
+   "ally-buff"
+  ],
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "Orehimi (Faith)|You Will Not Die!": {
+  "remove": [
+   "self-buff"
+  ],
+  "add": [
+   "ally-buff"
+  ],
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "Todu (Unleashed)|Boogie Technique": {
+  "add": [
+   "ally-buff",
+   "dmg-buff"
+  ],
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "Karem (Chilled)|Thermoacoustic": {
+  "remove": [
+   "burn",
+   "frostburn",
+   "freeze"
+  ]
+ },
+ "Toad Shinobi (Ribbit)|Strongest Mentor": {
+  "buffTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "Lfelt (Love)|Heavy Metal Wife": {
+  "buffTargets": [
+   "VideoGames"
+  ]
+ },
+ "Agony Shinobi (Force)|Know Pain": {
+  "buffTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "Fruit Eater|Terrifying Conqueror": {
+  "buffTargets": [
+   "all",
+   "Swap"
+  ]
+ },
+ "Fruit Eater (He Wins)|Terrifying Conqueror": {
+  "buffTargets": [
+   "all",
+   "Swap"
+  ]
+ },
+ "Explosive Demon (Bomb)|Hidden Spy": {
+  "remove": [
+   "ally-buff"
+  ],
+  "add": [
+   "self-buff"
+  ],
+  "buffTargets": []
+ },
+ "Foboko|Charisma": {
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "Foboko (Hellish)|Charisma": {
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "Lfelt|Heavy Metal Wife": {
+  "buffTargets": [
+   "VideoGames"
+  ]
+ },
+ "Saber (Alternate)|Aura of Corruption": {
+  "remove": [
+   "ally-buff"
+  ],
+  "add": [
+   "self-buff"
+  ],
+  "buffTargets": []
+ },
+ "Saber (Black Tyrant)|Aura of Corruption": {
+  "remove": [
+   "ally-buff"
+  ],
+  "add": [
+   "self-buff"
+  ],
+  "buffTargets": []
+ },
+ "Shinobi Sage|Believe It!": {
+  "buffTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "Shinobi Sage (Friendship)|Believe It!": {
+  "buffTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "Soburo (Contract)|Contracted Spirit": {
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "The Witch (Disciple)|Astral Assistance": {
+  "buffTargets": [
+   "all"
+  ]
+ }
+}
