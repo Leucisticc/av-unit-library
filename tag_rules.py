@@ -76,6 +76,8 @@ TAG_GROUPS = {
 }
 
 _BUFF = r"\bbuff(?:s|ing|ed)?"
+# a damage number that only applies against some enemy condition is a bonus, not a buff
+_CONDITIONAL = r"(?![^.;]{0,70}\\b(?:when attacking|when hitting|against|to enemies|enemies inflicted|inflicted with|on (?:an? )?enem|while attacking|to bosses|to (?:a )?boss))"
 _ALLY_NOUN = r"(?:all|allies|ally|every|other|nearby|units|towers)"
 
 # Preceding context that turns an effect word into a condition, not an application.
@@ -130,13 +132,15 @@ TAG_RULES = {
     "wanted":    _fx("amp", "Wanted",    "Wanted.png",    [r"\bwanted\b"]),
     "slumber":   _fx("amp", "Slumber",   "Slumber.png",   [r"\bslumber\b"]),
     "stone":     _fx("amp", "Stone",     "Stone.png",     [r"\binflict(?:s|ing)? stone\b", r"\bturn(?:s|ed)? (?:enemies |them )?(?:in)?to stone\b"]),
-    "dmg-taken": {"group": "amp", "label": "Takes more damage (unnamed)", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\binflicts? opportunity\b", r"\bdespair\b"], "suppress": _CONDITION},
+    "dmg-taken": {"group": "amp", "label": "Takes more damage (unnamed)", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\bdespair\b"], "suppress": _CONDITION},
+    "opportunity": _fx("amp", "Opportunity", "Opportunity.png", [r"\bopportunity\b"]),
     # -- Other Effects ------------------------------------------------------------
     "rupture":  _fx("effect", "Rupture",  "Rupture.png",  [r"\brupture\b"]),
     "nullify":  _fx("effect", "Nullify",  "Nullify.png",  [r"\bnullif(?:y|ies|ied)\b"]),
+    "absolute-zero": {"group": "effect", "label": "Absolute Zero", "icon": "AbsoluteZero.png", "patterns": [r"\babsolute zero\b"]},
     "tethered": {"group": "effect", "label": "Tethered / Pull", "icon": "Tethered.png", "patterns": [r"\btether(?:s|ed|ing)?\b", r"\bpull(?:s|ed|ing)? (?:all |the )?(?:[\w]+ )?enemies\b", r"\bbring(?:s)? all enemies to\b"]},
     # -- Buffs --------------------------------------------------------------------
-    "dmg-buff":   {"group": "buffs", "label": "Damage buff", "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w'% ]+?)?(?:damage|attack)\b", r"\bdamage buff\b", r"\bincreas(?:e|es|ing) (?:the |this unit'?s |its |own )?damage (?:of|by)\b", r"\bgains? (?:a )?\+?\d+% damage\b", r"(?<!crit )(?<!burn )\b(?:damage|dmg) \+\d+%", r"\+\d+% attack\b", r"(?<!crit )(?<!burn )(?<!bleed )(?<!dot )\bDMG \+\d+%", r"\+\d+% damage\b", r"\braises? damage by\b"]},
+    "dmg-buff":   {"group": "buffs", "label": "Damage buff", "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w'% ]+?)?(?:damage|attack)\b" + _CONDITIONAL, r"\bdamage buff\b", r"\bincreas(?:e|es|ing) (?:the |this unit'?s |its |own )?(?:dot |cosmic |fire |curse |spark |blast |holy |water |nature |passion |unbound )?damage (?:of|by)\b" + _CONDITIONAL, r"\bgains? (?:a )?\+?\d+% damage\b", r"(?<!crit )(?<!burn )\b(?:damage|dmg) \+\d+%", r"\+\d+% attack\b", r"(?<!crit )(?<!burn )(?<!bleed )(?<!dot )\bDMG \+\d+%", r"\+\d+% damage\b", r"\braises? damage by\b"]},
     "range-buff": {"group": "buffs", "label": "Range buff",  "icon": None, "patterns": [_BUFF + r" (?:this unit'?s |their |its |own |the )?range\b", _BUFF + r" (?:that |the )?(?:ally|unit|allies|units)(?: in range)? by [\w'% ]{0,25}?\brange\b", r"\brange \+\d+%", r"(?<!in )\brange by \d", r"\b(?:and|&) (?:\+?\d+% )?range\b", r"\bRNG \+\d+%", r"\+\d+% range\b", r"\brange buff\b", r"\bincreases? range by\b", r"\bgains? \+?\d+% range\b"]},
     "spa-buff":   {"group": "buffs", "label": "SPA buff",    "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w' ]+?)?(?:spa|attack speed)\b", r"\b(?:reduc|decreas|lower)(?:e|es|ed|ing)? (?:the |this unit'?s |their |own |its )?spa\b", r"\bSPA -\d+%", r"-\d+% spa\b", r"\bloses? \d+% spa\b"]},
     "crit-buff":  {"group": "buffs", "label": "Crit buff",   "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w' ]+?)?crit(?:ical)?(?: rate| damage| chance| dmg)?\b", r"\bcrit(?:ical)? (?:rate|damage|chance|dmg) \+\d+%", r"\+\d+% crit", r"\bgains? \+?\d+% crit", r"\bhas \d+% crit", r"\bovercrit\b"]},
@@ -153,7 +157,7 @@ TAG_RULES = {
         r"(?<!crit )\b(?:DMG|RNG|CRIT|CRIT DMG) \+\d+%(?![^.;]{0,40}\b(?:for|to) all (?:[\w' ]+ )?(?:units|allies))",
         r"\bSPA -\d+%(?![^.;]{0,40}\b(?:for|to) all (?:[\w' ]+ )?(?:units|allies))",
         r"\+\d+% (?:damage|range|crit)",
-        r"\bincreases? (?:this unit'?s |own |its )?(?:damage|range|crit[\w ]*) by \d+%",
+        r"\bincreases? (?:this unit'?s |own |its )?(?:dot |cosmic |fire |curse |spark |blast |holy |water |nature |passion |unbound )?(?:damage|range|crit[\w ]*) by \d+%" + _CONDITIONAL,
         r"\bincreases? this unit'?s damage\b",
         r"\braises? damage by\b",
     ], "suppress": _ALLY_CONTEXT},
@@ -176,20 +180,36 @@ TAG_RULES = {
         r"\b(?:any|every) unit [^.;]{0,60}?\bbuffed\b",
     ]},
     # -- Mechanics ------------------------------------------------------------------
-    "dr-bypass":  {"group": "mech", "label": "Ignores damage reduction", "icon": None, "patterns": [r"\b(?:bypass|ignor)(?:e|es|ed|ing)?\b[^.;]{0,25}?\b(?:damage|dmg) (?:reduction|resistance)s?\b", r"\bignores? (?:enemy )?dr\b", r"\binflicts? destruction\b", r"\bdamage reduction (?:amount )?(?:is )?set to 0\b", r"\blowers? the damage reduction\b", r"\bdamage reduction ignore\b"]},
+    "dr-bypass":  {"group": "mech", "label": "Ignores damage reduction", "icon": None, "patterns": [r"\b(?:bypass|ignor)(?:e|es|ed|ing)?\b[^.;]{0,25}?\b(?:damage|dmg) (?:reduction|resistance)s?\b", r"\bignores? (?:enemy )?dr\b", r"\binflicts? destruction\b", r"\bdamage reduction (?:amount )?(?:is )?set to 0\b", r"\blowers? the damage reduction\b", r"\bdamage reduction ignore\b", r"\bdamage reduction bypass\b"]},
     "shield-pierce": {"group": "mech", "label": "Anti-shield / vs Overshield", "icon": None, "patterns": [
         r"\b(?:bypass|ignor|remov|destroy|break|pierc|shatter)(?:e|es|ed|ing)?\b[^.;]{0,30}?\b(?:over)?shields?\b",
         r"\b(?:more damage|bonus damage|\+\d+% DMG|\dx damage)[^.;]{0,40}?\b(?:over)?shield(?:ed|s)?\b",
         r"\b(?:against|to) (?:enemies with )?(?:over)?shield(?:ed|s)?\b",
         r"\bhitting enemies with overshield\b",
     ]},
-    "bonus-vs":   {"group": "mech", "label": "Bonus dmg vs condition", "icon": None, "patterns": [r"\bdeals? \+?\d+% more (?:damage|dmg) (?:to|against|when|if|on|while)\b", r"\bDMG \+\d+% (?:when|to|against|if|while)\b", r"\b\+\d+% (?:damage|dmg) to enemies\b", r"\bdamage is multiplied\b"]},
+    "bonus-vs":   {"group": "mech", "label": "Bonus dmg vs condition", "icon": None, "patterns": [
+        r"\b(?:deals?|dealt|does|do|take[s]?) (?:an? )?(?:additional |extra |between \d+% to )?\+?\d+% (?:more|increased|bonus) (?:damage|dmg)\b",
+        r"\b\d+% more (?:damage|dmg)\b",
+        r"\bDMG \+\d+% (?:when|to|against|if|while)\b",
+        r"\b\+\d+% (?:damage|dmg) to enemies\b",
+        r"\bincreases? (?:the )?damage (?:dealt )?by \d+% (?:when|against|to|if)\b",
+        r"\bbuff damage dealt to\b",
+        r"\bdamage is multiplied\b",
+        r"\bguaranteed (?:to )?crit\b",
+    ]},
     # Membership comes from groups_extra.json ("Swap"), not from text: the list is hand-confirmed.
+    "follow-up":  {"group": "mech", "label": "Follow-up attack", "icon": None, "patterns": [r"\bfollow[- ]?ups?\b", r"\bfollows? up\b", r"\bfollowing up\b"]},
+    "active-ability": {"group": "mech", "label": "Active ability", "icon": None, "patterns": [r"\bactive abilit(?:y|ies)\b", r"\buses? (?:an |its |this unit'?s )?active\b", r"\btoggles? an active\b", r"\b(?:from|by) actives?\b", r"\bactive is active\b", r"\babilities\b", r"\bthe next ability\b"]},
+    "cleanse-self": {"group": "mech", "label": "Cleanse self", "icon": None, "patterns": [r"\bcleanses? (?:self|itself|this unit)\b", r"\bcleanse(?:s|d)? (?:all )?(?:status effects|debuffs|status debuffs)[^.;]{0,30}\bfrom (?:self|this unit)\b"]},
+    "cleanse-allies": {"group": "mech", "label": "Cleanse allies", "icon": None, "patterns": [r"\bcleans(?:e|es|ing) (?:all )?(?:allies|units|that ally|that unit|them)\b", r"\bcleans(?:e|es|ing) (?:that|the|all) (?:status effect|status debuff|debuff)s?\b[^.;]{0,40}\b(?:ally|allies)\b", r"\bcleanse(?:s|d)? all (?:allies|units) in range\b", r"\bwill cleanse them\b"]},
+    "has-domain": {"group": "mech", "label": "Has a Domain", "icon": None, "patterns": [r"\bdomain(?:s|'s)?\b"]},
+    "revive":     {"group": "mech", "label": "Revival / rewind", "icon": None, "patterns": [r"\brewinds?\b", r"\brevives?\b", r"\brevival\b", r"\brestores? (?:a )?life ?stocks?\b"]},
+    "income":     {"group": "buffs", "label": "Increase income", "icon": None, "patterns": [r"\byen\b", r"\bincome\b", r"\bmoney\b"]},
     "swap":       {"group": "mech", "label": "Swap (counterpart)", "icon": None, "patterns": [r"(?!x)x"]},
     "summon":     {"group": "mech", "label": "Summon",       "icon": None, "patterns": [r"(?<!\d )\bsummon(?:s|ed|ing)?\b(?! cap)", r"\bclones?\b", r"\bthralls?\b", r"\bspawns? (?:a |an |in )?(?:[\w' ]{0,20}? )?(?:ally|allies|copy|soldier|zombie|shadow|skeleton|wolves|wolf)", r"\bas (?:a |an )?(?:friendly )?(?:summon|ally|allies)\b", r"\bconvert(?:s|ed)? (?:\d+ )?(?:non-?boss )?enemies into\b"]},
     "mark":       {"group": "mech", "label": "Marks enemies", "icon": None, "patterns": [r"\bmark(?:s|ed)? (?:an? |the |that |every |all |each )?(?:enem|target|non-boss|them\b|it\b)", r"\b(?:is|are|become|becomes) marked\b(?! with| as)", r"\bmarked enem"]},
     "meter":      {"group": "mech", "label": "Meter / Mana", "icon": None, "patterns": [r"\bmana\b", r"\bMP\b", r"\bmeters?\b", r"\bbars? of meter\b", r"\bgauge\b"]},
-    "stacks":     {"group": "mech", "label": "Stacking mechanic", "icon": None, "patterns": [r"\b\d+ stacks?\b", r"\bstacks? of\b", r"\bper stack\b", r"\bgains? (?:\d+ )?[\w' ]{0,20}? stacks?\b", r"\bstacking\b", r"\bstacks? (?:count|reset|refresh)", r"\bcan stack\b"]},
+    "stacks":     {"group": "mech", "label": "Stacking mechanic", "icon": None, "patterns": [r"\b\d+ stacks?\b", r"\bstacks? of\b", r"\bper stack\b", r"\bgains? (?:\d+ )?[\w' ]{0,20}? stacks?\b", r"(?<!non )(?<!non-)\bstacking\b", r"\bstacks? (?:count|reset|refresh)", r"\bcan stack\b"]},
     "aoe":        {"group": "mech", "label": "Hits all in range", "icon": None, "patterns": [r"\ball enemies\b", r"\bAoE\b", r"\bhits? all\b"]},
 }
 

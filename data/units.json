@@ -380,7 +380,6 @@
     "\\bvulnerab(?:le|ility)\\b",
     "\\breceive \\+\\d+%",
     "\\bpurgatory flames\\b",
-    "\\binflicts? opportunity\\b",
     "\\bdespair\\b"
    ],
    "suppress": [
@@ -391,6 +390,21 @@
     "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
    ],
    "icon": null
+  },
+  "opportunity": {
+   "group": "amp",
+   "label": "Opportunity",
+   "patterns": [
+    "\\bopportunity\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
   },
   "rupture": {
    "group": "effect",
@@ -422,6 +436,15 @@
    ],
    "icon": "data:image/png;base64,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"
   },
+  "absolute-zero": {
+   "group": "effect",
+   "label": "Absolute Zero",
+   "patterns": [
+    "\\babsolute zero\\b"
+   ],
+   "suppress": [],
+   "icon": "data:image/png;base64,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"
+  },
   "tethered": {
    "group": "effect",
    "label": "Tethered / Pull",
@@ -437,9 +460,9 @@
    "group": "buffs",
    "label": "Damage buff",
    "patterns": [
-    "\\bbuff(?:s|ing|ed)? (?:the )?(?:[\\w'% ]+?)?(?:damage|attack)\\b",
+    "\\bbuff(?:s|ing|ed)? (?:the )?(?:[\\w'% ]+?)?(?:damage|attack)\\b(?![^.;]{0,70}\\\\b(?:when attacking|when hitting|against|to enemies|enemies inflicted|inflicted with|on (?:an? )?enem|while attacking|to bosses|to (?:a )?boss))",
     "\\bdamage buff\\b",
-    "\\bincreas(?:e|es|ing) (?:the |this unit'?s |its |own )?damage (?:of|by)\\b",
+    "\\bincreas(?:e|es|ing) (?:the |this unit'?s |its |own )?(?:dot |cosmic |fire |curse |spark |blast |holy |water |nature |passion |unbound )?damage (?:of|by)\\b(?![^.;]{0,70}\\\\b(?:when attacking|when hitting|against|to enemies|enemies inflicted|inflicted with|on (?:an? )?enem|while attacking|to bosses|to (?:a )?boss))",
     "\\bgains? (?:a )?\\+?\\d+% damage\\b",
     "(?<!crit )(?<!burn )\\b(?:damage|dmg) \\+\\d+%",
     "\\+\\d+% attack\\b",
@@ -533,7 +556,7 @@
     "(?<!crit )\\b(?:DMG|RNG|CRIT|CRIT DMG) \\+\\d+%(?![^.;]{0,40}\\b(?:for|to) all (?:[\\w' ]+ )?(?:units|allies))",
     "\\bSPA -\\d+%(?![^.;]{0,40}\\b(?:for|to) all (?:[\\w' ]+ )?(?:units|allies))",
     "\\+\\d+% (?:damage|range|crit)",
-    "\\bincreases? (?:this unit'?s |own |its )?(?:damage|range|crit[\\w ]*) by \\d+%",
+    "\\bincreases? (?:this unit'?s |own |its )?(?:dot |cosmic |fire |curse |spark |blast |holy |water |nature |passion |unbound )?(?:damage|range|crit[\\w ]*) by \\d+%(?![^.;]{0,70}\\\\b(?:when attacking|when hitting|against|to enemies|enemies inflicted|inflicted with|on (?:an? )?enem|while attacking|to bosses|to (?:a )?boss))",
     "\\bincreases? this unit'?s damage\\b",
     "\\braises? damage by\\b"
    ],
@@ -579,7 +602,8 @@
     "\\binflicts? destruction\\b",
     "\\bdamage reduction (?:amount )?(?:is )?set to 0\\b",
     "\\blowers? the damage reduction\\b",
-    "\\bdamage reduction ignore\\b"
+    "\\bdamage reduction ignore\\b",
+    "\\bdamage reduction bypass\\b"
    ],
    "suppress": [],
    "icon": null
@@ -600,10 +624,94 @@
    "group": "mech",
    "label": "Bonus dmg vs condition",
    "patterns": [
-    "\\bdeals? \\+?\\d+% more (?:damage|dmg) (?:to|against|when|if|on|while)\\b",
+    "\\b(?:deals?|dealt|does|do|take[s]?) (?:an? )?(?:additional |extra |between \\d+% to )?\\+?\\d+% (?:more|increased|bonus) (?:damage|dmg)\\b",
+    "\\b\\d+% more (?:damage|dmg)\\b",
     "\\bDMG \\+\\d+% (?:when|to|against|if|while)\\b",
     "\\b\\+\\d+% (?:damage|dmg) to enemies\\b",
-    "\\bdamage is multiplied\\b"
+    "\\bincreases? (?:the )?damage (?:dealt )?by \\d+% (?:when|against|to|if)\\b",
+    "\\bbuff damage dealt to\\b",
+    "\\bdamage is multiplied\\b",
+    "\\bguaranteed (?:to )?crit\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "follow-up": {
+   "group": "mech",
+   "label": "Follow-up attack",
+   "patterns": [
+    "\\bfollow[- ]?ups?\\b",
+    "\\bfollows? up\\b",
+    "\\bfollowing up\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "active-ability": {
+   "group": "mech",
+   "label": "Active ability",
+   "patterns": [
+    "\\bactive abilit(?:y|ies)\\b",
+    "\\buses? (?:an |its |this unit'?s )?active\\b",
+    "\\btoggles? an active\\b",
+    "\\b(?:from|by) actives?\\b",
+    "\\bactive is active\\b",
+    "\\babilities\\b",
+    "\\bthe next ability\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "cleanse-self": {
+   "group": "mech",
+   "label": "Cleanse self",
+   "patterns": [
+    "\\bcleanses? (?:self|itself|this unit)\\b",
+    "\\bcleanse(?:s|d)? (?:all )?(?:status effects|debuffs|status debuffs)[^.;]{0,30}\\bfrom (?:self|this unit)\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "cleanse-allies": {
+   "group": "mech",
+   "label": "Cleanse allies",
+   "patterns": [
+    "\\bcleans(?:e|es|ing) (?:all )?(?:allies|units|that ally|that unit|them)\\b",
+    "\\bcleans(?:e|es|ing) (?:that|the|all) (?:status effect|status debuff|debuff)s?\\b[^.;]{0,40}\\b(?:ally|allies)\\b",
+    "\\bcleanse(?:s|d)? all (?:allies|units) in range\\b",
+    "\\bwill cleanse them\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "has-domain": {
+   "group": "mech",
+   "label": "Has a Domain",
+   "patterns": [
+    "\\bdomain(?:s|'s)?\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "revive": {
+   "group": "mech",
+   "label": "Revival / rewind",
+   "patterns": [
+    "\\brewinds?\\b",
+    "\\brevives?\\b",
+    "\\brevival\\b",
+    "\\brestores? (?:a )?life ?stocks?\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
+  "income": {
+   "group": "buffs",
+   "label": "Increase income",
+   "patterns": [
+    "\\byen\\b",
+    "\\bincome\\b",
+    "\\bmoney\\b"
    ],
    "suppress": [],
    "icon": null
@@ -663,7 +771,7 @@
     "\\bstacks? of\\b",
     "\\bper stack\\b",
     "\\bgains? (?:\\d+ )?[\\w' ]{0,20}? stacks?\\b",
-    "\\bstacking\\b",
+    "(?<!non )(?<!non-)\\bstacking\\b",
     "\\bstacks? (?:count|reset|refresh)",
     "\\bcan stack\\b"
    ],
@@ -826,7 +934,6 @@
  "buffTargets": [
   "all",
   "Blast",
-  "Chained",
   "Cosmic",
   "Curse",
   "DemonController",
@@ -836,7 +943,6 @@
   "Fused",
   "Giant",
   "Nature",
-  "Nature Element",
   "Ninjutsu",
   "Passion",
   "Peroxide",
@@ -999,7 +1105,8 @@
      "rich": "If Arin is on the field, this unit follows up attacking the same target he does regardless of range; For every enemy in range decreases SPA by ⟦num|1%⟧. (Up to ⟦num|20%⟧)",
      "source": "unit",
      "tags": [
-      "spa-buff"
+      "spa-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -1018,6 +1125,7 @@
    "abilities": [],
    "tags": [
     "spa-buff",
+    "follow-up",
     "dmg-buff",
     "buff"
    ],
@@ -1182,7 +1290,9 @@
      "rich": "Revives every unit with Ninjutsu sold during the match for 30 seconds.",
      "cooldown": null,
      "cooldownType": "Global",
-     "tags": [],
+     "tags": [
+      "revive"
+     ],
      "buffTargets": []
     }
    ],
@@ -1192,7 +1302,8 @@
     "range-buff",
     "buff",
     "self-buff",
-    "ally-buff"
+    "ally-buff",
+    "revive"
    ],
    "buffTargets": [
     "Ninjutsu"
@@ -1370,6 +1481,7 @@
      "source": "unit",
      "tags": [
       "repulse",
+      "cleanse-allies",
       "meter"
      ],
      "buffTargets": []
@@ -1382,6 +1494,7 @@
     "buff",
     "ally-buff",
     "repulse",
+    "cleanse-allies",
     "meter"
    ],
    "buffTargets": [
@@ -1694,7 +1807,8 @@
      "source": "unit",
      "tags": [
       "wounded",
-      "dmg-taken"
+      "dmg-taken",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -1770,6 +1884,7 @@
     "bleed",
     "wounded",
     "dmg-taken",
+    "bonus-vs",
     "dmg-buff",
     "spa-buff",
     "self-buff",
@@ -1808,6 +1923,7 @@
       "buff",
       "self-buff",
       "ally-buff",
+      "active-ability",
       "stacks"
      ],
      "buffTargets": [
@@ -1833,6 +1949,7 @@
     "buff",
     "self-buff",
     "ally-buff",
+    "active-ability",
     "stacks"
    ],
    "buffTargets": [
@@ -1868,6 +1985,7 @@
       "buff",
       "self-buff",
       "ally-buff",
+      "active-ability",
       "stacks"
      ],
      "buffTargets": [
@@ -1885,6 +2003,7 @@
       "buff",
       "self-buff",
       "ally-buff",
+      "active-ability",
       "stacks"
      ],
      "buffTargets": [
@@ -1897,6 +2016,8 @@
      "rich": "⟦c|ff7b1c|When the player reaches 0 Life Stocks while this unit is on the field:⟧\n• Rewind all enemies by 30 seconds\n• Move this unit to the first enemy and activate Final Stand Against Death\n• This activation deals 1000% of this unit's damage to all enemies and counts as Active Ability damage.",
      "source": "unit",
      "tags": [
+      "active-ability",
+      "revive",
       "aoe"
      ],
      "buffTargets": []
@@ -1945,7 +2066,9 @@
     "buff",
     "self-buff",
     "ally-buff",
+    "active-ability",
     "stacks",
+    "revive",
     "aoe",
     "meter"
    ],
@@ -1976,14 +2099,16 @@
      "rich": "On attack, follow-up with Attack 1 for 50% of this unit's damage (5 second cooldown); When an enemy is hit by Attack 1, inflict Bleed for 50% of this unit's damage over 8 seconds.",
      "source": "unit",
      "tags": [
-      "bleed"
+      "bleed",
+      "follow-up"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "bleed"
+    "bleed",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Arbiter.png"
@@ -2009,7 +2134,8 @@
      "rich": "On attack, follow-up with Attack 1 for 50% of this unit's damage (5 second cooldown); When an enemy is hit by Attack 1, inflict Bleed for 50% of this unit's damage over 8 seconds.",
      "source": "unit",
      "tags": [
-      "bleed"
+      "bleed",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -2022,6 +2148,8 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "follow-up",
+      "active-ability",
       "stacks"
      ],
      "buffTargets": []
@@ -2040,9 +2168,11 @@
    ],
    "tags": [
     "bleed",
+    "follow-up",
     "dmg-buff",
     "buff",
     "self-buff",
+    "active-ability",
     "stacks"
    ],
    "buffTargets": [],
@@ -2738,7 +2868,7 @@
      "rich": "⟦c|30c23d|Heavenly Restriction:⟧\n• Cannot have a Trait, Stats, Memoria, or Familiar\n• Stats remain at 0%\n• Has 100% Critical Chance and Overcrit ⟦c|ff7b1c|Attacks:⟧\n• Inflict Opportunity for 10 seconds\n• Deal 50% more damage to shielded enemies ⟦c|6bf5fa|Opportunity:⟧\n• Remove and prevent DoTs\n• Unbound units deal 100% more damage to affected enemies while their owner has Awakened Sibling placed.",
      "source": "unit",
      "tags": [
-      "dmg-taken",
+      "opportunity",
       "crit-buff",
       "shield-pierce",
       "bonus-vs"
@@ -2748,7 +2878,7 @@
    ],
    "abilities": [],
    "tags": [
-    "dmg-taken",
+    "opportunity",
     "crit-buff",
     "shield-pierce",
     "bonus-vs"
@@ -2775,7 +2905,7 @@
      "rich": "⟦c|30c23d|Heavenly Restriction:⟧\n• Cannot have a Trait, Stats, Memoria, or Familiar\n• Stats remain at 0%\n• Has 100% Critical Chance and Overcrit ⟦c|ff7b1c|Attacks:⟧\n• Inflict Opportunity for 10 seconds\n• Deal 50% more damage to shielded enemies ⟦c|6bf5fa|Opportunity:⟧\n• Remove and prevent DoTs\n• Unbound units deal 100% more damage to affected enemies while their owner has Awakened Sibling placed.",
      "source": "unit",
      "tags": [
-      "dmg-taken",
+      "opportunity",
       "crit-buff",
       "shield-pierce",
       "bonus-vs"
@@ -2789,7 +2919,8 @@
      "source": "unit",
      "tags": [
       "dr-bypass",
-      "shield-pierce"
+      "shield-pierce",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -2806,11 +2937,12 @@
    ],
    "abilities": [],
    "tags": [
-    "dmg-taken",
+    "opportunity",
     "crit-buff",
     "shield-pierce",
     "bonus-vs",
-    "dr-bypass"
+    "dr-bypass",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Awakened Sibling (Restricted).png"
@@ -2991,8 +3123,7 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff",
-      "stacks"
+      "self-buff"
      ],
      "buffTargets": []
     },
@@ -3015,7 +3146,6 @@
    "tags": [
     "dmg-buff",
     "self-buff",
-    "stacks",
     "bleed",
     "slow",
     "range-buff",
@@ -3042,7 +3172,9 @@
      "desc": "Medical Chakra; Cleanses units in range of all debuffs.",
      "rich": "Medical Chakra; Cleanses units in range of all debuffs.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
@@ -3053,11 +3185,15 @@
      "rich": "Cleanses units in range of all debuffs.",
      "cooldown": 100,
      "cooldownType": "Local",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
-   "tags": [],
+   "tags": [
+    "cleanse-allies"
+   ],
    "buffTargets": [],
    "icon": "img/units/Blossom.png"
   },
@@ -3198,7 +3334,8 @@
      "familiar": "Candy Ball",
      "tags": [
       "dmg-taken",
-      "buff"
+      "buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -3240,7 +3377,8 @@
     "crit-buff",
     "shield-pierce",
     "summon",
-    "dmg-taken"
+    "dmg-taken",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Boo (Evil).png"
@@ -3634,7 +3772,8 @@
      "rich": "When attacking a Burning enemy, inflict Wanted; Gain 50 Yen for each takedown on a Wanted enemy; Triple rewards from Boss Bounty Missions; Double Rift Shards gained from Rifts.",
      "source": "unit",
      "tags": [
-      "wanted"
+      "wanted",
+      "income"
      ],
      "buffTargets": []
     },
@@ -3668,6 +3807,7 @@
    "abilities": [],
    "tags": [
     "wanted",
+    "income",
     "bleed",
     "burn",
     "rupture",
@@ -3756,6 +3896,7 @@
       "dmg-buff",
       "buff",
       "ally-buff",
+      "follow-up",
       "meter",
       "stacks",
       "aoe"
@@ -3773,6 +3914,10 @@
      "tags": [
       "stun",
       "dmg-taken",
+      "bonus-vs",
+      "follow-up",
+      "active-ability",
+      "cleanse-self",
       "meter"
      ],
      "buffTargets": []
@@ -3813,9 +3958,13 @@
     "meter",
     "stacks",
     "ally-buff",
+    "follow-up",
     "aoe",
     "stun",
-    "dmg-taken"
+    "dmg-taken",
+    "bonus-vs",
+    "active-ability",
+    "cleanse-self"
    ],
    "buffTargets": [
     "Spark"
@@ -3844,7 +3993,8 @@
      "source": "unit",
      "tags": [
       "crit-buff",
-      "self-buff"
+      "self-buff",
+      "cleanse-self"
      ],
      "buffTargets": []
     },
@@ -3870,7 +4020,8 @@
       "dmg-buff",
       "cost-reduction",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -3892,10 +4043,12 @@
    "tags": [
     "crit-buff",
     "self-buff",
+    "cleanse-self",
     "rupture",
     "dmg-buff",
     "buff",
-    "cost-reduction"
+    "cost-reduction",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Brolzi Super (Wrathful).png"
@@ -4037,6 +4190,7 @@
       "spa-buff",
       "buff",
       "ally-buff",
+      "cleanse-allies",
       "summon"
      ],
      "buffTargets": [
@@ -4051,6 +4205,7 @@
     "spa-buff",
     "buff",
     "ally-buff",
+    "cleanse-allies",
     "summon"
    ],
    "buffTargets": [
@@ -4084,6 +4239,7 @@
       "spa-buff",
       "buff",
       "ally-buff",
+      "cleanse-allies",
       "summon"
      ],
      "buffTargets": [
@@ -4095,7 +4251,9 @@
      "desc": "Gains the active ability The Crimson Mage. After the explosion is activated:\n• This unit becomes inactive for 40 seconds.",
      "rich": "Gains the active ability The Crimson Mage. After the explosion is activated:\n• This unit becomes inactive for 40 seconds.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "active-ability"
+     ],
      "buffTargets": []
     }
    ],
@@ -4118,7 +4276,9 @@
     "spa-buff",
     "buff",
     "ally-buff",
+    "cleanse-allies",
     "summon",
+    "active-ability",
     "aoe"
    ],
    "buffTargets": [
@@ -4196,6 +4356,7 @@
      "rich": "For each active effect on the enemy:\n• Deals +5% increased damage (DoT stacks count as a single instance.)",
      "source": "unit",
      "tags": [
+      "bonus-vs",
       "stacks"
      ],
      "buffTargets": []
@@ -4206,6 +4367,7 @@
     "slow",
     "diseased",
     "bubbled",
+    "bonus-vs",
     "stacks"
    ],
    "buffTargets": [],
@@ -4234,7 +4396,8 @@
      "tags": [
       "slow",
       "dmg-taken",
-      "dr-bypass"
+      "dr-bypass",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -4243,7 +4406,8 @@
    "tags": [
     "slow",
     "dmg-taken",
-    "dr-bypass"
+    "dr-bypass",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Cat God.png"
@@ -4271,7 +4435,8 @@
      "tags": [
       "slow",
       "dmg-taken",
-      "dr-bypass"
+      "dr-bypass",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -4303,6 +4468,7 @@
     "slow",
     "dmg-taken",
     "dr-bypass",
+    "follow-up",
     "dmg-buff",
     "buff",
     "self-buff"
@@ -4605,14 +4771,16 @@
      "rich": "⟦c|ff7b1c|On Hit:⟧\n• Applies Slow If Attacking a Slowed Enemy:\n• Follows up with Attack ⟦num|6⟧ for ⟦num|-50%⟧ damage",
      "source": "unit",
      "tags": [
-      "slow"
+      "slow",
+      "follow-up"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "slow"
+    "slow",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Clatakiri.png"
@@ -4638,7 +4806,8 @@
      "rich": "⟦c|ff7b1c|On Hit:⟧\n• Applies Slow If Attacking a Slowed Enemy:\n• Follows up with Attack ⟦num|6⟧ for ⟦num|-50%⟧ damage",
      "source": "unit",
      "tags": [
-      "slow"
+      "slow",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -4667,6 +4836,7 @@
    "abilities": [],
    "tags": [
     "slow",
+    "follow-up",
     "stun",
     "aoe",
     "spa-buff"
@@ -4838,7 +5008,9 @@
      "desc": "This unit attacks non-stop regardless of any enemy in its range or not; every 2 attacks this unit will do a random attack and that attack will deal 120% more damage.",
      "rich": "This unit attacks non-stop regardless of any enemy in its range or not; every ⟦num|2⟧ attacks this unit will do a random attack and that attack will deal ⟦num|120%⟧ more damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -4847,6 +5019,7 @@
      "rich": "Whenever attacks from this unit hits a non-boss enemy, it does ⟦num|50%⟧ more damage; when attacks from this unit hit a boss enemy, that attack hits all enemies in range of this unit.",
      "source": "unit",
      "tags": [
+      "bonus-vs",
       "aoe"
      ],
      "buffTargets": []
@@ -4873,17 +5046,20 @@
      "cooldownType": "Global",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "cleanse-self"
      ],
      "buffTargets": []
     }
    ],
    "tags": [
+    "bonus-vs",
     "aoe",
     "stun",
     "range-buff",
     "dmg-buff",
-    "self-buff"
+    "self-buff",
+    "cleanse-self"
    ],
    "buffTargets": [],
    "icon": "img/units/Conqueror vs Invulnerable.png"
@@ -4999,7 +5175,8 @@
       "dmg-buff",
       "range-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -5009,7 +5186,8 @@
     "dmg-buff",
     "range-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Cursed Copycat.png"
@@ -5036,7 +5214,8 @@
       "dmg-buff",
       "range-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -5064,6 +5243,7 @@
       "buff",
       "self-buff",
       "ally-buff",
+      "bonus-vs",
       "stacks"
      ],
      "buffTargets": [
@@ -5088,6 +5268,7 @@
      "cooldown": 60,
      "cooldownType": "Local",
      "tags": [
+      "bonus-vs",
       "stacks"
      ],
      "buffTargets": []
@@ -5098,6 +5279,7 @@
     "range-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "slow",
     "stun",
     "rupture",
@@ -5185,7 +5367,8 @@
      "tags": [
       "range-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "active-ability"
      ],
      "buffTargets": [
       "all"
@@ -5197,7 +5380,8 @@
     "dmg-buff",
     "buff",
     "ally-buff",
-    "range-buff"
+    "range-buff",
+    "active-ability"
    ],
    "buffTargets": [
     "all"
@@ -5223,14 +5407,16 @@
      "rich": "⟦c|30c23d|Energy:⟧\n• Regenerate 12% Energy per second\n• Consume all available Energy when attacking ⟦c|6bf5fa|Attacks:⟧\n• Below 50% Energy, use Attack 1 and inflict Burn for 30% of this unit's damage over 8 seconds\n• At 50% Energy or higher, use Attack 2, deal 200% more damage, and guarantee a critical hit.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "burn"
+    "burn",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Cursed Gourmet.png"
@@ -5254,7 +5440,8 @@
      "rich": "⟦c|30c23d|Energy:⟧\n• Regenerate 12% Energy per second\n• Consume all available Energy when attacking ⟦c|6bf5fa|Attacks:⟧\n• Below 50% Energy, use Attack 1 and inflict Burn for 30% of this unit's damage over 8 seconds\n• At 50% Energy or higher, use Attack 2, deal 200% more damage, and guarantee a critical hit.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -5299,12 +5486,12 @@
    ],
    "tags": [
     "burn",
+    "bonus-vs",
     "stun",
     "range-buff",
     "buff",
     "self-buff",
     "shield-pierce",
-    "bonus-vs",
     "meter"
    ],
    "buffTargets": [],
@@ -5596,6 +5783,7 @@
       "burn",
       "diseased",
       "dmg-taken",
+      "bonus-vs",
       "meter",
       "aoe"
      ],
@@ -5751,7 +5939,8 @@
      "source": "unit",
      "tags": [
       "crit-buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -5759,7 +5948,8 @@
    "abilities": [],
    "tags": [
     "crit-buff",
-    "self-buff"
+    "self-buff",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Dawntay.png"
@@ -5786,7 +5976,8 @@
      "source": "unit",
      "tags": [
       "crit-buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -5800,6 +5991,7 @@
       "range-buff",
       "crit-buff",
       "self-buff",
+      "follow-up",
       "meter"
      ],
      "buffTargets": []
@@ -5834,7 +6026,9 @@
      "rich": "This unit is immune to Status Debuffs and Status Effects; Anytime a status debuff or status effect is attempted on this unit, it counters for 300% damage and is guaranteed to crit, at most once per attack this unit makes. (A damage instance, not an attack)",
      "source": "familiar",
      "familiar": "Familial Jewel",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -5842,10 +6036,12 @@
    "tags": [
     "crit-buff",
     "self-buff",
+    "follow-up",
     "dmg-buff",
     "range-buff",
     "meter",
-    "buff"
+    "buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Dawntay (Jackpot).png"
@@ -5912,7 +6108,9 @@
      "desc": "When Lifestocks reach zero this unit Revives, sets Lifestocks to 1, Enhanced Aura is now 100% of this units range, and this unit now does Attack 4. (Revival can only proc once per match)",
      "rich": "When Lifestocks reach zero this unit Revives, sets Lifestocks to 1, Enhanced Aura is now 100% of this units range, and this unit now does Attack 4. (Revival can only proc once per match)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "revive"
+     ],
      "buffTargets": []
     },
     {
@@ -5947,6 +6145,7 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "revive",
     "buff",
     "ally-buff",
     "stun",
@@ -6024,7 +6223,8 @@
       "bleed",
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "follow-up"
      ],
      "buffTargets": [
       "all"
@@ -6036,7 +6236,8 @@
     "bleed",
     "dmg-buff",
     "buff",
-    "ally-buff"
+    "ally-buff",
+    "follow-up"
    ],
    "buffTargets": [
     "all"
@@ -6067,7 +6268,8 @@
       "bleed",
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "follow-up"
      ],
      "buffTargets": [
       "all"
@@ -6109,6 +6311,7 @@
     "dmg-buff",
     "buff",
     "ally-buff",
+    "follow-up",
     "range-buff",
     "self-buff",
     "meter"
@@ -6309,7 +6512,9 @@
      "desc": "If this unit is Chained by Demon Leader, when this unit attacks a Wounded enemy, follow up for 30% of this unit's damage.",
      "rich": "If this unit is ⟦fx|Chained|Chained⟧ by Demon Leader, when this unit attacks a Wounded enemy, follow up for 30% of this unit's damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
@@ -6319,7 +6524,8 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "meter"
+    "meter",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Demon Hybrid (Chainsaw).png"
@@ -6406,7 +6612,8 @@
       "wounded",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -6416,7 +6623,8 @@
      "rich": "When a ⟦fx|Chained|Chained⟧ unit performs an attack, this unit follows up at the target's position for 2% of this unit's damage in a small area and applies Slow by 50% for 5 seconds (no animation, damage-only instance).",
      "source": "unit",
      "tags": [
-      "slow"
+      "slow",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -6440,7 +6648,9 @@
     "self-buff",
     "aoe",
     "wounded",
-    "slow"
+    "bonus-vs",
+    "slow",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Demon Leader (Control).png"
@@ -6582,7 +6792,9 @@
      "desc": "On placement, designate 1 unit with Affection; If the designated unit and this unit attack the same enemy, the designated unit deals 10% more damage, doubled if the designated unit is Lich King (Ruler).",
      "rich": "On placement, designate 1 unit with Affection; If the designated unit and this unit attack the same enemy, the designated unit deals 10% more damage, doubled if the designated unit is Lich King (Ruler).",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -6620,7 +6832,8 @@
       "range-buff",
       "cost-reduction",
       "buff",
-      "self-buff"
+      "self-buff",
+      "income"
      ],
      "buffTargets": []
     }
@@ -6631,7 +6844,8 @@
     "range-buff",
     "cost-reduction",
     "buff",
-    "self-buff"
+    "self-buff",
+    "income"
    ],
    "buffTargets": [],
    "icon": "img/units/Diablo.png"
@@ -6659,7 +6873,8 @@
       "range-buff",
       "cost-reduction",
       "buff",
-      "self-buff"
+      "self-buff",
+      "income"
      ],
      "buffTargets": []
     },
@@ -6669,7 +6884,8 @@
      "rich": "Attacks inflict Repulse; This unit's attacks deal increased damage based on how far an enemy is from this unit, scaling from +1% at close range up to +100% at 90% of this unit's attack radius; When this unit attacks an enemy at maximum range, the attack is a guaranteed crit.",
      "source": "unit",
      "tags": [
-      "repulse"
+      "repulse",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -6693,7 +6909,9 @@
     "cost-reduction",
     "buff",
     "self-buff",
-    "repulse"
+    "income",
+    "repulse",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Diablo (Renacimiento).png"
@@ -7270,7 +7488,9 @@
       "dmg-taken",
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "bonus-vs",
+      "income"
      ],
      "buffTargets": [
       "Pirates"
@@ -7323,6 +7543,8 @@
     "self-buff",
     "dmg-taken",
     "ally-buff",
+    "bonus-vs",
+    "income",
     "spa-buff",
     "cost-reduction"
    ],
@@ -7358,7 +7580,9 @@
       "dmg-taken",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs",
+      "income"
      ],
      "buffTargets": []
     },
@@ -7372,7 +7596,8 @@
       "nullify",
       "crit-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -7437,6 +7662,8 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
+    "income",
     "nullify",
     "crit-buff",
     "slow",
@@ -7484,7 +7711,9 @@
       "wanted",
       "dmg-taken",
       "dmg-buff",
-      "ally-buff"
+      "ally-buff",
+      "bonus-vs",
+      "income"
      ],
      "buffTargets": [
       "Pirates"
@@ -7527,6 +7756,8 @@
     "self-buff",
     "dmg-taken",
     "ally-buff",
+    "bonus-vs",
+    "income",
     "spa-buff",
     "cost-reduction"
    ],
@@ -7592,14 +7823,16 @@
      "rich": "Attacks apply Freeze to enemies; When attacking a Frozen enemy, deal ⟦num|40%⟧ more damage.",
      "source": "unit",
      "tags": [
-      "freeze"
+      "freeze",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "freeze"
+    "freeze",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Emmie.png"
@@ -7626,7 +7859,8 @@
      "rich": "Attacks apply Freeze to enemies; When attacking a Frozen enemy, deal ⟦num|40%⟧ more damage.",
      "source": "unit",
      "tags": [
-      "freeze"
+      "freeze",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -7646,6 +7880,7 @@
    "abilities": [],
    "tags": [
     "freeze",
+    "bonus-vs",
     "range-buff",
     "crit-buff",
     "self-buff"
@@ -7677,6 +7912,7 @@
       "buff",
       "dr-bypass",
       "bonus-vs",
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -7687,6 +7923,7 @@
     "buff",
     "dr-bypass",
     "bonus-vs",
+    "follow-up",
     "stacks"
    ],
    "buffTargets": [],
@@ -7716,6 +7953,7 @@
       "buff",
       "dr-bypass",
       "bonus-vs",
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -7731,7 +7969,9 @@
       "crit-buff",
       "buff",
       "self-buff",
-      "dr-bypass"
+      "dr-bypass",
+      "active-ability",
+      "revive"
      ],
      "buffTargets": []
     }
@@ -7753,11 +7993,14 @@
     "buff",
     "dr-bypass",
     "bonus-vs",
+    "follow-up",
     "stacks",
     "dmg-buff",
     "range-buff",
     "crit-buff",
     "self-buff",
+    "active-ability",
+    "revive",
     "aoe"
    ],
    "buffTargets": [],
@@ -8195,7 +8438,9 @@
      "desc": "Anytime an ally in this units range has a status effect or debuff afflicted to them, this unit will cleanse them. (Applies to one unit.) (30 Second Local Cooldown)",
      "rich": "Anytime an ally in this units range has a status effect or debuff afflicted to them, this unit will cleanse them. (Applies to one unit.) (⟦num|30⟧ Second Local Cooldown)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
@@ -8203,7 +8448,8 @@
    "tags": [
     "freeze",
     "spa-buff",
-    "ally-buff"
+    "ally-buff",
+    "cleanse-allies"
    ],
    "buffTargets": [
     "all"
@@ -8374,7 +8620,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "bonus-vs"
      ],
      "buffTargets": [
       "all",
@@ -8386,7 +8633,8 @@
    "tags": [
     "dmg-buff",
     "buff",
-    "ally-buff"
+    "ally-buff",
+    "bonus-vs"
    ],
    "buffTargets": [
     "all",
@@ -8417,7 +8665,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "bonus-vs"
      ],
      "buffTargets": [
       "all",
@@ -8458,6 +8707,7 @@
     "dmg-buff",
     "buff",
     "ally-buff",
+    "bonus-vs",
     "slow",
     "meter",
     "stacks",
@@ -8521,6 +8771,7 @@
      "rich": "Every ⟦num|5⟧ attacks, revive all enemies killed by any unit during this timespan as an ally for ⟦num|30%⟧ of the units damage (up to ⟦num|120⟧ Enemies per Gazelle).",
      "source": "unit",
      "tags": [
+      "revive",
       "summon",
       "aoe"
      ],
@@ -8529,6 +8780,7 @@
    ],
    "abilities": [],
    "tags": [
+    "revive",
     "summon",
     "aoe"
    ],
@@ -8554,6 +8806,7 @@
      "rich": "Every ⟦num|5⟧ attacks, revive all enemies killed by any unit during this timespan as an ally for ⟦num|30%⟧ of the units damage (up to ⟦num|120⟧ Enemies per Gazelle).",
      "source": "unit",
      "tags": [
+      "revive",
       "summon",
       "aoe"
      ],
@@ -8573,6 +8826,7 @@
    ],
    "abilities": [],
    "tags": [
+    "revive",
     "summon",
     "aoe",
     "buff"
@@ -8602,7 +8856,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -8623,6 +8878,7 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "bonus-vs",
     "meter"
    ],
    "buffTargets": [],
@@ -8650,7 +8906,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -8694,6 +8951,7 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "bonus-vs",
     "spa-buff",
     "meter"
    ],
@@ -8760,12 +9018,16 @@
      "desc": "Every 8th hit deals +200% more damage. 5 second cooldown.",
      "rich": "Every 8th hit deals ⟦num|+200%⟧ more damage. ⟦num|5⟧ second cooldown.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "bonus-vs"
+   ],
    "buffTargets": [],
    "icon": "img/units/Genitsu.png"
   },
@@ -8789,12 +9051,16 @@
      "desc": "The first time an enemy enters this units range, this unit will followup with attack 1. (Local 8 second cooldown)",
      "rich": "The first time an enemy enters this units range, this unit will followup with attack 1. (Local 8 second cooldown)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "follow-up"
+   ],
    "buffTargets": [],
    "icon": "img/units/GG.png"
   },
@@ -8818,7 +9084,9 @@
      "desc": "The first time an enemy enters this units range, this unit will followup with attack 1. (Local 8 second cooldown)",
      "rich": "The first time an enemy enters this units range, this unit will followup with attack 1. (Local 8 second cooldown)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     },
     {
@@ -8834,12 +9102,17 @@
      "desc": "Allies placed in this units range will become protected after 60 seconds from when they are placed; Anytime a protected unit is debuffed, this unit will cleanse them. (Local Cooldown 3 seconds)",
      "rich": "Allies placed in this units range will become protected after 60 seconds from when they are placed; Anytime a protected unit is debuffed, this unit will cleanse them. (Local Cooldown 3 seconds)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "follow-up",
+    "cleanse-allies"
+   ],
    "buffTargets": [],
    "icon": "img/units/GG (Possessed).png"
   },
@@ -9508,7 +9781,8 @@
      "source": "familiar",
      "familiar": "Sealed Spell Scroll",
      "tags": [
-      "crit-buff"
+      "crit-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -9521,7 +9795,8 @@
     "stun",
     "dmg-buff",
     "self-buff",
-    "crit-buff"
+    "crit-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Goblin Killer (Trapper).png"
@@ -9600,7 +9875,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "active-ability"
      ],
      "buffTargets": []
     },
@@ -9650,6 +9926,7 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "active-ability",
     "timestop",
     "aoe",
     "swap"
@@ -9808,7 +10085,8 @@
       "range-buff",
       "buff",
       "self-buff",
-      "ally-buff"
+      "ally-buff",
+      "active-ability"
      ],
      "buffTargets": [
       "all"
@@ -9849,6 +10127,7 @@
     "buff",
     "self-buff",
     "ally-buff",
+    "active-ability",
     "bonus-vs",
     "aoe"
    ],
@@ -10187,7 +10466,8 @@
      "tags": [
       "burn",
       "scorched",
-      "dmg-taken"
+      "dmg-taken",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -10238,6 +10518,7 @@
     "burn",
     "scorched",
     "dmg-taken",
+    "bonus-vs",
     "range-buff",
     "self-buff",
     "dmg-buff",
@@ -10480,12 +10761,16 @@
      "desc": "Whenever this unit attacks, has a 30% chance to do no damage (No longer applies when Mr Boo Arrives is unlocked); Increases money earned by any farm units on the map by 2% per upgrade on this unit. (Cannot Stack)",
      "rich": "Whenever this unit attacks, has a ⟦num|30%⟧ chance to do no damage (No longer applies when Mr Boo Arrives is unlocked); Increases money earned by any farm units on the map by ⟦num|2%⟧ per upgrade on this unit. (Cannot Stack)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "income"
+   ],
    "buffTargets": [],
    "icon": "img/units/Hercool.png"
   },
@@ -10509,7 +10794,9 @@
      "desc": "Whenever this unit attacks, has a 30% chance to do no damage (No longer applies when Mr Boo Arrives is unlocked); Increases money earned by any farm units on the map by 2% per upgrade on this unit. (Cannot Stack)",
      "rich": "Whenever this unit attacks, has a ⟦num|30%⟧ chance to do no damage (No longer applies when Mr Boo Arrives is unlocked); Increases money earned by any farm units on the map by ⟦num|2%⟧ per upgrade on this unit. (Cannot Stack)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     },
     {
@@ -10531,6 +10818,7 @@
    ],
    "abilities": [],
    "tags": [
+    "income",
     "dmg-buff",
     "crit-buff",
     "buff",
@@ -10580,7 +10868,8 @@
       "dmg-buff",
       "range-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -10642,6 +10931,7 @@
     "buff",
     "range-buff",
     "self-buff",
+    "bonus-vs",
     "burn",
     "dr-bypass",
     "shield-pierce"
@@ -10833,7 +11123,8 @@
      "source": "unit",
      "tags": [
       "freeze",
-      "wanted"
+      "wanted",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -10841,7 +11132,8 @@
    "abilities": [],
    "tags": [
     "freeze",
-    "wanted"
+    "wanted",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Ice Manipulator.png"
@@ -10869,7 +11161,8 @@
      "source": "unit",
      "tags": [
       "freeze",
-      "wanted"
+      "wanted",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -10889,6 +11182,7 @@
    "tags": [
     "freeze",
     "wanted",
+    "follow-up",
     "bonus-vs"
    ],
    "buffTargets": [],
@@ -10917,6 +11211,7 @@
      "tags": [
       "slow",
       "freeze",
+      "absolute-zero",
       "dmg-buff",
       "crit-buff",
       "buff",
@@ -10934,10 +11229,12 @@
      "source": "unit",
      "tags": [
       "freeze",
+      "absolute-zero",
       "dmg-buff",
       "range-buff",
       "buff",
       "self-buff",
+      "follow-up",
       "aoe"
      ],
      "buffTargets": []
@@ -10952,7 +11249,9 @@
       "nullify",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -10966,6 +11265,7 @@
      "cooldownType": "Global",
      "tags": [
       "freeze",
+      "absolute-zero",
       "aoe"
      ],
      "buffTargets": []
@@ -10974,6 +11274,7 @@
    "tags": [
     "slow",
     "freeze",
+    "absolute-zero",
     "dmg-buff",
     "crit-buff",
     "buff",
@@ -10981,7 +11282,9 @@
     "aoe",
     "range-buff",
     "self-buff",
-    "nullify"
+    "follow-up",
+    "nullify",
+    "bonus-vs"
    ],
    "buffTargets": [
     "all"
@@ -11390,6 +11693,7 @@
      "rich": "⟦c|30c23d|MP:⟧\n• Regenerate 2% MP per second\n• Gain 10% MP when this unit lands a critical hit\n• Gain 5% MP when a Demon Controller ally lands a critical hit\n• When this unit attacks or uses an Active Ability other than Rest, consume all MP and increase that attack or Active Ability's damage by the percentage of MP consumed.",
      "source": "unit",
      "tags": [
+      "active-ability",
       "meter"
      ],
      "buffTargets": []
@@ -11435,6 +11739,7 @@
     "buff",
     "self-buff",
     "meter",
+    "active-ability",
     "aoe"
    ],
    "buffTargets": [],
@@ -11486,7 +11791,8 @@
      "rich": "Attacks inflict Burn for 30% of this units damage for 5 seconds; If an enemy leaves this units range, this unit will inflict that enemy with Burn for 100% of this units damage for 5 seconds; Anytime this unit inflicts Burn on an enemy, cleanses all debuffs and status effects from self.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "cleanse-self"
      ],
      "buffTargets": []
     },
@@ -11523,7 +11829,8 @@
      "source": "familiar",
      "familiar": "Blazing Solstice",
      "tags": [
-      "intense-burn"
+      "intense-burn",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -11557,8 +11864,10 @@
     "dmg-buff",
     "self-buff",
     "aoe",
+    "cleanse-self",
     "buff",
-    "intense-burn"
+    "intense-burn",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Iscanur (Pride).png"
@@ -11634,7 +11943,9 @@
      "desc": "On placement marks a single allied unit in range with Affection (Cannot mark farms); If this unit attacks the same enemy the allied unit with Affection attacks, this unit will do +50% more damage on that attack.",
      "rich": "On placement marks a single allied unit in range with Affection (Cannot mark farms); If this unit attacks the same enemy the allied unit with Affection attacks, this unit will do ⟦num|+50%⟧ more damage on that attack.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -11694,6 +12005,7 @@
      "tags": [
       "freeze",
       "dmg-taken",
+      "bonus-vs",
       "aoe"
      ],
      "buffTargets": []
@@ -11725,6 +12037,7 @@
     "range-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "spa-buff",
     "stacks",
     "dmg-taken",
@@ -11996,7 +12309,9 @@
      "rich": "Gains Iron Coffin on placement; During Iron Coffin, whenever ⟦fx|Burn|Burn⟧ or ⟦fx|Intense Burn|Intense Burn⟧ ends, deal 50% of the damage that instance of DoT did in total; When Iron Coffin ends, detonate all instances of ⟦fx|Intense Burn|Intense Burn⟧ for all the damage that instance has dealt; All ⟦fx|Black Flames|Black Flames⟧, ⟦fx|Intense Burn|Intense Burn⟧, and ⟦fx|Burn|Burn⟧ tick twice as fast during the domain.",
      "source": "familiar",
      "familiar": "Molten Rocks",
-     "tags": [],
+     "tags": [
+      "has-domain"
+     ],
      "buffTargets": []
     },
     {
@@ -12031,6 +12346,7 @@
    "tags": [
     "burn",
     "aoe",
+    "has-domain",
     "dmg-buff",
     "self-buff",
     "bonus-vs"
@@ -12090,7 +12406,8 @@
      "rich": "⟦c|ff7b1c|When this unit attacks with attack 2:⟧\n• Deals 100% more damage\n• Stuns the enemy for 2 seconds\n• Creates a friendly copy of that enemy with 20% of this unit's attack stat\n• 2 second cooldown",
      "source": "unit",
      "tags": [
-      "stun"
+      "stun",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -12099,13 +12416,17 @@
      "desc": "When this unit attacks with attack 3:\n• Follows up with attack 2\n• 2 second cooldown",
      "rich": "⟦c|ff7b1c|When this unit attacks with attack 3:⟧\n• Follows up with attack 2\n• 2 second cooldown",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "stun"
+    "stun",
+    "bonus-vs",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Jailer (Underworld).png"
@@ -12682,14 +13003,17 @@
      "desc": "This unit always targets the highest HP Enemy; When attacking the highest HP enemy that enemy receives 30% more damage from Kid Boo (Evil).",
      "rich": "This unit always targets the highest HP Enemy; When attacking the highest HP enemy that enemy receives ⟦num|30%⟧ more damage from Kid Boo (Evil).",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
     "dmg-buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Kid Boo (Evil).png"
@@ -12847,7 +13171,8 @@
      "source": "unit",
      "tags": [
       "wounded",
-      "dmg-taken"
+      "dmg-taken",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -12857,7 +13182,8 @@
     "bleed",
     "stun",
     "wounded",
-    "dmg-taken"
+    "dmg-taken",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Kiskae (Scientist).png"
@@ -12887,7 +13213,8 @@
       "dmg-buff",
       "range-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "has-domain"
      ],
      "buffTargets": []
     },
@@ -12908,7 +13235,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "has-domain"
      ],
      "buffTargets": []
     }
@@ -12920,7 +13248,9 @@
      "rich": "Open menu to activate domains.",
      "cooldown": 1,
      "cooldownType": "Local",
-     "tags": [],
+     "tags": [
+      "has-domain"
+     ],
      "buffTargets": []
     },
     {
@@ -12938,6 +13268,7 @@
     "range-buff",
     "buff",
     "self-buff",
+    "has-domain",
     "meter"
    ],
    "buffTargets": [],
@@ -13137,7 +13468,8 @@
      "rich": "For every Burning enemy in range, increases range by .5% (up to 20%); When attacking a Burning enemy does 20% more damage.",
      "source": "unit",
      "tags": [
-      "range-buff"
+      "range-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -13212,6 +13544,7 @@
    "tags": [
     "burn",
     "range-buff",
+    "bonus-vs",
     "dmg-buff",
     "buff",
     "self-buff",
@@ -13353,6 +13686,7 @@
      "source": "unit",
      "tags": [
       "stun",
+      "follow-up",
       "meter"
      ],
      "buffTargets": []
@@ -13364,6 +13698,7 @@
      "source": "familiar",
      "familiar": "Rose Bundle",
      "tags": [
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -13428,7 +13763,9 @@
     "range-buff",
     "buff",
     "self-buff",
-    "stun"
+    "stun",
+    "follow-up",
+    "bonus-vs"
    ],
    "buffTargets": [
     "VideoGames"
@@ -13587,6 +13924,7 @@
      "rich": "Unlocks the Berserker! ability. Summons a Berserker unit that walks the track with HP equal to twice of this unit's attack stat, and shares its speed, crit rate, and attack stats. If the Berserker dies, it revives after ⟦num|2⟧ seconds with ⟦num|5%⟧ more HP each time, up to ⟦num|100%⟧. Each revival increases the revive time by ⟦num|0.4⟧ seconds.",
      "source": "unit",
      "tags": [
+      "revive",
       "summon"
      ],
      "buffTargets": []
@@ -13599,14 +13937,17 @@
      "rich": "Select a spawn point for Berserker!; forcibly revives any currently dead or active Berserkers.",
      "cooldown": 40,
      "cooldownType": "Global",
-     "tags": [],
+     "tags": [
+      "revive"
+     ],
      "buffTargets": []
     }
    ],
    "tags": [
     "dmg-buff",
     "self-buff",
-    "summon"
+    "summon",
+    "revive"
    ],
    "buffTargets": [],
    "icon": "img/units/Lilia and Berserker.png"
@@ -13634,6 +13975,7 @@
      "tags": [
       "burn",
       "dmg-taken",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -13643,6 +13985,7 @@
    "tags": [
     "burn",
     "dmg-taken",
+    "bonus-vs",
     "meter"
    ],
    "buffTargets": [],
@@ -13671,6 +14014,7 @@
      "tags": [
       "burn",
       "dmg-taken",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -13682,6 +14026,7 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
+      "active-ability",
       "meter",
       "aoe"
      ],
@@ -13702,8 +14047,10 @@
    "tags": [
     "burn",
     "dmg-taken",
+    "bonus-vs",
     "meter",
     "dmg-buff",
+    "active-ability",
     "aoe"
    ],
    "buffTargets": [],
@@ -13732,7 +14079,8 @@
       "stone",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -13743,7 +14091,8 @@
     "stone",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Lord.png"
@@ -13771,7 +14120,8 @@
       "stone",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -13798,6 +14148,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "slow"
    ],
    "buffTargets": [],
@@ -13914,6 +14265,7 @@
       "range-buff",
       "buff",
       "self-buff",
+      "active-ability",
       "meter",
       "aoe"
      ],
@@ -13955,6 +14307,7 @@
     "range-buff",
     "buff",
     "self-buff",
+    "active-ability",
     "meter",
     "aoe",
     "swap"
@@ -14021,7 +14374,9 @@
      "desc": "Any time a Dave in range attacks, Luce will follow up with her own attack independent of SPA (local cooldown 10 seconds).",
      "rich": "Any time a Dave in range attacks, Luce will follow up with her own attack independent of SPA (local cooldown ⟦num|10⟧ seconds).",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     },
     {
@@ -14063,6 +14418,7 @@
    "abilities": [],
    "tags": [
     "nullify",
+    "follow-up",
     "bonus-vs",
     "stacks",
     "dmg-buff",
@@ -14146,7 +14502,9 @@
      "desc": "When this unit attacks an enemy with any DoT, follow up with Spider's Web after the attack ends (20 second cooldown); Spider's Web deals all remaining DoT damage currently on each hit enemy as a single instance without removing the DoT (excludes Intense Burn).",
      "rich": "When this unit attacks an enemy with any DoT, follow up with Spider's Web after the attack ends (20 second cooldown); Spider's Web deals all remaining DoT damage currently on each hit enemy as a single instance without removing the DoT (excludes Intense Burn).",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
@@ -14156,7 +14514,8 @@
     "diseased",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Manipulator (Spider).png"
@@ -15096,14 +15455,16 @@
      "rich": "Attacks inflict Burn for ⟦num|30%⟧ of this units damage over ⟦num|5⟧ seconds; Anytime this unit attacks a Burning enemy, Follow Up with attack ⟦num|1⟧ (⟦num|4⟧ Second Local cooldown). [PVP Only] Upon killing an enemy inflicted with Burn , spawn that enemy to your opponents side.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "follow-up"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "burn"
+    "burn",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/NotGoodGuy.png"
@@ -15129,7 +15490,8 @@
      "rich": "Attacks inflict Burn for ⟦num|30%⟧ of this units damage over ⟦num|5⟧ seconds; Anytime this unit attacks a Burning enemy, Follow Up with attack ⟦num|1⟧ (⟦num|4⟧ Second Local cooldown). [PVP Only] Upon killing an enemy inflicted with Burn , spawn that enemy to your opponents side.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -15176,6 +15538,7 @@
    ],
    "tags": [
     "burn",
+    "follow-up",
     "meter",
     "aoe",
     "intense-burn",
@@ -15259,7 +15622,9 @@
      "rich": "Selling this unit gives you no money back, but instead the next Obita (Awakened) placed is free and retains the upgrade of the previous. (10 Second cooldown).",
      "source": "familiar",
      "familiar": "Secluded Kunai",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     },
     {
@@ -15293,6 +15658,7 @@
     "spa-buff",
     "self-buff",
     "burn",
+    "income",
     "aoe",
     "dmg-buff",
     "range-buff"
@@ -15614,6 +15980,7 @@
       "crit-buff",
       "buff",
       "self-buff",
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -15635,6 +16002,7 @@
     "crit-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "stacks"
    ],
    "buffTargets": [],
@@ -15666,6 +16034,7 @@
       "crit-buff",
       "buff",
       "self-buff",
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -15678,6 +16047,9 @@
      "tags": [
       "dmg-buff",
       "buff",
+      "bonus-vs",
+      "follow-up",
+      "active-ability",
       "meter"
      ],
      "buffTargets": []
@@ -15712,7 +16084,8 @@
      "cooldown": 60,
      "cooldownType": "Global",
      "tags": [
-      "shield-pierce"
+      "shield-pierce",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -15722,11 +16095,13 @@
     "crit-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "stacks",
+    "bonus-vs",
+    "active-ability",
     "meter",
     "slow",
     "rupture",
-    "bonus-vs",
     "shield-pierce"
    ],
    "buffTargets": [],
@@ -15783,14 +16158,16 @@
      "rich": "Units in range cannot be sold or deleted (Does not count this unit); This unit dodges all attacks (Stun Immunity); Anytime this unit attacks an enemy inflicted with Wanted it deals 50% more damage; This units attacks inflict Rupture.",
      "source": "unit",
      "tags": [
-      "rupture"
+      "rupture",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "rupture"
+    "rupture",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Pink Villain.png"
@@ -15816,7 +16193,8 @@
      "rich": "Units in range cannot be sold or deleted (Does not count this unit); This unit dodges all attacks (Stun Immunity); Anytime this unit attacks an enemy inflicted with Wanted it deals 50% more damage; This units attacks inflict Rupture.",
      "source": "unit",
      "tags": [
-      "rupture"
+      "rupture",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -15880,6 +16258,7 @@
    ],
    "tags": [
     "rupture",
+    "bonus-vs",
     "cost-reduction",
     "stacks",
     "stun",
@@ -15908,12 +16287,16 @@
      "desc": "This unit has the same range and 50% more damage than Star Crusader (Platinum)",
      "rich": "This unit has the same range and 50% more damage than Star Crusader (Platinum)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "bonus-vs"
+   ],
    "buffTargets": [],
    "icon": "img/units/Platinum Star.png"
   },
@@ -16067,14 +16450,17 @@
      "desc": "Anytime an ally in range is inflicted with a debuff, after 5 seconds cleanse that ally of all debuffs. (Local 10 second cooldown)",
      "rich": "Anytime an ally in range is inflicted with a debuff, after 5 seconds cleanse that ally of all debuffs. (Local 10 second cooldown)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
     "slow",
-    "stun"
+    "stun",
+    "cleanse-allies"
    ],
    "buffTargets": [],
    "icon": "img/units/Priestess (Holy).png"
@@ -16321,6 +16707,7 @@
       "spa-buff",
       "buff",
       "self-buff",
+      "cleanse-self",
       "stacks"
      ],
      "buffTargets": []
@@ -16332,6 +16719,7 @@
     "spa-buff",
     "buff",
     "self-buff",
+    "cleanse-self",
     "stacks"
    ],
    "buffTargets": [],
@@ -16362,6 +16750,7 @@
       "spa-buff",
       "buff",
       "self-buff",
+      "cleanse-self",
       "stacks"
      ],
      "buffTargets": []
@@ -16372,7 +16761,8 @@
      "rich": "This unit dodges all attacks and is immune to Status Effects; When this unit attacks a Boss enemy, follow up with Attack 3; This follow up counts as an attack for Heard No Bell and bypasses enemy damage reduction.",
      "source": "unit",
      "tags": [
-      "dr-bypass"
+      "dr-bypass",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -16383,8 +16773,10 @@
     "spa-buff",
     "buff",
     "self-buff",
+    "cleanse-self",
     "stacks",
-    "dr-bypass"
+    "dr-bypass",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Rabbit Hero (Guts).png"
@@ -16413,6 +16805,7 @@
       "crit-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16451,6 +16844,7 @@
      "cooldown": 1,
      "cooldownType": "Local",
      "tags": [
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16460,6 +16854,7 @@
     "crit-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "meter",
     "nullify",
     "slow"
@@ -16492,6 +16887,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16505,6 +16901,7 @@
       "crit-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16530,6 +16927,7 @@
      "cooldown": 1,
      "cooldownType": "Local",
      "tags": [
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16549,6 +16947,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "meter",
     "crit-buff",
     "nullify"
@@ -16576,6 +16975,7 @@
      "source": "unit",
      "tags": [
       "bleed",
+      "follow-up",
       "aoe"
      ],
      "buffTargets": []
@@ -16584,6 +16984,7 @@
    "abilities": [],
    "tags": [
     "bleed",
+    "follow-up",
     "aoe"
    ],
    "buffTargets": [],
@@ -16609,6 +17010,7 @@
      "source": "unit",
      "tags": [
       "bleed",
+      "follow-up",
       "aoe"
      ],
      "buffTargets": []
@@ -16624,7 +17026,8 @@
       "rupture",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -16632,6 +17035,7 @@
    "abilities": [],
    "tags": [
     "bleed",
+    "follow-up",
     "aoe",
     "stun",
     "rupture",
@@ -16669,6 +17073,7 @@
       "spa-buff",
       "buff",
       "self-buff",
+      "follow-up",
       "meter",
       "stacks"
      ],
@@ -16683,6 +17088,7 @@
     "spa-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "meter",
     "stacks"
    ],
@@ -16716,6 +17122,7 @@
       "spa-buff",
       "buff",
       "self-buff",
+      "follow-up",
       "meter",
       "stacks"
      ],
@@ -16726,7 +17133,9 @@
      "desc": "Immune to Debuffs; When an enemy dies, absorb that enemy's essence. Follow-ups:\n• After Attack 2, follow up with Attack 1\n• After Attack 4, follow up with Attack 3\n• After Attack 5, follow up with Attack 4\n• Follow-ups deal 50% damage.",
      "rich": "Immune to Debuffs; When an enemy dies, absorb that enemy's essence. ⟦c|ff7b1c|Follow-ups:⟧\n• After Attack 2, follow up with Attack 1\n• After Attack 4, follow up with Attack 3\n• After Attack 5, follow up with Attack 4\n• Follow-ups deal 50% damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
@@ -16757,6 +17166,7 @@
     "spa-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "meter",
     "stacks"
    ],
@@ -16784,6 +17194,7 @@
      "rich": "⟦c|30c23d|Mana:⟧\n• This unit has a Mana meter\n• Attacks generate 50 Mana ⟦c|6bf5fa|Combo string:⟧\n• After attacking, this unit follows up with the next unused ability when it has enough Mana; a successful follow-up begins a combo string\n• During a combo string, each attack and ability adds a stacking 50% damage bonus\n• Each ability in the combo costs 50% more Mana than the previous ability.",
      "source": "unit",
      "tags": [
+      "follow-up",
       "meter",
       "stacks"
      ],
@@ -16798,6 +17209,7 @@
       "crit-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -16826,20 +17238,23 @@
      "cooldown": 0,
      "cooldownType": "Local",
      "tags": [
+      "active-ability",
       "meter"
      ],
      "buffTargets": []
     }
    ],
    "tags": [
+    "follow-up",
     "meter",
     "stacks",
     "crit-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "dmg-buff",
     "shield-pierce",
-    "bonus-vs"
+    "active-ability"
    ],
    "buffTargets": [],
    "icon": "img/units/Rebel Fighter (Gauntlet).png"
@@ -16937,6 +17352,7 @@
      "rich": "Every card this unit draws they gain 1 stack of Gamble!; When 52 stacks are reached, this unit now draws 5 cards every attack and now insteads loses Gamble! stacks down to 0 at which this function resets; If the player were to lose to a non-boss enemy, rewinds all enemies for 20 seconds, resets stocks to 1, and activates Death Gamble (When activated this way if a jackpot is not obtained the player loses the match, this can only occur once per match and does not count as a revive)",
      "source": "unit",
      "tags": [
+      "revive",
       "stacks",
       "aoe"
      ],
@@ -16965,6 +17381,7 @@
      "cooldown": 41,
      "cooldownType": "PerPlayer",
      "tags": [
+      "has-domain",
       "stacks"
      ],
      "buffTargets": []
@@ -16980,7 +17397,9 @@
     "self-buff",
     "ally-buff",
     "stacks",
-    "aoe"
+    "aoe",
+    "revive",
+    "has-domain"
    ],
    "buffTargets": [
     "Passion"
@@ -17425,12 +17844,16 @@
      "desc": "The first time this unit attacks a boss, it does 400% more damage.",
      "rich": "The first time this unit attacks a boss, it does ⟦num|400%⟧ more damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "bonus-vs"
+   ],
    "buffTargets": [],
    "icon": "img/units/Rodock.png"
   },
@@ -18174,14 +18597,16 @@
      "rich": "When this unit attacks an enemy inflicted with Wanted, Inflicts Rupture; When attacking an enemy with Rupture deals 50% more damage.",
      "source": "unit",
      "tags": [
-      "rupture"
+      "rupture",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "rupture"
+    "rupture",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Rule.png"
@@ -18207,7 +18632,8 @@
      "rich": "When this unit attacks an enemy inflicted with Wanted, Inflicts Rupture; When attacking an enemy with Rupture deals 50% more damage.",
      "source": "unit",
      "tags": [
-      "rupture"
+      "rupture",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -18217,7 +18643,8 @@
      "rich": "This unit has access to 3 different zones each with unique effects; When this unit pops a zone he causes 5 rocks to fly up inside the zone, when this unit attacks the rocks will follow up for 50% of this units damage and inflict Stun for 2 seconds until depleted.",
      "source": "unit",
      "tags": [
-      "stun"
+      "stun",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -18235,7 +18662,9 @@
    ],
    "tags": [
     "rupture",
-    "stun"
+    "bonus-vs",
+    "stun",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Rule (Surgeon).png"
@@ -18260,12 +18689,16 @@
      "desc": "This unit only uses Attack 1 or Attack 2. On Attack:\n• Follows up on the first enemy hit, dealing 50% of this unit's damage If 30 or more enemies are in range:\n• Performs Attack 3 instead\n• Follow-up is disabled.",
      "rich": "This unit only uses Attack 1 or Attack 2. On Attack:\n• Follows up on the first enemy hit, dealing 50% of this unit's damage If 30 or more enemies are in range:\n• Performs Attack 3 instead\n• Follow-up is disabled.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "follow-up"
+   ],
    "buffTargets": [],
    "icon": "img/units/Rummie.png"
   },
@@ -18289,7 +18722,9 @@
      "desc": "This unit only uses Attack 1 or Attack 2. On Attack:\n• Follows up on the first enemy hit, dealing 50% of this unit's damage If 30 or more enemies are in range:\n• Performs Attack 3 instead\n• Follow-up is disabled.",
      "rich": "This unit only uses Attack 1 or Attack 2. On Attack:\n• Follows up on the first enemy hit, dealing 50% of this unit's damage If 30 or more enemies are in range:\n• Performs Attack 3 instead\n• Follow-up is disabled.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     },
     {
@@ -18308,6 +18743,7 @@
    ],
    "abilities": [],
    "tags": [
+    "follow-up",
     "dmg-buff",
     "buff",
     "self-buff",
@@ -18805,7 +19241,9 @@
      "desc": "When this unit performs a Basic Attack, follow up with Attack 3 for 100% of this unit's damage; When this unit follows up with Attack 3, follow up with Attack 1 for 100% of this unit's damage; When this unit follows up with Attack 1, follow up with Attack 2 for 100% of this unit's damage; When this unit follows up with Attack 2, follow up with Attack 4 for 100% of this unit's damage.",
      "rich": "When this unit performs a Basic Attack, follow up with Attack 3 for 100% of this unit's damage; When this unit follows up with Attack 3, follow up with Attack 1 for 100% of this unit's damage; When this unit follows up with Attack 1, follow up with Attack 2 for 100% of this unit's damage; When this unit follows up with Attack 2, follow up with Attack 4 for 100% of this unit's damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     },
     {
@@ -18816,8 +19254,7 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff",
-      "stacks"
+      "self-buff"
      ],
      "buffTargets": []
     },
@@ -18831,7 +19268,10 @@
       "dmg-buff",
       "buff",
       "self-buff",
-      "dr-bypass"
+      "dr-bypass",
+      "bonus-vs",
+      "follow-up",
+      "cleanse-self"
      ],
      "buffTargets": []
     }
@@ -18848,12 +19288,14 @@
     }
    ],
    "tags": [
+    "follow-up",
     "dmg-buff",
     "buff",
     "self-buff",
-    "stacks",
     "dmg-taken",
-    "dr-bypass"
+    "dr-bypass",
+    "bonus-vs",
+    "cleanse-self"
    ],
    "buffTargets": [],
    "icon": "img/units/Savior (Moonless).png"
@@ -18882,7 +19324,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -18898,6 +19341,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "revive",
       "aoe"
      ],
      "buffTargets": []
@@ -18912,6 +19356,7 @@
       "buff",
       "self-buff",
       "dr-bypass",
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -18922,9 +19367,11 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "slow",
     "stun",
     "tethered",
+    "revive",
     "aoe",
     "dr-bypass",
     "stacks"
@@ -19098,14 +19545,16 @@
      "rich": "Grants Immunity to Status Effects. ⟦c|ff6666|On hit⟧:\n• Inflicts Burn for 50% of this unit's damage over 8 seconds When attacking a Burning enemy:\n• Follows up with Attack 2 (local 20s cooldown).",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "follow-up"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "burn"
+    "burn",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Senator.png"
@@ -19132,7 +19581,8 @@
      "rich": "Grants Immunity to Status Effects. ⟦c|ff6666|On hit⟧:\n• Inflicts Burn for 50% of this unit's damage over 8 seconds When attacking a Burning enemy:\n• Follows up with Attack 2 (local 20s cooldown).",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -19147,7 +19597,8 @@
    ],
    "abilities": [],
    "tags": [
-    "burn"
+    "burn",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Senator (Nanomachines).png"
@@ -19284,7 +19735,8 @@
       "nullify",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -19318,7 +19770,8 @@
     "nullify",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Shinobi God (Infinite Dreams).png"
@@ -19407,6 +19860,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "active-ability",
       "summon"
      ],
      "buffTargets": []
@@ -19443,6 +19897,7 @@
     "ally-buff",
     "aoe",
     "self-buff",
+    "active-ability",
     "summon",
     "wounded",
     "nullify"
@@ -19693,7 +20148,9 @@
      "rich": "Select an enemy. A prompt will then appear explaining the enemy mechanics, mutators, and what the mutators do. [PVP] Shows how much Economy and Yen your opponent has.",
      "cooldown": 60,
      "cooldownType": "Local",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
@@ -19703,7 +20160,8 @@
     "bonus-vs",
     "dmg-buff",
     "buff",
-    "aoe"
+    "aoe",
+    "income"
    ],
    "buffTargets": [],
    "icon": "img/units/Slime (King).png"
@@ -19734,6 +20192,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "active-ability",
       "meter",
       "aoe"
      ],
@@ -19755,7 +20214,9 @@
      "desc": "If the enemy has more health than this unit has damage, this unit deals +40% more damage.",
      "rich": "If the enemy has more health than this unit has damage, this unit deals ⟦num|+40%⟧ more damage.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -19815,11 +20276,12 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "active-ability",
     "meter",
     "aoe",
     "stacks",
-    "range-buff",
     "bonus-vs",
+    "range-buff",
     "swap"
    ],
    "buffTargets": [],
@@ -19904,7 +20366,8 @@
       "range-buff",
       "buff",
       "self-buff",
-      "ally-buff"
+      "ally-buff",
+      "active-ability"
      ],
      "buffTargets": [
       "all"
@@ -19939,7 +20402,8 @@
     "range-buff",
     "buff",
     "ally-buff",
-    "self-buff"
+    "self-buff",
+    "active-ability"
    ],
    "buffTargets": [
     "all"
@@ -20024,7 +20488,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "active-ability"
      ],
      "buffTargets": []
     },
@@ -20058,6 +20523,7 @@
     "shield-pierce",
     "aoe",
     "dmg-buff",
+    "active-ability",
     "spa-buff"
    ],
    "buffTargets": [],
@@ -20474,12 +20940,16 @@
      "desc": "Earns yen equal to his displayed yen number every wave.",
      "rich": "Earns yen equal to his displayed yen number every wave.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "income"
+   ],
    "buffTargets": [],
    "icon": "img/units/Sprintwagon.png"
   },
@@ -20508,6 +20978,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "aoe"
      ],
      "buffTargets": []
@@ -20519,7 +20990,9 @@
      "source": "unit",
      "tags": [
       "slow",
-      "shield-pierce"
+      "shield-pierce",
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -20543,7 +21016,9 @@
      "rich": "Deals 1000% damage to the highest HP enemy in range; if the enemy is on timestop lockout deals 50% more damage",
      "cooldown": 60,
      "cooldownType": "Local",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -20563,9 +21038,11 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "aoe",
     "slow",
-    "shield-pierce"
+    "shield-pierce",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Star Crusader (Platinum).png"
@@ -20598,13 +21075,16 @@
      "desc": "This unit deals up to 30% more damage on hit based on how close the target is to them.",
      "rich": "This unit deals up to ⟦num|30%⟧ more damage on hit based on how close the target is to them.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/units/Stone Lee.png"
@@ -20634,7 +21114,9 @@
       "buff",
       "self-buff",
       "dr-bypass",
-      "shield-pierce"
+      "shield-pierce",
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -20645,7 +21127,9 @@
     "buff",
     "self-buff",
     "dr-bypass",
-    "shield-pierce"
+    "shield-pierce",
+    "bonus-vs",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Strongest Shinobi.png"
@@ -20675,7 +21159,9 @@
       "buff",
       "self-buff",
       "dr-bypass",
-      "shield-pierce"
+      "shield-pierce",
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -20687,7 +21173,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -20713,6 +21200,8 @@
     "self-buff",
     "dr-bypass",
     "shield-pierce",
+    "bonus-vs",
+    "follow-up",
     "dmg-buff",
     "burn",
     "aoe"
@@ -20745,7 +21234,8 @@
       "dmg-buff",
       "crit-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -20758,7 +21248,8 @@
       "dmg-buff",
       "buff",
       "self-buff",
-      "dr-bypass"
+      "dr-bypass",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -20784,6 +21275,7 @@
     "crit-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "dr-bypass",
     "ally-buff"
    ],
@@ -20813,7 +21305,8 @@
      "tags": [
       "bleed",
       "cleave",
-      "dmg-taken"
+      "dmg-taken",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -20875,7 +21368,8 @@
      "source": "familiar",
      "familiar": "Sukono's Finger",
      "tags": [
-      "cleave"
+      "cleave",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -20899,12 +21393,14 @@
     "bleed",
     "cleave",
     "dmg-taken",
+    "bonus-vs",
     "dmg-buff",
     "self-buff",
     "burn",
     "buff",
     "ally-buff",
-    "range-buff"
+    "range-buff",
+    "follow-up"
    ],
    "buffTargets": [
     "Curse"
@@ -21144,12 +21640,16 @@
      "desc": "Converts Takaroda Bucks into yen",
      "rich": "Converts Takaroda Bucks into yen",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "income"
+   ],
    "buffTargets": [],
    "icon": "img/units/Takaroda.png"
   },
@@ -21189,7 +21689,8 @@
       "dmg-buff",
       "crit-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -21203,7 +21704,8 @@
       "crit-buff",
       "buff",
       "self-buff",
-      "ally-buff"
+      "ally-buff",
+      "revive"
      ],
      "buffTargets": [
       "DragonSphere"
@@ -21216,7 +21718,9 @@
     "buff",
     "self-buff",
     "crit-buff",
-    "ally-buff"
+    "follow-up",
+    "ally-buff",
+    "revive"
    ],
    "buffTargets": [
     "DragonSphere"
@@ -21290,7 +21794,8 @@
      "source": "unit",
      "tags": [
       "stun",
-      "wanted"
+      "wanted",
+      "income"
      ],
      "buffTargets": []
     }
@@ -21299,7 +21804,8 @@
    "tags": [
     "conduit",
     "stun",
-    "wanted"
+    "wanted",
+    "income"
    ],
    "buffTargets": [],
    "icon": "img/units/Tempest Pirate (Navigator).png"
@@ -21645,7 +22151,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "income"
      ],
      "buffTargets": [
       "all"
@@ -21675,6 +22182,7 @@
     "summon",
     "buff",
     "ally-buff",
+    "income",
     "aoe"
    ],
    "buffTargets": [
@@ -21787,14 +22295,17 @@
      "desc": "If a unit on the map is inflicted with a status effect or debuff, this unit will teleport to their location cleansing them of the status effect or debuff after a 3 second delay. (Local 15 second cooldown)",
      "rich": "If a unit on the map is inflicted with a status effect or debuff, this unit will teleport to their location cleansing them of the status effect or debuff after a 3 second delay. (Local 15 second cooldown)",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "cleanse-allies"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
     "buff",
-    "self-buff"
+    "self-buff",
+    "cleanse-allies"
    ],
    "buffTargets": [],
    "icon": "img/units/The King (Apostle).png"
@@ -21975,7 +22486,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "income"
      ],
      "buffTargets": []
     },
@@ -21999,7 +22511,8 @@
      "rich": "⟦c|ff6666|When this unit hits a⟧ ⟦c|ff7b1c|vs⟧ Bleeding ⟦c|ff7b1c|enemy:⟧\n• Follow up with Attack 2 for 50% of this unit's damage\n• Enemies hit by this follow-up are Repulsed\n• This follow-up cannot generate Injury stacks\n• 2 second local cooldown",
      "source": "unit",
      "tags": [
-      "repulse"
+      "repulse",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -22012,6 +22525,7 @@
      "cooldown": 5,
      "cooldownType": "Local",
      "tags": [
+      "follow-up",
       "stacks"
      ],
      "buffTargets": []
@@ -22020,10 +22534,12 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "income",
     "bleed",
     "buff",
     "stacks",
-    "repulse"
+    "repulse",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/The Struggler (Rampage).png"
@@ -22198,7 +22714,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -22210,6 +22727,7 @@
      "tags": [
       "timestop",
       "dr-bypass",
+      "bonus-vs",
       "aoe"
      ],
      "buffTargets": []
@@ -22220,7 +22738,9 @@
      "rich": "Every stud an enemy moves while in this unit's range makes that enemy take 1% more damage from this unit; When attacking an enemy taking at least 30% more damage, follow up all attacks with Zayin.",
      "source": "unit",
      "tags": [
-      "dmg-taken"
+      "dmg-taken",
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -22251,8 +22771,10 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "follow-up",
     "timestop",
     "dr-bypass",
+    "bonus-vs",
     "aoe",
     "dmg-taken",
     "summon"
@@ -22417,7 +22939,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -22543,7 +23066,8 @@
       "dmg-buff",
       "range-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "bonus-vs"
      ],
      "buffTargets": []
     }
@@ -23019,7 +23543,9 @@
      "desc": "Gains the Ability Cursed Inventory; Using Cursed Inventory will swap between Chain Blitz and Domain Breaker; Domain Breaker +25% RNG & Boss DMG; Chain Blitz +10% DMG.",
      "rich": "Gains the Ability Cursed Inventory; Using Cursed Inventory will swap between Chain Blitz and Domain Breaker; Domain Breaker ⟦num|+25%⟧ RNG & Boss DMG; Chain Blitz ⟦num|+10%⟧ DMG.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "has-domain"
+     ],
      "buffTargets": []
     },
     {
@@ -23055,7 +23581,8 @@
       "rupture",
       "nullify",
       "shield-pierce",
-      "bonus-vs"
+      "bonus-vs",
+      "has-domain"
      ],
      "buffTargets": []
     }
@@ -23069,7 +23596,8 @@
      "cooldownType": "Local",
      "tags": [
       "range-buff",
-      "self-buff"
+      "self-buff",
+      "has-domain"
      ],
      "buffTargets": []
     }
@@ -23081,6 +23609,7 @@
     "bonus-vs",
     "range-buff",
     "shield-pierce",
+    "has-domain",
     "rupture",
     "nullify"
    ],
@@ -23117,7 +23646,8 @@
      "source": "unit",
      "tags": [
       "crit-buff",
-      "self-buff"
+      "self-buff",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -23125,7 +23655,8 @@
    "abilities": [],
    "tags": [
     "crit-buff",
-    "self-buff"
+    "self-buff",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Ultimate Rohan.png"
@@ -23513,7 +24044,9 @@
      "desc": "When attacking a Stunned /Frozen/ or Time Stopped enemy or an enemy in lockout, the attack has a 100% chance of immediately following up with Move 1; This attack can be immediately followed up again by move 1 with each repeating occurrence reducing the chance by 15%.",
      "rich": "When attacking a Stunned /Frozen/ or Time Stopped enemy or an enemy in lockout, the attack has a ⟦num|100%⟧ chance of immediately following up with Move 1; This attack can be immediately followed up again by move ⟦num|1⟧ with each repeating occurrence reducing the chance by ⟦num|15%⟧.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
@@ -23523,7 +24056,8 @@
     "range-buff",
     "self-buff",
     "summon",
-    "meter"
+    "meter",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Vigil (Power).png"
@@ -23819,7 +24353,9 @@
      "desc": "Anytime this unit attacks an enemy who is already marked, that attack is guaranteed to crit.",
      "rich": "Anytime this unit attacks an enemy who is already marked, that attack is guaranteed to crit.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -23828,7 +24364,8 @@
      "rich": "Anytime this unit crits an enemy, follow up with attack 1 for 60% damage and applies 50% Slow for 20 seconds. (Local 5 second cooldown)",
      "source": "unit",
      "tags": [
-      "slow"
+      "slow",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -23837,7 +24374,9 @@
    "tags": [
     "summon",
     "mark",
-    "slow"
+    "bonus-vs",
+    "slow",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/units/Wolf (Resurrection).png"
@@ -23929,6 +24468,7 @@
      "source": "unit",
      "tags": [
       "wanted",
+      "bonus-vs",
       "aoe"
      ],
      "buffTargets": []
@@ -23957,6 +24497,7 @@
     "range-buff",
     "self-buff",
     "dr-bypass",
+    "bonus-vs",
     "aoe",
     "repulse"
    ],
@@ -23988,6 +24529,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "bonus-vs",
       "meter"
      ],
      "buffTargets": []
@@ -24024,6 +24566,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "bonus-vs",
     "meter",
     "crit-buff",
     "nullify"
@@ -24305,6 +24848,7 @@
      "familiar": "Burning Blade",
      "tags": [
       "burn",
+      "bonus-vs",
       "summon",
       "stacks"
      ],
@@ -24329,6 +24873,7 @@
     "dmg-buff",
     "spa-buff",
     "self-buff",
+    "bonus-vs",
     "summon",
     "stacks"
    ],
@@ -24641,7 +25186,9 @@
      "rich": "Anytime this unit does Attack 4, does 50% more damage.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -24649,7 +25196,8 @@
    "tags": [
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/memoria/A Father's Sacrifice.png"
@@ -24688,7 +25236,8 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "burn"
+      "burn",
+      "cleanse-self"
      ],
      "buffTargets": []
     },
@@ -24701,11 +25250,9 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "self-buff"
      ],
-     "buffTargets": [
-      "all"
-     ]
+     "buffTargets": []
     }
    ],
    "abilities": [],
@@ -24714,11 +25261,9 @@
     "buff",
     "self-buff",
     "burn",
-    "ally-buff"
+    "cleanse-self"
    ],
-   "buffTargets": [
-    "all"
-   ],
+   "buffTargets": [],
    "icon": "img/memoria/All I've Got.png"
   },
   {
@@ -24817,7 +25362,9 @@
      "rich": "When attacking an enemy inflicted with Corruption, deal 20% more damage.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -24826,7 +25373,8 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "meter"
+    "meter",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Anger vs Discipline.png"
@@ -24938,8 +25486,7 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "dmg-buff",
-      "buff"
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -24970,9 +25517,10 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "bleed",
     "dmg-buff",
     "buff",
-    "bleed",
     "self-buff"
    ],
    "buffTargets": [],
@@ -24998,7 +25546,9 @@
      "rich": "Does 30% more damage to enemies inflicted with burn.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -25028,6 +25578,7 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "intense-burn",
     "stacks",
     "dmg-buff",
@@ -25067,7 +25618,9 @@
      "rich": "Whenever this unit Crits, cleanse self of all Debuffs.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "cleanse-self"
+     ],
      "buffTargets": []
     },
     {
@@ -25077,14 +25630,19 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "self-buff"
+      "self-buff",
+      "follow-up",
+      "crit-buff"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "self-buff"
+    "self-buff",
+    "cleanse-self",
+    "follow-up",
+    "crit-buff"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Bond of Master and Disciple.png"
@@ -25166,8 +25724,7 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "dmg-buff",
-      "self-buff"
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -25194,8 +25751,7 @@
    ],
    "abilities": [],
    "tags": [
-    "dmg-buff",
-    "self-buff",
+    "bonus-vs",
     "slow"
    ],
    "buffTargets": [],
@@ -25323,7 +25879,9 @@
      "rich": "When attacking a Time Stopped enemy, deal 30% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -25355,6 +25913,7 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "dmg-buff",
     "buff",
     "self-buff",
@@ -25399,7 +25958,9 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "active-ability",
+      "stun"
      ],
      "buffTargets": []
     }
@@ -25408,7 +25969,9 @@
    "tags": [
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "active-ability",
+    "stun"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Destroyer of Worlds.png"
@@ -25448,18 +26011,24 @@
      "specialty": true,
      "tags": [
       "dmg-buff",
-      "buff"
+      "buff",
+      "ally-buff"
      ],
-     "buffTargets": []
+     "buffTargets": [
+      "all"
+     ]
     }
    ],
    "abilities": [],
    "tags": [
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "ally-buff"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "all"
+   ],
    "icon": "img/memoria/Devoted Dedication.png"
   },
   {
@@ -25480,12 +26049,18 @@
      "rich": "Increases DoT damage by 30%.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "dmg-buff",
+    "self-buff"
+   ],
    "buffTargets": [],
    "icon": "img/memoria/DoT Amplifier.png"
   },
@@ -25509,7 +26084,9 @@
      "rich": "When attacking a Primed enemy deal 30% more damage",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -25519,16 +26096,15 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "repulse",
-      "aoe"
+      "repulse"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "repulse",
-    "aoe"
+    "bonus-vs",
+    "repulse"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Drops of Serenity.png"
@@ -25553,7 +26129,10 @@
      "rich": "Increases Cosmic damage by 30%.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
      "buffTargets": []
     },
     {
@@ -25564,7 +26143,8 @@
      "specialty": true,
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "active-ability"
      ],
      "buffTargets": []
     }
@@ -25572,7 +26152,8 @@
    "abilities": [],
    "tags": [
     "dmg-buff",
-    "self-buff"
+    "self-buff",
+    "active-ability"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Empty Reflections.png"
@@ -25610,7 +26191,9 @@
      "rich": "Does between 0% to 100% more damage to an enemy based on how close they are to this unit. (Further = More Damage)",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -25618,7 +26201,8 @@
    "tags": [
     "slow",
     "meter",
-    "aoe"
+    "aoe",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Endless Buffet.png"
@@ -25706,7 +26290,10 @@
      "rich": "When attacking an enemy inflicted with Wanted, increases damage dealt by 30%.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "wanted",
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -25715,12 +26302,18 @@
      "rich": "When attacking an enemy inflicted with Wanted, follows up with Attack 2 for 30% of this units damage. (5 second cooldown)",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "wanted",
+    "bonus-vs",
+    "follow-up"
+   ],
    "buffTargets": [],
    "icon": "img/memoria/Frozen Admiral.png"
   },
@@ -25779,7 +26372,9 @@
      "rich": "Anytime this unit is attacking timestopped enemies or enemies on timestop lockout, does 45% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -25814,6 +26409,7 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "dmg-buff",
     "range-buff",
     "buff",
@@ -25848,7 +26444,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "has-domain"
      ],
      "buffTargets": []
     },
@@ -25874,10 +26471,11 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "has-domain"
      ],
      "buffTargets": [
-      "Nature Element"
+      "Nature"
      ]
     }
    ],
@@ -25886,10 +26484,11 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "has-domain",
     "ally-buff"
    ],
    "buffTargets": [
-    "Nature Element"
+    "Nature"
    ],
    "icon": "img/memoria/Goddess of Spring.png"
   },
@@ -25913,7 +26512,9 @@
      "rich": "Increases Yen gain by 20%.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     },
     {
@@ -25923,6 +26524,7 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
+      "income",
       "stacks"
      ],
      "buffTargets": []
@@ -25930,6 +26532,7 @@
    ],
    "abilities": [],
    "tags": [
+    "income",
     "stacks"
    ],
    "buffTargets": [],
@@ -26008,7 +26611,10 @@
      "rich": "When attacking an enemy on Repulse lockout, deal 35% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs",
+      "repulse"
+     ],
      "buffTargets": []
     },
     {
@@ -26037,9 +26643,10 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "repulse",
     "rupture",
-    "meter",
-    "repulse"
+    "meter"
    ],
    "buffTargets": [],
    "icon": "img/memoria/He Laughed.png"
@@ -26065,7 +26672,9 @@
      "rich": "Deal 50% more damage inside Rifts.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -26075,7 +26684,8 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "bonus-vs"
+      "bonus-vs",
+      "rupture"
      ],
      "buffTargets": []
     },
@@ -26097,6 +26707,7 @@
    "abilities": [],
    "tags": [
     "bonus-vs",
+    "rupture",
     "dmg-buff",
     "crit-buff",
     "buff",
@@ -26125,7 +26736,9 @@
      "rich": "Anytime Absolute Zero is Triggered in this units range, it is immediately re-applied. (10 second cooldown.)",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "absolute-zero"
+     ],
      "buffTargets": []
     },
     {
@@ -26152,6 +26765,7 @@
    ],
    "abilities": [],
    "tags": [
+    "absolute-zero",
     "freeze",
     "aoe"
    ],
@@ -26178,7 +26792,9 @@
      "rich": "Deals 10% more damage per Modifier/Mutator on the enemy.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -26200,12 +26816,15 @@
      "rich": "This unit does 5% more damage per attack on the same enemy.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "range-buff",
     "buff",
     "self-buff"
@@ -26233,7 +26852,10 @@
      "rich": "Active Ability damage deals 50% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs",
+      "active-ability"
+     ],
      "buffTargets": []
     },
     {
@@ -26267,6 +26889,8 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "active-ability",
     "dmg-buff",
     "buff",
     "self-buff",
@@ -26311,6 +26935,7 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
+      "income",
       "stacks"
      ],
      "buffTargets": []
@@ -26332,6 +26957,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "income",
     "stacks"
    ],
    "buffTargets": [],
@@ -26369,14 +26995,17 @@
      "rich": "Gains 20% more yen when killing an enemy, this number becomes 40% after the ability Skill Garden is first used.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
     "crit-buff",
-    "self-buff"
+    "self-buff",
+    "income"
    ],
    "buffTargets": [],
    "icon": "img/memoria/King of the Trash.png"
@@ -26402,7 +27031,8 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "slow"
+      "slow",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -26423,6 +27053,7 @@
    "abilities": [],
    "tags": [
     "slow",
+    "bonus-vs",
     "dmg-buff",
     "buff",
     "self-buff"
@@ -26450,8 +27081,14 @@
      "rich": "Demon Controller allies' follow-up attacks deal 70% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
-     "buffTargets": []
+     "tags": [
+      "bonus-vs",
+      "follow-up",
+      "ally-buff"
+     ],
+     "buffTargets": [
+      "DemonController"
+     ]
     },
     {
      "name": "Show Stealer",
@@ -26462,7 +27099,9 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "ally-buff"
+      "ally-buff",
+      "active-ability",
+      "bonus-vs"
      ],
      "buffTargets": [
       "all"
@@ -26480,11 +27119,15 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "follow-up",
+    "ally-buff",
     "dmg-buff",
     "buff",
-    "ally-buff"
+    "active-ability"
    ],
    "buffTargets": [
+    "DemonController",
     "all"
    ],
    "icon": "img/memoria/Life Will Change.png"
@@ -26572,7 +27215,8 @@
      "specialty": true,
      "tags": [
       "stun",
-      "stone"
+      "stone",
+      "follow-up"
      ],
      "buffTargets": []
     }
@@ -26583,7 +27227,8 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "stone"
+    "stone",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Lord of the Fairies.png"
@@ -26673,7 +27318,9 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "dr-bypass",
+      "active-ability"
      ],
      "buffTargets": []
     }
@@ -26683,7 +27330,8 @@
     "dr-bypass",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "active-ability"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Messenger of Destruction.png"
@@ -26888,7 +27536,10 @@
      "rich": "When performing a follow up, do 30% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs",
+      "follow-up"
+     ],
      "buffTargets": []
     },
     {
@@ -26917,6 +27568,8 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "follow-up",
     "buff",
     "meter",
     "bleed"
@@ -27055,7 +27708,10 @@
      "rich": "After using 10 abilities, the next ability deals 300% more damage.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs",
+      "active-ability"
+     ],
      "buffTargets": []
     }
    ],
@@ -27063,7 +27719,9 @@
    "tags": [
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "bonus-vs",
+    "active-ability"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Princess Rosa.png"
@@ -27090,7 +27748,8 @@
      "specialty": false,
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "stun"
      ],
      "buffTargets": []
     },
@@ -27111,6 +27770,7 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "stun",
     "crit-buff"
    ],
    "buffTargets": [],
@@ -27280,7 +27940,10 @@
      "rich": "When attacking, if a shielded enemy is included in the enemys damaged that attack does 50% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs",
+      "shield-pierce"
+     ],
      "buffTargets": []
     },
     {
@@ -27292,16 +27955,20 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "active-ability"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
+    "shield-pierce",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "active-ability"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Restricted By the Heavens.png"
@@ -27326,7 +27993,9 @@
      "rich": "When this unit applies a DoT on an enemy for the first time, that DoT does 50% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -27335,12 +28004,19 @@
      "rich": "Whenever an enemy that was inflicted by Black Flames in this unit's range dies, this unit does a follow up attack. (2 second cooldown)",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "follow-up",
+      "black-flames"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "bonus-vs",
+    "follow-up",
+    "black-flames"
+   ],
    "buffTargets": [],
    "icon": "img/memoria/Revenge of the Cursed One.png"
   },
@@ -27366,7 +28042,9 @@
      "specialty": false,
      "tags": [
       "dmg-buff",
-      "buff"
+      "buff",
+      "crit-buff",
+      "self-buff"
      ],
      "buffTargets": []
     },
@@ -27376,7 +28054,9 @@
      "rich": "While Jackpot is active, this unit can attack anywhere on the map.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "range-buff"
+     ],
      "buffTargets": []
     },
     {
@@ -27392,7 +28072,10 @@
    "abilities": [],
    "tags": [
     "dmg-buff",
-    "buff"
+    "buff",
+    "crit-buff",
+    "self-buff",
+    "range-buff"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Royal Flush.png"
@@ -27418,8 +28101,9 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "dmg-buff",
-      "buff"
+      "buff",
+      "active-ability",
+      "bonus-vs"
      ],
      "buffTargets": []
     },
@@ -27429,14 +28113,19 @@
      "rich": "Damage dealt by this unit's Active abilities inflicts Bleed for 50% of the damage dealt over 8 seconds.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "active-ability",
+      "bleed"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "dmg-buff",
-    "buff"
+    "buff",
+    "active-ability",
+    "bonus-vs",
+    "bleed"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Scrap Metal Master.png"
@@ -27479,7 +28168,7 @@
       "ally-buff"
      ],
      "buffTargets": [
-      "Chained"
+      "all"
      ]
     },
     {
@@ -27489,7 +28178,9 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "dmg-buff"
+      "dmg-buff",
+      "buff",
+      "self-buff"
      ],
      "buffTargets": []
     }
@@ -27503,7 +28194,7 @@
     "ally-buff"
    ],
    "buffTargets": [
-    "Chained"
+    "all"
    ],
    "icon": "img/memoria/Shackled Sight.png"
   },
@@ -27529,7 +28220,9 @@
      "specialty": false,
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "active-ability",
+      "buff"
      ],
      "buffTargets": []
     },
@@ -27545,7 +28238,7 @@
       "ally-buff"
      ],
      "buffTargets": [
-      "all"
+      "Ninjutsu"
      ]
     },
     {
@@ -27566,11 +28259,12 @@
    "tags": [
     "dmg-buff",
     "self-buff",
+    "active-ability",
     "buff",
     "ally-buff"
    ],
    "buffTargets": [
-    "all"
+    "Ninjutsu"
    ],
    "icon": "img/memoria/Shall Know Pain.png"
   },
@@ -27594,7 +28288,10 @@
      "rich": "For every enemy hit increases next attacks damage by 5%. (Up to 35%, Resets every attack)",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "self-buff",
+      "dmg-buff"
+     ],
      "buffTargets": []
     },
     {
@@ -27612,8 +28309,8 @@
    ],
    "abilities": [],
    "tags": [
-    "dmg-buff",
-    "self-buff"
+    "self-buff",
+    "dmg-buff"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Sinful Priest.png"
@@ -27639,7 +28336,8 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "bonus-vs"
+      "bonus-vs",
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -27660,6 +28358,7 @@
    "abilities": [],
    "tags": [
     "bonus-vs",
+    "follow-up",
     "range-buff",
     "buff",
     "self-buff"
@@ -27713,7 +28412,9 @@
      "rich": "Pure Love's Beam does 100% more damage to bosses.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -27722,7 +28423,8 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "range-buff"
+    "range-buff",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Special Grade.png"
@@ -27746,14 +28448,16 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "spa-buff"
+      "spa-buff",
+      "self-buff"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "spa-buff"
+    "spa-buff",
+    "self-buff"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Speed Boost I.png"
@@ -27781,7 +28485,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "stacks"
      ],
      "buffTargets": []
     },
@@ -27843,7 +28548,9 @@
      "rich": "The first attack this unit lands on an enemy deals 100% more damage.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -27852,7 +28559,9 @@
      "rich": "Enemies within 30 range of this unit are Slowed by 50%.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "slow"
+     ],
      "buffTargets": []
     }
    ],
@@ -27860,7 +28569,9 @@
    "tags": [
     "dmg-buff",
     "buff",
-    "summon"
+    "summon",
+    "bonus-vs",
+    "slow"
    ],
    "buffTargets": [],
    "icon": "img/memoria/The Beast King.png"
@@ -27889,7 +28600,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
-      "stacks"
+      "follow-up"
      ],
      "buffTargets": []
     },
@@ -27902,7 +28613,7 @@
      "tags": [
       "buff",
       "self-buff",
-      "stacks"
+      "dmg-buff"
      ],
      "buffTargets": []
     },
@@ -27915,7 +28626,7 @@
      "tags": [
       "buff",
       "self-buff",
-      "stacks"
+      "dmg-buff"
      ],
      "buffTargets": []
     }
@@ -27925,7 +28636,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "stacks"
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/memoria/The True Savior.png"
@@ -27961,13 +28672,16 @@
      "rich": "Whenever this unit follows up with Attack 3, move this unit to the nearest available position next to the track.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "follow-up"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "stun"
+    "stun",
+    "follow-up"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Tough Bunny.png"
@@ -28016,7 +28730,11 @@
      "rich": "Anytime an unbound unit attacks an enemy inflicted with Opportunity, this unit does a follow up of a 4% damage instance.",
      "source": "memoria",
      "specialty": true,
-     "tags": [],
+     "tags": [
+      "follow-up",
+      "opportunity",
+      "bonus-vs"
+     ],
      "buffTargets": []
     }
    ],
@@ -28025,7 +28743,10 @@
     "nullify",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "follow-up",
+    "opportunity",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Trauma Turned Strength.png"
@@ -28119,7 +28840,9 @@
      "rich": "When attacking a slowed enemy does 30% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -28130,7 +28853,8 @@
      "specialty": true,
      "tags": [
       "dmg-buff",
-      "self-buff"
+      "self-buff",
+      "revive"
      ],
      "buffTargets": []
     },
@@ -28146,8 +28870,10 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "dmg-buff",
-    "self-buff"
+    "self-buff",
+    "revive"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Ultimate Deceiver.png"
@@ -28172,8 +28898,12 @@
      "rich": "On placement, gain 2 upgrades (cannot be equipped on Ninjutsu units).",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
-     "buffTargets": []
+     "tags": [
+      "ally-buff"
+     ],
+     "buffTargets": [
+      "all"
+     ]
     },
     {
      "name": "Bad Habit",
@@ -28193,9 +28923,9 @@
    ],
    "abilities": [],
    "tags": [
+    "ally-buff",
     "range-buff",
-    "buff",
-    "ally-buff"
+    "buff"
    ],
    "buffTargets": [
     "all"
@@ -28222,7 +28952,9 @@
      "rich": "Whenever a placement of this unit beyond the initial attacks, that attack deals 50% more damage.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "bonus-vs"
+     ],
      "buffTargets": []
     },
     {
@@ -28240,6 +28972,7 @@
    ],
    "abilities": [],
    "tags": [
+    "bonus-vs",
     "timestop",
     "nullify"
    ],
@@ -28299,12 +29032,16 @@
      "rich": "(Sprintwagon Exclusive) Increases Yen gain by 100%; Every placed placement of Sprintwagon reduces this amount by 50% excluding the first.",
      "source": "memoria",
      "specialty": false,
-     "tags": [],
+     "tags": [
+      "income"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "income"
+   ],
    "buffTargets": [],
    "icon": "img/memoria/Young Entrepreneur.png"
   }

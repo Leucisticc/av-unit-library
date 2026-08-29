@@ -142,5 +142,421 @@
   "buffTargets": [
    "all"
   ]
+ },
+ "memoria:A Father's Sacrifice|A Father's Duty": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:All I've Got|Burning Youth": {
+  "add": [
+   "cleanse-self"
+  ]
+ },
+ "memoria:All I've Got|Teacher of Taijutsu": {
+  "remove": [
+   "ally-buff"
+  ],
+  "add": [
+   "self-buff"
+  ],
+  "buffTargets": []
+ },
+ "memoria:Anger vs Discipline|Corruption of the Dark Chi": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Battle of the Strongest|Wanton Destruction": {
+  "remove": [
+   "dmg-buff",
+   "buff"
+  ],
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Blazing Inferno|Fires of Destruction": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Bond of Master and Disciple|Tough Teaching": {
+  "add": [
+   "cleanse-self"
+  ]
+ },
+ "memoria:Bond of Master and Disciple|Trial By Fire": {
+  "add": [
+   "crit-buff"
+  ]
+ },
+ "memoria:Company Captain's Presence|Fire's Warmth": {
+  "remove": [
+   "dmg-buff",
+   "self-buff"
+  ],
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Deceptive Innocence|Time Stop": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Destroyer of Worlds|Sleepy God": {
+  "add": [
+   "stun"
+  ]
+ },
+ "memoria:Devoted Dedication|Lover's Support": {
+  "add": [
+   "ally-buff"
+  ],
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "memoria:DoT Amplifier|DoT Amplifier": {
+  "add": [
+   "self-buff",
+   "dmg-buff"
+  ]
+ },
+ "memoria:Drops of Serenity|Foreign Training": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Drops of Serenity|Shockwave": {
+  "remove": [
+   "aoe"
+  ]
+ },
+ "memoria:Empty Reflections|Emptiness Becoming": {
+  "add": [
+   "self-buff",
+   "dmg-buff"
+  ]
+ },
+ "memoria:Endless Buffet|Hungry for a Fight": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Enthusiastic Walks|Vampiric Chaser": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Frozen Admiral|Pirate Hunter": {
+  "add": [
+   "wanted",
+   "bonus-vs"
+  ]
+ },
+ "memoria:Frozen Admiral|Admiral of Ice": {
+  "add": [
+   "follow-up"
+  ]
+ },
+ "memoria:Gaze of the Strongest|Voided Gaze": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Goddess of Spring|Founder's Domain": {
+  "add": [
+   "has-domain"
+  ]
+ },
+ "memoria:Goddess of Spring|Lover of Nature": {
+  "add": [
+   "has-domain"
+  ],
+  "buffTargets": [
+   "Nature"
+  ]
+ },
+ "memoria:Golden Obsessions|All That Glitters": {
+  "add": [
+   "income"
+  ]
+ },
+ "memoria:Golden Obsessions|Treasure Hunter": {
+  "add": [
+   "income"
+  ]
+ },
+ "memoria:He Laughed|Moment of Opportunity": {
+  "add": [
+   "bonus-vs",
+   "repulse"
+  ]
+ },
+ "memoria:Hellfire|Bounty Spotted": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Hellfire|Finisher": {
+  "add": [
+   "bonus-vs",
+   "rupture"
+  ]
+ },
+ "memoria:Ice Queen's Rest|Queen of Ice": {
+  "add": [
+   "absolute-zero"
+  ]
+ },
+ "memoria:Immortal Divine General|The Wheel Turns": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:It's Going Down Now|Memories of You": {
+  "add": [
+   "active-ability"
+  ]
+ },
+ "memoria:Journey's End|Overwhelming Curiosity": {
+  "add": [
+   "income"
+  ]
+ },
+ "memoria:King of the Trash|Loot Goblin": {
+  "add": [
+   "income"
+  ]
+ },
+ "memoria:Late Night Shift|Expiration of Life": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Life Will Change|Our Beginning": {
+  "add": [
+   "ally-buff",
+   "follow-up",
+   "bonus-vs"
+  ],
+  "buffTargets": [
+   "DemonController"
+  ]
+ },
+ "memoria:Life Will Change|Show Stealer": {
+  "add": [
+   "active-ability",
+   "bonus-vs"
+  ]
+ },
+ "memoria:Lord of the Fairies|Remorseful Existence": {
+  "add": [
+   "follow-up"
+  ]
+ },
+ "memoria:Messenger of Destruction|33550336": {
+  "add": [
+   "active-ability",
+   "dr-bypass",
+   "dmg-buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Perpetual Motion|Going Wild": {
+  "add": [
+   "follow-up",
+   "bonus-vs"
+  ]
+ },
+ "memoria:Princess Rosa|Limit Break": {
+  "add": [
+   "bonus-vs",
+   "active-ability"
+  ]
+ },
+ "memoria:Purveyor of Peace|Intense Battle": {
+  "add": [
+   "stun"
+  ]
+ },
+ "memoria:Restricted By the Heavens|Cursed Removal": {
+  "add": [
+   "bonus-vs",
+   "shield-pierce"
+  ]
+ },
+ "memoria:Restricted By the Heavens|Methodical Planning": {
+  "add": [
+   "active-ability"
+  ]
+ },
+ "memoria:Revenge of the Cursed One|Black Flames": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Revenge of the Cursed One|Hunter of Revenge": {
+  "add": [
+   "black-flames",
+   "follow-up"
+  ]
+ },
+ "memoria:Royal Flush|Against All Odds": {
+  "add": [
+   "crit-buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Royal Flush|Cursed Gambler": {
+  "add": [
+   "range-buff"
+  ]
+ },
+ "memoria:Scrap Metal Master|Captain of the Crew": {
+  "remove": [
+   "dmg-buff"
+  ],
+  "add": [
+   "active-ability",
+   "bonus-vs"
+  ]
+ },
+ "memoria:Scrap Metal Master|Heavy Metal": {
+  "add": [
+   "active-ability",
+   "bleed"
+  ]
+ },
+ "memoria:Shackled Sight|Control Freak": {
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "memoria:Shackled Sight|Dangerous Love": {
+  "add": [
+   "buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Shall Know Pain|Deliverance of Pain": {
+  "add": [
+   "active-ability",
+   "dmg-buff",
+   "buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Shall Know Pain|Course Correction": {
+  "buffTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "memoria:Sinful Priest|Large Cannon": {
+  "add": [
+   "self-buff",
+   "dmg-buff"
+  ]
+ },
+ "memoria:Snip Snip|Surprise Firearm": {
+  "add": [
+   "follow-up"
+  ]
+ },
+ "memoria:Special Grade|A Child's Promise": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Speed Boost I|Speed Boost": {
+  "add": [
+   "spa-buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Sword Priestess|Zen Zephyr": {
+  "add": [
+   "stacks"
+  ]
+ },
+ "memoria:The Beast King|Draconic Might": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:The Beast King|Pressure of the Strong": {
+  "add": [
+   "slow"
+  ]
+ },
+ "memoria:The True Savior|Living Out Your Fantasy": {
+  "add": [
+   "follow-up"
+  ]
+ },
+ "memoria:The True Savior|The Brightest Star": {
+  "remove": [
+   "stacks"
+  ],
+  "add": [
+   "dmg-buff",
+   "self-buff"
+  ]
+ },
+ "memoria:The True Savior|For All to See": {
+  "remove": [
+   "stacks"
+  ],
+  "add": [
+   "dmg-buff",
+   "self-buff"
+  ]
+ },
+ "memoria:Tough Bunny|Prey Becomes Predator": {
+  "add": [
+   "follow-up"
+  ]
+ },
+ "memoria:Trauma Turned Strength|Resented Lineage": {
+  "add": [
+   "opportunity",
+   "follow-up",
+   "bonus-vs"
+  ]
+ },
+ "memoria:Trust of Others|Power of Friendship": {
+  "add": [
+   "self-buff"
+  ]
+ },
+ "memoria:Ultimate Deceiver|Opportune Attack": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Ultimate Deceiver|Immortal Monster": {
+  "add": [
+   "revive"
+  ]
+ },
+ "memoria:Unlikely Doctor|Top Tier Support": {
+  "add": [
+   "ally-buff"
+  ],
+  "buffTargets": [
+   "all"
+  ]
+ },
+ "memoria:Want Some|Remote Control": {
+  "add": [
+   "bonus-vs"
+  ]
+ },
+ "memoria:Young Entrepreneur|Yen Mastery": {
+  "add": [
+   "income"
+  ]
  }
 }

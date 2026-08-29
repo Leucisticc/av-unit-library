@@ -78,7 +78,7 @@ def buff_targets(text: str, groups: list[str]) -> list[str]:
         for m in rx.finditer(text):
             if _TARGET_NEG.search(_clause_before(text, m.start(), 30, ".;")):
                 continue  # "stop buffing allies", "can no longer buff other units"
-            phrase = m.group(1).strip().lower().replace("'s", "")
+            phrase = re.sub(r"\s+element$", "", m.group(1).strip().lower().replace("'s", ""))
             parts = [p.strip() for p in re.split(r"\s+(?:and|&)\s+|,", phrase) if p.strip()] or [""]
             for part in parts:
                 if part in _TARGET_SELF:
