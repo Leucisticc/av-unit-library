@@ -125,6 +125,9 @@ def _load(raw_dir: Path, module: str):
     return parse_module(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
+# Seasonal "_Mythic" variants that are the same group as their base on the wiki.
+SAME_GROUP = {"Fall25_Mythic": "Fall25", "Spring_Mythic": "Spring"}
+
 def _as_list(v) -> list:
     if v is None:
         return []
@@ -204,6 +207,8 @@ def build_units(raw_dir: Path = RAW_DIR) -> list[dict]:
             continue  # element-combo placeholder rows ("BlastBlast"), nothing to read
 
         groups = _as_list(u.get("groups"))
+        # Fall25_Mythic / Spring_Mythic are the same seasonal group as their base, so fold them in.
+        groups = list(dict.fromkeys(SAME_GROUP.get(g, g) for g in groups))
         # "Ninjutsu" is a mechanic the wiki never lists as a group, but buffs target it.
         if any(re.search(r"\b(?:has|have) Ninjutsu\b|\bvia Ninjutsu\b", p["desc"]) for p in passives) and "Ninjutsu" not in groups:
             groups = groups + ["Ninjutsu"]

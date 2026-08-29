@@ -140,16 +140,16 @@
  },
  "Spring": {
   "name": "Spring",
-  "icon": null,
+  "icon": "Shamrock.png",
   "tab": "Seasonal",
-  "gradient": null,
+  "gradient": "linear-gradient(0deg,#00ff96,#2bff30,#f4ff9b)",
   "order": 15
  },
  "Fall25": {
-  "name": "Fall25",
-  "icon": null,
+  "name": "Fall '25",
+  "icon": "Leaves.png",
   "tab": "Seasonal",
-  "gradient": null,
+  "gradient": "linear-gradient(0deg,#a1290e 10%,#ffbd89 50%,#ffa200 90%)",
   "order": 18
  }
 }
