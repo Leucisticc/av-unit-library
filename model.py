@@ -48,6 +48,60 @@ def _join_lines(s: str) -> str:
     return "\n".join(out)
 
 
+# The wiki's page renderer (Module:UnitPage autoTagKeywords) turns bare effect and
+# element words into icons and colours numbers; mirror that in `rich`.
+_EFFECT_WORDS = {
+    "Bleed": "Bleed", "Bleeds": "Bleed", "Bled": "Bleed", "Bleeding": "Bleed",
+    "Burn": "Burn", "Burns": "Burn", "Burned": "Burn", "Burning": "Burn",
+    "Freeze": "Freeze", "Freezes": "Freeze", "Freezed": "Freeze", "Freezing": "Freeze", "Frozen": "Freeze",
+    "Slow": "Slow", "Slows": "Slow", "Slowed": "Slow", "Slowing": "Slow",
+    "Stun": "Stun", "Stuns": "Stun", "Stunned": "Stun", "Stunning": "Stun",
+    "Repulse": "Repulse", "Repulses": "Repulse", "Repulsed": "Repulse", "Repulsing": "Repulse",
+    "Nullify": "Nullify", "Nullifies": "Nullify", "Nullified": "Nullify", "Nullifying": "Nullify",
+    "Cleave": "Cleave", "Cleaved": "Cleave", "Cleaves": "Cleave", "Cleaving": "Cleave",
+    "Time Stop": "Time Stop", "Time Stops": "Time Stop", "Time Stopped": "Time Stop", "Timestop": "Time Stop", "Timestops": "Time Stop", "Timestopped": "Time Stop",
+    "Absolute Zero": "Absolute Zero", "Aura of Corruption": "Aura of Corruption", "Purgatory Flames": "Purgatory Flames",
+    "Black Flame": "Black Flame", "Black Flames": "Black Flame", "Intense Burn": "Intense Burn", "Infinite Spin": "Infinite Spin",
+    "Conflagration": "Conflagration", "Frostburn": "Frostburn", "Affection": "Affection", "Petrified": "Petrified", "Petrify": "Petrified",
+    "Wounded": "Wounded", "Rupture": "Rupture", "Ruptured": "Rupture", "Bubbled": "Bubbled", "Tethered": "Tethered", "Diseased": "Diseased",
+    "Scorched": "Scorched", "Despair": "Despair", "Conduit": "Conduit", "Wanted": "Wanted", "Confusion": "Confusion", "Confuses": "Confusion",
+    "Slumber": "Slumber", "Chaos": "Chaos", "Dismantle": "Dismantle", "Stone": "Stone", "Stoned": "Stone", "Destruction": "Destruction",
+    "Corruption": "Corruption", "Opportunity": "Opportunity", "Primed": "Primed", "Chained": "Chained",
+}
+_ELEMENT_WORDS = ["Spark", "Nature", "Water", "Fire", "Holy", "Passion", "Curse", "Blast", "Cosmic", "Unbound"]
+_RE_TOKEN = re.compile(_T + r"[^" + _E + r"]*" + _E)
+_RE_AUTO = re.compile(
+    r"\b(" + "|".join(sorted((re.escape(w) for w in _EFFECT_WORDS), key=len, reverse=True)) + r")\b"
+    + r"|\b(" + "|".join(_ELEMENT_WORDS) + r")\b(?= (?:units?|allies|ally|element|damage|dmg|towers?|category|attacks?|DoT))"
+    + r"|(?<![\w<>])([+-]?\d+(?:\.\d+)?%?)(?![\w<>%])",
+    re.I,
+)
+
+
+def _auto_tag(rich: str) -> str:
+    """Wrap bare effect words, element names (when used as a category) and numbers in
+    tokens, leaving existing tokens untouched. Visible text is unchanged."""
+    parts, i = [], 0
+    for tok in _RE_TOKEN.finditer(rich):
+        parts.append(_auto_tag_text(rich[i:tok.start()]))
+        parts.append(tok.group(0))
+        i = tok.end()
+    parts.append(_auto_tag_text(rich[i:]))
+    return "".join(parts)
+
+
+def _auto_tag_text(text: str) -> str:
+    def rep(m):
+        if m.group(1):
+            key = next(k for k in _EFFECT_WORDS if k.lower() == m.group(1).lower())
+            return f"{_T}fx|{_EFFECT_WORDS[key]}|{m.group(1)}{_E}"
+        if m.group(2):
+            el = next(e for e in _ELEMENT_WORDS if e.lower() == m.group(2).lower())
+            return f"{_T}el|{el}|{m.group(2)}{_E}"
+        return f"{_T}num|{m.group(3)}{_E}"
+    return _RE_AUTO.sub(rep, text)
+
+
 def clean_both(s: str) -> tuple[str, str]:
     """Return (plain, rich). Same words, same line breaks; rich keeps markup tokens."""
     s = s.replace("\\n", "\n").replace("\\t", "\t")
@@ -55,7 +109,7 @@ def clean_both(s: str) -> tuple[str, str]:
     for rx, fn in _SUBS:
         rich = rx.sub(lambda m: fn(m)[0], rich)
         plain = rx.sub(lambda m: fn(m)[1], plain)
-    return _join_lines(plain), _join_lines(rich)
+    return _join_lines(plain), _auto_tag(_join_lines(rich))
 
 
 def clean_text(s: str) -> str:

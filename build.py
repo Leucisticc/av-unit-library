@@ -51,6 +51,7 @@ def make_data() -> dict:
                     "name": "Kouhaii", "role": "Developer & Designer",
                     "discord": "Kouhaii", "github": "https://github.com/Leucisticc"},
         "elements": {e: {"color": c, "icon": _icon(ELEMENT_ICON[e])} for e, c in ELEMENT_COLOR.items()},
+        "stats": {"damage": _icon("stat_Damage.png"), "range": _icon("stat_Range.png"), "spa": _icon("stat_SPA.png")},
         "buffTargets": sorted({t for u in units + memoria for t in u["buffTargets"]}, key=lambda t: (t != "all", t)),
         "units": units,
         "memoria": memoria,

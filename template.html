@@ -35,7 +35,7 @@ header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 
 .u{display:flex;gap:10px;align-items:flex-start}.u>div{min-width:0;flex:1}
 .spec{font:600 10px "Chakra Petch",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amp);border:1px solid var(--amp);border-radius:4px;padding:1px 6px}
 .stat{font-family:"IBM Plex Mono",monospace}
-.topbtns{position:absolute;top:12px;right:20px;display:flex;gap:8px;z-index:5}
+.topbtns{position:absolute;top:12px;right:20px;display:flex;gap:8px;z-index:5;align-items:center}
 .brand h1{font:700 18px/1 "Chakra Petch",sans-serif;letter-spacing:.06em;text-transform:uppercase;margin:0}
 .brand .sub{color:var(--muted);font-size:12px}
 .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -47,9 +47,9 @@ header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 
 .dd>button:hover,.dd.open>button{border-color:var(--accent)}
 .dd>button .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent)}
 .dd>button::after{content:"▾";color:var(--muted);font-size:11px}
-.dd .menu{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:240px;overflow:visible;
+.dd .menu{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:240px;overflow:visible;max-height:none;
 z-index:20;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.25);padding:6px}
-.dd .menu2{overflow:auto}
+.dd .menu2{overflow:auto;max-height:70vh}
 .dd.open .menu{display:block}
 .dd.flip .menu{left:auto;right:0}
 .dd label{display:flex;gap:8px;align-items:center;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:13px;white-space:nowrap}
@@ -81,7 +81,14 @@ kbd{font-family:"IBM Plex Mono",monospace;border:1px solid var(--line);border-bo
 .pills:empty{display:none}
 .pill{font:12px "IBM Plex Mono",monospace;border-radius:6px;padding:2px 8px;background:var(--panel2);border:1px solid var(--line);cursor:pointer}
 .pill b{color:var(--accent);font-weight:500}.pill:hover{border-color:var(--applies)}
-main{flex:1;display:grid;grid-template-columns:380px minmax(0,1fr);min-height:0}
+main{flex:1;display:grid;grid-template-columns:var(--listw,380px) 6px minmax(0,1fr);min-height:0}
+#split{cursor:col-resize;background:var(--line);opacity:.6}#split:hover,#split.on{background:var(--accent);opacity:1}
+.si{width:16px;height:16px;object-fit:contain;vertical-align:-3px;margin-right:2px}
+.paren{color:#909090}
+.rnum{color:#acd0ff;font-weight:600}
+:root:not([data-theme="dark"]) .rnum{color:#2f6fd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rnum{color:#acd0ff}}
+#zoom{display:flex;gap:4px}#zoom button{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);font:700 16px "IBM Plex Mono",monospace;cursor:pointer}#zoom button:hover{border-color:var(--accent)}
 #list{overflow:auto;border-right:1px solid var(--line);background:var(--bg)}
 #count{padding:8px 14px;color:var(--muted);font-size:12px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:1}
 .u{padding:9px 14px 9px 12px;width:100%;box-sizing:border-box;border-bottom:1px solid var(--line);cursor:pointer;border-left:3px solid transparent}
@@ -109,7 +116,7 @@ main{flex:1;display:grid;grid-template-columns:380px minmax(0,1fr);min-height:0}
 .dd .flyrow{display:flex;align-items:center;gap:8px;padding:5px 8px 5px 28px;border-radius:6px;cursor:pointer;font-size:12px;color:var(--accent)}
 .dd .flyrow:hover{background:var(--panel2)}
 .dd .flyrow .arr{margin-left:auto;color:var(--muted)}
-.dd .menu2{display:none;position:absolute;left:100%;top:-6px;margin-left:2px;min-width:240px;max-height:420px}
+.dd .menu2{display:none;position:absolute;left:100%;top:-6px;margin-left:2px;min-width:240px}
 .dd .fly:hover>.menu2,.dd .fly.open>.menu2{display:block}
 .dd.flip .menu2{left:auto;right:100%;margin-left:0;margin-right:2px}
 .dd .subhead{padding:6px 8px 2px 28px;font:600 10px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
@@ -150,9 +157,6 @@ h3.sec::after{content:"";flex:1;height:1px;background:var(--line)}
 .rfx{display:inline-flex;align-items:center;gap:3px;color:var(--c,inherit);font-weight:600}
 .rfx img{width:16px;height:16px;object-fit:contain;vertical-align:-3px}
 .rgrp{font-weight:600;color:var(--accent)}
-.rnum{color:#00fe6c;font-weight:600}
-:root:not([data-theme="dark"]) .rnum{color:#0a8f3c}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rnum{color:#00fe6c}}
 .rhead{font-weight:700}
 mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 .empty{color:var(--muted);padding:60px 20px;text-align:center;max-width:46ch;margin:0 auto}
@@ -164,22 +168,22 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 </head>
 <body>
 <header>
-  <div class="topbtns"><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
+  <div class="topbtns"><div id="zoom"><button type="button" id="zoomout" title="Zoom out (⌘−)">−</button><button type="button" id="zoomin" title="Zoom in (⌘+)">+</button></div><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
   <div class="brand"><h1>Kouhaii AV Library</h1><span class="sub">passives &amp; abilities of every Anime Vanguards unit and memoria · wiki data <span id="gen" class="mono"></span></span></div>
   <div class="tabs" role="tablist"><button class="tab" data-tab="units" role="tab">Units <span class="n" id="tabn-units"></span></button><button class="tab" data-tab="memoria" role="tab">Memoria <span class="n" id="tabn-memoria"></span></button></div>
   <div class="bar">
-    <input id="q" placeholder="unit name or a word from a passive, or use the filters below" autocomplete="off" spellcheck="false" aria-label="Search and filter">
+    <input id="q" placeholder="Unit name or a word from a passive, or use the filters below" autocomplete="off" spellcheck="false" aria-label="Search and filter">
   </div>
   <div id="dds" class="bar"></div>
   <div id="pills" class="pills"></div>
   <div id="creditbox" role="dialog" aria-label="Credits"></div>
   <div id="helpbox" role="dialog" aria-label="How to use">
     <h3>What this is</h3>
-    <p>Every Anime Vanguards unit and memoria with the full text of its passives and active abilities, pulled from the wiki. Switch between <b>Units</b> and <b>Memoria</b> with the tabs; filters work the same on both. A memoria's first passive works on anyone; its <em>Specialty</em> passives only work on the unit(s) or element(s) shown. Each passive is tagged with the status effects it applies and the buffs it gives, so you can find units by what they do instead of guessing keywords.</p>
+    <p>Every Anime Vanguards unit and memoria with the full text of its passives and active abilities, pulled from the wiki. Switch between <b>Units</b> and <b>Memoria</b> with the tabs; filters work the same on both. A memoria's first passive works on anyone; its <em>Exclusive</em> passives only work on the unit(s) or element(s) shown. Each passive is tagged with the status effects it applies and the buffs it gives, so you can find units by what they do instead of guessing keywords.</p>
     <h3>Filters</h3>
     <ul>
       <li><b>Damage over Time, Crowd Control, Damage Amplification, Other Effects</b> — every status effect on the wiki's Status Effects page, in its groups. Tick an effect to show units that <em>apply</em> it. Unit-specific effects (Stone, Despair, Infinite Spin…) also carry the general effect they do (Stun, Slow, Repulse…). Units that only react to it ("deals more damage to Bleeding enemies") are not included — look under Mechanics → <em>Conditional Bonus Damage</em> for those.</li>
-      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it. Hover "who gets it" under Buffs allies to narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit. On the Memoria tab, Buffs self has the same flyout ("which unit can wear it"): a universal passive works on anyone, a Specialty passive only on its unit or element.</li>
+      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it. Hover "who gets it" under Buffs allies to narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit. On the Memoria tab, Buffs self has the same flyout ("which unit can wear it"): a universal passive works on anyone, an Exclusive passive only on its unit or element.</li>
       <li><b>Mechanics</b> — summons, meters, stacks, ignoring damage reduction, anti-shield, hits-everything.</li>
       <li><b>Element, Rarity, State, Group</b> — the unit itself. State is <em>Unevolved</em> (has an evolution), <em>Evolved</em>, or <em>No evolution</em>.</li>
     </ul>
@@ -199,6 +203,7 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 </header>
 <main>
   <div id="list"><div id="count"></div><div id="rows"></div></div>
+  <div id="split" title="drag to resize"></div>
   <div id="detail"></div>
 </main>
 <script id="data" type="application/json">/*__DATA__*/</script>
@@ -326,9 +331,11 @@ function wordSpans(text, words){
 function renderRich(rich, plain, words, tids){
   const spans = [...tagSpans(plain, tids), ...wordSpans(plain, words)].sort((a,b) => a[0]-b[0]);
   const segs = richSegments(rich);
-  let pos = 0, html = '';
+  let pos = 0, html = '', depth = 0;
   for (const seg of segs){
     const start = pos, end = pos + seg.text.length; let inner = '', i = start;
+    const openDepth = depth;
+    for (const ch of seg.text){ if (ch === '(') depth++; else if (ch === ')') depth = Math.max(0, depth - 1); }
     for (const [a,b,tid] of spans){
       if (b <= start || a >= end) continue;
       const sa = Math.max(a, start), sb = Math.min(b, end);
@@ -339,9 +346,33 @@ function renderRich(rich, plain, words, tids){
       i = sb;
     }
     inner += esc(plain.slice(i, end));
-    html += wrapSeg(seg, inner); pos = end;
+    let piece = wrapSeg(seg, inner);
+    if (!seg.kind && (openDepth > 0 || depth > 0) && seg.text.includes('(') === false && seg.text.includes(')') === false) piece = `<span class="paren">${piece}</span>`;
+    else if (!seg.kind && (seg.text.includes('(') || seg.text.includes(')'))) piece = greyParens(seg.text, inner, openDepth);
+    else if (seg.kind && openDepth > 0) piece = `<span class="paren">${piece}</span>`;
+    html += piece; pos = end;
   }
   return html;
+}
+// split an escaped plain segment at parentheses so text inside "(...)" is greyed like the wiki
+function greyParens(text, innerHtml, depth){
+  // innerHtml may contain <mark> tags; walk the raw text and the html in step
+  let out = '', j = 0, buf = '', d = depth;
+  const flush = () => { if (buf){ out += d > 0 ? `<span class="paren">${buf}</span>` : buf; buf = ''; } };
+  for (let k = 0; k < text.length; k++){
+    const ch = text[k];
+    // copy any tags sitting at this position
+    while (innerHtml[j] === '<'){ const e = innerHtml.indexOf('>', j); buf += innerHtml.slice(j, e + 1); j = e + 1; }
+    let tok = innerHtml[j];
+    if (tok === '&'){ const e = innerHtml.indexOf(';', j); tok = innerHtml.slice(j, e + 1); }
+    j += tok.length;
+    if (ch === '('){ flush(); d++; buf += tok; }
+    else if (ch === ')'){ buf += tok; flush(); d = Math.max(0, d - 1); }
+    else buf += tok;
+  }
+  while (j < innerHtml.length) buf += innerHtml[j++];
+  flush();
+  return out;
 }
 function hlTags(text, words, tids){ return renderRich(text, text, words, tids); }
 function hl(text, words){
@@ -378,7 +409,7 @@ function render(){
   $('#rows').innerHTML = visible.map((u,i) => `
     <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="" loading="lazy">`:''}<div>
       <div class="n"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</div>
-      <div class="m">${u.kind==='memoria' ? (u.exclusiveUnits.length ? 'Specialty: ' + u.exclusiveUnits.map(esc).join(', ') : u.elements.length ? 'Specialty: ' + u.elements.map(elem).join(' ') : 'Universal') : u.elements.map(elem).join(' ') + (u.state==='Evolved'?' · Evolved':'')}</div>
+      <div class="m">${u.kind==='memoria' ? (u.exclusiveUnits.length ? 'Exclusive: ' + u.exclusiveUnits.map(esc).join(', ') : u.elements.length ? 'Exclusive: ' + u.elements.map(elem).join(' ') : 'Universal') : u.elements.map(elem).join(' ') + (u.state==='Evolved'?' · Evolved':'')}</div>
       <div class="s">${snippet(u, q)}</div>
     </div></div>`).join('');
   renderPills(); renderDropdowns(q); renderDetail(q);
@@ -393,15 +424,15 @@ function renderDetail(q){
   const u = ITEMS().find(x => x.slug === state.unit);
   document.body.classList.toggle('showing', !!u);
   if (!u){ $('#detail').innerHTML = `<div class="empty"><b>Pick a unit</b>Filter with the dropdowns above, or type <code>cc:repulse effect:tethered</code> to find every push-and-pull unit.</div>`; return; }
-  const card = e => `<div class="card"><h4>${esc(e.name)}${e.specialty?`<span class="spec" title="only works on the unit(s) / element(s) this memoria is made for">Specialty</span>`:''}${e.cooldown!=null?`<span class="src">CD ${e.cooldown}s${e.cooldownType?' · '+esc(e.cooldownType):''}</span>`:''}${e.tags.map(tagPill).join(' ')}</h4><p>${renderRich(e.rich || e.desc, e.desc, q.text, activeTags(q))}</p></div>`;
+  const card = e => `<div class="card"><h4>${esc(e.name)}${e.specialty?`<span class="spec" title="only works on the unit(s) / element(s) this memoria is made for">Exclusive</span>`:''}${e.cooldown!=null?`<span class="src">CD ${e.cooldown}s${e.cooldownType?' · '+esc(e.cooldownType):''}</span>`:''}${e.tags.map(tagPill).join(' ')}</h4><p>${renderRich(e.rich || e.desc, e.desc, q.text, activeTags(q))}</p></div>`;
   const link = n => `<a data-unit="${esc(n.replace(/ /g,'_'))}">${esc(n)}</a>`;
   const meta = u.kind === 'memoria'
-    ? `<span class="stat">ATK ${esc(u.baseAttack ?? '—')} · RNG ${esc(u.baseRange ?? '—')}</span>${u.exclusiveUnits.length?`<span>Specialty for ${u.exclusiveUnits.map(n => BY_SLUG[norm(n.replace(/ /g,'_'))] ? link(n) : esc(n)).join(', ')}</span>`:''}${u.elements.length?`<span>Specialty for ${u.elements.map(elem).join(' ')} units</span>`:''}${!u.exclusiveUnits.length && !u.elements.length ? '<span>Universal</span>' : ''}`
+    ? `<span class="stat"><img class="si" src="${DATA.stats.damage}" alt="Damage">${esc(u.baseAttack ?? '—')} <img class="si" src="${DATA.stats.range}" alt="Range">${esc(u.baseRange ?? '—')}</span>${u.exclusiveUnits.length?`<span>Exclusive to ${u.exclusiveUnits.map(n => BY_SLUG[norm(n.replace(/ /g,'_'))] ? link(n) : esc(n)).join(', ')}</span>`:''}${u.elements.length?`<span>Exclusive to ${u.elements.map(elem).join(' ')} units</span>`:''}${!u.exclusiveUnits.length && !u.elements.length ? '<span>Universal</span>' : ''}`
     : `<span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}`;
   $('#detail').innerHTML = `
     <span class="back" data-back>← back to list</span>
     <div class="dh"><h2>${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
-    <div class="meta">${meta}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">wiki ↗</a></div>
+    <div class="meta">${meta}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">Wiki ↗</a></div>
     <div class="tagrow">${u.tags.map(tagPill).join('')}</div>
     ${u.passives.some(p=>p.source!=='familiar')?'<h3 class="sec">Passives</h3>'+u.passives.filter(p=>p.source!=='familiar').map(card).join(''):''}
     ${u.passives.some(p=>p.source==='familiar')?`<h3 class="sec">Vanguard Familiar · ${esc(u.passives.find(p=>p.source==='familiar').familiar)}</h3>`+u.passives.filter(p=>p.source==='familiar').map(card).join(''):''}
@@ -509,6 +540,20 @@ $('#credits').addEventListener('click', e => { e.stopPropagation(); toggleBox('c
 $('#copydc').addEventListener('click', async e => { try { await navigator.clipboard.writeText(CR.discord); e.currentTarget.querySelector('.mono').textContent = 'copied!'; setTimeout(() => e.target.closest('button').querySelector('.mono').textContent = CR.discord, 1200); } catch {} });
 document.addEventListener('click', e => { if (!e.target.closest('#helpbox,#creditbox,#help,#credits')) toggleBox(null); });
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+// list pane resize
+(() => { let drag = false; const sp = $('#split');
+  try { const w = localStorage.getItem('listw'); if (w) document.documentElement.style.setProperty('--listw', w + 'px'); } catch {}
+  sp.addEventListener('mousedown', e => { drag = true; sp.classList.add('on'); e.preventDefault(); });
+  window.addEventListener('mousemove', e => { if (!drag) return; const w = Math.min(Math.max(e.clientX, 260), window.innerWidth - 360); document.documentElement.style.setProperty('--listw', w + 'px'); });
+  window.addEventListener('mouseup', () => { if (!drag) return; drag = false; sp.classList.remove('on'); try { localStorage.setItem('listw', parseInt(getComputedStyle(document.documentElement).getPropertyValue('--listw'))); } catch {} });
+})();
+// zoom buttons (same effect as ⌘+ / ⌘−, remembered per browser)
+(() => { let z = 1; try { z = parseFloat(localStorage.getItem('zoom')) || 1; } catch {}
+  const apply = () => { document.documentElement.style.fontSize = (16 * z) + 'px'; try { localStorage.setItem('zoom', z); } catch {} };
+  $('#zoomin').addEventListener('click', () => { z = Math.min(1.6, +(z + 0.1).toFixed(2)); apply(); });
+  $('#zoomout').addEventListener('click', () => { z = Math.max(0.7, +(z - 0.1).toFixed(2)); apply(); });
+  apply();
+})();
 document.addEventListener('click', e => { if (!e.target.closest('.dd')) document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); });
 $('#q').addEventListener('input', e => { state.q = e.target.value; writeHash(); render(); });
 $('#pills').addEventListener('click', e => { const p = e.target.closest('.pill'); if (p) toggleToken(p.dataset.tok); });
