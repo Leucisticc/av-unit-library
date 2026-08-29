@@ -33,6 +33,15 @@ RARITY_STYLE = {
     "Secret":    {"gradient": "linear-gradient(150deg,#c60000 10%,#500000 45%,#f40000 80%)", "solid": "#a80000"},
     "Vanguard":  {"gradient": "linear-gradient(150deg,#c00060 10%,#700090 40%,#e0a02d 80%)", "solid": "#8a0a78"},
     "Unknown":   {"gradient": "linear-gradient(#8a8f9a,#8a8f9a)", "solid": "#6b7280"},
+    # Memoria with a bespoke wiki style; the wiki labels all of these "Vanguard".
+    "Strongest": {"gradient": "linear-gradient(135deg, #ffffff, #18f6ff, #802d9b, #ffffff, #a3281b, #800000, #ffffff)", "solid": "#8a0a78", "text": "Vanguard"},
+    "BlazingSol": {"gradient": "linear-gradient(to right, #ff2a00, #e57a00, #ffde9b, #e37a00, #ff2a00)", "solid": "#8a0a78", "text": "Vanguard"},
+    "CogFive": {"gradient": "linear-gradient(-208deg, #ffffff, #c4f6ff, #ff5cd2, #fff59a, #ffffff, #92deff, #ff4aa4, #ffffff)", "solid": "#8a0a78", "text": "Vanguard"},
+    "Goddess": {"gradient": "linear-gradient(152deg, #9981cf, #e5d4f5, #f3f6f9, #e5d4f5, #9981cf)", "solid": "#8a0a78", "text": "Vanguard"},
+    "ShinobiGod": {"gradient": "linear-gradient(152deg, #000018, #00000c, #6d2d51 50%, #6d2d51 80%, #000018)", "solid": "#8a0a78", "text": "Vanguard"},
+    "Savior": {"gradient": "linear-gradient(-208deg, #750011 10%, #280006, #040001, #8e0014, #d4344b, #eeb2bb, #fefefe, #ea99a4, #d73c52, #fe5133, #c3001c, #750011 90%)", "solid": "#8a0a78", "text": "Vanguard"},
+    "Enthusiastic": {"gradient": "linear-gradient(-208deg, #f0262b 20%, #6d021b, #f9200c, #200000, #f0262b 90%)", "solid": "#8a0a78", "text": "Vanguard"},
+    "IceQueen": {"gradient": "linear-gradient(150deg, #0047b6 21%, #e1e7ec 35%, #91f8f6 55%, #37b2fc 75%, #1656ba 100%)", "solid": "#8a0a78", "text": "Vanguard"},
 }
 ELEMENT_COLOR = {
     "Fire": "#f88f2d", "Nature": "#00fe6c", "Water": "#4275ff", "Spark": "#09e7ff", "Holy": "#f9fca7",

@@ -99,6 +99,10 @@ class _Parser:
             if c == "}":
                 self.i += 1
                 break
+            m_stray = _IDENT.match(self.s, self.i)
+            if m_stray and self.s[m_stray.end():m_stray.end() + 1] in "\n\r" and m_stray.group() not in ("true", "false", "nil"):
+                self.i = m_stray.end()   # wiki typo like `name = "X",e` — a stray letter on its own
+                continue
             if c == "[":
                 self.i += 1
                 k = self.value()

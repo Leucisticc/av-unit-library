@@ -1,9 +1,9 @@
-# AV Unit Library
+# Kouhaii AV Library
 
 **Live:** https://leucisticc.github.io/av-unit-library/
 
 Offline, filterable library of every Anime Vanguards unit's passives and
-active abilities. Data comes from the wiki's Lua data modules
+active abilities, plus every Memoria (universal passive + Specialty passives). Data comes from the wiki's Lua data modules
 (`Module:UnitData/data`, `AbilityData`, `FamiliarData`, `EvolvedUnitsData`),
 not from scraping pages.
 

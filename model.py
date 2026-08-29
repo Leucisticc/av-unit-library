@@ -17,6 +17,7 @@ _SUBS = [
     (re.compile(r"\{\{Effects\|([^|}]+)(?:\|([^}]*))?\}\}"), lambda m: (f"{_T}fx|{m.group(1).strip()}|{(m.group(2) or m.group(1)).strip()}{_E}", (m.group(2) or m.group(1)).strip())),
     (re.compile(r"<effect=([^>]+)>(.*?)</effect>"), lambda m: (f"{_T}fx|{m.group(1).strip()}|{m.group(2).strip()}{_E}", m.group(2).strip())),
     (re.compile(r"\{\{Element\|([^|}]+)\}\}"), lambda m: (f"{_T}el|{m.group(1).strip()}{_E}", m.group(1).strip())),
+    (re.compile(r"<element=([^>]+)>(.*?)</element>"), lambda m: (f"{_T}el|{m.group(1).strip()}{_E}", m.group(2).strip())),
     (re.compile(r"\{\{Group\|([^|}]+)\}\}"), lambda m: (f"{_T}grp|{m.group(1).strip()}|{_split_camel(m.group(1).strip())}{_E}", _split_camel(m.group(1).strip()))),
     (re.compile(r"\{\{Rarity\|([^|}]+)\|([^}]*)\}\}"), lambda m: (f"{_T}rar|{m.group(1).strip()}|{m.group(2).strip()}{_E}", m.group(2).strip())),
     (re.compile(r"\{\{ColorText\|([^|}]+)\|text=([^}]*)\}\}"), lambda m: (f"{_T}ct|{m.group(1).strip()}|{m.group(2).strip()}{_E}", m.group(2).strip())),
@@ -172,6 +173,43 @@ def build_units(raw_dir: Path = RAW_DIR) -> list[dict]:
             "towerType": u.get("tower_type"),
             "passives": passives,
             "abilities": abils,
+            "tags": [],
+        })
+    out.sort(key=lambda x: x["name"].lower())
+    return out
+
+
+def build_memoria(raw_dir: Path = RAW_DIR) -> list[dict]:
+    """Memoria: equippable items with a universal first passive and locked
+    'Specialty' passives that only work on the named unit(s) / element(s)."""
+    data = _load(raw_dir, "MemoriaData/data")
+    out = []
+    for name, mem in data.items():
+        if not isinstance(mem, dict):
+            continue
+        excl_units = _as_list(mem.get("exclusive_units")) or _as_list(mem.get("exclusive_unit"))
+        excl_units = [u for u in excl_units if isinstance(u, str)]
+        excl_elems = [e for e in _as_list(mem.get("exclusive_elements")) if isinstance(e, str)]
+        passives = []
+        for p in _as_list(mem.get("passives")):
+            if not isinstance(p, dict) or not p.get("name"):
+                continue
+            plain, rich = clean_both(p.get("description", ""))
+            passives.append({"name": p["name"], "desc": plain, "rich": rich, "source": "memoria",
+                             "specialty": bool(p.get("locked")), "tags": []})
+        out.append({
+            "kind": "memoria",
+            "name": name,
+            "slug": slugify(name),
+            "rarity": mem.get("rarity", "Unknown"),
+            "elements": excl_elems,          # what the Specialty passives need
+            "exclusiveUnits": excl_units,
+            "state": "Memoria",
+            "groups": [],
+            "baseAttack": mem.get("base_attack"),
+            "baseRange": mem.get("base_range"),
+            "passives": passives,
+            "abilities": [],
             "tags": [],
         })
     out.sort(key=lambda x: x["name"].lower())

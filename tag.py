@@ -117,18 +117,21 @@ def load_overrides(path: Path = OVERRIDES_PATH) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
-def apply_tags(units: list[dict], overrides: dict) -> list[dict]:
+def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = None, prefix: str = "") -> list[dict]:
+    """Tag every passive/ability. `prefix` namespaces override keys ("memoria:Name|Passive");
+    only overrides with that prefix are applied (and unprefixed ones only to units)."""
     index: dict[str, dict] = {}
-    all_groups = sorted({g for u in units for g in u["groups"]})
+    all_groups = groups if groups is not None else sorted({g for u in units for g in u["groups"]})
     for u in units:
         for entry in u["passives"] + u["abilities"]:
             entry["tags"] = tag_text(entry["desc"])
             entry["buffTargets"] = buff_targets(entry["desc"], all_groups) if "ally-buff" in entry["tags"] else []
             index[f"{u['name']}|{entry['name']}"] = entry
 
-    for key, ov in overrides.items():
+    mine = {k[len(prefix):]: v for k, v in overrides.items() if k.startswith(prefix) and (prefix or ":" not in k.split("|")[0])}
+    for key, ov in mine.items():
         if key not in index:
-            raise ValueError(f"[Tag] Override key not found: {key}")
+            raise ValueError(f"[Tag] Override key not found: {prefix}{key}")
         for tid in ov.get("add", []) + ov.get("remove", []):
             if tid not in TAG_RULES:
                 raise ValueError(f"[Tag] Unknown tag {tid!r} in override {key}")

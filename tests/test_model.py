@@ -50,3 +50,14 @@ def test_units_shape(raw):
         for p in u["passives"] + u["abilities"]:
             assert "<color" not in p["desc"] and "{{" not in p["desc"] and "\\n" not in p["desc"]
             assert "{{" not in p["rich"] and "<" not in p["rich"].replace("<", "") 
+
+
+def test_memoria():
+    from model import build_memoria
+    ms = build_memoria()
+    by = {m["name"]: m for m in ms}
+    assert len(ms) >= 70
+    m = by["It's Going Down Now"]
+    assert m["exclusiveUnits"] == ["Apathetic Savior"] and m["rarity"] == "Secret"
+    assert m["passives"][0]["specialty"] is False and m["passives"][1]["specialty"] is True
+    assert by["Trauma Turned Strength"]["elements"] == ["Unbound"]

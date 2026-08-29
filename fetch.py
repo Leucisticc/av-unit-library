@@ -15,6 +15,7 @@ MODULES = [
     "AbilityData/customData",
     "FamiliarData/data",
     "EvolvedUnitsData/data",
+    "MemoriaData/data",
 ]
 RAW_DIR = Path(__file__).parent / "data" / "raw"
 ICON_DIR = Path(__file__).parent / "data" / "icons"
@@ -81,6 +82,29 @@ def fetch_icons(dest: Path = ICON_DIR) -> dict[str, str]:
     return names
 
 
+def fetch_memoria_icons(dest: Path = ICON_DIR / "memoria") -> None:
+    """Download every memoria's picture (File:<name>.png) as an 80px thumbnail."""
+    from luaparse import parse_module
+    dest.mkdir(parents=True, exist_ok=True)
+    data = parse_module(raw_path("MemoriaData/data").read_text(encoding="utf-8"))
+    names = [k for k, v in data.items() if isinstance(v, dict)]
+    for i in range(0, len(names), 25):
+        chunk = names[i:i + 25]
+        info = _api({"action": "query", "prop": "imageinfo", "iiprop": "url", "iiurlwidth": "120",
+                     "titles": "|".join(f"File:{n}.png" for n in chunk)})
+        for page in info["query"]["pages"]:
+            if "imageinfo" not in page:
+                print(f"[Fetch] No picture for memoria {page['title'][5:-4]}")
+                continue
+            name = page["title"][5:-4]
+            tmp = dest / ("_" + name + ".png")
+            url = page["imageinfo"][0].get("thumburl") or page["imageinfo"][0]["url"]
+            subprocess.run(["curl", "-sSfL", "-A", UA, "-o", str(tmp), url], check=True)
+            subprocess.run(["sips", "-Z", "80", str(tmp), "--out", str(dest / (name + ".png"))], check=True, capture_output=True)
+            tmp.unlink()
+    print(f"[Fetch] {len(names)} memoria pictures")
+
+
 def fetch_all(dest: Path = RAW_DIR) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     for m in MODULES:
@@ -88,6 +112,7 @@ def fetch_all(dest: Path = RAW_DIR) -> None:
         raw_path(m, dest).write_text(text, encoding="utf-8")
         print(f"[Fetch] {m} -> {len(text)} chars")
     fetch_icons()
+    fetch_memoria_icons()
 
 
 if __name__ == "__main__":

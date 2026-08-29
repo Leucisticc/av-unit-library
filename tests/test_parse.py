@@ -38,3 +38,7 @@ def test_real_other_dumps(raw):
     assert len(parse_module(raw("AbilityData_data"))) > 50
     assert len(parse_module(raw("FamiliarData_data"))) > 20
     assert parse_module(raw("EvolvedUnitsData_data"))["Alocard"] == "Alocard (Vampire King)"
+
+
+def test_stray_identifier_is_skipped():
+    assert parse_module('return { a = "x",e\n b = 2 }') == {"a": "x", "b": 2}

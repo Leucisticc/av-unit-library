@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from fetch import fetch_all
-from model import build_units
+from model import build_memoria, build_units
 from tag import apply_tags, load_overrides
 from tag_rules import ELEMENT_COLOR, ELEMENT_ICON, NEGATIONS, RARITY_STYLE, TAG_GROUPS, TAG_RULES
 
@@ -29,7 +29,12 @@ def _icon(name: str | None) -> str | None:
 
 
 def make_data() -> dict:
-    units = apply_tags(build_units(), load_overrides())
+    overrides = load_overrides()
+    units = apply_tags(build_units(), overrides)
+    memoria = apply_tags(build_memoria(), overrides, groups=sorted({g for u in units for g in u["groups"]}), prefix="memoria:")
+    for mem in memoria:
+        p = ICON_DIR / "memoria" / f"{mem['name']}.png"
+        mem["icon"] = _icon(f"memoria/{mem['name']}.png") if p.exists() else None
     return {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "groups": TAG_GROUPS,
@@ -44,8 +49,9 @@ def make_data() -> dict:
                     "name": "Kouhaii", "role": "Developer & Designer",
                     "discord": "Kouhaii", "github": "https://github.com/Leucisticc"},
         "elements": {e: {"color": c, "icon": _icon(ELEMENT_ICON[e])} for e, c in ELEMENT_COLOR.items()},
-        "buffTargets": sorted({t for u in units for t in u["buffTargets"]}, key=lambda t: (t != "all", t)),
+        "buffTargets": sorted({t for u in units + memoria for t in u["buffTargets"]}, key=lambda t: (t != "all", t)),
         "units": units,
+        "memoria": memoria,
     }
 
 

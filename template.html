@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AV Unit Library</title>
+<title>Kouhaii AV Library</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -25,6 +25,16 @@ body{background:var(--bg);color:var(--text);font:14px/1.5 "IBM Plex Sans",system
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
 header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 20px 14px;display:flex;flex-direction:column;gap:12px;flex:none}
 .brand{display:flex;align-items:baseline;gap:14px;padding-right:96px;min-height:34px}
+.tabs{display:flex;gap:6px}
+.tab{padding:7px 16px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--muted);font:600 13px "Chakra Petch",sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:flex;gap:8px;align-items:center}
+.tab .n{font:11px "IBM Plex Mono",monospace;color:var(--muted)}
+.tab.on{border-color:var(--accent);color:var(--text);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.tab.on .n{color:var(--accent)}
+.u .pic,.dh .pic{width:40px;height:40px;object-fit:contain;border-radius:6px;background:var(--panel2);flex:none}
+.dh .pic{width:72px;height:72px}
+.u{display:flex;gap:10px;align-items:flex-start}.u>div{min-width:0;flex:1}
+.spec{font:600 10px "Chakra Petch",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amp);border:1px solid var(--amp);border-radius:4px;padding:1px 6px}
+.stat{font-family:"IBM Plex Mono",monospace}
 .topbtns{position:absolute;top:12px;right:20px;display:flex;gap:8px;z-index:5}
 .brand h1{font:700 18px/1 "Chakra Petch",sans-serif;letter-spacing:.06em;text-transform:uppercase;margin:0}
 .brand .sub{color:var(--muted);font-size:12px}
@@ -147,7 +157,8 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 <body>
 <header>
   <div class="topbtns"><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
-  <div class="brand"><h1>AV Unit Library</h1><span class="sub">passives &amp; abilities of every Anime Vanguards unit · wiki data <span id="gen" class="mono"></span></span></div>
+  <div class="brand"><h1>Kouhaii AV Library</h1><span class="sub">passives &amp; abilities of every Anime Vanguards unit and memoria · wiki data <span id="gen" class="mono"></span></span></div>
+  <div class="tabs" role="tablist"><button class="tab" data-tab="units" role="tab">Units <span class="n" id="tabn-units"></span></button><button class="tab" data-tab="memoria" role="tab">Memoria <span class="n" id="tabn-memoria"></span></button></div>
   <div class="bar">
     <input id="q" placeholder="unit name or a word from a passive, or use the filters below" autocomplete="off" spellcheck="false" aria-label="Search and filter">
   </div>
@@ -156,7 +167,7 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
   <div id="creditbox" role="dialog" aria-label="Credits"></div>
   <div id="helpbox" role="dialog" aria-label="How to use">
     <h3>What this is</h3>
-    <p>Every Anime Vanguards unit with the full text of its passives and active abilities, pulled from the wiki. Each passive is tagged with the status effects it applies and the buffs it gives, so you can find units by what they do instead of guessing keywords.</p>
+    <p>Every Anime Vanguards unit and memoria with the full text of its passives and active abilities, pulled from the wiki. Switch between <b>Units</b> and <b>Memoria</b> with the tabs; filters work the same on both. A memoria's first passive works on anyone; its <em>Specialty</em> passives only work on the unit(s) or element(s) shown. Each passive is tagged with the status effects it applies and the buffs it gives, so you can find units by what they do instead of guessing keywords.</p>
     <h3>Filters</h3>
     <ul>
       <li><b>Damage over Time, Crowd Control, Damage Amplification, Other Effects</b> — the wiki's status-effect groups. Tick an effect to show units that <em>apply</em> it. Units that only react to it ("deals more damage to Bleeding enemies") are not included — look under Mechanics → <em>Bonus dmg vs condition</em> for those.</li>
@@ -185,7 +196,10 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 <script id="data" type="application/json">/*__DATA__*/</script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
-const TAGS = DATA.tags, GROUPS = DATA.groups, UNITS = DATA.units;
+const TAGS = DATA.tags, GROUPS = DATA.groups, UNITS = DATA.units, MEMORIA = DATA.memoria;
+UNITS.forEach(u => u.kind = 'unit');
+const COLL = {units: UNITS, memoria: MEMORIA};
+const ITEMS = () => COLL[state.tab] || UNITS;
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm = s => s.toLowerCase().replace(/ /g,'_');
@@ -333,23 +347,28 @@ function snippet(u, q){
   }
   const f = u.passives[0] || u.abilities[0]; return f ? esc(f.name + ' — ' + one(f).slice(0,110)) : '';
 }
-let state = {q:'', unit:null, sel:0}, visible = [];
-function readHash(){ const p = new URLSearchParams(location.hash.slice(1)); state.q = p.get('q') || ''; state.unit = p.get('unit'); $('#q').value = state.q; }
-function writeHash(){ const p = new URLSearchParams(); if (state.q) p.set('q', state.q); if (state.unit) p.set('unit', state.unit); history.replaceState(null, '', '#' + p.toString()); }
+let state = {q:'', unit:null, sel:0, tab:'units'}, visible = [];
+function readHash(){ const p = new URLSearchParams(location.hash.slice(1)); state.q = p.get('q') || ''; state.unit = p.get('unit'); state.tab = COLL[p.get('tab')] ? p.get('tab') : 'units'; $('#q').value = state.q; }
+function writeHash(){ const p = new URLSearchParams(); if (state.tab !== 'units') p.set('tab', state.tab); if (state.q) p.set('q', state.q); if (state.unit) p.set('unit', state.unit); history.replaceState(null, '', '#' + p.toString()); }
+function setTab(t){ if (state.tab === t) return; state.tab = t; state.unit = null; writeHash(); render(); }
 function setQuery(q){ state.q = q.replace(/\s+/g,' ').trim(); $('#q').value = state.q; writeHash(); render(); }
 function toggleToken(tok){ const toks = state.q.split(/\s+/).filter(Boolean), i = toks.indexOf(tok); if (i >= 0) toks.splice(i,1); else toks.push(tok); setQuery(toks.join(' ')); }
-const rarity = r => `<span class="r" style="${rStyle(r)}">${esc(r)}</span>`;
+const rarity = r => `<span class="r" style="${rStyle(r)}">${esc((RARITY[r] && RARITY[r].text) || r)}</span>`;
 function render(){
   const q = parseQuery(state.q);
-  visible = UNITS.filter(u => matches(u, q));
-  $('#count').innerHTML = `<b class="mono">${visible.length}</b> of ${UNITS.length} units`;
+  const items = ITEMS();
+  visible = items.filter(u => matches(u, q));
+  $('#count').innerHTML = `<b class="mono">${visible.length}</b> of ${items.length} ${state.tab}`;
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.tab === state.tab));
+  $('#tabn-units').textContent = UNITS.filter(u => matches(u, q)).length;
+  $('#tabn-memoria').textContent = MEMORIA.filter(u => matches(u, q)).length;
   state.sel = Math.max(0, visible.findIndex(u=>u.slug===state.unit));
   $('#rows').innerHTML = visible.map((u,i) => `
-    <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">
+    <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">${u.icon?`<img class="pic" src="${u.icon}" alt="">`:''}<div>
       <div class="n"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</div>
-      <div class="m">${u.elements.map(elem).join(' ')}${u.state==='Evolved'?' · Evolved':''}</div>
+      <div class="m">${u.kind==='memoria' ? (u.exclusiveUnits.length ? 'Specialty: ' + u.exclusiveUnits.map(esc).join(', ') : u.elements.length ? 'Specialty: ' + u.elements.map(elem).join(' ') : 'Universal') : u.elements.map(elem).join(' ') + (u.state==='Evolved'?' · Evolved':'')}</div>
       <div class="s">${snippet(u, q)}</div>
-    </div>`).join('');
+    </div></div>`).join('');
   renderPills(); renderDropdowns(q); renderDetail(q);
 }
 function renderPills(){
@@ -359,15 +378,18 @@ function renderPills(){
 const tagPill = tid => { const t = TAGS[tid]; return t ? `<span class="t" style="--c:var(--${t.group})" data-tok="${t.group}:${tid}" title="${esc(GROUPS[t.group])}">${icon(t)}${esc(t.label)}</span>` : ''; };
 const activeTags = q => Object.entries(q.include).filter(([k])=>!META.has(k)).flatMap(([,s])=>s.flat()).filter(t=>TAGS[t]);
 function renderDetail(q){
-  const u = UNITS.find(x => x.slug === state.unit);
+  const u = ITEMS().find(x => x.slug === state.unit);
   document.body.classList.toggle('showing', !!u);
   if (!u){ $('#detail').innerHTML = `<div class="empty"><b>Pick a unit</b>Filter with the dropdowns above, or type <code>cc:repulse effect:tethered</code> to find every push-and-pull unit.</div>`; return; }
-  const card = e => `<div class="card"><h4>${esc(e.name)}${e.cooldown!=null?`<span class="src">CD ${e.cooldown}s${e.cooldownType?' · '+esc(e.cooldownType):''}</span>`:''}${e.tags.map(tagPill).join(' ')}</h4><p>${renderRich(e.rich || e.desc, e.desc, q.text, activeTags(q))}</p></div>`;
+  const card = e => `<div class="card"><h4>${esc(e.name)}${e.specialty?`<span class="spec" title="only works on the unit(s) / element(s) this memoria is made for">Specialty</span>`:''}${e.cooldown!=null?`<span class="src">CD ${e.cooldown}s${e.cooldownType?' · '+esc(e.cooldownType):''}</span>`:''}${e.tags.map(tagPill).join(' ')}</h4><p>${renderRich(e.rich || e.desc, e.desc, q.text, activeTags(q))}</p></div>`;
   const link = n => `<a data-unit="${esc(n.replace(/ /g,'_'))}">${esc(n)}</a>`;
+  const meta = u.kind === 'memoria'
+    ? `<span class="stat">ATK ${esc(u.baseAttack ?? '—')} · RNG ${esc(u.baseRange ?? '—')}</span>${u.exclusiveUnits.length?`<span>Specialty for ${u.exclusiveUnits.map(n => BY_SLUG[norm(n.replace(/ /g,'_'))] ? link(n) : esc(n)).join(', ')}</span>`:''}${u.elements.length?`<span>Specialty for ${u.elements.map(elem).join(' ')} units</span>`:''}${!u.exclusiveUnits.length && !u.elements.length ? '<span>Universal</span>' : ''}`
+    : `<span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}`;
   $('#detail').innerHTML = `
     <span class="back" data-back>← back to list</span>
-    <div class="dh"><h2><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
-    <div class="meta"><span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">wiki ↗</a></div>
+    <div class="dh"><h2>${u.icon?`<img class="pic" src="${u.icon}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
+    <div class="meta">${meta}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">wiki ↗</a></div>
     <div class="tagrow">${u.tags.map(tagPill).join('')}</div>
     ${u.passives.some(p=>p.source!=='familiar')?'<h3 class="sec">Passives</h3>'+u.passives.filter(p=>p.source!=='familiar').map(card).join(''):''}
     ${u.passives.some(p=>p.source==='familiar')?`<h3 class="sec">Vanguard Familiar · ${esc(u.passives.find(p=>p.source==='familiar').familiar)}</h3>`+u.passives.filter(p=>p.source==='familiar').map(card).join(''):''}
@@ -389,7 +411,7 @@ function renderDropdowns(q){
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
-    const vals = uniq(UNITS.flatMap(get)), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
+    const vals = uniq([...UNITS, ...MEMORIA].flatMap(get)).filter(v => v !== 'Memoria' || state.tab === 'memoria'), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
     html += `<div class="dd${openKey===key?' open':''}" data-key="${key}"><button type="button">${label}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
       ${vals.map(v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
@@ -463,6 +485,7 @@ $('#creditbox').innerHTML = `<img class="av" src="${CR.avatar}" alt=""><div clas
   </div>`;
 const boxes = {help: $('#helpbox'), credits: $('#creditbox')};
 function toggleBox(which){ for (const [k, el] of Object.entries(boxes)){ const on = k === which && !el.classList.contains('open'); el.classList.toggle('open', on); $('#'+k).classList.toggle('open', on); } }
+document.querySelector('.tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) setTab(b.dataset.tab); });
 $('#help').addEventListener('click', e => { e.stopPropagation(); toggleBox('help'); });
 $('#credits').addEventListener('click', e => { e.stopPropagation(); toggleBox('credits'); });
 $('#copydc').addEventListener('click', async e => { try { await navigator.clipboard.writeText(CR.discord); e.currentTarget.querySelector('.mono').textContent = 'copied!'; setTimeout(() => e.target.closest('button').querySelector('.mono').textContent = CR.discord, 1200); } catch {} });
@@ -475,7 +498,7 @@ $('#rows').addEventListener('click', e => { const r = e.target.closest('.u'); if
 $('#detail').addEventListener('click', e => {
   if (e.target.closest('[data-back]')) { state.unit = null; writeHash(); render(); return; }
   const t = e.target.closest('.t'); if (t) return toggleToken(t.dataset.tok);
-  const a = e.target.closest('a[data-unit]'); if (a) select(a.dataset.unit);
+  const a = e.target.closest('a[data-unit]'); if (a){ if (state.tab !== 'units'){ state.tab = 'units'; } select(a.dataset.unit); }
 });
 document.addEventListener('keydown', e => {
   const inQ = document.activeElement === $('#q');
