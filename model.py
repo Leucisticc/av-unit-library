@@ -265,7 +265,8 @@ def build_memoria(raw_dir: Path = RAW_DIR) -> list[dict]:
             "rarityStyle": mem.get("rarity", "Unknown"),
             "elements": excl_elems,          # what the Specialty passives need
             "exclusiveUnits": excl_units,
-            "state": "Exclusive" if (excl_units or excl_elems) else "Universal",
+            # per passive: the first (unlocked) passive works on any wearer, locked ones only on the Specialty unit(s)/element(s)
+            "state": [st for st in ("Universal", "Exclusive") if any(bool(p["specialty"]) == (st == "Exclusive") for p in passives)],
             "groups": [],
             "baseAttack": mem.get("base_attack"),
             "baseRange": mem.get("base_range"),

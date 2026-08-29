@@ -28090,7 +28090,10 @@
    "exclusiveUnits": [
     "Fastest Shinobi"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28145,7 +28148,10 @@
    "exclusiveUnits": [
     "Strongest Shinobi"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28218,7 +28224,10 @@
    "exclusiveUnits": [
     "Manipulator"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28275,7 +28284,10 @@
     "Raging Oni",
     "Wrath God"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28354,7 +28366,10 @@
    "exclusiveUnits": [
     "Armored Mage"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28411,7 +28426,9 @@
    "rarityStyle": "Legendary",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -28445,7 +28462,10 @@
     "Today's Strongest",
     "History's Strongest"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -28517,7 +28537,10 @@
    "exclusiveUnits": [
     "Yomomata (Captain)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28587,7 +28610,10 @@
    "exclusiveUnits": [
     "Teacher (Final Stand)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28659,7 +28685,10 @@
    "exclusiveUnits": [
     "Cursed Lawyer"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28721,7 +28750,10 @@
    "exclusiveUnits": [
     "Company Captain (Hybrid)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28778,7 +28810,9 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -28820,7 +28854,10 @@
    "exclusiveUnits": [
     "Diablo"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28893,7 +28930,10 @@
    "exclusiveUnits": [
     "Time Goddess (Crazed)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28964,7 +29004,10 @@
    "exclusiveUnits": [
     "Cat God"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29026,7 +29069,10 @@
    "exclusiveUnits": [
     "Devoted Demon"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29086,7 +29132,9 @@
    "rarityStyle": "Epic",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
@@ -29128,7 +29176,10 @@
    "exclusiveUnits": [
     "Explosive Demon"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29179,7 +29230,10 @@
    "exclusiveUnits": [
     "Arbiter"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29239,7 +29293,10 @@
    "exclusiveUnits": [
     "Cursed Gourmet"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29292,7 +29349,10 @@
    "exclusiveUnits": [
     "Alocard"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29364,7 +29424,10 @@
    "exclusiveUnits": [
     "Ice Manipulator"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29415,7 +29478,9 @@
    "exclusiveUnits": [
     "Takaroda"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -29453,7 +29518,10 @@
    "exclusiveUnits": [
     "Gujo"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29528,7 +29596,10 @@
    "exclusiveUnits": [
     "Koguro (Unsealed)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29607,7 +29678,10 @@
    "exclusiveUnits": [
     "Tempest Pirate"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29657,7 +29731,10 @@
    "exclusiveUnits": [
     "Graceful Pilot (Mecha)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29716,7 +29793,10 @@
    "exclusiveUnits": [
     "Elastic Captain (Cog 5th)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29782,7 +29862,10 @@
     "Bounty Hunter (King of Hell)",
     "Bounty Hunter"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29855,7 +29938,10 @@
    "exclusiveUnits": [
     "Ice Queen (Release)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2600,
    "baseRange": 2,
@@ -29916,7 +30002,10 @@
    "exclusiveUnits": [
     "Divine General (Adaptation)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29983,7 +30072,10 @@
    "exclusiveUnits": [
     "Apathetic Savior"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30058,7 +30150,10 @@
    "exclusiveUnits": [
     "Friran"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30130,7 +30225,10 @@
    "exclusiveUnits": [
     "Trash Gamer"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30185,7 +30283,10 @@
    "exclusiveUnits": [
     "Demon Hunter"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30242,7 +30343,10 @@
    "exclusiveUnits": [
     "Phantom Thief"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30316,7 +30420,10 @@
    "exclusiveUnits": [
     "Fruit Eater"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30369,7 +30476,10 @@
    "exclusiveUnits": [
     "Lord"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30429,7 +30539,10 @@
    "exclusiveUnits": [
     "Toad Shinobi"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30486,7 +30599,10 @@
    "exclusiveUnits": [
     "Envoy of Destruction"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30544,7 +30660,10 @@
    "exclusiveUnits": [
     "Todu"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30605,7 +30724,10 @@
    "exclusiveUnits": [
     "Iscanur (Pride)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -30667,7 +30789,10 @@
    "exclusiveUnits": [
     "Shinobi God (Infinite Dreams)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -30740,7 +30865,10 @@
    "exclusiveUnits": [
     "Demon Hybrid"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30804,7 +30932,10 @@
    "exclusiveUnits": [
     "Delusional Demon"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30860,7 +30991,9 @@
    "rarityStyle": "Legendary",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -30902,7 +31035,10 @@
    "exclusiveUnits": [
     "Rebel Fighter (Gauntlet)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30975,7 +31111,10 @@
    "exclusiveUnits": [
     "Fallen Angel"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31034,7 +31173,9 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -31076,7 +31217,10 @@
    "exclusiveUnits": [
     "Investigation Leader"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31137,7 +31281,10 @@
    "exclusiveUnits": [
     "Reasonable Person"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31196,7 +31343,10 @@
    "exclusiveUnits": [
     "Tuji"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31255,7 +31405,10 @@
    "exclusiveUnits": [
     "Cursed Shinobi"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31306,7 +31459,10 @@
    "exclusiveUnits": [
     "Reckless Gambler"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31373,7 +31529,10 @@
    "exclusiveUnits": [
     "Scrap Pirate"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31425,7 +31584,10 @@
    "exclusiveUnits": [
     "Demon Leader"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31503,7 +31665,10 @@
    "exclusiveUnits": [
     "Agony Shinobi"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31581,7 +31746,10 @@
    "exclusiveUnits": [
     "Preacher"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31639,7 +31807,10 @@
    "exclusiveUnits": [
     "Reaper"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31696,7 +31867,10 @@
    "exclusiveUnits": [
     "Cursed Copycat"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31767,7 +31941,9 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -31809,7 +31985,10 @@
    "exclusiveUnits": [
     "Sword Hunter (Void)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31870,7 +32049,10 @@
    "exclusiveUnits": [
     "Beast Pirate (Half-Dragon)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31934,7 +32116,10 @@
    "exclusiveUnits": [
     "Savior (Moonless)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -32009,7 +32194,10 @@
    "exclusiveUnits": [
     "Rabbit Hero"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32058,7 +32246,10 @@
     "Unbound"
    ],
    "exclusiveUnits": [],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32130,7 +32321,10 @@
    "exclusiveUnits": [
     "Shinobi Sage"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32208,7 +32402,10 @@
    "exclusiveUnits": [
     "Deceiver"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32275,7 +32472,10 @@
    "exclusiveUnits": [
     "Cursed Doctor"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32331,7 +32531,10 @@
    "exclusiveUnits": [
     "Star Crusader (Platinum)"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32382,7 +32585,9 @@
    "rarityStyle": "Epic",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Universal",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
@@ -32424,7 +32629,9 @@
    "exclusiveUnits": [
     "Sprintwagon"
    ],
-   "state": "Exclusive",
+   "state": [
+    "Universal"
+   ],
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
