@@ -265,7 +265,7 @@ def build_memoria(raw_dir: Path = RAW_DIR) -> list[dict]:
             "rarityStyle": mem.get("rarity", "Unknown"),
             "elements": excl_elems,          # what the Specialty passives need
             "exclusiveUnits": excl_units,
-            "state": "Memoria",
+            "state": "Exclusive" if (excl_units or excl_elems) else "Universal",
             "groups": [],
             "baseAttack": mem.get("base_attack"),
             "baseRange": mem.get("base_range"),

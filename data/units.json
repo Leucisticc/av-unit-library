@@ -28090,7 +28090,7 @@
    "exclusiveUnits": [
     "Fastest Shinobi"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28145,7 +28145,7 @@
    "exclusiveUnits": [
     "Strongest Shinobi"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28218,7 +28218,7 @@
    "exclusiveUnits": [
     "Manipulator"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28275,7 +28275,7 @@
     "Raging Oni",
     "Wrath God"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28354,7 +28354,7 @@
    "exclusiveUnits": [
     "Armored Mage"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28411,7 +28411,7 @@
    "rarityStyle": "Legendary",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -28445,7 +28445,7 @@
     "Today's Strongest",
     "History's Strongest"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -28517,7 +28517,7 @@
    "exclusiveUnits": [
     "Yomomata (Captain)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28587,7 +28587,7 @@
    "exclusiveUnits": [
     "Teacher (Final Stand)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28659,7 +28659,7 @@
    "exclusiveUnits": [
     "Cursed Lawyer"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28721,7 +28721,7 @@
    "exclusiveUnits": [
     "Company Captain (Hybrid)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -28778,7 +28778,7 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -28820,7 +28820,7 @@
    "exclusiveUnits": [
     "Diablo"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28893,7 +28893,7 @@
    "exclusiveUnits": [
     "Time Goddess (Crazed)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -28964,7 +28964,7 @@
    "exclusiveUnits": [
     "Cat God"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29026,7 +29026,7 @@
    "exclusiveUnits": [
     "Devoted Demon"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29086,7 +29086,7 @@
    "rarityStyle": "Epic",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
@@ -29128,7 +29128,7 @@
    "exclusiveUnits": [
     "Explosive Demon"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29179,7 +29179,7 @@
    "exclusiveUnits": [
     "Arbiter"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29239,7 +29239,7 @@
    "exclusiveUnits": [
     "Cursed Gourmet"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29292,7 +29292,7 @@
    "exclusiveUnits": [
     "Alocard"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29364,7 +29364,7 @@
    "exclusiveUnits": [
     "Ice Manipulator"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29415,7 +29415,7 @@
    "exclusiveUnits": [
     "Takaroda"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -29453,7 +29453,7 @@
    "exclusiveUnits": [
     "Gujo"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29528,7 +29528,7 @@
    "exclusiveUnits": [
     "Koguro (Unsealed)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29607,7 +29607,7 @@
    "exclusiveUnits": [
     "Tempest Pirate"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29657,7 +29657,7 @@
    "exclusiveUnits": [
     "Graceful Pilot (Mecha)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -29716,7 +29716,7 @@
    "exclusiveUnits": [
     "Elastic Captain (Cog 5th)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -29782,7 +29782,7 @@
     "Bounty Hunter (King of Hell)",
     "Bounty Hunter"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29855,7 +29855,7 @@
    "exclusiveUnits": [
     "Ice Queen (Release)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2600,
    "baseRange": 2,
@@ -29916,7 +29916,7 @@
    "exclusiveUnits": [
     "Divine General (Adaptation)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -29983,7 +29983,7 @@
    "exclusiveUnits": [
     "Apathetic Savior"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30058,7 +30058,7 @@
    "exclusiveUnits": [
     "Friran"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30130,7 +30130,7 @@
    "exclusiveUnits": [
     "Trash Gamer"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30185,7 +30185,7 @@
    "exclusiveUnits": [
     "Demon Hunter"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30242,7 +30242,7 @@
    "exclusiveUnits": [
     "Phantom Thief"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30316,7 +30316,7 @@
    "exclusiveUnits": [
     "Fruit Eater"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30369,7 +30369,7 @@
    "exclusiveUnits": [
     "Lord"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30429,7 +30429,7 @@
    "exclusiveUnits": [
     "Toad Shinobi"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30486,7 +30486,7 @@
    "exclusiveUnits": [
     "Envoy of Destruction"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30544,7 +30544,7 @@
    "exclusiveUnits": [
     "Todu"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30605,7 +30605,7 @@
    "exclusiveUnits": [
     "Iscanur (Pride)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -30667,7 +30667,7 @@
    "exclusiveUnits": [
     "Shinobi God (Infinite Dreams)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -30740,7 +30740,7 @@
    "exclusiveUnits": [
     "Demon Hybrid"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30804,7 +30804,7 @@
    "exclusiveUnits": [
     "Delusional Demon"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -30860,7 +30860,7 @@
    "rarityStyle": "Legendary",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 1200,
    "baseRange": 1,
@@ -30902,7 +30902,7 @@
    "exclusiveUnits": [
     "Rebel Fighter (Gauntlet)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -30975,7 +30975,7 @@
    "exclusiveUnits": [
     "Fallen Angel"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31034,7 +31034,7 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -31076,7 +31076,7 @@
    "exclusiveUnits": [
     "Investigation Leader"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31137,7 +31137,7 @@
    "exclusiveUnits": [
     "Reasonable Person"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31196,7 +31196,7 @@
    "exclusiveUnits": [
     "Tuji"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31255,7 +31255,7 @@
    "exclusiveUnits": [
     "Cursed Shinobi"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31306,7 +31306,7 @@
    "exclusiveUnits": [
     "Reckless Gambler"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31373,7 +31373,7 @@
    "exclusiveUnits": [
     "Scrap Pirate"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31425,7 +31425,7 @@
    "exclusiveUnits": [
     "Demon Leader"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31503,7 +31503,7 @@
    "exclusiveUnits": [
     "Agony Shinobi"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31581,7 +31581,7 @@
    "exclusiveUnits": [
     "Preacher"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31639,7 +31639,7 @@
    "exclusiveUnits": [
     "Reaper"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31696,7 +31696,7 @@
    "exclusiveUnits": [
     "Cursed Copycat"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31767,7 +31767,7 @@
    "rarityStyle": "Rare",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 100,
    "baseRange": 1,
@@ -31809,7 +31809,7 @@
    "exclusiveUnits": [
     "Sword Hunter (Void)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -31870,7 +31870,7 @@
    "exclusiveUnits": [
     "Beast Pirate (Half-Dragon)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -31934,7 +31934,7 @@
    "exclusiveUnits": [
     "Savior (Moonless)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2800,
    "baseRange": 2,
@@ -32009,7 +32009,7 @@
    "exclusiveUnits": [
     "Rabbit Hero"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32058,7 +32058,7 @@
     "Unbound"
    ],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32130,7 +32130,7 @@
    "exclusiveUnits": [
     "Shinobi Sage"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32208,7 +32208,7 @@
    "exclusiveUnits": [
     "Deceiver"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2400,
    "baseRange": 2,
@@ -32275,7 +32275,7 @@
    "exclusiveUnits": [
     "Cursed Doctor"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32331,7 +32331,7 @@
    "exclusiveUnits": [
     "Star Crusader (Platinum)"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 2300,
    "baseRange": 2,
@@ -32382,7 +32382,7 @@
    "rarityStyle": "Epic",
    "elements": [],
    "exclusiveUnits": [],
-   "state": "Memoria",
+   "state": "Universal",
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
@@ -32424,7 +32424,7 @@
    "exclusiveUnits": [
     "Sprintwagon"
    ],
-   "state": "Memoria",
+   "state": "Exclusive",
    "groups": [],
    "baseAttack": 600,
    "baseRange": 1,
