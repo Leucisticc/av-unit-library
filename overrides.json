@@ -558,5 +558,18 @@
   "add": [
    "income"
   ]
+ },
+ "Agony Shinobi (Force)|Shinobi Resurrection": {
+  "remove": [
+   "revive"
+  ],
+  "add": [
+   "clone"
+  ]
+ },
+ "Bounty Hunter (King of Hell)|Hunter of Pirates": {
+  "add": [
+   "wanted"
+  ]
  }
 }

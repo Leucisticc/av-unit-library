@@ -636,6 +636,17 @@
    "suppress": [],
    "icon": null
   },
+  "clone": {
+   "group": "mech",
+   "label": "Clone",
+   "patterns": [
+    "\\bclones?\\b",
+    "\\bcopy of (?:itself|this unit)\\b",
+    "\\bplacements? of (?:itself|this unit)\\b"
+   ],
+   "suppress": [],
+   "icon": null
+  },
   "follow-up": {
    "group": "mech",
    "label": "Follow-up attack",
@@ -730,7 +741,6 @@
    "label": "Summon",
    "patterns": [
     "(?<!\\d )\\bsummon(?:s|ed|ing)?\\b(?! cap)",
-    "\\bclones?\\b",
     "\\bthralls?\\b",
     "\\bspawns? (?:a |an |in )?(?:[\\w' ]{0,20}? )?(?:ally|allies|copy|soldier|zombie|shadow|skeleton|wolves|wolf)",
     "\\bas (?:a |an )?(?:friendly )?(?:summon|ally|allies)\\b",
@@ -1011,7 +1021,8 @@
      "source": "unit",
      "tags": [
       "bleed",
-      "slow"
+      "slow",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -1022,7 +1033,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "buff"
+      "buff",
+      "clone"
      ],
      "buffTargets": []
     }
@@ -1031,6 +1043,7 @@
    "tags": [
     "bleed",
     "slow",
+    "clone",
     "dmg-buff",
     "buff"
    ],
@@ -1070,7 +1083,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "buff"
+      "buff",
+      "clone"
      ],
      "buffTargets": []
     }
@@ -1079,7 +1093,8 @@
    "tags": [
     "dmg-buff",
     "self-buff",
-    "buff"
+    "buff",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Ackers (Levy).png"
@@ -1117,7 +1132,8 @@
      "source": "unit",
      "tags": [
       "dmg-buff",
-      "buff"
+      "buff",
+      "clone"
      ],
      "buffTargets": []
     }
@@ -1127,7 +1143,8 @@
     "spa-buff",
     "follow-up",
     "dmg-buff",
-    "buff"
+    "buff",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Ackers (Makoso).png"
@@ -1255,7 +1272,8 @@
      "tags": [
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -1291,7 +1309,7 @@
      "cooldown": null,
      "cooldownType": "Global",
      "tags": [
-      "revive"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -1302,8 +1320,8 @@
     "range-buff",
     "buff",
     "self-buff",
-    "ally-buff",
-    "revive"
+    "clone",
+    "ally-buff"
    ],
    "buffTargets": [
     "Ninjutsu"
@@ -2409,12 +2427,16 @@
      "desc": "This unit cannot be sold; Whenever a new placement of this unit is placed, it becomes the same upgrade as the highest existing placement on the field.",
      "rich": "This unit cannot be sold; Whenever a new placement of this unit is placed, it becomes the same upgrade as the highest existing placement on the field.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "clone"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "clone"
+   ],
    "buffTargets": [],
    "icon": "img/units/Arin.png"
   },
@@ -2438,7 +2460,9 @@
      "desc": "This unit cannot be sold; Whenever a new placement of this unit is placed, it becomes the same upgrade as the highest existing placement on the field.",
      "rich": "This unit cannot be sold; Whenever a new placement of this unit is placed, it becomes the same upgrade as the highest existing placement on the field.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "clone"
+     ],
      "buffTargets": []
     },
     {
@@ -2482,6 +2506,7 @@
     }
    ],
    "tags": [
+    "clone",
     "dmg-buff",
     "range-buff",
     "buff",
@@ -3786,7 +3811,8 @@
       "bleed",
       "burn",
       "rupture",
-      "bonus-vs"
+      "bonus-vs",
+      "wanted"
      ],
      "buffTargets": []
     },
@@ -5890,7 +5916,8 @@
      "tags": [
       "dmg-buff",
       "range-buff",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -5912,6 +5939,7 @@
     "dmg-buff",
     "self-buff",
     "range-buff",
+    "clone",
     "bonus-vs"
    ],
    "buffTargets": [],
@@ -9186,14 +9214,17 @@
      "desc": "When this unit is sold or removed:\n• Remains at its position in a ghostly form\n• Persists until a new copy of this unit is placed",
      "rich": "⟦c|ff7b1c|When this unit is sold or removed:⟧\n• Remains at its position in a ghostly form\n• Persists until a new copy of this unit is placed",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "clone"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
     "slow",
-    "diseased"
+    "diseased",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Ghost Girl (Umbrella).png"
@@ -9745,7 +9776,8 @@
      "source": "unit",
      "tags": [
       "rupture",
-      "cost-reduction"
+      "cost-reduction",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -9792,6 +9824,7 @@
     "dr-bypass",
     "rupture",
     "cost-reduction",
+    "clone",
     "stun",
     "dmg-buff",
     "self-buff",
@@ -11251,6 +11284,7 @@
       "buff",
       "self-buff",
       "bonus-vs",
+      "clone",
       "follow-up"
      ],
      "buffTargets": []
@@ -11284,7 +11318,8 @@
     "self-buff",
     "follow-up",
     "nullify",
-    "bonus-vs"
+    "bonus-vs",
+    "clone"
    ],
    "buffTargets": [
     "all"
@@ -14203,7 +14238,9 @@
      "desc": "This unit can place up to 3 minions per placement of this unit: Alien Cadet; Alien Soldier; Alien Elite.",
      "rich": "This unit can place up to 3 minions per placement of this unit: Alien Cadet; Alien Soldier; Alien Elite.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "clone"
+     ],
      "buffTargets": []
     },
     {
@@ -14232,6 +14269,7 @@
     }
    ],
    "tags": [
+    "clone",
     "dmg-buff",
     "range-buff",
     "self-buff",
@@ -14452,7 +14490,8 @@
       "diseased",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     }
@@ -14463,7 +14502,8 @@
     "diseased",
     "dmg-buff",
     "buff",
-    "self-buff"
+    "self-buff",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Manipulator.png"
@@ -14493,7 +14533,8 @@
       "diseased",
       "dmg-buff",
       "buff",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -14515,6 +14556,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "clone",
     "follow-up"
    ],
    "buffTargets": [],
@@ -15043,7 +15085,7 @@
       "range-buff",
       "buff",
       "self-buff",
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     },
@@ -15067,7 +15109,7 @@
      "cooldownType": "Local",
      "tags": [
       "cost-reduction",
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -15077,7 +15119,7 @@
     "buff",
     "self-buff",
     "range-buff",
-    "summon",
+    "clone",
     "dr-bypass",
     "cost-reduction"
    ],
@@ -15103,14 +15145,14 @@
      "rich": "A clone of the original.",
      "source": "unit",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Monkey King (Clone).png"
@@ -17487,7 +17529,9 @@
      "desc": "Anytime this unit is placed, if there is an existing placement of this unit on the field, it is deleted and SPA decreases by 5%. The placement limit does not get refunded from this.",
      "rich": "Anytime this unit is placed, if there is an existing placement of this unit on the field, it is deleted and SPA decreases by ⟦num|5%⟧. The placement limit does not get refunded from this.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "clone"
+     ],
      "buffTargets": []
     }
    ],
@@ -17496,7 +17540,8 @@
     "freeze",
     "dmg-buff",
     "self-buff",
-    "buff"
+    "buff",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Regnaw (Rage).png"
@@ -17923,7 +17968,7 @@
      "rich": "Anytime this unit attacks, a clone will appear mirroring the last attack this unit made.",
      "source": "unit",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     },
@@ -17953,7 +17998,7 @@
     "slow",
     "dmg-buff",
     "self-buff",
-    "summon",
+    "clone",
     "spa-buff"
    ],
    "buffTargets": [],
@@ -17990,7 +18035,7 @@
      "rich": "Anytime this unit attacks, a clone will appear mirroring the last attack this unit made.",
      "source": "unit",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     },
@@ -18010,7 +18055,7 @@
     "slow",
     "dmg-buff",
     "self-buff",
-    "summon",
+    "clone",
     "spa-buff"
    ],
    "buffTargets": [],
@@ -19860,8 +19905,8 @@
       "dmg-buff",
       "buff",
       "self-buff",
-      "active-ability",
-      "summon"
+      "clone",
+      "active-ability"
      ],
      "buffTargets": []
     },
@@ -19897,8 +19942,8 @@
     "ally-buff",
     "aoe",
     "self-buff",
+    "clone",
     "active-ability",
-    "summon",
     "wounded",
     "nullify"
    ],
@@ -20077,7 +20122,8 @@
      "source": "unit",
      "tags": [
       "cost-reduction",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     }
@@ -20085,7 +20131,8 @@
    "abilities": [],
    "tags": [
     "cost-reduction",
-    "self-buff"
+    "self-buff",
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Slime.png"
@@ -20113,7 +20160,8 @@
      "source": "unit",
      "tags": [
       "cost-reduction",
-      "self-buff"
+      "self-buff",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -20136,6 +20184,7 @@
       "dmg-buff",
       "buff",
       "self-buff",
+      "clone",
       "aoe"
      ],
      "buffTargets": []
@@ -20157,6 +20206,7 @@
    "tags": [
     "cost-reduction",
     "self-buff",
+    "clone",
     "bonus-vs",
     "dmg-buff",
     "buff",
@@ -22762,7 +22812,7 @@
      "cooldown": 20,
      "cooldownType": "Local",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -22777,7 +22827,7 @@
     "bonus-vs",
     "aoe",
     "dmg-taken",
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Time Goddess (Crazed).png"
@@ -22801,14 +22851,14 @@
      "rich": "A clone of Time Goddess (Crazed) that attacks enemies and applies either Aleph, Bet, or Dalet on shots.",
      "source": "unit",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Time Goddess (Crazed) Clone.png"
@@ -23822,14 +23872,14 @@
      "rich": "This clone does 20% of Valentines displayed DMG, and last 20 seconds.",
      "source": "unit",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Valentine (AU).png"
@@ -23901,7 +23951,7 @@
      "source": "familiar",
      "familiar": "American Flag",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     },
@@ -23912,7 +23962,7 @@
      "source": "familiar",
      "familiar": "American Flag",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -23925,7 +23975,7 @@
      "cooldown": 0,
      "cooldownType": "Local",
      "tags": [
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -23935,7 +23985,7 @@
     "self-buff",
     "spa-buff",
     "dmg-buff",
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/units/Valentine (Love Train).png"
@@ -23964,7 +24014,7 @@
       "dmg-buff",
       "range-buff",
       "self-buff",
-      "summon",
+      "clone",
       "meter"
      ],
      "buffTargets": []
@@ -23975,7 +24025,7 @@
     "dmg-buff",
     "range-buff",
     "self-buff",
-    "summon",
+    "clone",
     "meter"
    ],
    "buffTargets": [],
@@ -24034,7 +24084,7 @@
       "dmg-buff",
       "range-buff",
       "self-buff",
-      "summon",
+      "clone",
       "meter"
      ],
      "buffTargets": []
@@ -24055,7 +24105,7 @@
     "dmg-buff",
     "range-buff",
     "self-buff",
-    "summon",
+    "clone",
     "meter",
     "follow-up"
    ],
@@ -25906,7 +25956,7 @@
      "tags": [
       "buff",
       "self-buff",
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -25917,7 +25967,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
-    "summon"
+    "clone"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Deceptive Innocence.png"
@@ -28802,7 +28852,7 @@
      "tags": [
       "dmg-buff",
       "self-buff",
-      "summon"
+      "clone"
      ],
      "buffTargets": []
     }
@@ -28813,7 +28863,7 @@
     "buff",
     "self-buff",
     "ally-buff",
-    "summon"
+    "clone"
    ],
    "buffTargets": [
     "Nature"
@@ -28953,7 +29003,8 @@
      "source": "memoria",
      "specialty": false,
      "tags": [
-      "bonus-vs"
+      "bonus-vs",
+      "clone"
      ],
      "buffTargets": []
     },
@@ -28973,6 +29024,7 @@
    "abilities": [],
    "tags": [
     "bonus-vs",
+    "clone",
     "timestop",
     "nullify"
    ],

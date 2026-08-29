@@ -198,6 +198,7 @@ TAG_RULES = {
         r"\bguaranteed (?:to )?crit\b",
     ]},
     # Membership comes from groups_extra.json ("Swap"), not from text: the list is hand-confirmed.
+    "clone":      {"group": "mech", "label": "Clone", "icon": None, "patterns": [r"\bclones?\b", r"\bcopy of (?:itself|this unit)\b", r"\bplacements? of (?:itself|this unit)\b"]},
     "follow-up":  {"group": "mech", "label": "Follow-up attack", "icon": None, "patterns": [r"\bfollow[- ]?ups?\b", r"\bfollows? up\b", r"\bfollowing up\b"]},
     "active-ability": {"group": "mech", "label": "Active ability", "icon": None, "patterns": [r"\bactive abilit(?:y|ies)\b", r"\buses? (?:an |its |this unit'?s )?active\b", r"\btoggles? an active\b", r"\b(?:from|by) actives?\b", r"\bactive is active\b", r"\babilities\b", r"\bthe next ability\b"]},
     "cleanse-self": {"group": "mech", "label": "Cleanse self", "icon": None, "patterns": [r"\bcleanses? (?:self|itself|this unit)\b", r"\bcleanse(?:s|d)? (?:all )?(?:status effects|debuffs|status debuffs)[^.;]{0,30}\bfrom (?:self|this unit)\b"]},
@@ -206,7 +207,7 @@ TAG_RULES = {
     "revive":     {"group": "mech", "label": "Revival / rewind", "icon": None, "patterns": [r"\brewinds?\b", r"\brevives?\b", r"\brevival\b", r"\brestores? (?:a )?life ?stocks?\b"]},
     "income":     {"group": "buffs", "label": "Increase income", "icon": None, "patterns": [r"\byen\b", r"\bincome\b", r"\bmoney\b"]},
     "swap":       {"group": "mech", "label": "Swap (counterpart)", "icon": None, "patterns": [r"(?!x)x"]},
-    "summon":     {"group": "mech", "label": "Summon",       "icon": None, "patterns": [r"(?<!\d )\bsummon(?:s|ed|ing)?\b(?! cap)", r"\bclones?\b", r"\bthralls?\b", r"\bspawns? (?:a |an |in )?(?:[\w' ]{0,20}? )?(?:ally|allies|copy|soldier|zombie|shadow|skeleton|wolves|wolf)", r"\bas (?:a |an )?(?:friendly )?(?:summon|ally|allies)\b", r"\bconvert(?:s|ed)? (?:\d+ )?(?:non-?boss )?enemies into\b"]},
+    "summon":     {"group": "mech", "label": "Summon",       "icon": None, "patterns": [r"(?<!\d )\bsummon(?:s|ed|ing)?\b(?! cap)", r"\bthralls?\b", r"\bspawns? (?:a |an |in )?(?:[\w' ]{0,20}? )?(?:ally|allies|copy|soldier|zombie|shadow|skeleton|wolves|wolf)", r"\bas (?:a |an )?(?:friendly )?(?:summon|ally|allies)\b", r"\bconvert(?:s|ed)? (?:\d+ )?(?:non-?boss )?enemies into\b"]},
     "mark":       {"group": "mech", "label": "Marks enemies", "icon": None, "patterns": [r"\bmark(?:s|ed)? (?:an? |the |that |every |all |each )?(?:enem|target|non-boss|them\b|it\b)", r"\b(?:is|are|become|becomes) marked\b(?! with| as)", r"\bmarked enem"]},
     "meter":      {"group": "mech", "label": "Meter / Mana", "icon": None, "patterns": [r"\bmana\b", r"\bMP\b", r"\bmeters?\b", r"\bbars? of meter\b", r"\bgauge\b"]},
     "stacks":     {"group": "mech", "label": "Stacking mechanic", "icon": None, "patterns": [r"\b\d+ stacks?\b", r"\bstacks? of\b", r"\bper stack\b", r"\bgains? (?:\d+ )?[\w' ]{0,20}? stacks?\b", r"(?<!non )(?<!non-)\bstacking\b", r"\bstacks? (?:count|reset|refresh)", r"\bcan stack\b"]},
