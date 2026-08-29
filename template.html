@@ -89,7 +89,7 @@ main{flex:1;display:grid;grid-template-columns:var(--listw,380px) 6px minmax(0,1
 .rnum{color:#acd0ff;font-weight:600}
 :root:not([data-theme="dark"]) .rnum{color:#2f6fd6}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rnum{color:#acd0ff}}
-#zoom{display:flex;gap:4px}#zoom button{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);font:700 16px "IBM Plex Mono",monospace;cursor:pointer}#zoom button:hover{border-color:var(--accent)}
+#zoom{display:flex;gap:4px;align-items:stretch}#zoomlvl{display:flex;align-items:center;padding:0 8px;height:34px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--muted);font-size:12px}#zoom button{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);font:700 16px "IBM Plex Mono",monospace;cursor:pointer}#zoom button:hover{border-color:var(--accent)}
 #list{overflow:auto;border-right:1px solid var(--line);background:var(--bg)}
 #count{padding:8px 14px;color:var(--muted);font-size:12px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:1}
 .u{padding:9px 14px 9px 12px;width:100%;box-sizing:border-box;border-bottom:1px solid var(--line);cursor:pointer;border-left:3px solid transparent}
@@ -115,6 +115,12 @@ main{flex:1;display:grid;grid-template-columns:var(--listw,380px) 6px minmax(0,1
 .dd .picked{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid var(--accent);border-radius:6px;font-size:13px}
 .dd .fly{position:relative}
 .dd label .arr{margin-left:auto;color:var(--muted);padding-left:10px}
+.dd .flyrow{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:6px;cursor:default;font-size:13px}
+.dd .fly .fly .flyrow{padding-left:28px;font-size:12px}
+.dd .flyrow:hover{background:var(--panel2)}
+.dd .flyrow .arr{margin-left:auto;color:var(--muted)}
+.gl{display:inline-flex;align-items:center;gap:6px}.gl img{width:18px;height:18px;object-fit:contain}
+.gtx{-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
 .dd label .n{font:11px "IBM Plex Mono",monospace;color:var(--accent);margin-left:6px}
 .dd label .arr+.x{margin-left:6px}
 .dd .menu2{position:absolute;left:100%;top:-6px;margin-left:2px;min-width:240px;z-index:21;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.25);padding:6px;
@@ -170,7 +176,7 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
 </head>
 <body>
 <header>
-  <div class="topbtns"><div id="zoom"><button type="button" id="zoomout" title="Zoom out (⌘−)">−</button><button type="button" id="zoomin" title="Zoom in (⌘+)">+</button></div><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
+  <div class="topbtns"><div id="zoom"><button type="button" id="zoomout" title="Zoom out">−</button><span id="zoomlvl" class="mono"></span><button type="button" id="zoomin" title="Zoom in">+</button></div><button id="credits" type="button" title="Credits" aria-label="Credits"></button><button id="help" type="button" title="How to use" aria-label="How to use">?</button></div>
   <div class="brand"><h1>Kouhaii AV Library</h1><span class="sub">passives &amp; abilities of every Anime Vanguards unit and memoria · wiki data <span id="gen" class="mono"></span></span></div>
   <div class="tabs" role="tablist"><button class="tab" data-tab="units" role="tab">Units <span class="n" id="tabn-units"></span></button><button class="tab" data-tab="memoria" role="tab">Memoria <span class="n" id="tabn-memoria"></span></button></div>
   <div class="bar">
@@ -220,9 +226,14 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 const norm = s => s.toLowerCase().replace(/ /g,'_');
 const KEYS = new Set([...Object.keys(GROUPS),'tag','element','rarity','state','group','bufftarget','buffsunit','selftarget','selfunit']);
 const BY_SLUG = Object.fromEntries(UNITS.map(u => [norm(u.slug), u]));
-const RARITY = DATA.rarity, ELEM = DATA.elements;
+const RARITY = DATA.rarity, ELEM = DATA.elements, GM = DATA.groupsMeta, RARITIES = ['Rare','Epic','Legendary','Mythic','Secret','Vanguard'];
+const TABS_ORDER = ['Normal','Seasonal','Other'];
+const gname = g => (GM[g] && GM[g].name) || g.replace(/([a-z])([A-Z])/g,'$1 $2');
+const gicon = g => GM[g] && GM[g].icon ? `<img src="${GM[g].icon}" alt="">` : '';
+const glab = g => `<span class="gl">${gicon(g)}<span${GM[g] && GM[g].gradient ? ` class="gtx" style="background-image:${GM[g].gradient}"` : ''}>${esc(gname(g))}</span></span>`;
+const HIDDEN_GROUPS = new Set(['Swap','Domain']);
 const isDark = () => document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
-const rStyle = r => { const st = RARITY[r] || RARITY.Unknown; return `--rg:${isDark() ? st.gradient : st.solid}`; };
+const rStyle = (r, u) => { const st = RARITY[(u && u.rarityStyle) || r] || RARITY.Unknown; return `--rg:${isDark() ? st.gradient : st.solid}`; };
 const elem = e => { const x = ELEM[e] || ELEM.Unknown; return `<span class="el" style="--ec:${x.color}"><img src="${x.icon}" alt="">${esc(e)}</span>`; };
 const META = new Set(['element','rarity','state','group']);
 const $dds = () => $('#dds');
@@ -398,7 +409,7 @@ function writeHash(){ const p = new URLSearchParams(); if (state.tab !== 'units'
 function setTab(t){ if (state.tab === t) return; state.tab = t; state.unit = null; writeHash(); render(); }
 function setQuery(q){ state.q = q.replace(/\s+/g,' ').trim(); $('#q').value = state.q; writeHash(); render(); }
 function toggleToken(tok){ const toks = state.q.split(/\s+/).filter(Boolean), i = toks.indexOf(tok); if (i >= 0) toks.splice(i,1); else toks.push(tok); setQuery(toks.join(' ')); }
-const rarity = r => `<span class="r" style="${rStyle(r)}">${esc((RARITY[r] && RARITY[r].text) || r)}</span>`;
+const rarity = (r, u) => `<span class="r" style="${rStyle(r, u)}">${esc(r)}</span>`;
 function render(){
   const q = parseQuery(state.q);
   const items = ITEMS();
@@ -410,7 +421,7 @@ function render(){
   state.sel = Math.max(0, visible.findIndex(u=>u.slug===state.unit));
   $('#rows').innerHTML = visible.map((u,i) => `
     <div class="u${u.slug===state.unit?' sel':''}" data-i="${i}" tabindex="0">${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="" loading="lazy">`:''}<div>
-      <div class="n"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</div>
+      <div class="n"><span class="rn" style="${rStyle(u.rarity, u)}">${esc(u.name)}</span> ${rarity(u.rarity, u)}</div>
       <div class="m">${u.kind==='memoria' ? (u.exclusiveUnits.length ? 'Exclusive: ' + u.exclusiveUnits.map(esc).join(', ') : u.elements.length ? 'Exclusive: ' + u.elements.map(elem).join(' ') : 'Universal') : u.elements.map(elem).join(' ') + (u.state==='Evolved'?' · Evolved':'')}</div>
       <div class="s">${snippet(u, q)}</div>
     </div></div>`).join('');
@@ -430,10 +441,10 @@ function renderDetail(q){
   const link = n => `<a data-unit="${esc(n.replace(/ /g,'_'))}">${esc(n)}</a>`;
   const meta = u.kind === 'memoria'
     ? `<span class="stat"><img class="si" src="${DATA.stats.damage}" alt="Damage">${esc(u.baseAttack ?? '—')} <img class="si" src="${DATA.stats.range}" alt="Range">${esc(u.baseRange ?? '—')}</span>${u.exclusiveUnits.length?`<span>Exclusive to ${u.exclusiveUnits.map(n => BY_SLUG[norm(n.replace(/ /g,'_'))] ? link(n) : esc(n)).join(', ')}</span>`:''}${u.elements.length?`<span>Exclusive to ${u.elements.map(elem).join(' ')} units</span>`:''}${!u.exclusiveUnits.length && !u.elements.length ? '<span>Universal</span>' : ''}`
-    : `<span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.length?`<span>${esc(u.groups.join(', '))}</span>`:''}`;
+    : `<span>${u.elements.map(elem).join(' ') || '—'}</span><span>${esc(u.state)}</span>${u.evolvesFrom?`<span>evolves from ${link(u.evolvesFrom)}</span>`:''}${u.evolvesTo?`<span>evolves to ${link(u.evolvesTo)}</span>`:''}${u.groups.filter(g=>!HIDDEN_GROUPS.has(g)).length?`<span>${u.groups.filter(g=>!HIDDEN_GROUPS.has(g)).map(glab).join(' ')}</span>`:''}`;
   $('#detail').innerHTML = `
     <span class="back" data-back>← back to list</span>
-    <div class="dh"><h2>${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> ${rarity(u.rarity)}</h2></div>
+    <div class="dh"><h2>${u.icon?`<img class="pic" src="${esc(u.icon)}" alt="">`:''}<span class="rn" style="${rStyle(u.rarity, u)}">${esc(u.name)}</span> ${rarity(u.rarity, u)}</h2></div>
     <div class="meta">${meta}<a href="https://wiki.vanguards.gg/${encodeURIComponent(u.slug)}" target="_blank" rel="noopener">Wiki ↗</a></div>
     <div class="tagrow">${u.tags.map(tagPill).join('')}</div>
     ${u.passives.some(p=>p.source!=='familiar')?'<h3 class="sec">Passives</h3>'+u.passives.filter(p=>p.source!=='familiar').map(card).join(''):''}
@@ -457,9 +468,16 @@ function renderDropdowns(q){
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
-    const vals = uniq(ITEMS().flatMap(get)), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
+    const present = new Set(ITEMS().flatMap(get));
+    const vals = key === 'rarity' ? RARITIES.filter(r => present.has(r)) : uniq([...present]).filter(v => !HIDDEN_GROUPS.has(v));
+    const on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
+    const rowHtml = v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : key==='rarity' ? `<span class="rn" style="${rStyle(v)}">${esc(v)}</span>` : key==='group' ? glab(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`;
+    let body;
+    if (key === 'group'){
+      body = TABS_ORDER.map(tab => { const gs = vals.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab); return gs.length ? `<div class="fly" data-fly="group-${tab}"><div class="flyrow">${tab === 'Other' ? 'Other groups' : tab + ' groups'}<span class="arr">▸</span></div><div class="menu2">${gs.map(rowHtml).join('')}</div></div>` : ''; }).join('');
+    } else body = vals.map(rowHtml).join('');
     html += `<div class="dd${openKey===key?' open':''}" data-key="${key}"><button type="button">${label}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
-      ${vals.map(v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`).join('')}
+      ${body}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   $('#dds').innerHTML = html;
@@ -484,13 +502,16 @@ function targetFly(q, key, pickKey, title){
   const elems = Object.keys(ELEM).filter(e => e !== 'Unknown');
   const known = new Set(['all','unspecified', ...elems.map(norm)]);
   const groups = uniq(ITEMS().flatMap(u => key === 'bufftarget' ? (u.buffTargets||[]) : (u.selfTargets||[]))).filter(t => !known.has(norm(t)) && !BY_SLUG[norm(t.replace(/ /g,'_'))]);
+  if (!GM.Swap) GM.Swap = {name:'Swap units', tab:'Other'}; if (!GM.Ninjutsu) GM.Ninjutsu = {name:'Ninjutsu', tab:'Other'};
   const glabel = t => t === 'Swap' ? 'Swap units' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
   const picked = unit && BY_SLUG[unit];
   const active = on.size + (picked ? 1 : 0);
+  const sub = (id, title, inner) => `<div class="fly" data-fly="${id}"><div class="flyrow">${title}<span class="arr">▸</span></div><div class="menu2">${inner}</div></div>`;
+  const byTab = tab => groups.filter(g => (GM[g] ? GM[g].tab : 'Other') === tab);
   return `<div class="fly${state.fly===key?' open':''}" data-fly="${key}">${title.replace('<span class="arr">▸</span>', `${active?`<span class="n">${active}</span>`:''}<span class="arr">▸</span>`)}<div class="menu2">
     <div class="subhead">${key==='selftarget' ? 'affects which unit' : 'who gets it'}</div>${row('all', key==='selftarget' ? 'Any unit' : 'All allies (no restriction)')}
-    <div class="subhead">by element</div>${elems.map(e => row(e, elem(e))).join('')}
-    <div class="subhead">by group</div>${groups.map(t => row(t, esc(glabel(t)))).join('')}
+    ${sub(key+'-el', 'By element', elems.map(e => row(e, elem(e))).join(''))}
+    ${TABS_ORDER.map(tab => byTab(tab).length ? sub(key+'-'+tab, (tab === 'Other' ? 'Other groups' : tab + ' groups'), byTab(tab).map(t => row(t, GM[t] ? glab(t) : esc(glabel(t)))).join('')) : '').join('')}
     ${cnt.unspecified ? `<div class="subhead">unknown</div>${row('Unspecified', 'Target not stated in text')}` : ''}
     <div class="subhead">a specific unit</div>
     <div class="upick" data-pick="${pickKey}">${picked ? `<span class="picked"><span class="rn" style="${rStyle(picked.rarity)}">${esc(picked.name)}</span><span class="x" data-unpick="${pickKey}" title="remove">✕</span></span>` : `<input type="search" class="upick-in" placeholder="type a unit name…" autocomplete="off"><div class="upicklist"></div>`}</div>
@@ -558,7 +579,7 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
 })();
 // zoom buttons (same effect as ⌘+ / ⌘−, remembered per browser)
 (() => { let z = 1; try { z = parseFloat(localStorage.getItem('zoom')) || 1; } catch {}
-  const apply = () => { document.documentElement.style.fontSize = (16 * z) + 'px'; try { localStorage.setItem('zoom', z); } catch {} };
+  const apply = () => { document.body.style.zoom = z; $('#zoomlvl').textContent = Math.round(z * 100) + '%'; try { localStorage.setItem('zoom', z); } catch {} };
   $('#zoomin').addEventListener('click', () => { z = Math.min(1.6, +(z + 0.1).toFixed(2)); apply(); });
   $('#zoomout').addEventListener('click', () => { z = Math.max(0.7, +(z - 0.1).toFixed(2)); apply(); });
   apply();

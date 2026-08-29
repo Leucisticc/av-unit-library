@@ -29,6 +29,26 @@ def _icon(name: str | None) -> str | None:
     return "data:image/png;base64," + base64.b64encode(p.read_bytes()).decode()
 
 
+def _groups_meta(units: list[dict]) -> dict:
+    """Group id -> {name, icon, tab, gradient}; wiki-defined groups from data/groups.json
+    (Template:Group + Unit Mechanics tabber), derived/seasonal variants filled in."""
+    meta = json.loads((ROOT / "data" / "groups.json").read_text(encoding="utf-8"))
+    out = {}
+    for gid, g in meta.items():
+        p = ICON_DIR / "groups" / g["icon"] if g.get("icon") else None
+        out[gid] = {"name": g["name"], "tab": g["tab"], "gradient": g.get("gradient"),
+                    "icon": _icon(f"groups/{g['icon']}") if p and p.exists() else None}
+    for gid in sorted({g for u in units for g in u["groups"]}):
+        if gid in out or gid in ("Swap", "Domain"):
+            continue
+        base = gid.replace("_Mythic", "")
+        if base in out:
+            out[gid] = {**out[base], "name": out[base]["name"] + " (Mythic)"}
+        else:
+            out[gid] = {"name": gid, "tab": "Other", "gradient": None, "icon": None}
+    return out
+
+
 def make_data() -> dict:
     overrides = load_overrides()
     units = apply_tags(build_units(), overrides)
@@ -52,6 +72,7 @@ def make_data() -> dict:
                     "discord": "Kouhaii", "github": "https://github.com/Leucisticc"},
         "elements": {e: {"color": c, "icon": _icon(ELEMENT_ICON[e])} for e, c in ELEMENT_COLOR.items()},
         "stats": {"damage": _icon("stat_Damage.png"), "range": _icon("stat_Range.png"), "spa": _icon("stat_SPA.png")},
+        "groupsMeta": _groups_meta(units),
         "buffTargets": sorted({t for u in units + memoria for t in u["buffTargets"]}, key=lambda t: (t != "all", t)),
         "units": units,
         "memoria": memoria,

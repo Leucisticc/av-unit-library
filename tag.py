@@ -185,6 +185,13 @@ def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = No
             for t in entry["buffTargets"]:
                 if t not in targets:
                     targets.append(t)
+        if u.get("kind") != "memoria":
+            # Units: Domain and Swap come from the hand-confirmed lists in groups_extra.json, not text
+            seen = [t for t in seen if t != "has-domain"]
+            for entry in u["passives"] + u["abilities"]:
+                entry["tags"] = [t for t in entry["tags"] if t != "has-domain"]
+            if "Domain" in u["groups"] and "has-domain" not in seen:
+                seen.append("has-domain")
         if "Swap" in u["groups"] and "swap" not in seen:
             seen.append("swap")   # unit-level mechanic tag, hand-confirmed list in groups_extra.json
         u["tags"] = seen

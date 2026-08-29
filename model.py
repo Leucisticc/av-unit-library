@@ -255,7 +255,9 @@ def build_memoria(raw_dir: Path = RAW_DIR) -> list[dict]:
             "kind": "memoria",
             "name": name,
             "slug": slugify(name),
-            "rarity": mem.get("rarity", "Unknown"),
+            # bespoke wiki styles (Strongest, CogFive...) are all "Vanguard" rarity
+            "rarity": mem.get("rarity", "Unknown") if mem.get("rarity") in ("Rare", "Epic", "Legendary", "Mythic", "Exclusive", "Secret", "Vanguard") else "Vanguard",
+            "rarityStyle": mem.get("rarity", "Unknown"),
             "elements": excl_elems,          # what the Specialty passives need
             "exclusiveUnits": excl_units,
             "state": "Memoria",

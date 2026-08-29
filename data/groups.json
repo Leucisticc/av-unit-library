@@ -1,0 +1,155 @@
+{
+ "Giant": {
+  "name": "Giant",
+  "icon": "Ethereal Centipede.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#6d7ad3,#cde2ff)",
+  "order": 10
+ },
+ "VideoGames": {
+  "name": "Video Games",
+  "icon": "Unit Meter Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#00ff66,#007659)",
+  "order": 9
+ },
+ "DragonSphere": {
+  "name": "Dragon Sphere",
+  "icon": "Dragon Sphere Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#ff6600,#fcff00)",
+  "order": 6
+ },
+ "Pirates": {
+  "name": "Pirates",
+  "icon": "Pirate Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#3f278c,#ffdada,#ffe682)",
+  "order": 8
+ },
+ "Hunters": {
+  "name": "Hunters",
+  "icon": "Dark Matter.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#00a8ff,#312ac8)",
+  "order": 5
+ },
+ "Shadows": {
+  "name": "Shadows",
+  "icon": "Atomic Essence.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#fd79ff,#4c2ac7)",
+  "order": 7
+ },
+ "SteelBall": {
+  "name": "Steel Ball",
+  "icon": "Steel Ball Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#28d300,#c6ff00)",
+  "order": 3
+ },
+ "Berk": {
+  "name": "Unending Rage",
+  "icon": "Berk Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#520c00 0%,#ff2a00 60%)",
+  "order": 11
+ },
+ "CrimsonMoon": {
+  "name": "Crimson Moon",
+  "icon": "Crimson Moon Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#ff3e70,#ffffff)",
+  "order": 4
+ },
+ "Fused": {
+  "name": "Fused",
+  "icon": "Rotara Earring 1.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#006cff,#FFFFFF,#ffe400)",
+  "order": 12
+ },
+ "DevilKiller": {
+  "name": "Devil Killer",
+  "icon": "Devil Killer Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#b73aff,#cdb4ff)",
+  "order": 1
+ },
+ "Occult": {
+  "name": "Occult",
+  "icon": "Golden Ball Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#00ffcc,#ff00ba)",
+  "order": 2
+ },
+ "Any": {
+  "name": "Every Group",
+  "icon": "Horn of Salvation.png",
+  "tab": "Other",
+  "gradient": "linear-gradient(0deg,#fcff00,#f1baff)",
+  "order": 20
+ },
+ "1stAnni": {
+  "name": "1st Anniversary",
+  "icon": "Cake Slice.png",
+  "tab": "Seasonal",
+  "gradient": "linear-gradient(0deg,#d78420 10%,#ffe8d6 50%,#ff9bd6 90%)",
+  "order": 17
+ },
+ "Summer": {
+  "name": "Summer",
+  "icon": "Sunshine.png",
+  "tab": "Seasonal",
+  "gradient": "linear-gradient(0deg,#ffb476 0%,#fffeea 15%,#2b85ff 50%,#9bfff2 100%)",
+  "order": 16
+ },
+ "Winter": {
+  "name": "Winter",
+  "icon": "Snowflake.png",
+  "tab": "Seasonal",
+  "gradient": "linear-gradient(0deg,#244fbe,#60baff,#a6fffe)",
+  "order": 14
+ },
+ "Winter26": {
+  "name": "Winter '26",
+  "icon": "Winter Present.png",
+  "tab": "Seasonal",
+  "gradient": "linear-gradient(0deg, #c123ff, #60baff, #a6fffe)",
+  "order": 19
+ },
+ "Peroxide": {
+  "name": "Peroxide",
+  "icon": "Group Buffers.png",
+  "tab": "Other",
+  "gradient": "linear-gradient(0deg,#8745ff,#e4f6ff)"
+ },
+ "DemonController": {
+  "name": "Demon Controller",
+  "icon": "Demon Controller Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg,#0d1f6b,#2b4fd4,#6f9dff)",
+  "order": 0
+ },
+ "DemonHunter": {
+  "name": "Demon Hunter",
+  "icon": "Demon Hunter Icon.png",
+  "tab": "Normal",
+  "gradient": "linear-gradient(0deg, #ff3d37 20%, #44ff8b 60%)",
+  "order": 13
+ },
+ "Spring": {
+  "name": "Spring",
+  "icon": null,
+  "tab": "Seasonal",
+  "gradient": null,
+  "order": 15
+ },
+ "Fall25": {
+  "name": "Fall25",
+  "icon": null,
+  "tab": "Seasonal",
+  "gradient": null,
+  "order": 18
+ }
+}
