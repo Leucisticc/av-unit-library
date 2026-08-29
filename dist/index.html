@@ -453,7 +453,7 @@ function renderDropdowns(q){
     const on = new Set((q.include[gid]||[]).flat()), neg = new Set(q.exclude[gid]||[]);
     const rows = Object.entries(TAGS).filter(([tid,t]) => t.group === gid && (tabCount[tid] || on.has(tid) || neg.has(tid)));
     html += `<div class="dd fx${openKey===gid?' open':''}" data-key="${gid}" style="--c:var(--${gid})"><button type="button">${esc(glabel)}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
-      ${rows.map(([tid,t]) => { const lab = `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="cnt">${tabCount[tid]||0}</span>${tid==='ally-buff'||tid==='self-buff'?'<span class="arr">▸</span>':''}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>`; return tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', lab) : tid==='self-buff' ? targetFly(q, 'selftarget', 'selfunit', lab) : lab; }).join('')}
+      ${rows.map(([tid,t]) => { const lab = `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}${tid==='ally-buff'||tid==='self-buff'?'<span class="arr">▸</span>':''}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>`; return tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', lab) : tid==='self-buff' ? targetFly(q, 'selftarget', 'selfunit', lab) : lab; }).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
