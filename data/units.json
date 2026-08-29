@@ -86,21 +86,6 @@
    ],
    "icon": "data:image/png;base64,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"
   },
-  "frostburn": {
-   "group": "dot",
-   "label": "Frostburn",
-   "patterns": [
-    "\\bfrostburn\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
-   ],
-   "suppress": [
-    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
-    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
-    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
-    "\\bself\\s*-?\\s*$",
-    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
-   ],
-   "icon": "data:image/png;base64,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"
-  },
   "repulse": {
    "group": "cc",
    "label": "Repulse",
@@ -218,6 +203,51 @@
     "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
    ],
    "icon": "data:image/png;base64,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"
+  },
+  "frostburn": {
+   "group": "cc",
+   "label": "Frostburn",
+   "patterns": [
+    "\\bfrostburn\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "aura-of-corruption": {
+   "group": "cc",
+   "label": "Aura of Corruption",
+   "patterns": [
+    "\\baura of corruption\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "infinite-spin": {
+   "group": "cc",
+   "label": "Infinite Spin",
+   "patterns": [
+    "\\binfinite spin\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
   },
   "cleave": {
    "group": "amp",
@@ -406,6 +436,52 @@
    ],
    "icon": "data:image/png;base64,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"
   },
+  "purgatory-flames": {
+   "group": "amp",
+   "label": "Purgatory Flames",
+   "patterns": [
+    "\\bpurgatory flames\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "destruction": {
+   "group": "amp",
+   "label": "Destruction",
+   "patterns": [
+    "\\binflicts? destruction\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
+    "\\bdestruction:\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "despair": {
+   "group": "amp",
+   "label": "Despair",
+   "patterns": [
+    "\\bdespair\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
   "rupture": {
    "group": "effect",
    "label": "Rupture",
@@ -435,6 +511,83 @@
     "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
    ],
    "icon": "data:image/png;base64,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"
+  },
+  "affection": {
+   "group": "effect",
+   "label": "Affection (units)",
+   "patterns": [
+    "\\baffection\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "conflagration": {
+   "group": "effect",
+   "label": "Conflagration",
+   "patterns": [
+    "\\bconflagration\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "chained": {
+   "group": "effect",
+   "label": "Chained (units)",
+   "patterns": [
+    "\\bchained\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "primed": {
+   "group": "effect",
+   "label": "Primed",
+   "patterns": [
+    "\\bprimed\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
+  },
+  "corruption": {
+   "group": "effect",
+   "label": "Corruption",
+   "patterns": [
+    "\\binflicts? corruption\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
+    "\\bwith corruption\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
+    "\\bcorruption:\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAADoAEAAwAAAAEAAQAAoAIABAAAAAEAAAAooAMABAAAAAEAAAAoAAAAAHrmZqwAAATwSURBVFgJ7VddaBxVFM7G3aS1SQpiihBrVSqYVmsloqAifSpYsb4o+iBSoSLiPwq+lfbFJ0GiiJWAL1oUYoNSSVGRBZGKuq2kdTWy1JBuG7fNzm5mZ+fOzJ175/rd2Z3JndnZuHmRPszA3XPuOd8599xzz/3Zvr70SzOQZiDNQJqBdWWgUCjkKpXKpnUZ/V9gQsgYc90Zzvm86zhvCSEy3cZeS9fNJknedYA4uNls3jAwMPBNLpfbJXWCsUImm703k8kIFdus1+/qz+X2mpZ1bHR0dEnVIegB9G9BG/c8b0ef59H+bLaCfhX+Tw8PDy+r+J75fD6fpY5zDAOEH3fddwMHxWJxyGw0HgPmM5eQLx3wAPqTdxxnHNg3EdBXQni/gTZDJwoD+SJn7Kht27cGfnumWNonhLfqzeNcF7a9vXzq1Ear2XwagZ0JtZ5XZJb1LPo5ZtuPYtCLwDuMsSpKYyXEdWGA+cPW9dt6Dg5+rnUpnVP9ea57nOj6U5D/qMp9nvPzgtIDCwsLG4x6/SEs3S7DMHbYhEwik+eQqcDEBvMR2ttoP6FZaP7nus4JuWo9BUmI8aTiVDpA16u3XK3+YuZ/c0pfgmSz6lgQcqPg/INVpM8x/L4W4MBfg/ahr8EPfJlY6v/OoswCdu3PgWES9Ty+hEy+U6vVbgoGlBTYfu44hzCdaszuPPr70SIbFP33A5xMCALcq/pL5C3TfA4DBHYRCieLlNIp1OfWJGMEdzhi0OrkQTo2AWQb0CKJQIAPJ/kNZY5hjKOwF2HY8UFOZG2F4BgjTPMej7GwptoOjoNGlj8wg/ygOgj8a5ZlbQv0EWpUKls4IW/I3acahbznYXL26xEjpSPgGJvo1xDfYr4GSbx9IN+Mdq4Fa/1iZT5VXLZYqDJU15/BzEsqOM4j8BW9dmUfTudIDQUOXcs6ErMpo39zoI9T6F5Q8ZwzirK5L47z+9Q0I2DVUOURJBXNZkcRi3J5IzPNoyoWfLhb44NCdz/akopH9uSO75y8qFbH4HwKSnnaqzbCdd2TkP2jCnEI/yBKpUF1UFx/B7CpqIKT/ISKCXjIh9BOKliMQ0/jNEis0z55esvC5Kb5omqEY+aippVGcDi9osrR90Stti8YUFJMYjqCEUKed3tUjOQh24n2nYrF2Ucw/oNxbKSvadoIjoezqiFeLYfaTgdRn7hPVz+PkIJeLF7X1meAjejbyM9B5SPB/8DLGtXbOp9gYig78nKA6Uqpbb+qGiJ7ZVxTWwID3ApjuFcjE2CGMX0lXxySGNRPeBsofuRxI69EeaU9jyazGn7I3AWcCo8EY6xJcSN8G1qCQcCTcQO8Tu7EjBdUHM7M6crc3Cbobke9/qnq1uJlbSMB4/ExEvvYwXdjd8oL3P9wWNZhvDMJDMBubIbf21CfEMOYmZ2dHcRSPYAJVFRdnEdgZ5C1/fJ1nuQ/UUYd6xOP0r8Ypb9Ih8jee4nAthCQbajJ79XBbdOckbtQZgVBHMEkZxHsPJZxHv08+h8z5jyulUoja/nu0IlG43qHkBN0ZWWioWkHTcM4XK/Xd3cAYwIEN4In1CSy6T9CcXefrVyo3KHClpeXh2VTZevmtUuXttYuX/bvVvwhigzQizO8/yYQ7BRnfImY5hdX7Z8qBLndcq09oL09NnuZfYpJM5BmIM1AmoGrOwP/AnOpz/v0VRvNAAAAAElFTkSuQmCC"
   },
   "absolute-zero": {
    "group": "effect",
@@ -4422,6 +4575,7 @@
      "tags": [
       "slow",
       "dmg-taken",
+      "despair",
       "dr-bypass",
       "follow-up"
      ],
@@ -4432,6 +4586,7 @@
    "tags": [
     "slow",
     "dmg-taken",
+    "despair",
     "dr-bypass",
     "follow-up"
    ],
@@ -4461,6 +4616,7 @@
      "tags": [
       "slow",
       "dmg-taken",
+      "despair",
       "dr-bypass",
       "follow-up"
      ],
@@ -4493,6 +4649,7 @@
    "tags": [
     "slow",
     "dmg-taken",
+    "despair",
     "dr-bypass",
     "follow-up",
     "dmg-buff",
@@ -4985,7 +5142,8 @@
      "rich": "Attacks inflict Burn for 50% of this unit's damage over 8 seconds; When attacking an enemy that is already Burning, apply Conflagration; Conflagration persists as long as the enemy has Burn, and each Burn tick on a Conflagration enemy also damages nearby enemies in a small radius.",
      "source": "unit",
      "tags": [
-      "burn"
+      "burn",
+      "conflagration"
      ],
      "buffTargets": []
     },
@@ -5008,6 +5166,7 @@
     "scorched",
     "aoe",
     "burn",
+    "conflagration",
     "nullify",
     "dmg-buff",
     "buff",
@@ -6580,6 +6739,7 @@
      "source": "unit",
      "tags": [
       "bleed",
+      "chained",
       "dmg-buff",
       "cost-reduction",
       "buff",
@@ -6592,6 +6752,7 @@
    "abilities": [],
    "tags": [
     "bleed",
+    "chained",
     "dmg-buff",
     "cost-reduction",
     "buff",
@@ -6623,6 +6784,7 @@
      "source": "unit",
      "tags": [
       "bleed",
+      "chained",
       "dmg-buff",
       "cost-reduction",
       "buff",
@@ -6638,6 +6800,7 @@
      "source": "unit",
      "tags": [
       "wounded",
+      "chained",
       "dmg-buff",
       "buff",
       "self-buff",
@@ -6652,6 +6815,7 @@
      "source": "unit",
      "tags": [
       "slow",
+      "chained",
       "follow-up"
      ],
      "buffTargets": []
@@ -6664,12 +6828,15 @@
      "rich": "This unit deletes a chained ally at random and does 1000% damage to the strongest enemy in range. The deleted placement cannot be replaced.",
      "cooldown": 20,
      "cooldownType": "Global",
-     "tags": [],
+     "tags": [
+      "chained"
+     ],
      "buffTargets": []
     }
    ],
    "tags": [
     "bleed",
+    "chained",
     "dmg-buff",
     "cost-reduction",
     "buff",
@@ -6821,6 +6988,7 @@
      "rich": "On placement, designate 1 unit with Affection; If the designated unit and this unit attack the same enemy, the designated unit deals 10% more damage, doubled if the designated unit is Lich King (Ruler).",
      "source": "unit",
      "tags": [
+      "affection",
       "bonus-vs"
      ],
      "buffTargets": []
@@ -6832,7 +7000,8 @@
     "buff",
     "self-buff",
     "shield-pierce",
-    "bonus-vs"
+    "bonus-vs",
+    "affection"
    ],
    "buffTargets": [],
    "icon": "img/units/Devoted Demon (Obsessed).png"
@@ -7937,6 +8106,7 @@
      "rich": "⟦c|30c23d|Flame:⟧\n• Gain 1 Flame stack when this unit is buffed, then every 10 seconds per active buff\n• When this unit reaches 12 Flame stacks, the active becomes available\n• At 5 or more Flame stacks, basic attacks follow up with Attack 3 ⟦c|6bf5fa|Attacks:⟧\n• Inflict Destruction\n• Deal 100% more damage to enemies with Solidified ⟦c|ff7b1c|Destruction:⟧\n• Damage taken by affected enemies bypasses 70% of Damage Reduction\n• Enemies with Overshield take double damage",
      "source": "unit",
      "tags": [
+      "destruction",
       "buff",
       "dr-bypass",
       "bonus-vs",
@@ -7948,6 +8118,7 @@
    ],
    "abilities": [],
    "tags": [
+    "destruction",
     "buff",
     "dr-bypass",
     "bonus-vs",
@@ -7978,6 +8149,7 @@
      "rich": "⟦c|30c23d|Flame:⟧\n• Gain 1 Flame stack when this unit is buffed, then every 10 seconds per active buff\n• When this unit reaches 12 Flame stacks, the active becomes available\n• At 5 or more Flame stacks, basic attacks follow up with Attack 3 ⟦c|6bf5fa|Attacks:⟧\n• Inflict Destruction\n• Deal 100% more damage to enemies with Solidified ⟦c|ff7b1c|Destruction:⟧\n• Damage taken by affected enemies bypasses 70% of Damage Reduction\n• Enemies with Overshield take double damage",
      "source": "unit",
      "tags": [
+      "destruction",
       "buff",
       "dr-bypass",
       "bonus-vs",
@@ -8018,6 +8190,7 @@
     }
    ],
    "tags": [
+    "destruction",
     "buff",
     "dr-bypass",
     "bonus-vs",
@@ -8054,12 +8227,16 @@
      "desc": "Attacks inflict Primed; When this unit next attacks a Primed enemy, it detonates – dealing 100% of this unit's damage to that enemy and up to 3 additional enemies in a small area, consuming the Primed stack.",
      "rich": "Attacks inflict Primed; When this unit next attacks a Primed enemy, it detonates – dealing 100% of this unit's damage to that enemy and up to 3 additional enemies in a small area, consuming the Primed stack.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "primed"
+     ],
      "buffTargets": []
     }
    ],
    "abilities": [],
-   "tags": [],
+   "tags": [
+    "primed"
+   ],
    "buffTargets": [],
    "icon": "img/units/Explosive Demon.png"
   },
@@ -8083,7 +8260,9 @@
      "desc": "Attacks inflict Primed; When this unit next attacks a Primed enemy, it detonates – dealing 100% of this unit's damage to that enemy and up to 3 additional enemies in a small area, consuming the Primed stack.",
      "rich": "Attacks inflict Primed; When this unit next attacks a Primed enemy, it detonates – dealing 100% of this unit's damage to that enemy and up to 3 additional enemies in a small area, consuming the Primed stack.",
      "source": "unit",
-     "tags": [],
+     "tags": [
+      "primed"
+     ],
      "buffTargets": []
     },
     {
@@ -8101,6 +8280,7 @@
    ],
    "abilities": [],
    "tags": [
+    "primed",
     "dmg-buff",
     "buff",
     "self-buff"
@@ -11979,6 +12159,7 @@
      "rich": "On placement marks a single allied unit in range with Affection (Cannot mark farms); If this unit attacks the same enemy the allied unit with Affection attacks, this unit will do ⟦num|+50%⟧ more damage on that attack.",
      "source": "unit",
      "tags": [
+      "affection",
       "bonus-vs"
      ],
      "buffTargets": []
@@ -12024,6 +12205,7 @@
      "source": "familiar",
      "familiar": "Military Cap",
      "tags": [
+      "affection",
       "buff",
       "self-buff"
      ],
@@ -12040,6 +12222,7 @@
      "tags": [
       "freeze",
       "dmg-taken",
+      "affection",
       "bonus-vs",
       "aoe"
      ],
@@ -12072,6 +12255,7 @@
     "range-buff",
     "buff",
     "self-buff",
+    "affection",
     "bonus-vs",
     "spa-buff",
     "stacks",
@@ -12580,6 +12764,7 @@
      "cooldownType": "Global",
      "tags": [
       "repulse",
+      "infinite-spin",
       "dmg-buff",
       "self-buff"
      ],
@@ -12590,6 +12775,7 @@
     "spa-buff",
     "self-buff",
     "repulse",
+    "infinite-spin",
     "dmg-buff"
    ],
    "buffTargets": [],
@@ -12728,16 +12914,16 @@
      "rich": "Gains Frostburn ; Anytime this unit attacks an enemy with Burn afflicted, remove the Burn, then Freeze the enemy for ⟦num|2⟧ seconds and apply a DoT for ⟦num|50%⟧ of this units damage for ⟦num|7⟧ seconds.",
      "source": "unit",
      "tags": [
-      "frostburn",
-      "freeze"
+      "freeze",
+      "frostburn"
      ],
      "buffTargets": []
     }
    ],
    "abilities": [],
    "tags": [
-    "frostburn",
-    "freeze"
+    "freeze",
+    "frostburn"
    ],
    "buffTargets": [],
    "icon": "img/units/Karem.png"
@@ -12764,8 +12950,8 @@
      "rich": "Gains Frostburn ; Anytime this unit attacks an enemy with Burn afflicted, remove the Burn, then Freeze the enemy for ⟦num|2⟧ seconds and apply a DoT for ⟦num|50%⟧ of this units damage for ⟦num|7⟧ seconds.",
      "source": "unit",
      "tags": [
-      "frostburn",
-      "freeze"
+      "freeze",
+      "frostburn"
      ],
      "buffTargets": []
     },
@@ -12785,8 +12971,8 @@
    ],
    "abilities": [],
    "tags": [
-    "frostburn",
     "freeze",
+    "frostburn",
     "dmg-buff",
     "range-buff",
     "self-buff",
@@ -16859,6 +17045,7 @@
      "source": "unit",
      "tags": [
       "nullify",
+      "corruption",
       "crit-buff",
       "meter"
      ],
@@ -16899,6 +17086,7 @@
     "bonus-vs",
     "meter",
     "nullify",
+    "corruption",
     "slow"
    ],
    "buffTargets": [],
@@ -16955,6 +17143,7 @@
      "source": "unit",
      "tags": [
       "nullify",
+      "corruption",
       "crit-buff",
       "meter"
      ],
@@ -16992,7 +17181,8 @@
     "bonus-vs",
     "meter",
     "crit-buff",
-    "nullify"
+    "nullify",
+    "corruption"
    ],
    "buffTargets": [],
    "icon": "img/units/Raging Oni vs Wrath God.png"
@@ -17694,7 +17884,8 @@
      "rich": "Increases Burn DMG to ⟦num|50%⟧ of DMG; Enemies hit by attacks are inflicted with Purgatory Flames , making them receive ⟦num|+25%⟧ Burn DMG for 5 seconds.",
      "source": "unit",
      "tags": [
-      "dmg-taken"
+      "dmg-taken",
+      "purgatory-flames"
      ],
      "buffTargets": []
     }
@@ -17702,7 +17893,8 @@
    "abilities": [],
    "tags": [
     "burn",
-    "dmg-taken"
+    "dmg-taken",
+    "purgatory-flames"
    ],
    "buffTargets": [],
    "icon": "img/units/Renguko (Purgatory).png"
@@ -18973,6 +19165,7 @@
      "familiar": "King's Crown",
      "tags": [
       "slow",
+      "aura-of-corruption",
       "dmg-buff",
       "range-buff",
       "buff",
@@ -19014,6 +19207,7 @@
     "aoe",
     "range-buff",
     "burn",
+    "aura-of-corruption",
     "buff"
    ],
    "buffTargets": [],
@@ -24604,6 +24798,7 @@
      "source": "unit",
      "tags": [
       "nullify",
+      "corruption",
       "crit-buff",
       "meter"
      ],
@@ -24619,7 +24814,8 @@
     "bonus-vs",
     "meter",
     "crit-buff",
-    "nullify"
+    "nullify",
+    "corruption"
    ],
    "buffTargets": [],
    "icon": "img/units/Wrath God.png"
@@ -25413,6 +25609,7 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
+      "corruption",
       "bonus-vs"
      ],
      "buffTargets": []
@@ -25424,6 +25621,7 @@
     "buff",
     "self-buff",
     "meter",
+    "corruption",
     "bonus-vs"
    ],
    "buffTargets": [],
@@ -26060,6 +26258,7 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
+      "affection",
       "dmg-buff",
       "buff",
       "ally-buff"
@@ -26074,6 +26273,7 @@
     "dmg-buff",
     "buff",
     "self-buff",
+    "affection",
     "ally-buff"
    ],
    "buffTargets": [
@@ -26146,7 +26346,8 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
-      "repulse"
+      "repulse",
+      "primed"
      ],
      "buffTargets": []
     }
@@ -26154,7 +26355,8 @@
    "abilities": [],
    "tags": [
     "bonus-vs",
-    "repulse"
+    "repulse",
+    "primed"
    ],
    "buffTargets": [],
    "icon": "img/memoria/Drops of Serenity.png"
@@ -28212,6 +28414,7 @@
      "source": "memoria",
      "specialty": true,
      "tags": [
+      "chained",
       "dmg-buff",
       "buff",
       "self-buff",
@@ -28238,6 +28441,7 @@
    "abilities": [],
    "tags": [
     "bleed",
+    "chained",
     "dmg-buff",
     "buff",
     "self-buff",

@@ -112,7 +112,6 @@ TAG_RULES = {
     "intense-burn": _fx("dot", "Intense Burn", "Intense Burn.png", [r"\bintense burn\b"]),
     "black-flames": _fx("dot", "Black Flames", "BlackFlame.png",   [r"\bblack flames?\b"]),
     "chaos":        _fx("dot", "Chaos",        "Chaos Icon.png",   [r"\bchaos\b"]),
-    "frostburn":    _fx("dot", "Frostburn",    "Frostburn.png",    [r"\bfrostburn\b"]),
     # -- Crowd Control ------------------------------------------------------------
     "repulse":   _fx("cc", "Repulse",   "Repulse.png",   [r"\brepulse[sd]?\b(?! lockout)", r"\brepulsing\b", r"\binfinite spin\b"]),
     "slow":      _fx("cc", "Slow",      "Slow.png",      [r"\bslows?\b", r"\bslowing\b", r"\b(?:enem(?:y|ies)|them|they|those|it|targets?|boss(?:es)?|all|hit|units|range|map|field)\s+(?:are |is |gets? |becomes? |will be )?slowed(?: by| for| until)\b", r"\bdespair\b", r"\baura of corruption\b"]),
@@ -121,6 +120,9 @@ TAG_RULES = {
     "timestop":  _fx("cc", "Time Stop", "Time Stop.png", [r"\btime ?stops?\b(?! lockout)", r"\b(?:enem(?:y|ies)|them|they|those|it|targets?|boss(?:es)?|all|hit|units|range|map|field)\s+(?:are |is |gets? |becomes? |will be )?time ?stopped(?: for| by| until)\b", r"\bstops? time\b"]),
     "petrified": _fx("cc", "Petrified", "Petrified.png", [r"\bpetrif(?:y|ies|ied)\b"]),
     "confusion": _fx("cc", "Confusion", "Confusion.png", [r"\bconfus(?:ion|es|ed|ing)\b"]),
+    "frostburn": _fx("cc", "Frostburn", "Frostburn.png", [r"\bfrostburn\b"]),
+    "aura-of-corruption": _fx("cc", "Aura of Corruption", "Alterslow.png", [r"\baura of corruption\b"]),
+    "infinite-spin": _fx("cc", "Infinite Spin", "InfiniteSpin.png", [r"\binfinite spin\b"]),
     # -- Damage Amplification -----------------------------------------------------
     "cleave":    _fx("amp", "Cleave",    "Cleave.png",    [r"\bcleaves?\b", r"\bcleaved\b"]),
     "diseased":  _fx("amp", "Diseased",  "Diseased.png",  [r"\bdiseased?\b"]),
@@ -134,9 +136,17 @@ TAG_RULES = {
     "stone":     _fx("amp", "Stone",     "Stone.png",     [r"\binflict(?:s|ing)? stone\b", r"\bturn(?:s|ed)? (?:enemies |them )?(?:in)?to stone\b"]),
     "dmg-taken": {"group": "amp", "label": "Takes more damage (unnamed)", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\bdespair\b"], "suppress": _CONDITION},
     "opportunity": _fx("amp", "Opportunity", "Opportunity.png", [r"\bopportunity\b"]),
+    "purgatory-flames": _fx("amp", "Purgatory Flames", "Purgatory Flames.png", [r"\bpurgatory flames\b"]),
+    "destruction": _fx("amp", "Destruction", "Destruction.png", [r"\binflicts? destruction\b", r"\bdestruction:\b"]),
+    "despair":     _fx("amp", "Despair", "Despair.png", [r"\bdespair\b"]),
     # -- Other Effects ------------------------------------------------------------
     "rupture":  _fx("effect", "Rupture",  "Rupture.png",  [r"\brupture\b"]),
     "nullify":  _fx("effect", "Nullify",  "Nullify.png",  [r"\bnullif(?:y|ies|ied)\b"]),
+    "affection":     _fx("effect", "Affection (units)", "Affection.png", [r"\baffection\b"]),
+    "conflagration": _fx("effect", "Conflagration", "Conflagration.png", [r"\bconflagration\b"]),
+    "chained":       _fx("effect", "Chained (units)", "Chained.png", [r"\bchained\b"]),
+    "primed":        _fx("effect", "Primed", "Primed.png", [r"\bprimed\b"]),
+    "corruption":    _fx("effect", "Corruption", "Corruption.png", [r"\binflicts? corruption\b", r"\bwith corruption\b", r"\bcorruption:\b"]),
     "absolute-zero": {"group": "effect", "label": "Absolute Zero", "icon": "AbsoluteZero.png", "patterns": [r"\babsolute zero\b"]},
     "tethered": {"group": "effect", "label": "Tethered / Pull", "icon": "Tethered.png", "patterns": [r"\btether(?:s|ed|ing)?\b", r"\bpull(?:s|ed|ing)? (?:all |the )?(?:[\w]+ )?enemies\b", r"\bbring(?:s)? all enemies to\b"]},
     # -- Buffs --------------------------------------------------------------------
