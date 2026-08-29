@@ -95,7 +95,7 @@ main{flex:1;display:grid;grid-template-columns:var(--listw,380px) 6px minmax(0,1
 #detail{contain:layout paint}
 body.dragging{cursor:col-resize;user-select:none}body.dragging #list,body.dragging #detail{pointer-events:none}
 #count{padding:8px 14px;color:var(--muted);font-size:12px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:1}
-.u{padding:9px 14px 9px 12px;width:100%;box-sizing:border-box;border-bottom:1px solid var(--line);cursor:pointer;border-left:3px solid transparent}
+.u{padding:9px 14px 9px 12px;width:100%;box-sizing:border-box;border-bottom:1px solid var(--line);cursor:pointer;border-left:3px solid transparent;content-visibility:auto;contain-intrinsic-size:auto 70px}
 .u:hover{background:var(--panel)}
 .u.sel{background:var(--panel);border-left-color:var(--accent)}
 .u .n{font:600 15px "Chakra Petch",sans-serif;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -587,7 +587,10 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
 })();
 // zoom buttons (same effect as ⌘+ / ⌘−, remembered per browser)
 (() => { let z = 1; try { z = parseFloat(localStorage.getItem('zoom')) || 1; } catch {}
-  const apply = () => { document.body.style.zoom = z; $('#zoomlvl').textContent = Math.round(z * 100) + '%'; try { localStorage.setItem('zoom', z); } catch {} };
+  // 100vh scales with CSS zoom, so size the body from the real window height instead
+  const fit = () => { document.body.style.height = Math.round(window.innerHeight / z) + 'px'; };
+  const apply = () => { document.body.style.zoom = z; fit(); $('#zoomlvl').textContent = Math.round(z * 100) + '%'; try { localStorage.setItem('zoom', z); } catch {} };
+  window.addEventListener('resize', fit);
   $('#zoomin').addEventListener('click', () => { z = Math.min(1.6, +(z + 0.1).toFixed(2)); apply(); });
   $('#zoomout').addEventListener('click', () => { z = Math.max(0.7, +(z - 0.1).toFixed(2)); apply(); });
   apply();
