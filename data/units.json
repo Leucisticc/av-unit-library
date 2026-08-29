@@ -403,7 +403,7 @@
   },
   "dmg-taken": {
    "group": "amp",
-   "label": "Takes more damage (unnamed)",
+   "label": "Enemies take more damage",
    "patterns": [
     "\\btakes? \\+?\\d+% more (?:damage|dmg)\\b",
     "\\bincreases? the damage (?:they|it) takes?\\b",
@@ -775,7 +775,7 @@
   },
   "bonus-vs": {
    "group": "mech",
-   "label": "Bonus dmg vs condition",
+   "label": "Conditional Bonus Damage",
    "patterns": [
     "\\b(?:deals?|dealt|does|do|take[s]?) (?:an? )?(?:additional |extra |between \\d+% to )?\\+?\\d+% (?:more|increased|bonus) (?:damage|dmg)\\b",
     "\\b\\d+% more (?:damage|dmg)\\b",

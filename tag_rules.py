@@ -134,7 +134,7 @@ TAG_RULES = {
     "wanted":    _fx("amp", "Wanted",    "Wanted.png",    [r"\bwanted\b"]),
     "slumber":   _fx("amp", "Slumber",   "Slumber.png",   [r"\bslumber\b"]),
     "stone":     _fx("amp", "Stone",     "Stone.png",     [r"\binflict(?:s|ing)? stone\b", r"\bturn(?:s|ed)? (?:enemies |them )?(?:in)?to stone\b"]),
-    "dmg-taken": {"group": "amp", "label": "Takes more damage (unnamed)", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\bdespair\b"], "suppress": _CONDITION},
+    "dmg-taken": {"group": "amp", "label": "Enemies take more damage", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\bdespair\b"], "suppress": _CONDITION},
     "opportunity": _fx("amp", "Opportunity", "Opportunity.png", [r"\bopportunity\b"]),
     "purgatory-flames": _fx("amp", "Purgatory Flames", "Purgatory Flames.png", [r"\bpurgatory flames\b"]),
     "destruction": _fx("amp", "Destruction", "Destruction.png", [r"\binflicts? destruction\b", r"\bdestruction:\b"]),
@@ -197,7 +197,7 @@ TAG_RULES = {
         r"\b(?:against|to) (?:enemies with )?(?:over)?shield(?:ed|s)?\b",
         r"\bhitting enemies with overshield\b",
     ]},
-    "bonus-vs":   {"group": "mech", "label": "Bonus dmg vs condition", "icon": None, "patterns": [
+    "bonus-vs":   {"group": "mech", "label": "Conditional Bonus Damage", "icon": None, "patterns": [
         r"\b(?:deals?|dealt|does|do|take[s]?) (?:an? )?(?:additional |extra |between \d+% to )?\+?\d+% (?:more|increased|bonus) (?:damage|dmg)\b",
         r"\b\d+% more (?:damage|dmg)\b",
         r"\bDMG \+\d+% (?:when|to|against|if|while)\b",
