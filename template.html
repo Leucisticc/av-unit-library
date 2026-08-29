@@ -448,15 +448,16 @@ const icon = t => t.icon ? `<img src="${t.icon}" alt="">` : '';
 function renderDropdowns(q){
   const openKey = document.querySelector('.dd.open')?.dataset.key;
   let html = '';
+  const tabCount = {}; for (const u of ITEMS()) for (const t of u.tags) tabCount[t] = (tabCount[t]||0) + 1;
   for (const [gid, glabel] of Object.entries(GROUPS)){
     const on = new Set((q.include[gid]||[]).flat()), neg = new Set(q.exclude[gid]||[]);
-    const rows = Object.entries(TAGS).filter(([,t]) => t.group === gid);
+    const rows = Object.entries(TAGS).filter(([,t]) => t.group === gid && (tabCount[t] || on.has(t) || neg.has(t)));
     html += `<div class="dd fx${openKey===gid?' open':''}" data-key="${gid}" style="--c:var(--${gid})"><button type="button">${esc(glabel)}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
-      ${rows.map(([tid,t]) => { const lab = `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}${tid==='ally-buff'||tid==='self-buff'?'<span class="arr">▸</span>':''}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>`; return tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', lab) : tid==='self-buff' ? targetFly(q, 'selftarget', 'selfunit', lab) : lab; }).join('')}
+      ${rows.map(([tid,t]) => { const lab = `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="cnt">${tabCount[tid]||0}</span>${tid==='ally-buff'||tid==='self-buff'?'<span class="arr">▸</span>':''}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>`; return tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', lab) : tid==='self-buff' ? targetFly(q, 'selftarget', 'selfunit', lab) : lab; }).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
-    const vals = uniq([...UNITS, ...MEMORIA].flatMap(get)).filter(v => v !== 'Memoria' || state.tab === 'memoria'), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
+    const vals = uniq(ITEMS().flatMap(get)), on = new Set((q.include[key]||[]).flat()), neg = new Set(q.exclude[key]||[]);
     html += `<div class="dd${openKey===key?' open':''}" data-key="${key}"><button type="button">${label}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
       ${vals.map(v => `<label${neg.has(norm(v))?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${esc(norm(v))}"${on.has(norm(v))?' checked':''}> ${key==='element' ? elem(v) : esc(v)}<span class="x" data-neg="${esc(norm(v))}" title="exclude">✕</span></label>`).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
@@ -475,14 +476,14 @@ function fitMenus(){
   }
 }
 window.addEventListener('resize', fitMenus);
-const TARGET_COUNT = (() => { const c = {bufftarget:{}, selftarget:{}}; for (const u of [...UNITS, ...MEMORIA]){ for (const t of u.buffTargets||[]) c.bufftarget[norm(t)] = (c.bufftarget[norm(t)]||0) + 1; for (const t of u.selfTargets||[]) c.selftarget[norm(t)] = (c.selftarget[norm(t)]||0) + 1; } return c; })();
+const targetCount = () => { const c = {bufftarget:{}, selftarget:{}}; for (const u of ITEMS()){ for (const t of u.buffTargets||[]) c.bufftarget[norm(t)] = (c.bufftarget[norm(t)]||0) + 1; for (const t of u.selfTargets||[]) c.selftarget[norm(t)] = (c.selftarget[norm(t)]||0) + 1; } return c; };
 // "who gets it" flyout: key = bufftarget | selftarget, pickKey = buffsunit | selfunit
 function targetFly(q, key, pickKey, title){
-  const on = new Set((q.include[key]||[]).flat()), unit = (q.include[pickKey]||[]).flat()[0], cnt = TARGET_COUNT[key];
+  const on = new Set((q.include[key]||[]).flat()), unit = (q.include[pickKey]||[]).flat()[0], cnt = targetCount()[key];
   const row = (t, lab) => { const n = cnt[norm(t)]||0; return `<label class="sub${n?'':' dim'}"><input type="checkbox" data-key="${key}" value="${esc(norm(t))}"${on.has(norm(t))?' checked':''}> ${lab}<span class="cnt">${n}</span></label>`; };
   const elems = Object.keys(ELEM).filter(e => e !== 'Unknown');
   const known = new Set(['all','unspecified', ...elems.map(norm)]);
-  const groups = uniq([...UNITS, ...MEMORIA].flatMap(u => [...(u.buffTargets||[]), ...(u.selfTargets||[])])).filter(t => !known.has(norm(t)) && !BY_SLUG[norm(t.replace(/ /g,'_'))]);
+  const groups = uniq(ITEMS().flatMap(u => key === 'bufftarget' ? (u.buffTargets||[]) : (u.selfTargets||[]))).filter(t => !known.has(norm(t)) && !BY_SLUG[norm(t.replace(/ /g,'_'))]);
   const glabel = t => t === 'Swap' ? 'Swap units' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
   const picked = unit && BY_SLUG[unit];
   const active = on.size + (picked ? 1 : 0);
@@ -522,6 +523,13 @@ $('#dds').addEventListener('change', e => {
   const dd = e.target.closest('.dd'); if (!dd || e.target.type!=='checkbox') return;
   const key = e.target.dataset.key || dd.dataset.key;
   const vals = [...dd.querySelectorAll(`input:checked`)].filter(i => (i.dataset.key || dd.dataset.key) === key).map(i=>i.value);
+  if (key === 'buffs'){
+    let toks = state.q.split(/\s+/).filter(Boolean).filter(t => !/^buffs:/i.test(t));
+    if (!vals.includes('ally-buff')) toks = toks.filter(t => !/^-?(?:bufftarget|buffsunit):/i.test(t));
+    if (!vals.includes('self-buff')) toks = toks.filter(t => !/^-?(?:selftarget|selfunit):/i.test(t));
+    if (vals.length) toks.push('buffs:' + vals.join('+'));
+    setQuery(toks.join(' ')); dd.classList.add('open'); return;
+  }
   setKeyValues(key, vals);
   if (key === 'bufftarget' || key === 'selftarget'){ state.fly = key; const need = key === 'selftarget' ? 'self-buff' : 'ally-buff'; if (vals.length && !(parseQuery(state.q).include.buffs||[]).flat().includes(need)) toggleToken('buffs:' + need); }
   dd.classList.add('open');
