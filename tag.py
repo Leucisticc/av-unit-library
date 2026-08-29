@@ -113,6 +113,18 @@ def buff_targets(text: str, groups: list[str]) -> list[str]:
     return found
 
 
+def tag_spans(text: str, tids: list[str]) -> list[tuple[int, int, str]]:
+    """[(start, end, tag)] for every pattern hit that survives negation/suppress —
+    the same spans the page underlines. Used by the review sheets."""
+    spans = []
+    for tid in tids:
+        for pat in _COMPILED.get(tid, []):
+            for m in pat.finditer(text):
+                if m.end() > m.start() and not _dropped(text, m.start(), tid):
+                    spans.append((m.start(), m.end(), tid))
+    return sorted(spans)
+
+
 def load_overrides(path: Path = OVERRIDES_PATH) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
