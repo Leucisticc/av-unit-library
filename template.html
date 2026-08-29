@@ -47,8 +47,9 @@ header{border-bottom:1px solid var(--line);background:var(--panel);padding:14px 
 .dd>button:hover,.dd.open>button{border-color:var(--accent)}
 .dd>button .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent)}
 .dd>button::after{content:"▾";color:var(--muted);font-size:11px}
-.dd .menu{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:240px;
-z-index:20;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.25);padding:6px;max-height:320px;overflow:auto}
+.dd .menu{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:240px;overflow:visible;
+z-index:20;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.25);padding:6px}
+.dd .menu2{overflow:auto}
 .dd.open .menu{display:block}
 .dd.flip .menu{left:auto;right:0}
 .dd label{display:flex;gap:8px;align-items:center;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:13px;white-space:nowrap}
@@ -104,6 +105,13 @@ main{flex:1;display:grid;grid-template-columns:380px minmax(0,1fr);min-height:0}
 .dd .uhit:hover{background:var(--panel2)}
 .dd .uhit .m{font-size:11px}
 .dd .picked{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid var(--accent);border-radius:6px;font-size:13px}
+.dd .fly{position:relative}
+.dd .flyrow{display:flex;align-items:center;gap:8px;padding:5px 8px 5px 28px;border-radius:6px;cursor:pointer;font-size:12px;color:var(--accent)}
+.dd .flyrow:hover{background:var(--panel2)}
+.dd .flyrow .arr{margin-left:auto;color:var(--muted)}
+.dd .menu2{display:none;position:absolute;left:100%;top:-6px;margin-left:2px;min-width:240px;max-height:420px}
+.dd .fly:hover>.menu2,.dd .fly.open>.menu2{display:block}
+.dd.flip .menu2{left:auto;right:100%;margin-left:0;margin-right:2px}
 .dd .subhead{padding:6px 8px 2px 28px;font:600 10px "Chakra Petch",sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 #help{width:34px;height:34px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--accent);font:700 16px "Chakra Petch",sans-serif;cursor:pointer;flex:none}
 #help:hover,#help.open{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
@@ -171,7 +179,7 @@ mark{background:var(--hl);color:var(--hl-ink);border-radius:2px;padding:0 1px}
     <h3>Filters</h3>
     <ul>
       <li><b>Damage over Time, Crowd Control, Damage Amplification, Other Effects</b> — every status effect on the wiki's Status Effects page, in its groups. Tick an effect to show units that <em>apply</em> it. Unit-specific effects (Stone, Despair, Infinite Spin…) also carry the general effect they do (Stun, Slow, Repulse…). Units that only react to it ("deals more damage to Bleeding enemies") are not included — look under Mechanics → <em>Conditional Bonus Damage</em> for those.</li>
-      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it; under Buffs allies you can narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit.</li>
+      <li><b>Buffs</b> — what the unit boosts. <em>Buffs self</em> and <em>Buffs allies</em> say who gets it. Hover "who gets it" under Buffs allies to narrow to an element, a group, "all allies", or <em>a specific unit</em> — type its name and you get every unit whose buff reaches it (all-ally buffs, its element, its groups, or buffs that name it). Buffs whose target the wiki text doesn't state are listed under "Target not stated" and never match a picked unit. On the Memoria tab, Buffs self has the same flyout ("which unit can wear it"): a universal passive works on anyone, a Specialty passive only on its unit or element.</li>
       <li><b>Mechanics</b> — summons, meters, stacks, ignoring damage reduction, anti-shield, hits-everything.</li>
       <li><b>Element, Rarity, State, Group</b> — the unit itself. State is <em>Unevolved</em> (has an evolution), <em>Evolved</em>, or <em>No evolution</em>.</li>
     </ul>
@@ -203,7 +211,7 @@ const ITEMS = () => COLL[state.tab] || UNITS;
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm = s => s.toLowerCase().replace(/ /g,'_');
-const KEYS = new Set([...Object.keys(GROUPS),'tag','element','rarity','state','group','bufftarget','buffsunit']);
+const KEYS = new Set([...Object.keys(GROUPS),'tag','element','rarity','state','group','bufftarget','buffsunit','selftarget','selfunit']);
 const BY_SLUG = Object.fromEntries(UNITS.map(u => [norm(u.slug), u]));
 const RARITY = DATA.rarity, ELEM = DATA.elements;
 const isDark = () => document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
@@ -233,19 +241,23 @@ function unitValues(u, key){
     case 'tag': return u.tags;
     case 'bufftarget': return u.buffTargets.map(norm);
     case 'buffsunit': return buffReach(u);
+    case 'selftarget': return (u.selfTargets||[]).map(norm);
+    case 'selfunit': return selfReach(u);
     default: return u.tags.filter(t => TAGS[t] && TAGS[t].group === key);
   }
 }
-// every unit slug this unit's ally buffs can reach: all allies, by element, by group, or by name
-function buffReach(u){
-  if (u._reach) return u._reach;
-  const t = new Set(u.buffTargets.map(norm)); const out = [];
+// every unit slug a buff can end up on: all, by element, by group, by name, or (ally buffs) swap units
+function reach(u, field, cache){
+  if (u[cache]) return u[cache];
+  const t = new Set((u[field]||[]).map(norm)); const out = [];
   if (t.size) for (const v of UNITS){
     if (v === u) continue;
-    if (t.has('all') || v.elements.some(e => t.has(norm(e))) || v.groups.some(g => t.has(norm(g))) || t.has(norm(v.name)) || (t.has('swap') && v.tags.includes('swap'))) out.push(norm(v.slug));
+    if (t.has('all') || v.elements.some(e => t.has(norm(e))) || v.groups.some(g => t.has(norm(g))) || t.has(norm(v.name)) || t.has(norm(v.slug)) || (t.has('swap') && v.tags.includes('swap'))) out.push(norm(v.slug));
   }
-  return u._reach = out;
+  return u[cache] = out;
 }
+const buffReach = u => reach(u, 'buffTargets', '_reach');
+const selfReach = u => reach(u, 'selfTargets', '_sreach');
 const unitText = u => u._text ||= [u.name, ...[...u.passives, ...u.abilities].map(e => e.name + ' ' + e.desc)].join('\n').toLowerCase();
 function matches(u, q){
   for (const [key, sets] of Object.entries(q.include)){ const have = unitValues(u, key); for (const set of sets) if (!set.some(v => have.includes(v))) return false; }
@@ -347,7 +359,7 @@ function snippet(u, q){
   }
   const f = u.passives[0] || u.abilities[0]; return f ? esc(f.name + ' — ' + one(f).slice(0,110)) : '';
 }
-let state = {q:'', unit:null, sel:0, tab:'units'}, visible = [];
+let state = {q:'', unit:null, sel:0, tab:'units', fly:null}, visible = [];
 function readHash(){ const p = new URLSearchParams(location.hash.slice(1)); state.q = p.get('q') || ''; state.unit = p.get('unit'); state.tab = COLL[p.get('tab')] ? p.get('tab') : 'units'; $('#q').value = state.q; }
 function writeHash(){ const p = new URLSearchParams(); if (state.tab !== 'units') p.set('tab', state.tab); if (state.q) p.set('q', state.q); if (state.unit) p.set('unit', state.unit); history.replaceState(null, '', '#' + p.toString()); }
 function setTab(t){ if (state.tab === t) return; state.tab = t; state.unit = null; writeHash(); render(); }
@@ -373,7 +385,7 @@ function render(){
 }
 function renderPills(){
   const toks = state.q.split(/\s+/).filter(t => /^-?[a-z]+:/i.test(t));
-  $('#pills').innerHTML = toks.map(t => { const i = t.indexOf(':'); let k = t.slice(0,i), v = t.slice(i+1); if (k.replace('-','') === 'buffsunit' && BY_SLUG[v.toLowerCase()]) { k = k.replace('buffsunit','buffs unit'); v = BY_SLUG[v.toLowerCase()].name; } return `<span class="pill" data-tok="${esc(t)}" title="remove"><b>${esc(k)}</b>:${esc(v)} ✕</span>`; }).join('');
+  $('#pills').innerHTML = toks.map(t => { const i = t.indexOf(':'); let k = t.slice(0,i), v = t.slice(i+1); if ((k.replace('-','') === 'buffsunit' || k.replace('-','') === 'selfunit') && BY_SLUG[v.toLowerCase()]) { k = k.replace('buffsunit','buffs unit').replace('selfunit','worn by'); v = BY_SLUG[v.toLowerCase()].name; } return `<span class="pill" data-tok="${esc(t)}" title="remove"><b>${esc(k)}</b>:${esc(v)} ✕</span>`; }).join('');
 }
 const tagPill = tid => { const t = TAGS[tid]; return t ? `<span class="t" style="--c:var(--${t.group})" data-tok="${t.group}:${tid}" title="${esc(GROUPS[t.group])}">${icon(t)}${esc(t.label)}</span>` : ''; };
 const activeTags = q => Object.entries(q.include).filter(([k])=>!META.has(k)).flatMap(([,s])=>s.flat()).filter(t=>TAGS[t]);
@@ -407,7 +419,7 @@ function renderDropdowns(q){
     const on = new Set((q.include[gid]||[]).flat()), neg = new Set(q.exclude[gid]||[]);
     const rows = Object.entries(TAGS).filter(([,t]) => t.group === gid);
     html += `<div class="dd fx${openKey===gid?' open':''}" data-key="${gid}" style="--c:var(--${gid})"><button type="button">${esc(glabel)}${on.size+neg.size?` <span class="n">${on.size+neg.size}</span>`:''}</button><div class="menu">
-      ${rows.map(([tid,t]) => `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>` + (tid==='ally-buff' ? buffTargetRows(q) : '')).join('')}
+      ${rows.map(([tid,t]) => `<label${neg.has(tid)?' style="text-decoration:line-through;opacity:.7"':''}><input type="checkbox" value="${tid}"${on.has(tid)?' checked':''}> ${icon(t)}${esc(t.label)}<span class="x" data-neg="${tid}" title="exclude">✕</span></label>` + (tid==='ally-buff' ? targetFly(q, 'bufftarget', 'buffsunit', 'who gets it') : tid==='self-buff' && state.tab==='memoria' ? targetFly(q, 'selftarget', 'selfunit', 'which unit can wear it') : '')).join('')}
       ${on.size+neg.size?`<button type="button" class="clr">clear</button>`:''}</div></div>`;
   }
   for (const [key,label,get] of DD){
@@ -430,24 +442,29 @@ function fitMenus(){
   }
 }
 window.addEventListener('resize', fitMenus);
-const TARGET_COUNT = (() => { const c = {}; for (const u of UNITS) for (const t of u.buffTargets) c[norm(t)] = (c[norm(t)]||0) + 1; return c; })();
-function buffTargetRows(q){
-  const on = new Set((q.include.bufftarget||[]).flat()), unit = (q.include.buffsunit||[]).flat()[0];
-  const row = (t, lab) => { const n = TARGET_COUNT[norm(t)]||0; return `<label class="sub${n?'':' dim'}"><input type="checkbox" data-key="bufftarget" value="${esc(norm(t))}"${on.has(norm(t))?' checked':''}> ${lab}<span class="cnt">${n}</span></label>`; };
+const TARGET_COUNT = (() => { const c = {bufftarget:{}, selftarget:{}}; for (const u of [...UNITS, ...MEMORIA]){ for (const t of u.buffTargets||[]) c.bufftarget[norm(t)] = (c.bufftarget[norm(t)]||0) + 1; for (const t of u.selfTargets||[]) c.selftarget[norm(t)] = (c.selftarget[norm(t)]||0) + 1; } return c; })();
+// "who gets it" flyout: key = bufftarget | selftarget, pickKey = buffsunit | selfunit
+function targetFly(q, key, pickKey, title){
+  const on = new Set((q.include[key]||[]).flat()), unit = (q.include[pickKey]||[]).flat()[0], cnt = TARGET_COUNT[key];
+  const row = (t, lab) => { const n = cnt[norm(t)]||0; return `<label class="sub${n?'':' dim'}"><input type="checkbox" data-key="${key}" value="${esc(norm(t))}"${on.has(norm(t))?' checked':''}> ${lab}<span class="cnt">${n}</span></label>`; };
   const elems = Object.keys(ELEM).filter(e => e !== 'Unknown');
-  const groups = DATA.buffTargets.filter(t => t !== 'all' && t !== 'Unspecified' && !ELEM[t]);
-  const glabel = t => t === 'Swap' ? 'Swap units (can swap to a counterpart)' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
+  const known = new Set(['all','unspecified', ...elems.map(norm)]);
+  const groups = uniq([...UNITS, ...MEMORIA].flatMap(u => [...(u.buffTargets||[]), ...(u.selfTargets||[])])).filter(t => !known.has(norm(t)) && !BY_SLUG[norm(t.replace(/ /g,'_'))]);
+  const glabel = t => t === 'Swap' ? 'Swap units' : t.replace(/([a-z])([A-Z])/g,'$1 $2');
   const picked = unit && BY_SLUG[unit];
-  return `<div class="subhead">who gets it</div>${row('all','All allies (no restriction)')}
+  const active = on.size + (picked ? 1 : 0);
+  return `<div class="fly${state.fly===key?' open':''}" data-fly="${key}"><div class="flyrow">${title}${active?` <span class="n">${active}</span>`:''}<span class="arr">▸</span></div><div class="menu menu2">
+    <div class="subhead">any</div>${row('all', key==='selftarget' ? 'Any unit (universal passive)' : 'All allies (no restriction)')}
     <div class="subhead">by element</div>${elems.map(e => row(e, elem(e))).join('')}
-    <div class="subhead">by group / named set</div>${groups.map(t => row(t, esc(glabel(t)))).join('')}
-    ${TARGET_COUNT.unspecified ? row('Unspecified', 'Target not stated in text') : ''}
+    <div class="subhead">by group</div>${groups.map(t => row(t, esc(glabel(t)))).join('')}
+    ${cnt.unspecified ? `<div class="subhead">unknown</div>${row('Unspecified', 'Target not stated in text')}` : ''}
     <div class="subhead">a specific unit</div>
-    <div class="upick">${picked ? `<span class="picked"><span class="rn" style="${rStyle(picked.rarity)}">${esc(picked.name)}</span><span class="x" data-unpick title="remove">✕</span></span>` : `<input type="search" id="upick" placeholder="type a unit name…" autocomplete="off"><div id="upicklist"></div>`}</div>`;
+    <div class="upick" data-pick="${pickKey}">${picked ? `<span class="picked"><span class="rn" style="${rStyle(picked.rarity)}">${esc(picked.name)}</span><span class="x" data-unpick="${pickKey}" title="remove">✕</span></span>` : `<input type="search" class="upick-in" placeholder="type a unit name…" autocomplete="off"><div class="upicklist"></div>`}</div>
+  </div></div>`;
 }
-function unitPickList(qs){
-  const box = $('#upicklist'); if (!box) return;
-  const w = qs.trim().toLowerCase(); if (!w){ box.innerHTML = ''; return; }
+function unitPickList(input){
+  const box = input.parentElement.querySelector('.upicklist'); if (!box) return;
+  const w = input.value.trim().toLowerCase(); if (!w){ box.innerHTML = ''; return; }
   const hits = UNITS.filter(u => u.name.toLowerCase().includes(w)).slice(0, 8);
   box.innerHTML = hits.map(u => `<div class="uhit" data-slug="${esc(norm(u.slug))}"><span class="rn" style="${rStyle(u.rarity)}">${esc(u.name)}</span> <span class="m">${u.elements.map(elem).join(' ')}</span></div>`).join('') || '<div class="uhit dim">no match</div>';
 }
@@ -457,13 +474,14 @@ function setKeyValues(key, vals){
   if (vals.length) toks.push(key + ':' + vals.join('+'));
   setQuery(toks.join(' '));
 }
-$('#dds').addEventListener('input', e => { if (e.target.id === 'upick') unitPickList(e.target.value); });
-$('#dds').addEventListener('keydown', e => { if (e.target.id === 'upick' && e.key === 'Enter'){ const h = $('#upicklist .uhit[data-slug]'); if (h) h.click(); } });
+$('#dds').addEventListener('input', e => { if (e.target.classList.contains('upick-in')) unitPickList(e.target); });
+$('#dds').addEventListener('keydown', e => { if (e.target.classList.contains('upick-in') && e.key === 'Enter'){ const h = e.target.parentElement.querySelector('.uhit[data-slug]'); if (h) h.click(); } });
 $('#dds').addEventListener('click', e => {
   const dd = e.target.closest('.dd'); if (!dd) return;
-  if (e.target.id === 'upick') return;
-  const hit = e.target.closest('.uhit[data-slug]'); if (hit){ setKeyValues('buffsunit', [hit.dataset.slug]); if (!(parseQuery(state.q).include.buffs||[]).flat().includes('ally-buff')) toggleToken('buffs:ally-buff'); dd.classList.add('open'); return; }
-  if (e.target.closest('[data-unpick]')){ setKeyValues('buffsunit', []); dd.classList.add('open'); return; }
+  if (e.target.classList.contains('upick-in')) return;
+  const flyrow = e.target.closest('.flyrow'); if (flyrow){ const k = flyrow.parentElement.dataset.fly; state.fly = state.fly === k ? null : k; renderDropdowns(parseQuery(state.q)); document.querySelector(`.dd[data-key=${dd.dataset.key}]`)?.classList.add('open'); return; }
+  const hit = e.target.closest('.uhit[data-slug]'); if (hit){ const pk = hit.closest('.upick').dataset.pick; state.fly = pk === 'selfunit' ? 'selftarget' : 'bufftarget'; setKeyValues(pk, [hit.dataset.slug]); const need = pk === 'selfunit' ? 'self-buff' : 'ally-buff'; if (!(parseQuery(state.q).include.buffs||[]).flat().includes(need)) toggleToken('buffs:' + need); dd.classList.add('open'); return; }
+  const un = e.target.closest('[data-unpick]'); if (un){ setKeyValues(un.dataset.unpick, []); dd.classList.add('open'); return; }
   if (e.target.closest('.dd>button')){ const was = dd.classList.contains('open'); document.querySelectorAll('.dd.open').forEach(x=>x.classList.remove('open')); if (!was) dd.classList.add('open'); return; }
   if (e.target.closest('.clr')){ const k = dd.dataset.key; const toks = state.q.split(/\s+/).filter(Boolean).filter(t => !new RegExp('^-?'+k+':','i').test(t)); setQuery(toks.join(' ')); document.querySelector(`.dd[data-key=${k}]`)?.classList.add('open'); return; }
   const x = e.target.closest('.x'); if (x){ e.preventDefault(); toggleToken('-' + dd.dataset.key + ':' + x.dataset.neg); document.querySelector(`.dd[data-key=${dd.dataset.key}]`)?.classList.add('open'); }
@@ -473,7 +491,7 @@ $('#dds').addEventListener('change', e => {
   const key = e.target.dataset.key || dd.dataset.key;
   const vals = [...dd.querySelectorAll(`input:checked`)].filter(i => (i.dataset.key || dd.dataset.key) === key).map(i=>i.value);
   setKeyValues(key, vals);
-  if (key === 'bufftarget' && vals.length && !(parseQuery(state.q).include.buffs||[]).flat().includes('ally-buff')) toggleToken('buffs:ally-buff');
+  if (key === 'bufftarget' || key === 'selftarget'){ state.fly = key; const need = key === 'selftarget' ? 'self-buff' : 'ally-buff'; if (vals.length && !(parseQuery(state.q).include.buffs||[]).flat().includes(need)) toggleToken('buffs:' + need); }
   dd.classList.add('open');
 });
 const CR = DATA.credits;

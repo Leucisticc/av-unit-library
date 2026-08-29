@@ -47,7 +47,7 @@ Then commit `data/` and `dist/` — pushing `main` redeploys the site (GitHub Pa
 
 Edit `overrides.json`:
 
-    {"Alocard (Vampire King)|Vampiric Thralls": {"add": ["summon"], "remove": ["buff"]}}
+    {"Alocard (Vampire King)|Vampiric Thralls": {"add": ["summon"], "remove": ["range-buff"]}}
 
 Key is `"<unit name>|<passive or ability name>"`. Unknown keys or tag ids fail
 the build. New tag = one line in `tag_rules.py` (keep regex syntax JS-compatible,

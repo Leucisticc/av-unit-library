@@ -85,7 +85,7 @@ def test_negation_guard():
 
 
 def test_vocabulary_is_real_effects():
-    for fake in ("shock", "poison", "curse", "knockback", "shield", "heal", "overshield"):
+    for fake in ("shock", "poison", "curse", "knockback", "shield", "heal", "overshield", "buff"):
         assert fake not in TAG_RULES
     assert "tethered" in tag_text("Enemies are Tethered to this unit")
     assert "tethered" not in tag_text("Any unit placed before this unit becomes Chained to this unit")

@@ -155,7 +155,6 @@ TAG_RULES = {
     "spa-buff":   {"group": "buffs", "label": "SPA buff",    "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w' ]+?)?(?:spa|attack speed)\b", r"\b(?:reduc|decreas|lower)(?:e|es|ed|ing)? (?:the |this unit'?s |their |own |its )?spa\b", r"\bSPA -\d+%", r"-\d+% spa\b", r"\bloses? \d+% spa\b"]},
     "crit-buff":  {"group": "buffs", "label": "Crit buff",   "icon": None, "patterns": [_BUFF + r" (?:the )?(?:[\w' ]+?)?crit(?:ical)?(?: rate| damage| chance| dmg)?\b", r"\bcrit(?:ical)? (?:rate|damage|chance|dmg) \+\d+%", r"\+\d+% crit", r"\bgains? \+?\d+% crit", r"\bhas \d+% crit", r"\bovercrit\b"]},
     "cost-reduction": {"group": "buffs", "label": "Cost reduction", "icon": None, "patterns": [r"\b(?:reduc|lower|decreas)(?:e|es|ed|ing)? (?:the )?(?:[\w' ]{0,25}?)(?:placement |upgrades? |deployment )?(?<!active )(?<!ability )(?<!mana )(?<!meter )costs?\b", r"\bcheaper\b", r"\bcost reduction\b", r"\bcosts? nothing\b", r"\bplace[sd]?[^.;]{0,30}? for free\b", r"\bcosts \d+% less\b", r"\bcosts? (?:are )?reduced\b"]},
-    "buff":       {"group": "buffs", "label": "Buff (any)",  "icon": None, "patterns": [_BUFF + r"\b"]},
     "self-buff":  {"group": "buffs", "label": "Buffs self",  "icon": None, "patterns": [
         _BUFF + r" this unit'?s?\b",
         _BUFF + r" (?:its |their |his |her )?own\b",

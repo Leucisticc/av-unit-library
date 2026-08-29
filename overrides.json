@@ -169,8 +169,7 @@
  },
  "memoria:Battle of the Strongest|Wanton Destruction": {
   "remove": [
-   "dmg-buff",
-   "buff"
+   "dmg-buff"
   ],
   "add": [
    "bonus-vs"
@@ -238,6 +237,9 @@
   "add": [
    "self-buff",
    "dmg-buff"
+  ],
+  "selfTargets": [
+   "Cosmic"
   ]
  },
  "memoria:Endless Buffet|Hungry for a Fight": {
@@ -437,7 +439,6 @@
  },
  "memoria:Shackled Sight|Dangerous Love": {
   "add": [
-   "buff",
    "self-buff"
   ]
  },
@@ -445,7 +446,6 @@
   "add": [
    "active-ability",
    "dmg-buff",
-   "buff",
    "self-buff"
   ]
  },
@@ -529,6 +529,9 @@
  "memoria:Trust of Others|Power of Friendship": {
   "add": [
    "self-buff"
+  ],
+  "selfTargets": [
+   "Ninjutsu"
   ]
  },
  "memoria:Ultimate Deceiver|Opportune Attack": {
@@ -570,6 +573,21 @@
  "Bounty Hunter (King of Hell)|Hunter of Pirates": {
   "add": [
    "wanted"
+  ]
+ },
+ "memoria:Devoted Dedication|Undead Army": {
+  "selfTargets": [
+   "Curse"
+  ]
+ },
+ "memoria:Goddess of Spring|The First Shinobi": {
+  "selfTargets": [
+   "Ninjutsu"
+  ]
+ },
+ "memoria:Master of Toads|Summoning of Toads": {
+  "selfTargets": [
+   "Ninjutsu"
   ]
  }
 }

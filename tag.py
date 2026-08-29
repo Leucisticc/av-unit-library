@@ -148,6 +148,8 @@ def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = No
             if tid not in TAG_RULES:
                 raise ValueError(f"[Tag] Unknown tag {tid!r} in override {key}")
         entry = index[key]
+        if "selfTargets" in ov:
+            entry["selfTargets"] = list(ov["selfTargets"])
         tags = [t for t in entry["tags"] if t not in ov.get("remove", [])]
         tags += [t for t in ov.get("add", []) if t not in tags]
         entry["tags"] = tags
@@ -161,7 +163,17 @@ def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = No
     for u in units:
         seen: list[str] = []
         targets: list[str] = []
+        self_targets: list[str] = []
         for entry in u["passives"] + u["abilities"]:
+            # Who a self-buff can end up on. Units: only themselves. Memoria: the wearer —
+            # anyone for the universal passive, the Specialty unit(s)/element(s) otherwise.
+            if "self-buff" in entry["tags"] and u.get("kind") == "memoria" and "selfTargets" not in entry:
+                entry["selfTargets"] = (u["exclusiveUnits"] or u["elements"] or ["all"]) if entry.get("specialty") else ["all"]
+            elif "self-buff" not in entry["tags"] or u.get("kind") != "memoria":
+                entry["selfTargets"] = []
+            for t in entry["selfTargets"]:
+                if t not in self_targets:
+                    self_targets.append(t)
             for t in entry["tags"]:
                 if t not in seen:
                     seen.append(t)
@@ -174,4 +186,5 @@ def apply_tags(units: list[dict], overrides: dict, groups: list[str] | None = No
             seen.append("swap")   # unit-level mechanic tag, hand-confirmed list in groups_extra.json
         u["tags"] = seen
         u["buffTargets"] = targets
+        u["selfTargets"] = self_targets
     return units
