@@ -33,6 +33,9 @@ def test_named_effects_map_to_general_ones():
     assert "dr-bypass" in tag_text("Attacks ignore enemy Damage Reduction")
     assert "dr-bypass" in tag_text("Attacks bypass 40% of Damage Reduction")
     assert "petrified" in tag_text("allows this unit to Petrify the selected area")
+    assert {"destruction", "dr-bypass"} <= set(tag_text("Attacks apply Destruction"))
+    assert "blight" in tag_text("Blight: afflicted enemies take 30% more damage from Holy and Curse units.")
+    assert "blight" not in tag_text("When a Blight inflicted enemy takes damage from a Crimson Moon ally")
     for fake in ("petrify", "stone-icon", "heal", "overshield", "shock", "poison", "curse", "knockback", "dot"):
         assert fake not in TAG_RULES
 

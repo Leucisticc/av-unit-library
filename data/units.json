@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-29",
+ "generated": "2026-09-18",
  "groups": {
   "dot": "Damage over Time",
   "cc": "Crowd Control",
@@ -435,7 +435,7 @@
    "group": "amp",
    "label": "Destruction",
    "patterns": [
-    "\\binflicts? destruction\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
+    "\\b(?:inflicts?|appl(?:y|ies)) destruction\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
     "\\bdestruction:\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
    ],
    "suppress": [
@@ -461,6 +461,22 @@
     "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
    ],
    "icon": "data:image/png;base64,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"
+  },
+  "blight": {
+   "group": "amp",
+   "label": "Blight",
+   "patterns": [
+    "\\b(?:inflicts?|appl(?:y|ies)) blight\\b(?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))",
+    "\\bblight: (?![^.;]{0,30}\\b(?:is |are |gets? )?(?:removed|expires?|ends|tick|dealt|stacks? expire))"
+   ],
+   "suppress": [
+    "\\b(?:attacking|hitting|against|already|per|each|every|extend(?:s|ed|ing)?|detonat(?:e|es|ed|ing)|expire[sd]?|of|from|by|as|has|have|any|no|not|while|bypass(?:es|ing)?|damage to|dmg to|toward(?:s)? the|increas(?:e|es|ing))\\s+(?:a |an |the |all |any |enemies |enemy |non-boss |same |that |already |newly |their |instances? of |the % of )*$",
+    "\\battacks?\\s+(?:a|an|the|any)\\s+(?:already |newly )?$",
+    "(?<!inflict )(?<!inflicts )(?<!inflict that )(?<!inflicts that )(?<!inflict the )(?<!inflicts the )(?<!inflict all )(?<!inflicts all )(?<!inflicting )\\b(?:enem(?:y|ies)|targets?|boss(?:es)?|one|those|them)\\s+(?:already |currently )?(?:that (?:is|are|has|have) )?(?:is |are )?(?:inflicted |afflicted )?with\\s+(?:a |an |any |the )?$",
+    "\\bself\\s*-?\\s*$",
+    "\\bthis unit\\s+(?:is|gets?|was)\\s+$"
+   ],
+   "icon": "data:image/png;base64,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"
   },
   "dmg-taken": {
    "group": "amp",
@@ -743,7 +759,7 @@
    "patterns": [
     "\\b(?:bypass|ignor)(?:e|es|ed|ing)?\\b[^.;]{0,25}?\\b(?:damage|dmg) (?:reduction|resistance)s?\\b",
     "\\bignores? (?:enemy )?dr\\b",
-    "\\binflicts? destruction\\b",
+    "\\b(?:inflicts?|appl(?:y|ies)) destruction\\b",
     "\\bdamage reduction (?:amount )?(?:is )?set to 0\\b",
     "\\blowers? the damage reduction\\b",
     "\\bdamage reduction ignore\\b",
@@ -1235,6 +1251,18 @@
    "gradient": "linear-gradient(0deg,#a1290e 10%,#ffbd89 50%,#ffa200 90%)",
    "icon": "data:image/png;base64,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"
   },
+  "Evils": {
+   "name": "Evils",
+   "tab": "Other",
+   "gradient": null,
+   "icon": null
+  },
+  "GuiltyCog": {
+   "name": "GuiltyCog",
+   "tab": "Other",
+   "gradient": null,
+   "icon": null
+  },
   "Ninjutsu": {
    "name": "Ninjutsu",
    "tab": "Other",
@@ -1262,15 +1290,19 @@
  },
  "buffTargets": [
   "all",
+  "Berk",
   "Blast",
   "Cosmic",
+  "CrimsonMoon",
   "Curse",
   "DemonController",
   "DemonHunter",
   "DragonSphere",
+  "Evils",
   "Fire",
   "Fused",
   "Giant",
+  "Holy",
   "Nature",
   "Ninjutsu",
   "Passion",
@@ -1280,7 +1312,8 @@
   "Swap",
   "To Another",
   "To This",
-  "VideoGames"
+  "VideoGames",
+  "Water"
  ],
  "units": [
   {
@@ -2631,6 +2664,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Arc (True Ancestor)",
    "groups": [
+    "CrimsonMoon",
     "Spring"
    ],
    "towerType": "GRND",
@@ -2668,6 +2702,7 @@
    "evolvesFrom": "Arc",
    "evolvesTo": null,
    "groups": [
+    "CrimsonMoon",
     "Spring"
    ],
    "towerType": "GRND",
@@ -4420,6 +4455,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Brisket (Yo-Yo)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -4451,6 +4487,7 @@
    "evolvesFrom": "Brisket",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -4680,6 +4717,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Byeken (Ronin)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -4715,6 +4753,7 @@
    "evolvesFrom": "Byeken",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -5510,6 +5549,50 @@
      ],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Loyal Son",
+     "desc": "Gains 5000% Damage.",
+     "rich": "Gains ⟦num|5000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Donut",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Clatakiri (Mochi)"
+     ]
+    },
+    {
+     "name": "Bashful Villain",
+     "desc": "When this unit does Attack 6, each hit of Attack 6 will count as an attack for any on-attack Status Effect or Debuff application (Up to 3 effects applied per enemy per attack) (Effect cannot already be applied).",
+     "rich": "When this unit does Attack ⟦num|6⟧, each hit of Attack ⟦num|6⟧ will count as an attack for any on-attack Status Effect or Debuff application (Up to ⟦num|3⟧ effects applied per enemy per attack) (Effect cannot already be applied).",
+     "source": "familiar",
+     "familiar": "Donut",
+     "tags": [],
+     "buffTargets": [],
+     "selfTargets": []
+    },
+    {
+     "name": "Morality's Mirror",
+     "desc": "Buffs Water units Damage by 80%; If a unit has the ability to inflict Wanted, buffs their damage by 50% and range by 20%; Enemies affected by slow take 30% more damage from allies that can inflict Wanted; Inflicts Wanted to enemies who walk onto this unit's sticky Mochi Spot; If the enemy this unit is targeting is not in range of this unit to be attacked, this unit will teleport to that targeted enemy.",
+     "rich": "Buffs ⟦el|Water⟧ units Damage by ⟦num|80%⟧; If a unit has the ability to inflict ⟦fx|Wanted|Wanted⟧, buffs their damage by ⟦num|50%⟧ and range by ⟦num|20%⟧; Enemies affected by ⟦fx|Slow|slow⟧ take ⟦num|30%⟧ more damage from allies that can inflict ⟦fx|Wanted|Wanted⟧; Inflicts ⟦fx|Wanted|Wanted⟧ to enemies who walk onto this unit's sticky Mochi Spot; If the enemy this unit is targeting is not in range of this unit to be attacked, this unit will teleport to that targeted enemy.",
+     "source": "familiar",
+     "familiar": "Donut",
+     "tags": [
+      "wanted",
+      "dmg-taken",
+      "dmg-buff",
+      "range-buff",
+      "ally-buff",
+      "bonus-vs"
+     ],
+     "buffTargets": [
+      "Water"
+     ],
+     "selfTargets": []
     }
    ],
    "abilities": [],
@@ -5518,10 +5601,21 @@
     "follow-up",
     "stun",
     "aoe",
-    "spa-buff"
+    "spa-buff",
+    "dmg-buff",
+    "self-buff",
+    "wanted",
+    "dmg-taken",
+    "range-buff",
+    "ally-buff",
+    "bonus-vs"
    ],
-   "buffTargets": [],
-   "selfTargets": [],
+   "buffTargets": [
+    "Water"
+   ],
+   "selfTargets": [
+    "Clatakiri (Mochi)"
+   ],
    "icon": "img/units/Clatakiri (Mochi).png"
   },
   {
@@ -7953,6 +8047,52 @@
      ],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Fear Crusher",
+     "desc": "Gains 5500% Damage.",
+     "rich": "Gains ⟦num|5500%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Cell Phone",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Divalo (Requiem)"
+     ]
+    },
+    {
+     "name": "Stolen Time",
+     "desc": "When this unit attacks, all enemies hit have their time stolen, causing them to skip forward 2 seconds' worth of movement and take 1 attack's worth of damage from all allies in this unit's range (20 Second global cooldown per enemy, counts as a Basic attack for the allies involved); Enemies hit by ally Basic attacks are slowed by 50% for 10 seconds; This unit now gets Complete Erasure on placement and its cooldown is reduced to 180 seconds, while enemies are affected by Complete Erasure they take 30% more damage from Cosmic allies.",
+     "rich": "When this unit attacks, all enemies hit have their time stolen, causing them to skip forward ⟦num|2⟧ seconds' worth of movement and take ⟦num|1⟧ attack's worth of damage from all allies in this unit's range (⟦num|20⟧ Second global cooldown per enemy, counts as a Basic attack for the allies involved); Enemies hit by ally Basic attacks are ⟦fx|Slow|slowed⟧ by ⟦num|50%⟧ for ⟦num|10⟧ seconds; This unit now gets Complete Erasure on placement and its cooldown is reduced to ⟦num|180⟧ seconds, while enemies are affected by Complete Erasure they take ⟦num|30%⟧ more damage from ⟦el|Cosmic⟧ allies.",
+     "source": "familiar",
+     "familiar": "Cell Phone",
+     "tags": [
+      "dmg-taken",
+      "bonus-vs",
+      "aoe"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    },
+    {
+     "name": "Cannot Escape Fate",
+     "desc": "Buffs Cosmic allies' Damage by 30% and Range by 10%; Whenever this unit does a basic attack, this unit does 10% damage of that attack to enemies inflicted with Slow; Whenever this unit attacks, follow up with Attack 1.",
+     "rich": "Buffs ⟦el|Cosmic⟧ allies' Damage by ⟦num|30%⟧ and Range by ⟦num|10%⟧; Whenever this unit does a basic attack, this unit does ⟦num|10%⟧ damage of that attack to enemies inflicted with ⟦fx|Slow|Slow⟧; Whenever this unit attacks, follow up with Attack ⟦num|1⟧.",
+     "source": "familiar",
+     "familiar": "Cell Phone",
+     "tags": [
+      "dmg-buff",
+      "range-buff",
+      "ally-buff",
+      "follow-up"
+     ],
+     "buffTargets": [
+      "Cosmic"
+     ],
+     "selfTargets": []
     }
    ],
    "abilities": [
@@ -7980,10 +8120,15 @@
     "bonus-vs",
     "slow",
     "aoe",
-    "confusion",
-    "range-buff"
+    "dmg-taken",
+    "range-buff",
+    "ally-buff",
+    "follow-up",
+    "confusion"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Cosmic"
+   ],
    "selfTargets": [
     "Divalo (Requiem)"
    ],
@@ -9944,6 +10089,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Gear Boy (Hungry)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -10001,6 +10147,7 @@
    "evolvesFrom": "Gear Boy",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -10650,6 +10797,64 @@
      "selfTargets": []
     },
     {
+     "name": "Filled Arsenal",
+     "desc": "Gains 8000% Damage.",
+     "rich": "Gains ⟦num|8000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Sword of Rupture",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
+    },
+    {
+     "name": "King Leading His People",
+     "desc": "Buffs Holy units' Damage by 80%; Buffs Crimson Moon allies by 50% damage and 20% range; Attacks apply Nullify; Active Ability damage bypasses enemy damage reduction, shield, and overshield; After activating Enuma Elish buffs Crit Damage by 50% for 30 seconds; This unit gains the Passive and Active Enuma Elish on placement; Every 10 Follow Up attacks from allies grant 1 NP stack; No longer loses damage for units in range; Myriad Treasures buff cap for damage is increased from 35% to 300%.",
+     "rich": "Buffs ⟦el|Holy⟧ units' Damage by ⟦num|80%⟧; Buffs ⟦grp|Crimson Moon|Crimson Moon⟧ allies by ⟦num|50%⟧ damage and ⟦num|20%⟧ range; Attacks apply ⟦fx|Nullify|Nullify⟧; Active Ability damage bypasses enemy damage reduction, shield, and overshield; After activating Enuma Elish buffs Crit Damage by ⟦num|50%⟧ for ⟦num|30⟧ seconds; This unit gains the Passive and Active Enuma Elish on placement; Every ⟦num|10⟧ Follow Up attacks from allies grant ⟦num|1⟧ NP stack; No longer loses damage for units in range; Myriad Treasures buff cap for damage is increased from ⟦num|35%⟧ to ⟦num|300%⟧.",
+     "source": "familiar",
+     "familiar": "Sword of Rupture",
+     "tags": [
+      "nullify",
+      "dmg-buff",
+      "range-buff",
+      "crit-buff",
+      "self-buff",
+      "ally-buff",
+      "dr-bypass",
+      "shield-pierce",
+      "follow-up",
+      "active-ability"
+     ],
+     "buffTargets": [
+      "Holy",
+      "CrimsonMoon"
+     ],
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
+    },
+    {
+     "name": "Gates of Babylon",
+     "desc": "Gains an NP Stack Amount, every time a non-toggleable Active is used it adds to the NP stack amount by 1 (Up to 30); When Enuma Elish is activated stacks start to reduce at a rate of 1/s attacking a single enemy each time for 100% damage and is guaranteed to crit (Applies on hit effects, targets the strongest enemy); Buffs damage by 10% per NP stack, this buff stays at max value achieved until NP stacks reach zero then resets.",
+     "rich": "Gains an NP Stack Amount, every time a non-toggleable Active is used it adds to the NP stack amount by ⟦num|1⟧ (Up to ⟦num|30⟧); When Enuma Elish is activated stacks start to reduce at a rate of ⟦num|1⟧/s attacking a single enemy each time for ⟦num|100%⟧ damage and is guaranteed to crit (Applies on hit effects, targets the strongest enemy); Buffs damage by ⟦num|10%⟧ per NP stack, this buff stays at max value achieved until NP stacks reach zero then resets.",
+     "source": "familiar",
+     "familiar": "Sword of Rupture",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "bonus-vs",
+      "stacks"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Gilgamesh (King of Heroes)"
+     ]
+    },
+    {
      "name": "King's Revival",
      "desc": "Gains 125% Damage.",
      "rich": "Gains ⟦num|125%⟧ Damage.",
@@ -10714,13 +10919,23 @@
     "spa-buff",
     "self-buff",
     "dr-bypass",
+    "nullify",
+    "range-buff",
+    "crit-buff",
+    "ally-buff",
+    "shield-pierce",
+    "follow-up",
+    "active-ability",
+    "bonus-vs",
+    "stacks",
     "slow",
     "stun",
-    "stacks",
-    "range-buff",
     "aoe"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Holy",
+    "CrimsonMoon"
+   ],
    "selfTargets": [
     "Gilgamesh (King of Heroes)"
    ],
@@ -12383,6 +12598,97 @@
    "icon": "img/units/Hollowseph (Pure).png"
   },
   {
+   "name": "Holy Deceiver (Dark)",
+   "slug": "Holy_Deceiver_(Dark)",
+   "rarity": "Exclusive",
+   "elements": [
+    "Holy"
+   ],
+   "state": "No evolution",
+   "evolvesFrom": null,
+   "evolvesTo": null,
+   "groups": [
+    "DragonSphere"
+   ],
+   "towerType": "GRND",
+   "passives": [
+    {
+     "name": "Holy Retribution",
+     "desc": "Buffs Holy Damage by 80% and Holy unit Active Ability's do 50% more damage; When this unit attacks applies 50% slow for 10 seconds, Self and Dragon Sphere allies do 5% more damage for 20 seconds (Can stack up to 100%, New stacks do not refresh old ones), Buffs own Damage by 2% (Up to 300%); When this unit attacks an enemy with Overshield or Damage Reduction, other Dragon Sphere allies deal 100% more damage to that enemy; When this unit is upgraded, if that upgrade number is equal to or greater than the current upgrade of another Dragon Sphere ally, then that unit is upgraded as well and their crit rate is buffed by 12% (Stacks).",
+     "rich": "Buffs ⟦el|Holy|Holy⟧ Damage by ⟦num|80%⟧ and ⟦el|Holy|Holy⟧ unit Active Ability's do ⟦num|50%⟧ more damage; When this unit attacks applies ⟦num|50%⟧ ⟦fx|Slow|slow⟧ for ⟦num|10⟧ seconds, Self and Dragon Sphere allies do ⟦num|5%⟧ more damage for ⟦num|20⟧ seconds (Can stack up to ⟦num|100%⟧, New stacks do not refresh old ones), Buffs own Damage by ⟦num|2%⟧ (Up to ⟦num|300%⟧); When this unit attacks an enemy with Overshield or Damage Reduction, other Dragon Sphere allies deal ⟦num|100%⟧ more damage to that enemy; When this unit is upgraded, if that upgrade number is equal to or greater than the current upgrade of another Dragon Sphere ally, then that unit is upgraded as well and their crit rate is buffed by ⟦num|12%⟧ (Stacks).",
+     "source": "unit",
+     "tags": [
+      "slow",
+      "dmg-buff",
+      "self-buff",
+      "bonus-vs",
+      "active-ability",
+      "stacks"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Holy Deceiver (Dark)"
+     ]
+    },
+    {
+     "name": "Inviting Oblivion",
+     "desc": "This unit has a meter, every time a Dragon Sphere ally uses an active that would deal damage generates 50% meter; When this meter hits 100% this unit unlocks a new tier and the meter resets to 0 (Does not count as consuming meter); Dragon Sphere units gain Overcrit; When a Dragon Sphere unit crits, deals 10% of the damage as Sourceless damage to all enemies in range and stuns the enemies for 2 seconds; When an enemy takes Sourceless damage this unit performs Attack 2 as a Follow Up for 200% damage (Local 10 sec cooldown.); Tier 1 - Unit gains 100% Crit Rate and Overcrit, Tier 2 - Active abilities that would deal damage also upgrades all Dragon Sphere allies by 1 (Puts the ability on a 60 second cooldown), Tier 3 - When attacking enemies inflicted with slow, inflict repulse and do 30% more damage to enemies on repulse lock out.",
+     "rich": "This unit has a meter, every time a Dragon Sphere ally uses an active that would deal damage generates ⟦num|50%⟧ meter; When this meter hits ⟦num|100%⟧ this unit unlocks a new tier and the meter resets to ⟦num|0⟧ (Does not count as consuming meter); Dragon Sphere units gain Overcrit; When a Dragon Sphere unit crits, deals ⟦num|10%⟧ of the damage as Sourceless damage to all enemies in range and ⟦fx|Stun|stuns⟧ the enemies for ⟦num|2⟧ seconds; When an enemy takes Sourceless damage this unit performs Attack ⟦num|2⟧ as a Follow Up for ⟦num|200%⟧ damage (Local ⟦num|10⟧ sec cooldown.); Tier ⟦num|1⟧ - Unit gains ⟦num|100%⟧ Crit Rate and Overcrit, Tier ⟦num|2⟧ - Active abilities that would deal damage also upgrades all Dragon Sphere allies by ⟦num|1⟧ (Puts the ability on a ⟦num|60⟧ second cooldown), Tier ⟦num|3⟧ - When attacking enemies inflicted with ⟦fx|Slow|slow⟧, inflict ⟦fx|Repulse|repulse⟧ and do ⟦num|30%⟧ more damage to enemies on ⟦fx|Repulse|repulse⟧ lock out.",
+     "source": "unit",
+     "tags": [
+      "repulse",
+      "stun",
+      "crit-buff",
+      "self-buff",
+      "bonus-vs",
+      "follow-up",
+      "active-ability",
+      "meter",
+      "aoe"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Holy Deceiver (Dark)"
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": "Dark Dimensional Tear",
+     "desc": "Cuts open a dimensional tear for 30 seconds, while active clones of this unit appear every second hitting all enemies around the rift applying on hit effects.",
+     "rich": "Cuts open a dimensional tear for ⟦num|30⟧ seconds, while active clones of this unit appear every second hitting all enemies around the rift applying on hit effects.",
+     "cooldown": 180,
+     "cooldownType": "PerPlayer",
+     "tags": [
+      "clone",
+      "aoe"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    }
+   ],
+   "tags": [
+    "slow",
+    "dmg-buff",
+    "self-buff",
+    "bonus-vs",
+    "active-ability",
+    "stacks",
+    "repulse",
+    "stun",
+    "crit-buff",
+    "follow-up",
+    "meter",
+    "aoe",
+    "clone"
+   ],
+   "buffTargets": [],
+   "selfTargets": [
+    "Holy Deceiver (Dark)"
+   ],
+   "icon": "img/units/Holy Deceiver (Dark).png"
+  },
+  {
    "name": "Horsegirls (Racers)",
    "slug": "Horsegirls_(Racers)",
    "rarity": "Secret",
@@ -13190,6 +13496,7 @@
    "evolvesFrom": null,
    "evolvesTo": null,
    "groups": [
+    "Evils",
     "Summer",
     "Summer_Mythic"
    ],
@@ -14346,6 +14653,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Kazzy (Queen)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -14395,6 +14703,7 @@
    "evolvesFrom": "Kazzy",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -15284,6 +15593,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Lfelt (Love)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -15325,6 +15635,7 @@
    "evolvesFrom": "Lfelt",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -15783,7 +16094,9 @@
    "state": "Unevolved",
    "evolvesFrom": null,
    "evolvesTo": "Lord (Fairy)",
-   "groups": [],
+   "groups": [
+    "Evils"
+   ],
    "towerType": "GRND",
    "passives": [
     {
@@ -15828,7 +16141,9 @@
    "state": "Evolved",
    "evolvesFrom": "Lord",
    "evolvesTo": null,
-   "groups": [],
+   "groups": [
+    "Evils"
+   ],
    "towerType": "GRND",
    "passives": [
     {
@@ -16301,6 +16616,7 @@
    "evolvesFrom": null,
    "evolvesTo": "Marlin (Gluttony)",
    "groups": [
+    "Evils",
     "Spring"
    ],
    "towerType": "GRND",
@@ -16332,6 +16648,7 @@
    "evolvesFrom": "Marlin",
    "evolvesTo": null,
    "groups": [
+    "Evils",
     "Spring"
    ],
    "towerType": "GRND",
@@ -16533,6 +16850,56 @@
      "selfTargets": [
       "Medea (Witch of Betrayal)"
      ]
+    },
+    {
+     "name": "Witch of Colchis",
+     "desc": "Gains 3000% Damage.",
+     "rich": "Gains ⟦num|3000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Witch's Staff",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
+    },
+    {
+     "name": "Teeth of the Dragon",
+     "desc": "This unit gains Dragon Fang Army on placement, summoning 2 Warriors, 2 Archers and 1 Beast on a chosen point of the track; Warriors spawn with 60% of this unit's damage, Archers with 40% and the Beast with 200%; A summon that dies to the enemy it hits leaves that enemy with Rupture; While a Sokora is placed, every Crimson Moon unit at or below the highest placed Sokora's upgrade pays 70% less for upgrades, Sokora included; A unit discounted this way cannot have its upgrade cost lowered by any other source.",
+     "rich": "This unit gains Dragon Fang Army on placement, summoning ⟦num|2⟧ Warriors, ⟦num|2⟧ Archers and ⟦num|1⟧ Beast on a chosen point of the track; Warriors spawn with ⟦num|60%⟧ of this unit's damage, Archers with ⟦num|40%⟧ and the Beast with ⟦num|200%⟧; A summon that dies to the enemy it hits leaves that enemy with ⟦fx|Rupture|Rupture⟧; While a Sokora is placed, every ⟦grp|Crimson Moon|Crimson Moon⟧ unit at or below the highest placed Sokora's upgrade pays ⟦num|70%⟧ less for upgrades, Sokora included; A unit discounted this way cannot have its upgrade cost lowered by any other source.",
+     "source": "familiar",
+     "familiar": "Witch's Staff",
+     "tags": [
+      "self-buff",
+      "summon"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
+    },
+    {
+     "name": "Broken Oath",
+     "desc": "Buffs Curse and Holy units' Damage by 40%; This unit gains Oathbreaker on placement and its damage now counts as Ability Damage; Oathbreaker deals 10% of every Crimson Moon unit's current damage to the selected area, counting each unit once no matter how many of it are placed; Hitting an enemy afflicted with Nullified follows up with Attack 2.",
+     "rich": "Buffs ⟦el|Curse⟧ and ⟦el|Holy⟧ units' Damage by ⟦num|40%⟧; This unit gains Oathbreaker on placement and its damage now counts as Ability Damage; Oathbreaker deals ⟦num|10%⟧ of every ⟦grp|Crimson Moon|Crimson Moon⟧ unit's current damage to the selected area, counting each unit once no matter how many of it are placed; Hitting an enemy afflicted with ⟦fx|Nullified|Nullified⟧ follows up with Attack ⟦num|2⟧.",
+     "source": "familiar",
+     "familiar": "Witch's Staff",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "ally-buff",
+      "follow-up"
+     ],
+     "buffTargets": [
+      "Curse",
+      "Holy"
+     ],
+     "selfTargets": [
+      "Medea (Witch of Betrayal)"
+     ]
     }
    ],
    "abilities": [
@@ -16552,6 +16919,18 @@
      "selfTargets": [
       "Medea (Witch of Betrayal)"
      ]
+    },
+    {
+     "name": "Dragon Fang Army",
+     "desc": "Raises an army on a chosen point of the track: 2 Dragon Fang Warriors at 60% of this unit's damage, 2 Dragon Fang Archers at 40%, and 1 Dragon Fang Beast at 200%. A summon that dies to the enemy it hits leaves that enemy with Rupture.",
+     "rich": "Raises an army on a chosen point of the track: ⟦num|2⟧ Dragon Fang Warriors at ⟦num|60%⟧ of this unit's damage, ⟦num|2⟧ Dragon Fang Archers at ⟦num|40%⟧, and ⟦num|1⟧ Dragon Fang Beast at ⟦num|200%⟧. A summon that dies to the enemy it hits leaves that enemy with ⟦fx|Rupture|Rupture⟧.",
+     "cooldown": 60,
+     "cooldownType": "Global",
+     "tags": [
+      "summon"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "tags": [
@@ -16559,9 +16938,15 @@
     "self-buff",
     "nullify",
     "dmg-buff",
-    "bonus-vs"
+    "bonus-vs",
+    "summon",
+    "ally-buff",
+    "follow-up"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Curse",
+    "Holy"
+   ],
    "selfTargets": [
     "Medea (Witch of Betrayal)"
    ],
@@ -17349,6 +17734,7 @@
    "evolvesFrom": null,
    "evolvesTo": "NotGoodGuy (Free)",
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -17386,6 +17772,7 @@
    "evolvesFrom": "NotGoodGuy",
    "evolvesTo": null,
    "groups": [
+    "GuiltyCog",
     "VideoGames"
    ],
    "towerType": "GRND",
@@ -17414,6 +17801,65 @@
      ],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Ready Or Not",
+     "desc": "Gains 1000% Damage. Gain 100% more meter.",
+     "rich": "Gains ⟦num|1000%⟧ Damage. Gain ⟦num|100%⟧ more meter.",
+     "source": "familiar",
+     "familiar": "Scrap Bluntsword",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "meter"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "NotGoodGuy (Free)"
+     ]
+    },
+    {
+     "name": "Smell of the Game",
+     "desc": "Buff the damage of every Fire ally by 80%; Dragon Install unlocks on placement as both an active and a passive; Hell now consumes 30% meter to make the next attack hit every enemy in range and no longer detonates; During Dragon Install this unit only stops building meter from attacks, every Guilty Cog unit gains 50% Crit Rate, this unit bypasses its animation cancel lockout and its Follow Up attack loses its cooldown, but Follow Up can only occur after a base attack; Increases duration of Burns applied by this unit to 10 seconds; Follow Up attacks detonate every instance of Burn and for 110% damage.",
+     "rich": "Buff the damage of every ⟦el|Fire⟧ ally by ⟦num|80%⟧; Dragon Install unlocks on placement as both an active and a passive; Hell now consumes ⟦num|30%⟧ meter to make the next attack hit every enemy in range and no longer detonates; During Dragon Install this unit only stops building meter from attacks, every Guilty Cog unit gains ⟦num|50%⟧ Crit Rate, this unit bypasses its animation cancel lockout and its Follow Up attack loses its cooldown, but Follow Up can only occur after a base attack; Increases duration of ⟦fx|Burn|Burns⟧ applied by this unit to ⟦num|10⟧ seconds; Follow Up attacks detonate every instance of ⟦fx|Burn|Burn⟧ and for ⟦num|110%⟧ damage.",
+     "source": "familiar",
+     "familiar": "Scrap Bluntsword",
+     "tags": [
+      "dmg-buff",
+      "crit-buff",
+      "self-buff",
+      "ally-buff",
+      "follow-up",
+      "meter"
+     ],
+     "buffTargets": [
+      "Fire"
+     ],
+     "selfTargets": [
+      "NotGoodGuy (Free)"
+     ]
+    },
+    {
+     "name": "Find Your One Way",
+     "desc": "Buff the damage of every Video Games unit by 50% and their range by 20%; Every instance of Burn inflicted on an enemy grants this unit 1% meter; Buff this unit's damage by its current meter percentage; During Dragon Install, inflicting Burn also Slow the enemy by 50% for 10 seconds; While another Guilty Cog unit is on the field, increase this unit's meter gain by a further 200% and its attacks strip 20% of the maximum from any enemy that has it; When another Guilty Cog unit burns meter, this unit gains 10% of the meter burned.",
+     "rich": "Buff the damage of every ⟦grp|Video Games|Video Games⟧ unit by ⟦num|50%⟧ and their range by ⟦num|20%⟧; Every instance of ⟦fx|Burn|Burn⟧ inflicted on an enemy grants this unit ⟦num|1%⟧ meter; Buff this unit's damage by its current meter percentage; During Dragon Install, inflicting ⟦fx|Burn|Burn⟧ also ⟦fx|Slow|Slow⟧ the enemy by ⟦num|50%⟧ for ⟦num|10⟧ seconds; While another Guilty Cog unit is on the field, increase this unit's meter gain by a further ⟦num|200%⟧ and its attacks strip ⟦num|20%⟧ of the maximum from any enemy that has it; When another Guilty Cog unit ⟦fx|Burn|burns⟧ meter, this unit gains ⟦num|10%⟧ of the meter ⟦fx|Burn|burned⟧.",
+     "source": "familiar",
+     "familiar": "Scrap Bluntsword",
+     "tags": [
+      "burn",
+      "slow",
+      "dmg-buff",
+      "range-buff",
+      "self-buff",
+      "ally-buff",
+      "meter"
+     ],
+     "buffTargets": [
+      "VideoGames"
+     ],
+     "selfTargets": [
+      "NotGoodGuy (Free)"
+     ]
     }
    ],
    "abilities": [
@@ -17453,12 +17899,18 @@
     "follow-up",
     "meter",
     "aoe",
-    "intense-burn",
     "dmg-buff",
+    "self-buff",
+    "crit-buff",
+    "ally-buff",
+    "slow",
     "range-buff",
-    "self-buff"
+    "intense-burn"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Fire",
+    "VideoGames"
+   ],
    "selfTargets": [
     "NotGoodGuy (Free)"
    ],
@@ -20081,6 +20533,60 @@
      ],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Prankster",
+     "desc": "Gains 2000% Damage.",
+     "rich": "Gains ⟦num|2000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Monkey King's Circlet",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Rogita (Super 4)"
+     ]
+    },
+    {
+     "name": "Time to Get Serious",
+     "desc": "Buffs Blast units by 80% Damage; When this unit teleports, it leaves a clone at its previous location for 30 seconds. Clones deal 50% less damage. The clone inherits this unit's passives, familiar, and memoria; Gotchya! follows up every third attack and slows all enemies in range by 50% for 30 seconds; Teleporting stuns all enemies in range for 2 seconds.",
+     "rich": "Buffs ⟦el|Blast⟧ units by ⟦num|80%⟧ Damage; When this unit teleports, it leaves a clone at its previous location for ⟦num|30⟧ seconds. Clones deal ⟦num|50%⟧ less damage. The clone inherits this unit's passives, familiar, and memoria; Gotchya! follows up every third attack and ⟦fx|Slow|slows⟧ all enemies in range by ⟦num|50%⟧ for ⟦num|30⟧ seconds; Teleporting ⟦fx|Stun|stuns⟧ all enemies in range for ⟦num|2⟧ seconds.",
+     "source": "familiar",
+     "familiar": "Monkey King's Circlet",
+     "tags": [
+      "slow",
+      "stun",
+      "dmg-buff",
+      "ally-buff",
+      "clone",
+      "follow-up",
+      "aoe"
+     ],
+     "buffTargets": [
+      "Blast"
+     ],
+     "selfTargets": []
+    },
+    {
+     "name": "Goofing Around",
+     "desc": "Gains Active Endless Me; Gains 50% Damage per active clone; Clones are guaranteed to critically strike and deal 50% more damage to enemies with Overshield; Reduces Dragon Sphere allies' upgrade costs by 30%.",
+     "rich": "Gains Active Endless Me; Gains ⟦num|50%⟧ Damage per active clone; Clones are guaranteed to critically strike and deal ⟦num|50%⟧ more damage to enemies with Overshield; Reduces Dragon Sphere allies' upgrade costs by ⟦num|30%⟧.",
+     "source": "familiar",
+     "familiar": "Monkey King's Circlet",
+     "tags": [
+      "dmg-buff",
+      "cost-reduction",
+      "self-buff",
+      "shield-pierce",
+      "bonus-vs",
+      "clone"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Rogita (Super 4)"
+     ]
     }
    ],
    "abilities": [
@@ -20093,6 +20599,18 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Endless Me",
+     "desc": "For the next 40 seconds, any clone created by this unit remains active until the effect ends.",
+     "rich": "For the next ⟦num|40⟧ seconds, any clone created by this unit remains active until the effect ends.",
+     "cooldown": 180,
+     "cooldownType": "Global",
+     "tags": [
+      "clone"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "tags": [
@@ -20100,9 +20618,18 @@
     "dmg-buff",
     "self-buff",
     "clone",
-    "spa-buff"
+    "spa-buff",
+    "stun",
+    "ally-buff",
+    "follow-up",
+    "aoe",
+    "cost-reduction",
+    "shield-pierce",
+    "bonus-vs"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Blast"
+   ],
    "selfTargets": [
     "Rogita (Super 4)"
    ],
@@ -20159,7 +20686,18 @@
      "selfTargets": []
     }
    ],
-   "abilities": [],
+   "abilities": [
+    {
+     "name": "Instant Teleportation",
+     "desc": "On activation, can select any point on the map. This unit will move to that point on the map.",
+     "rich": "On activation, can select any point on the map. This unit will move to that point on the map.",
+     "cooldown": 20,
+     "cooldownType": "Local",
+     "tags": [],
+     "buffTargets": [],
+     "selfTargets": []
+    }
+   ],
    "tags": [
     "slow",
     "dmg-buff",
@@ -21300,6 +21838,58 @@
      "selfTargets": [
       "Saber (King of Knights)"
      ]
+    },
+    {
+     "name": "Golden Blade",
+     "desc": "Gains 3000% Damage.",
+     "rich": "Gains ⟦num|3000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Holy Sword",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
+    },
+    {
+     "name": "Promised Victory",
+     "desc": "Buffs Holy and Curse units' Damage by 40%; Buffs Crimson Moon allies' Active Ability damage by 50%; This unit gains Excalibur on placement and its damage now counts as Ability Damage; Excalibur damage is lowered to 200% but its cooldown is lowered to 60 seconds; Excalibur's damage cap from kills is raised from 25% to 100%; When Saber (Black Tyrant) uses Dark Excalibur, this unit gains the same damage buff for that window and follows up with Excalibur, which counts towards Gilgamesh NP Stacks.",
+     "rich": "Buffs ⟦el|Holy⟧ and ⟦el|Curse⟧ units' Damage by ⟦num|40%⟧; Buffs ⟦grp|Crimson Moon|Crimson Moon⟧ allies' Active Ability damage by ⟦num|50%⟧; This unit gains Excalibur on placement and its damage now counts as Ability Damage; Excalibur damage is lowered to ⟦num|200%⟧ but its cooldown is lowered to ⟦num|60⟧ seconds; Excalibur's damage cap from kills is raised from ⟦num|25%⟧ to ⟦num|100%⟧; When Saber (Black Tyrant) uses Dark Excalibur, this unit gains the same damage buff for that window and follows up with Excalibur, which counts towards Gilgamesh NP Stacks.",
+     "source": "familiar",
+     "familiar": "Holy Sword",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "ally-buff",
+      "follow-up",
+      "active-ability"
+     ],
+     "buffTargets": [
+      "Holy",
+      "Curse",
+      "CrimsonMoon"
+     ],
+     "selfTargets": [
+      "Saber (King of Knights)"
+     ]
+    },
+    {
+     "name": "Sealed Wind",
+     "desc": "Attacks apply Blight for 10 seconds; Sealed Blade of the Wind King no longer falls off after Upgrade 5; Enemies on Repulse lockout take 50% more damage from this unit; Hitting an enemy on Repulse lockout follows up with Attack 1 for 50% damage; King of Knights starts from placement; When a Blight inflicted enemy takes damage from a Crimson Moon ally, this unit deals an instance of damage equal to 1% of its damage, counting as a follow-up. Blight: afflicted enemies take 30% more damage from Holy and Curse units.",
+     "rich": "Attacks apply ⟦fx|Blight|Blight⟧ for ⟦num|10⟧ seconds; Sealed Blade of the Wind King no longer falls off after Upgrade ⟦num|5⟧; Enemies on ⟦fx|Repulse|Repulse⟧ lockout take ⟦num|50%⟧ more damage from this unit; Hitting an enemy on ⟦fx|Repulse|Repulse⟧ lockout follows up with Attack ⟦num|1⟧ for ⟦num|50%⟧ damage; King of Knights starts from placement; When a ⟦fx|Blight|Blight⟧ inflicted enemy takes damage from a ⟦grp|Crimson Moon|Crimson Moon⟧ ally, this unit deals an instance of damage equal to ⟦num|1%⟧ of its damage, counting as a follow-up. ⟦fx|Blight|Blight⟧: afflicted enemies take ⟦num|30%⟧ more damage from ⟦el|Holy⟧ and ⟦el|Curse⟧ units.",
+     "source": "familiar",
+     "familiar": "Holy Sword",
+     "tags": [
+      "blight",
+      "dmg-taken",
+      "bonus-vs",
+      "follow-up"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "abilities": [
@@ -21327,9 +21917,18 @@
     "self-buff",
     "bonus-vs",
     "range-buff",
+    "ally-buff",
+    "follow-up",
+    "active-ability",
+    "blight",
+    "dmg-taken",
     "aoe"
    ],
-   "buffTargets": [],
+   "buffTargets": [
+    "Holy",
+    "Curse",
+    "CrimsonMoon"
+   ],
    "selfTargets": [
     "Saber (King of Knights)"
    ],
@@ -24674,6 +25273,18 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Unholy Transformation",
+     "desc": "Spends every Sacrificed stack and ends the eclipse early, forcing this unit into its next form. Needs 100 stacks. Every 50 stacks above 100 grant 50% Damage, 50% Critical Damage and one free upgrade that carry over to the next form.",
+     "rich": "Spends every Sacrificed stack and ends the eclipse early, forcing this unit into its next form. Needs ⟦num|100⟧ stacks. Every ⟦num|50⟧ stacks above ⟦num|100⟧ grant ⟦num|50%⟧ Damage, ⟦num|50%⟧ Critical Damage and one free upgrade that carry over to the next form.",
+     "cooldown": 1,
+     "cooldownType": "Local",
+     "tags": [
+      "stacks"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "tags": [
@@ -24684,6 +25295,7 @@
     "range-buff",
     "self-buff",
     "dr-bypass",
+    "stacks",
     "has-domain"
    ],
    "buffTargets": [],
@@ -24835,6 +25447,57 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "King of Darkness",
+     "desc": "Buff damage by 2000%.",
+     "rich": "Buff damage by ⟦num|2000%⟧.",
+     "source": "familiar",
+     "familiar": "Iron Helmet",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "The Falcon (Sacrifice)"
+     ]
+    },
+    {
+     "name": "What I Hold Dear",
+     "desc": "Buff the damage of all Cosmic units by 40%; Buff the damage of all Berk units by 40%; Demons spawned by the eclipse no longer attack or remove your units; Gain Sacrificed stacks and a new active, Unholy Transformation; Each demon that collides with a branded enemy grants 1 Sacrificed stack; Taking the next form no longer upgrades this unit to max; I, Sacrifice no longer ends on its own, it ends when Unholy Transformation is used; At 100 Sacrificed stacks can activate Unholy Transformation (transforming consumes all stacks), for every 50 stacks over 100 this unit gains 50% Damage, 50% Crit Damage and upgrades self by 1. Carries over between forms, upgrades also carry over between forms. (Caps out at 500% Damage and 500% Crit Damage).",
+     "rich": "Buff the damage of all ⟦el|Cosmic⟧ units by ⟦num|40%⟧; Buff the damage of all ⟦grp|Berk|Berk⟧ units by ⟦num|40%⟧; Demons spawned by the eclipse no longer attack or remove your units; Gain Sacrificed stacks and a new active, Unholy Transformation; Each demon that collides with a branded enemy grants ⟦num|1⟧ Sacrificed stack; Taking the next form no longer upgrades this unit to max; I, Sacrifice no longer ends on its own, it ends when Unholy Transformation is used; At ⟦num|100⟧ Sacrificed stacks can activate Unholy Transformation (transforming consumes all stacks), for every ⟦num|50⟧ stacks over ⟦num|100⟧ this unit gains ⟦num|50%⟧ Damage, ⟦num|50%⟧ Crit Damage and upgrades self by ⟦num|1⟧. Carries over between forms, upgrades also carry over between forms. (Caps out at ⟦num|500%⟧ Damage and ⟦num|500%⟧ Crit Damage).",
+     "source": "familiar",
+     "familiar": "Iron Helmet",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "ally-buff",
+      "stacks"
+     ],
+     "buffTargets": [
+      "Cosmic",
+      "Berk"
+     ],
+     "selfTargets": [
+      "The Falcon (Sacrifice)"
+     ]
+    },
+    {
+     "name": "Causality Flows",
+     "desc": "Whenever an ally deals sourceless damage, this unit follows up with its first attack; Bleed applied by this unit or an ally becomes Opportunity for 30 seconds instead; Whenever an ally rolls for a critical hit and fails it, this unit follows up with its second attack; Every enemy is branded as it spawns, and branded enemies take 10% more damage from Berk units.",
+     "rich": "Whenever an ally deals sourceless damage, this unit follows up with its first attack; ⟦fx|Bleed|Bleed⟧ applied by this unit or an ally becomes ⟦fx|Opportunity|Opportunity⟧ for ⟦num|30⟧ seconds instead; Whenever an ally rolls for a critical hit and fails it, this unit follows up with its second attack; Every enemy is branded as it spawns, and branded enemies take ⟦num|10%⟧ more damage from ⟦grp|Berk|Berk⟧ units.",
+     "source": "familiar",
+     "familiar": "Iron Helmet",
+     "tags": [
+      "bleed",
+      "opportunity",
+      "dmg-taken",
+      "bonus-vs",
+      "follow-up"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "abilities": [
@@ -24847,13 +25510,39 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Unholy Transformation",
+     "desc": "Spends every Sacrificed stack and ends the eclipse early, forcing this unit into its next form. Needs 100 stacks. Every 50 stacks above 100 grant 50% Damage, 50% Critical Damage and one free upgrade that carry over to the next form.",
+     "rich": "Spends every Sacrificed stack and ends the eclipse early, forcing this unit into its next form. Needs ⟦num|100⟧ stacks. Every ⟦num|50⟧ stacks above ⟦num|100⟧ grant ⟦num|50%⟧ Damage, ⟦num|50%⟧ Critical Damage and one free upgrade that carry over to the next form.",
+     "cooldown": 1,
+     "cooldownType": "Local",
+     "tags": [
+      "stacks"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "tags": [
+    "dmg-buff",
+    "self-buff",
+    "ally-buff",
+    "stacks",
+    "bleed",
+    "opportunity",
+    "dmg-taken",
+    "bonus-vs",
+    "follow-up",
     "has-domain"
    ],
-   "buffTargets": [],
-   "selfTargets": [],
+   "buffTargets": [
+    "Cosmic",
+    "Berk"
+   ],
+   "selfTargets": [
+    "The Falcon (Sacrifice)"
+   ],
    "icon": "img/units/The Falcon (Sacrifice).png"
   },
   {
@@ -25042,6 +25731,35 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "A Smith's Legend",
+     "desc": "Increases Yen gain from farms by 30%.",
+     "rich": "Increases Yen gain from farms by ⟦num|30%⟧.",
+     "source": "familiar",
+     "familiar": "Black Smith's Hammer",
+     "tags": [
+      "income"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    },
+    {
+     "name": "Material Fetcher",
+     "desc": "Buff the damage of every Fire unit by 50% and every Berk unit by 40%; Unlocks the Hunter Quest active ability; Masterworks are now crafted from the Hunter Quest menu and cost materials instead of being free; Completing a quest grants Yen based on its difficulty (Easy 1000, Average 3000, Hard 7000, Nightmare 10000) once per wave and this unit counts as a farm; Enemies spawned by quests do not count toward kills, takedowns, or damage totals; Up to 3 of the same Masterwork can be crafted per player.",
+     "rich": "Buff the damage of every ⟦el|Fire⟧ unit by ⟦num|50%⟧ and every ⟦grp|Berk|Berk⟧ unit by ⟦num|40%⟧; Unlocks the Hunter Quest active ability; Masterworks are now crafted from the Hunter Quest menu and cost materials instead of being free; Completing a quest grants Yen based on its difficulty (Easy ⟦num|1000⟧, Average ⟦num|3000⟧, Hard ⟦num|7000⟧, Nightmare ⟦num|10000⟧) once per wave and this unit counts as a farm; Enemies spawned by quests do not count toward kills, takedowns, or damage totals; Up to ⟦num|3⟧ of the same Masterwork can be crafted per player.",
+     "source": "familiar",
+     "familiar": "Black Smith's Hammer",
+     "tags": [
+      "dmg-buff",
+      "ally-buff",
+      "active-ability",
+      "income"
+     ],
+     "buffTargets": [
+      "Fire"
+     ],
+     "selfTargets": []
     }
    ],
    "abilities": [
@@ -25068,14 +25786,30 @@
      "tags": [],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Hunter Quest",
+     "desc": "Opens the Hunter Quest board. Pick a difficulty and a quest to spawn its enemies, then kill them to earn materials and Yen based on the difficulty. Quest Yen is only paid once per wave, and only one quest can be active at a time.",
+     "rich": "Opens the Hunter Quest board. Pick a difficulty and a quest to spawn its enemies, then kill them to earn materials and Yen based on the difficulty. Quest Yen is only paid once per wave, and only one quest can be active at a time.",
+     "cooldown": 1,
+     "cooldownType": "Local",
+     "tags": [
+      "income"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
     }
    ],
    "tags": [
     "self-buff",
     "stacks",
-    "ally-buff"
+    "income",
+    "dmg-buff",
+    "ally-buff",
+    "active-ability"
    ],
    "buffTargets": [
+    "Fire",
     "all"
    ],
    "selfTargets": [
@@ -25171,6 +25905,55 @@
      ],
      "buffTargets": [],
      "selfTargets": []
+    },
+    {
+     "name": "Grim Dark Reminder",
+     "desc": "Gains 3000% Damage.",
+     "rich": "Gains ⟦num|3000%⟧ Damage.",
+     "source": "familiar",
+     "familiar": "Cannon Ball",
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "The Struggler (Rampage)"
+     ]
+    },
+    {
+     "name": "Black Swordsman",
+     "desc": "Buffs Unbound and Cosmic ally Damage by 40%; While this unit has Berserker Armor active, it can now bypass Animation Lockout but can only attack every 2 seconds; This unit cannot Crit; when they would Crit, instead perform Attack 1 for 200% damage as a follow up to that attack; Bleeding enemies in range are slowed by 50%; If this unit would apply a Bleed to an Enemy but cannot, instead does a sourceless damage instance for 50% of this unit's damage.",
+     "rich": "Buffs ⟦el|Unbound⟧ and ⟦el|Cosmic⟧ ally Damage by ⟦num|40%⟧; While this unit has Berserker Armor active, it can now bypass Animation Lockout but can only attack every ⟦num|2⟧ seconds; This unit cannot Crit; when they would Crit, instead perform Attack ⟦num|1⟧ for ⟦num|200%⟧ damage as a follow up to that attack; ⟦fx|Bleed|Bleeding⟧ enemies in range are ⟦fx|Slow|slowed⟧ by ⟦num|50%⟧; If this unit would apply a ⟦fx|Bleed|Bleed⟧ to an Enemy but cannot, instead does a sourceless damage instance for ⟦num|50%⟧ of this unit's damage.",
+     "source": "familiar",
+     "familiar": "Cannon Ball",
+     "tags": [
+      "bleed",
+      "slow",
+      "dmg-buff",
+      "follow-up"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    },
+    {
+     "name": "Perseverance",
+     "desc": "Reduces Injury Stack's self-stun from 3 seconds to 1 second per stack; Increases Damage by 10% per injury stack (Additive to other damage bonus); Attacks inflict Destruction; Deals 30% more damage to enemies inflicted with Destruction.",
+     "rich": "Reduces Injury Stack's self-⟦fx|Stun|stun⟧ from ⟦num|3⟧ seconds to ⟦num|1⟧ second per stack; Increases Damage by ⟦num|10%⟧ per injury stack (Additive to other damage bonus); Attacks inflict ⟦fx|Destruction|Destruction⟧; Deals ⟦num|30%⟧ more damage to enemies inflicted with ⟦fx|Destruction|Destruction⟧.",
+     "source": "familiar",
+     "familiar": "Cannon Ball",
+     "tags": [
+      "destruction",
+      "dmg-buff",
+      "self-buff",
+      "dr-bypass",
+      "bonus-vs",
+      "stacks"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "The Struggler (Rampage)"
+     ]
     }
    ],
    "abilities": [
@@ -25195,7 +25978,11 @@
     "bleed",
     "stacks",
     "repulse",
-    "follow-up"
+    "follow-up",
+    "slow",
+    "destruction",
+    "dr-bypass",
+    "bonus-vs"
    ],
    "buffTargets": [],
    "selfTargets": [
@@ -27360,6 +28147,97 @@
    "icon": "img/units/World Destroyer (Old).png"
   },
   {
+   "name": "Wrath (Assault)",
+   "slug": "Wrath_(Assault)",
+   "rarity": "Exclusive",
+   "elements": [
+    "Curse"
+   ],
+   "state": "No evolution",
+   "evolvesFrom": null,
+   "evolvesTo": null,
+   "groups": [
+    "Evils"
+   ],
+   "towerType": "GRND",
+   "passives": [
+    {
+     "name": "Phantom of Darkness",
+     "desc": "Buffs Curse Element by 50% Damage; Buffs Evils category units by 80% Damage and 20% Base Damage; This units slot cannot be burned and always counts as burned; If another Evils category unit upgrades itself, upgrade this unit and this unit gains 20% damage (Stacking); Attacks apply Despair for 20 seconds, if the player has only Evils category units placed (Self not included) Despair's effect is amplified to 50% more Damage and a 50% slow; If a different Evils category unit is placed, this unit is free to place (If placed this way cannot be sold); Attacks apply Destruction; Evils Category units deal 50% more damage per different base element in unit bar; When an Evils Category units Crits with elemental damage, deals damage to all enemies in range equal to 10% of that Crit as sourceless damage.",
+     "rich": "Buffs ⟦el|Curse|Curse⟧ Element by ⟦num|50%⟧ Damage; Buffs Evils category units by ⟦num|80%⟧ Damage and ⟦num|20%⟧ Base Damage; This units slot cannot be ⟦fx|Burn|burned⟧ and always counts as ⟦fx|Burn|burned⟧; If another Evils category unit upgrades itself, upgrade this unit and this unit gains ⟦num|20%⟧ damage (Stacking); Attacks apply ⟦fx|Despair|Despair⟧ for ⟦num|20⟧ seconds, if the player has only Evils category units placed (Self not included) ⟦fx|Despair|Despair⟧'s effect is amplified to ⟦num|50%⟧ more Damage and a ⟦num|50%⟧ ⟦fx|Slow|slow⟧; If a different Evils category unit is placed, this unit is free to place (If placed this way cannot be sold); Attacks apply ⟦fx|Destruction|Destruction⟧; Evils Category units deal ⟦num|50%⟧ more damage per different base element in unit bar; When an Evils Category units Crits with elemental damage, deals damage to all enemies in range equal to ⟦num|10%⟧ of that Crit as sourceless damage.",
+     "source": "unit",
+     "tags": [
+      "slow",
+      "destruction",
+      "despair",
+      "dmg-taken",
+      "dmg-buff",
+      "self-buff",
+      "ally-buff",
+      "dr-bypass",
+      "bonus-vs",
+      "stacks",
+      "aoe"
+     ],
+     "buffTargets": [
+      "Evils"
+     ],
+     "selfTargets": [
+      "Wrath (Assault)"
+     ]
+    },
+    {
+     "name": "Emotions Wiped",
+     "desc": "Every 3 waves after this unit is placed this unit is inflicted with Mind Control; When the Mind Control spawn of this unit is killed, buffs own Damage by 80% (Stacks); After this has happened 3 times it no longer happens and this unit gains 100% Crit Chance; When this unit Critically strikes an enemy, the next Evils category unit to attack that is not this unit is guaranteed to crit as well; Anytime this unit attacks an enemy with a shield, removes that shield; If an enemy this unit is attacking is inflicted with a DoT, this unit does 50% more damage to that enemy.",
+     "rich": "Every ⟦num|3⟧ waves after this unit is placed this unit is inflicted with Mind Control; When the Mind Control spawn of this unit is killed, buffs own Damage by ⟦num|80%⟧ (Stacks); After this has happened ⟦num|3⟧ times it no longer happens and this unit gains ⟦num|100%⟧ Crit Chance; When this unit Critically strikes an enemy, the next Evils category unit to attack that is not this unit is guaranteed to crit as well; Anytime this unit attacks an enemy with a shield, removes that shield; If an enemy this unit is attacking is inflicted with a DoT, this unit does ⟦num|50%⟧ more damage to that enemy.",
+     "source": "unit",
+     "tags": [
+      "dmg-buff",
+      "self-buff",
+      "shield-pierce",
+      "bonus-vs"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "Wrath (Assault)"
+     ]
+    }
+   ],
+   "abilities": [
+    {
+     "name": "The Power of Friends",
+     "desc": "Takes the next damage dealing active an Evils category unit would do and multiplies it by 4, then hits the highest HP enemy on the field with that.",
+     "rich": "Takes the next damage dealing active an Evils category unit would do and multiplies it by ⟦num|4⟧, then hits the highest HP enemy on the field with that.",
+     "cooldown": null,
+     "cooldownType": "PerPlayer",
+     "tags": [],
+     "buffTargets": [],
+     "selfTargets": []
+    }
+   ],
+   "tags": [
+    "slow",
+    "destruction",
+    "despair",
+    "dmg-taken",
+    "dmg-buff",
+    "self-buff",
+    "ally-buff",
+    "dr-bypass",
+    "bonus-vs",
+    "stacks",
+    "aoe",
+    "shield-pierce"
+   ],
+   "buffTargets": [
+    "Evils"
+   ],
+   "selfTargets": [
+    "Wrath (Assault)"
+   ],
+   "icon": "img/units/Wrath (Assault).png"
+  },
+  {
    "name": "Wrath God",
    "slug": "Wrath_God",
    "rarity": "Secret",
@@ -28082,6 +28960,64 @@
  "memoria": [
   {
    "kind": "memoria",
+   "name": "A Beast Plays",
+   "slug": "A_Beast_Plays",
+   "rarity": "Exclusive",
+   "rarityStyle": "Exclusive",
+   "elements": [],
+   "exclusiveUnits": [
+    "Wrath (Assault)"
+   ],
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
+   "groups": [],
+   "baseAttack": 2300,
+   "baseRange": 2,
+   "passives": [
+    {
+     "name": "Dancho",
+     "desc": "Buffs Damage by 20% per different element on the Unit Bar. (Only counts once per unit)",
+     "rich": "Buffs Damage by ⟦num|20%⟧ per different element on the Unit Bar. (Only counts once per unit)",
+     "source": "memoria",
+     "specialty": false,
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "all"
+     ]
+    },
+    {
+     "name": "Lost in Vain",
+     "desc": "Every 30 seconds this unit spawns in a clone that cannot attack; If an Evils Category unit other than this unit were to attack, this clone would reflect that attack to enemies making it deal 2x damage and apply all on hit effects of this unit and the attacker, the clone despawns after 1 attack.",
+     "rich": "Every ⟦num|30⟧ seconds this unit spawns in a clone that cannot attack; If an Evils Category unit other than this unit were to attack, this clone would reflect that attack to enemies making it deal 2x damage and apply all on hit effects of this unit and the attacker, the clone despawns after ⟦num|1⟧ attack.",
+     "source": "memoria",
+     "specialty": true,
+     "tags": [
+      "clone"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    }
+   ],
+   "abilities": [],
+   "tags": [
+    "dmg-buff",
+    "self-buff",
+    "clone"
+   ],
+   "buffTargets": [],
+   "selfTargets": [
+    "all"
+   ],
+   "icon": "img/memoria/A Beast Plays.png"
+  },
+  {
+   "kind": "memoria",
    "name": "A Father's Sacrifice",
    "slug": "A_Father's_Sacrifice",
    "rarity": "Mythic",
@@ -28674,6 +29610,64 @@
     "Teacher (Final Stand)"
    ],
    "icon": "img/memoria/Bond of Master and Disciple.png"
+  },
+  {
+   "kind": "memoria",
+   "name": "Bow to Your God",
+   "slug": "Bow_to_Your_God",
+   "rarity": "Exclusive",
+   "rarityStyle": "Exclusive",
+   "elements": [],
+   "exclusiveUnits": [
+    "Holy Deceiver (Dark)"
+   ],
+   "state": [
+    "Universal",
+    "Exclusive"
+   ],
+   "groups": [],
+   "baseAttack": 2300,
+   "baseRange": 2,
+   "passives": [
+    {
+     "name": "Mortal Extermination",
+     "desc": "If equipped by a Dragon Sphere unit, buffs Damage by 60%.",
+     "rich": "If equipped by a Dragon Sphere unit, buffs Damage by ⟦num|60%⟧.",
+     "source": "memoria",
+     "specialty": false,
+     "tags": [
+      "dmg-buff",
+      "self-buff"
+     ],
+     "buffTargets": [],
+     "selfTargets": [
+      "all"
+     ]
+    },
+    {
+     "name": "Ever-evolving Deity",
+     "desc": "When this unit uses its active, upgrade self by one. (40 Second cooldown)",
+     "rich": "When this unit uses its active, upgrade self by one. (⟦num|40⟧ Second cooldown)",
+     "source": "memoria",
+     "specialty": true,
+     "tags": [
+      "active-ability"
+     ],
+     "buffTargets": [],
+     "selfTargets": []
+    }
+   ],
+   "abilities": [],
+   "tags": [
+    "dmg-buff",
+    "self-buff",
+    "active-ability"
+   ],
+   "buffTargets": [],
+   "selfTargets": [
+    "all"
+   ],
+   "icon": "img/memoria/Bow to Your God.png"
   },
   {
    "kind": "memoria",

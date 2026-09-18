@@ -1,5 +1,289 @@
 return {
 	--UPDATE 14.5 (25th Hour)--
+	["Wrath (Assault)"] = {
+		placement_total_cost = 271500,
+		elements = {
+			"Curse",
+		},
+		upgrade = {
+			{
+				upgrade = 0,
+				current_attack = 1,
+				range = 20,
+				active_ability = {
+					"The Power of Friends",
+				},
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				damage = 8000,
+			},
+			{
+				upgrade = 1,
+				range = 22,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 8200,
+				damage = 12000,
+			},
+			{
+				upgrade = 2,
+				range = 24,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 10200,
+				damage = 15000,
+			},
+			{
+				upgrade = 3,
+				range = 26,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 12400,
+				damage = 18000,
+			},
+			{
+				upgrade = 4,
+				range = 28,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 14500,
+				damage = 21000,
+			},
+			{
+				upgrade = 5,
+				range = 30,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 16100,
+				damage = 23000,
+			},
+			{
+				upgrade = 6,
+				range = 32,
+				spa = 7,
+				aoe_size = 70,
+				aoe_type = "Cone",
+				cost = 18400,
+				damage = 26000,
+			},
+			{
+				move = "Demon Fire Eruption",
+				upgrade = 7,
+				current_attack = 2,
+				range = 34,
+				spa = 8,
+				aoe_size = 90,
+				aoe_type = "Splash",
+				circle_radius = 12,
+				cost = 20100,
+				damage = 34000,
+			},
+			{
+				upgrade = 8,
+				range = 36,
+				spa = 8,
+				aoe_size = 90,
+				aoe_type = "Splash",
+				circle_radius = 12,
+				cost = 24000,
+				damage = 48000,
+			},
+			{
+				upgrade = 9,
+				range = 38,
+				spa = 8,
+				aoe_size = 90,
+				aoe_type = "Splash",
+				circle_radius = 12,
+				cost = 28000,
+				damage = 65000,
+			},
+			{
+				upgrade = 10,
+				range = 40,
+				spa = 8,
+				aoe_size = 90,
+				aoe_type = "Splash",
+				circle_radius = 12,
+				cost = 32000,
+				damage = 82000,
+			},
+			{
+				move = "Dark Betrayal",
+				upgrade = 11,
+				current_attack = 3,
+				range = 45,
+				spa = 9,
+				aoe_size = 120,
+				aoe_type = "Cone",
+				cost = 38000,
+				damage = 100000,
+			},
+			{
+				upgrade = 12,
+				range = 50,
+				spa = 9,
+				aoe_size = 120,
+				aoe_type = "Cone",
+				cost = 45000,
+				damage = 125000,
+			},
+		},
+		ability = {
+			"The Power of Friends",
+		},
+		passives = {
+			{
+				name = "Phantom of Darkness",
+				description = "Buffs Curse Element by 50% Damage; Buffs Evils category units by 80% Damage and 20% Base Damage; This units slot cannot be burned and always counts as burned; If another Evils category unit upgrades itself, upgrade this unit and this unit gains 20% damage (Stacking); Attacks apply Despair for 20 seconds, if the player has only Evils category units placed (Self not included) Despair's effect is amplified to 50% more Damage and a 50% slow; If a different Evils category unit is placed, this unit is free to place (If placed this way cannot be sold); Attacks apply Destruction; Evils Category units deal 50% more damage per different base element in unit bar; When an Evils Category units Crits with elemental damage, deals damage to all enemies in range equal to 10% of that Crit as sourceless damage.",
+			},
+			{
+				name = "Emotions Wiped",
+				description = "Every 3 waves after this unit is placed this unit is inflicted with Mind Control; When the Mind Control spawn of this unit is killed, buffs own Damage by 80% (Stacks); After this has happened 3 times it no longer happens and this unit gains 100% Crit Chance; When this unit Critically strikes an enemy, the next Evils category unit to attack that is not this unit is guaranteed to crit as well; Anytime this unit attacks an enemy with a shield, removes that shield; If an enemy this unit is attacking is inflicted with a DoT, this unit does 50% more damage to that enemy.",
+			},
+		},
+		limited = true,
+		total_cost = 271500,
+		num_upgrade = 13,
+		place_limit = 1,
+		deployment_cost = 4600,
+		rarity = "Exclusive",
+		tower_type = "GRND",
+		damage_types = {
+			"Curse",
+		},
+		groups = {
+			"Evils",
+		},
+	},
+	["Holy Deceiver (Dark)"] = {
+		placement_total_cost = 165600,
+		rarity = "Exclusive",
+		upgrade = {
+			{
+				upgrade = 0,
+				current_attack = 1,
+				range = 20,
+				active_ability = {
+					"Dark Dimensional Tear",
+				},
+				spa = 6,
+				aoe_size = 40,
+				aoe_type = "Cone",
+				damage = 4000,
+			},
+			{
+				upgrade = 1,
+				range = 23,
+				spa = 6,
+				aoe_size = 40,
+				aoe_type = "Cone",
+				cost = 6700,
+				damage = 5500,
+			},
+			{
+				upgrade = 2,
+				range = 26,
+				spa = 6,
+				aoe_size = 40,
+				aoe_type = "Cone",
+				cost = 9200,
+				damage = 7000,
+			},
+			{
+				move = "Dark Scythe Blast",
+				upgrade = 3,
+				current_attack = 2,
+				range = 30,
+				spa = 7,
+				aoe_size = 20,
+				aoe_type = "Circle",
+				cost = 12300,
+				damage = 10000,
+			},
+			{
+				upgrade = 4,
+				range = 34,
+				spa = 7,
+				aoe_size = 20,
+				aoe_type = "Circle",
+				cost = 18500,
+				damage = 15000,
+			},
+			{
+				upgrade = 5,
+				range = 37,
+				spa = 7,
+				aoe_size = 20,
+				aoe_type = "Circle",
+				cost = 22000,
+				damage = 23000,
+			},
+			{
+				move = "Dark Future",
+				upgrade = 6,
+				current_attack = 3,
+				range = 40,
+				spa = 15,
+				aoe_size = 28,
+				aoe_type = "Circle",
+				cost = 25000,
+				damage = 74000,
+			},
+			{
+				upgrade = 7,
+				range = 43,
+				spa = 15,
+				aoe_size = 28,
+				aoe_type = "Circle",
+				cost = 32000,
+				damage = 96000,
+			},
+			{
+				upgrade = 8,
+				range = 47,
+				spa = 15,
+				aoe_size = 28,
+				aoe_type = "Circle",
+				cost = 38500,
+				damage = 120000,
+			},
+		},
+		ability = {
+			"Dark Dimensional Tear",
+		},
+		passives = {
+			{
+				name = "Holy Retribution",
+				description = "Buffs Holy Damage by 80% and Holy unit Active Ability's do 50% more damage; When this unit attacks applies 50% slow for 10 seconds, Self and Dragon Sphere allies do 5% more damage for 20 seconds (Can stack up to 100%, New stacks do not refresh old ones), Buffs own Damage by 2% (Up to 300%); When this unit attacks an enemy with Overshield or Damage Reduction, other Dragon Sphere allies deal 100% more damage to that enemy; When this unit is upgraded, if that upgrade number is equal to or greater than the current upgrade of another Dragon Sphere ally, then that unit is upgraded as well and their crit rate is buffed by 12% (Stacks).",
+			},
+			{
+				name = "Inviting Oblivion",
+				description = "This unit has a meter, every time a Dragon Sphere ally uses an active that would deal damage generates 50% meter; When this meter hits 100% this unit unlocks a new tier and the meter resets to 0 (Does not count as consuming meter); Dragon Sphere units gain Overcrit; When a Dragon Sphere unit crits, deals 10% of the damage as Sourceless damage to all enemies in range and stuns the enemies for 2 seconds; When an enemy takes Sourceless damage this unit performs Attack 2 as a Follow Up for 200% damage (Local 10 sec cooldown.); Tier 1 - Unit gains 100% Crit Rate and Overcrit, Tier 2 - Active abilities that would deal damage also upgrades all Dragon Sphere allies by 1 (Puts the ability on a 60 second cooldown), Tier 3 - When attacking enemies inflicted with slow, inflict repulse and do 30% more damage to enemies on repulse lock out.",
+			},
+		},
+		limited = true,
+		total_cost = 165600,
+		num_upgrade = 9,
+		place_limit = 1,
+		deployment_cost = 1400,
+		elements = {
+			"Holy",
+		},
+		tower_type = "GRND",
+		damage_types = {
+			"Holy",
+		},
+		groups = {
+			"DragonSphere",
+		},
+	},
 	["Investigation Leader (Truth)"] = {
 		placement_total_cost = 138200,
 		rarity = "Mythic",
@@ -808,7 +1092,6 @@ return {
 				description = "<color=30c23d>Additional placement:</color>\\n\\t• This unit can place one additional Platinum Star, even when no placements remain; Platinum Star can be sold and replaced\\n\\t• Platinum Star copies this unit's stats, deals 150% of this unit's damage, and applies all of this unit's on-hit effects\\n\\t<color=6bf5fa>Linked attacks:</color>\\n\\t• Whenever this unit uses Attack 3, Platinum Star follows up with Attack 2 and deals 50% more damage\\n\\t• Platinum Star's attacks bypass Overshield\\n\\t• This unit's attacks inflict a 50% Slow for 10 seconds.",
 			},
 		},
-		limited = true,
 		total_cost = 125900,
 		place_limit = 1,
 		deployment_cost = 4200,
@@ -2275,6 +2558,9 @@ return {
 		place_limit = 3,
 		deployment_cost = 800,
 		num_upgrade = 3,
+		groups = {
+			"Evils",
+		},
 		tower_type = "GRND",
 		total_cost = 9500,
 	},
@@ -2379,6 +2665,9 @@ return {
 		place_limit = 3,
 		deployment_cost = 800,
 		num_upgrade = 8,
+		groups = {
+			"Evils",
+		},
 		tower_type = "GRND",
 		total_cost = 88500,
 	},
@@ -4530,7 +4819,6 @@ return {
 				name = "Wood-Style Clones",
 			},
 		},
-		limited = true,
 		groups = {},
 		has_custom_summon = true,
 		tower_type = "GRND",
@@ -15491,7 +15779,7 @@ passives = {
 		},
 		passives = {
 			{
-				description = "Each attack unlocks a new member with a unique function:\\n\\n<color=6bf5fa>Attack 1:</color>\\n\\t• Slows enemy movement speed by 30%\\n\\t• Reduces own SPA by 15% for 30 seconds (cannot stack)\\n\\n<color=ff7b1c>Attack 2:</color>\\n\\t• Every 15 seconds, cleanses all allies in range of status effects and debuffs\\n\\t• Buffs ally damage by 20% for 15 seconds\\n\\n<color=30c23d>Attack 3:</color>\\n\\t• Summons Dark, who stands still on the track\\n\\t• Dark starts at 100% of this unit's damage and increases by 10% per second (up to 1000%)\\n\\t• Once Dark dies, she respawns after 30 seconds.",
+				description = "Each attack unlocks a new member with a unique function:\\n\\t<color=6bf5fa>Attack 1:</color>\\n\\t• Slows enemy movement speed by 30%\\n\\t• Reduces own SPA by 15% for 30 seconds (cannot stack)\\n\\t<color=ff7b1c>Attack 2:</color>\\n\\t• Every 15 seconds, cleanses all allies in range of status effects and debuffs\\n\\t• Buffs ally damage by 20% for 15 seconds\\n\\t<color=30c23d>Attack 3:</color>\\n\\t• Summons Dark, who stands still on the track\\n\\t• Dark starts at 100% of this unit's damage and increases by 10% per second (up to 1000%)\\n\\t• Once Dark dies, she respawns after 30 seconds.",
 				name = "Callasuba!",
 			},
 		},
@@ -17800,7 +18088,10 @@ passives = {
 		hide_damage = true,
 		placement_total_cost = 1000,
 		rarity = "Secret",
-		ability = "I, Sacrifice",
+		ability = {
+			"I, Sacrifice",
+			"Unholy Transformation",
+		},
 		can_upgrade = true,
 		is_evolved = true,
 		damage_types = {
@@ -17951,7 +18242,10 @@ passives = {
 		placement_total_cost = 103000,
 		rarity = "Secret",
 		deployment_cost = 0,
-		ability = "I, Sacrifice",
+		ability = {
+			"I, Sacrifice",
+			"Unholy Transformation",
+		},
 		place_limit = 1,
 		total_cost = 103000,
 	},
@@ -18565,7 +18859,9 @@ passives = {
 		can_upgrade = true,
 		ability = {
 			"The Forge",
-			"Masterworks"},
+			"Masterworks",
+			"Hunter Quest",
+		},
 		damage_types = {
 			"Fire",
 		},
@@ -18966,6 +19262,7 @@ passives = {
 		limited = true,
 		can_upgrade = true,
 		groups = {
+			"Evils",
 			"Summer",
 			"Summer_Mythic",
 		},
@@ -20317,7 +20614,6 @@ Ali = {
 				name = "Controller of Time",
 			},
 		},
-		limited = false,
 		damage_types = {
 			"Nature",
 		},
@@ -20483,7 +20779,6 @@ Ali = {
 				name = "Unfathomable Luck",
 			},
 		},
-		limited = false,
 		damage_types = {
 			"Holy",
 		},
@@ -22666,6 +22961,7 @@ Ali = {
 		},
 		num_upgrade = 11,
 		groups = {
+			"CrimsonMoon",
 			"Spring",
 			"Spring_Mythic",
 		},
@@ -23714,6 +24010,7 @@ Ali = {
 			},
 		},
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		can_upgrade = true,
@@ -27603,6 +27900,7 @@ Ali = {
 		},
 		num_upgrade = 9,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 1400,
@@ -28446,6 +28744,7 @@ Ali = {
 			},
 		},
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		can_upgrade = true,
@@ -29095,6 +29394,7 @@ Ali = {
 			},
 		},
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		can_upgrade = true,
@@ -30985,6 +31285,7 @@ Ali = {
 		},
 		num_upgrade = 11,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 2200,
@@ -31195,6 +31496,7 @@ Ali = {
 		},
 		limited = false,
 		groups = {
+			"CrimsonMoon",
 			"Spring",
 			"Spring_Mythic",
 		},
@@ -33982,6 +34284,7 @@ Ali = {
 		},
 		limited = false,
 		groups = {
+			"Evils",
 			"Spring",
 			"Spring_Mythic",
 		},
@@ -37604,9 +37907,10 @@ Ali = {
 		place_limit = 4,
 		placement_total_cost = 281800,
 		rarity = "Mythic",
-		ability = "Oathbreaker",
-		is_evolved = true,
-		total_cost = 70450,
+		ability = {
+			"Oathbreaker",
+			"Dragon Fang Army",
+		},
 	},
 	["Choy Jong En (Guild Leader)"] = {
 		elements = {
@@ -39047,7 +39351,6 @@ Ali = {
 		total_cost = 81600,
 	},
 	["Rogita (Super 4) (Clone)"] = {
-		unobtainable = true,
 		elements = {
 			"Blast",
 		},
@@ -39223,6 +39526,9 @@ Ali = {
 		is_evolved = false,
 		deployment_cost = 0,
 		can_upgrade = false,
+		ability = {
+			"Instant Teleportation",
+		},
 		num_upgrade = 15,
 		total_cost = 0,
 		hide_spa = true,
@@ -39724,6 +40030,7 @@ Ali = {
 			},
 		},
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		can_upgrade = true,
@@ -39830,6 +40137,7 @@ Ali = {
 		},
 		num_upgrade = 7,
 		groups = {
+			"Evils",
 			"Spring",
 			"Spring_Mythic",
 		},
@@ -41394,7 +41702,6 @@ Ali = {
 				name = "Its Getting Sticky",
 			},
 		},
-		limited = false,
 		groups = {
 			"Pirates",
 		},
@@ -41766,6 +42073,7 @@ Ali = {
 			},
 		},
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		can_upgrade = true,
@@ -42654,7 +42962,6 @@ Ali = {
 				name = "Complete Erasure",
 			},
 		},
-		limited = false,
 		can_upgrade = true,
 		groups = {
 			"Occult"
@@ -43276,7 +43583,6 @@ Ali = {
 				name = "Mochi Mastery",
 			},
 		},
-		limited = false,
 		can_upgrade = true,
 		num_upgrade = 11,
 		groups = {
@@ -43655,6 +43961,7 @@ Ali = {
 		},
 		num_upgrade = 9,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 1200,
@@ -44028,6 +44335,7 @@ Ali = {
 		},
 		num_upgrade = 11,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 1200,
@@ -44152,6 +44460,7 @@ Ali = {
 		},
 		num_upgrade = 9,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 1600,
@@ -44231,6 +44540,7 @@ Ali = {
 		},
 		can_upgrade = true,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		damage_types = {
@@ -45054,7 +45364,6 @@ Ali = {
 				name = "Enuma Elish",
 			},
 		},
-		limited = false,
 		damage_types = {
 			"Holy",
 		},
@@ -45823,7 +46132,6 @@ Ali = {
 				name = "Instant Teleportation",
 			},
 		},
-		limited = false,
 		can_upgrade = true,
 		groups = {
 			"Winter",
@@ -45840,7 +46148,10 @@ Ali = {
 		placement_total_cost = 182300,
 		rarity = "Vanguard",
 		deployment_cost = 1200,
-		ability = "Instant Teleportation",
+		ability = {
+			"Instant Teleportation",
+			"Endless Me",
+		},
 		place_limit = 1,
 		total_cost = 182300,
 	},
@@ -46371,6 +46682,7 @@ Ali = {
 		},
 		num_upgrade = 13,
 		groups = {
+			"GuiltyCog",
 			"VideoGames",
 		},
 		deployment_cost = 1000,

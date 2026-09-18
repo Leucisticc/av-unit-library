@@ -2,6 +2,49 @@
 -- Data type: active_ability_data
 
 return {
+	["Unholy Transformation"] = {
+		cooldown_type = "Local",
+		can_auto_use = false,
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		description = "Spends every Sacrificed stack and ends the eclipse early, forcing this unit into its next form. Needs 100 stacks. Every 50 stacks above 100 grant 50% Damage, 50% Critical Damage and one free upgrade that carry over to the next form.",
+		free_ability = true,
+		cooldown = 1,
+	},
+	["Hunter Quest"] = {
+		cooldown_type = "Local",
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		can_auto_use = false,
+		description = "Opens the Hunter Quest board. Pick a difficulty and a quest to spawn its enemies, then kill them to earn materials and Yen based on the difficulty. Quest Yen is only paid once per wave, and only one quest can be active at a time.",
+		free_ability = true,
+		cooldown = 1,
+	},
+	["Dragon Fang Army"] = {
+		cooldown_type = "Global",
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		description = "Raises an army on a chosen point of the track: 2 Dragon Fang Warriors at 60% of this unit's damage, 2 Dragon Fang Archers at 40%, and 1 Dragon Fang Beast at 200%. A summon that dies to the enemy it hits leaves that enemy with Rupture.",
+		cooldown = 60,
+		can_auto_use = false,
+	},
+	["The Power of Friends"] = {
+		cooldown_type = "PerPlayer",
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		can_auto_use = false,
+		uses = 1,
+		description = "Takes the next damage dealing active an Evils category unit would do and multiplies it by 4, then hits the highest HP enemy on the field with that.",
+	},
+	["Dark Dimensional Tear"] = {
+		cooldown_type = "PerPlayer",
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		description = "Cuts open a dimensional tear for 30 seconds, while active clones of this unit appear every second hitting all enemies around the rift applying on hit effects.",
+		cooldown = 180,
+		can_auto_use = false,
+	},
+	["Endless Me"] = {
+		cooldown_type = "Global",
+		outline_color = "linear-gradient(-90deg, #ba82e2 0.0%, #c1a1c8 25.0%, #f7f8fc 50.0%, #c1a1c8 75.0%, #ba82e2 100.0%)",
+		description = "For the next 40 seconds, any clone created by this unit remains active until the effect ends.",
+		cooldown = 180,
+	},
 	["Ice Cavalry"] = {
 		outline_color = "linear-gradient(-90deg, #0A2040 0.0%, #2060A0 25.0%, #8CD6FF 50.0%, #2060A0 75.0%, #0A2040 100.0%)",
 		cooldown_type = "Local",

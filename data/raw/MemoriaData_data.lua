@@ -1,5 +1,40 @@
 local data = {
 	--UPDATE 14.5 (25th Hour)--
+	["A Beast Plays"] = {
+		exclusive_unit = "Wrath (Assault)",
+		rarity = "Exclusive",
+		passives = {
+			{
+				description = "Buffs Damage by 20% per different element on the Unit Bar. (Only counts once per unit)",
+				name = "Dancho",
+			},
+			{
+				locked = true,
+				name = "Lost in Vain",
+				description = "Every 30 seconds this unit spawns in a clone that cannot attack; If an Evils Category unit other than this unit were to attack, this clone would reflect that attack to enemies making it deal 2x damage and apply all on hit effects of this unit and the attacker, the clone despawns after 1 attack.",
+			},
+		},
+		base_attack = 2300,
+		update_number = 14.5,
+		base_range = 2,
+	},
+	["Bow to Your God"] = {
+        base_attack = 2300,
+        rarity = "Exclusive",
+        exclusive_unit = "Holy Deceiver (Dark)",
+        passives = {
+            {
+                description = "If equipped by a Dragon Sphere unit, buffs Damage by 60%.",
+                name = "Mortal Extermination",
+            },
+            {
+                locked = true,
+                name = "Ever-evolving Deity",
+                description = "When this unit uses its active, upgrade self by one. (40 Second cooldown)",
+            },
+        },
+        base_range = 2,
+    },
 	["It's Going Down Now"] = {
 		base_attack = 2400,
 		rarity = "Secret",

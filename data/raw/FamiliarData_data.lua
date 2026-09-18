@@ -2,6 +2,196 @@ local data = {
 	-- ================================
 	-- RARITY: Vanguard
 	-- ================================
+	["Holy Sword"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Saber (King of Knights)",
+		obtainment = "Wrath Event Shop (1,000 Wrath Coins)",
+		passives = {
+			{
+				name = "Golden Blade",
+				description = "Gains 3000% Damage.",
+			},
+			{
+				name = "Promised Victory",
+				description = "Buffs {{Element|Holy}} and {{Element|Curse}} units' Damage by 40%; Buffs {{Group|Crimson Moon}} allies' Active Ability damage by 50%; This unit gains Excalibur on placement and its damage now counts as Ability Damage; Excalibur damage is lowered to 200% but its cooldown is lowered to 60 seconds; Excalibur's damage cap from kills is raised from 25% to 100%; When Saber (Black Tyrant) uses Dark Excalibur, this unit gains the same damage buff for that window and follows up with Excalibur, which counts towards Gilgamesh NP Stacks.",
+			},
+			{
+				name = "Sealed Wind",
+				description = "Attacks apply {{Effects|Blight}} for 10 seconds; Sealed Blade of the Wind King no longer falls off after Upgrade 5; Enemies on {{Effects|Repulse}} lockout take 50% more damage from this unit; Hitting an enemy on {{Effects|Repulse}} lockout follows up with Attack 1 for 50% damage; King of Knights starts from placement; When a {{Effects|Blight}} inflicted enemy takes damage from a {{Group|Crimson Moon}} ally, this unit deals an instance of damage equal to 1% of its damage, counting as a follow-up. {{Effects|Blight}}: afflicted enemies take 30% more damage from {{Element|Holy}} and {{Element|Curse}} units.",
+			},
+		},
+	},
+
+	["Iron Helmet"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "The Falcon (Sacrifice)",
+		obtainment = "Wrath Event Shop (1,000 Wrath Coins)",
+		passives = {
+			{
+				name = "King of Darkness",
+				description = "Buff damage by 2000%.",
+			},
+			{
+				name = "What I Hold Dear",
+				description = "Buff the damage of all {{Element|Cosmic}} units by 40%; Buff the damage of all {{Group|Berk}} units by 40%; Demons spawned by the eclipse no longer attack or remove your units; Gain Sacrificed stacks and a new active, Unholy Transformation; Each demon that collides with a branded enemy grants 1 Sacrificed stack; Taking the next form no longer upgrades this unit to max; I, Sacrifice no longer ends on its own, it ends when Unholy Transformation is used; At 100 Sacrificed stacks can activate Unholy Transformation (transforming consumes all stacks), for every 50 stacks over 100 this unit gains 50% Damage, 50% Crit Damage and upgrades self by 1. Carries over between forms, upgrades also carry over between forms. (Caps out at 500% Damage and 500% Crit Damage).",
+			},
+			{
+				name = "Causality Flows",
+				description = "Whenever an ally deals sourceless damage, this unit follows up with its first attack; {{Effects|Bleed}} applied by this unit or an ally becomes {{Effects|Opportunity}} for 30 seconds instead; Whenever an ally rolls for a critical hit and fails it, this unit follows up with its second attack; Every enemy is branded as it spawns, and branded enemies take 10% more damage from {{Group|Berk}} units.",
+			},
+		},
+	},
+
+	["Black Smith's Hammer"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "The Smith (Forged)",
+		obtainment = "Wrath Event Shop (1,000 Wrath Coins)",
+		passives = {
+			{
+				name = "A Smith's Legend",
+				description = "Increases Yen gain from farms by 30%.",
+			},
+			{
+				name = "Material Fetcher",
+				description = "Buff the damage of every {{Element|Fire}} unit by 50% and every {{Group|Berk}} unit by 40%; Unlocks the Hunter Quest active ability; Masterworks are now crafted from the Hunter Quest menu and cost materials instead of being free; Completing a quest grants Yen based on its difficulty (Easy 1000, Average 3000, Hard 7000, Nightmare 10000) once per wave and this unit counts as a farm; Enemies spawned by quests do not count toward kills, takedowns, or damage totals; Up to 3 of the same Masterwork can be crafted per player.",
+			},
+		},
+	},
+
+	["Scrap Bluntsword"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "NotGoodGuy (Free)",
+		obtainment = "Wrath Event Shop (1,000 Wrath Coins)",
+		passives = {
+			{
+				name = "Ready Or Not",
+				description = "Gains 1000% Damage. Gain 100% more meter.",
+			},
+			{
+				name = "Smell of the Game",
+				description = "Buff the damage of every {{Element|Fire}} ally by 80%; Dragon Install unlocks on placement as both an active and a passive; Hell now consumes 30% meter to make the next attack hit every enemy in range and no longer detonates; During Dragon Install this unit only stops building meter from attacks, every Guilty Cog unit gains 50% Crit Rate, this unit bypasses its animation cancel lockout and its Follow Up attack loses its cooldown, but Follow Up can only occur after a base attack; Increases duration of Burns applied by this unit to 10 seconds; Follow Up attacks detonate every instance of {{Effects|Burn}} and for 110% damage.",
+			},
+			{
+				name = "Find Your One Way",
+				description = "Buff the damage of every {{Group|Video Games}} unit by 50% and their range by 20%; Every instance of {{Effects|Burn}} inflicted on an enemy grants this unit 1% meter; Buff this unit's damage by its current meter percentage; During Dragon Install, inflicting {{Effects|Burn}} also {{Effects|Slow}} the enemy by 50% for 10 seconds; While another Guilty Cog unit is on the field, increase this unit's meter gain by a further 200% and its attacks strip 20% of the maximum from any enemy that has it; When another Guilty Cog unit burns meter, this unit gains 10% of the meter burned.",
+			},
+		},
+	},
+
+	["Witch's Staff"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Medea (Witch of Betrayal)",
+		obtainment = "Wrath Event Shop (1,000 Wrath Coins)",
+		passives = {
+			{
+				name = "Witch of Colchis",
+				description = "Gains 3000% Damage.",
+			},
+			{
+				name = "Teeth of the Dragon",
+				description = "This unit gains Dragon Fang Army on placement, summoning 2 Warriors, 2 Archers and 1 Beast on a chosen point of the track; Warriors spawn with 60% of this unit's damage, Archers with 40% and the Beast with 200%; A summon that dies to the enemy it hits leaves that enemy with {{Effects|Rupture}}; While a Sokora is placed, every {{Group|Crimson Moon}} unit at or below the highest placed Sokora's upgrade pays 70% less for upgrades, Sokora included; A unit discounted this way cannot have its upgrade cost lowered by any other source.",
+			},
+			{
+				name = "Broken Oath",
+				description = "Buffs {{Element|Curse}} and {{Element|Holy}} units' Damage by 40%; This unit gains Oathbreaker on placement and its damage now counts as Ability Damage; Oathbreaker deals 10% of every {{Group|Crimson Moon}} unit's current damage to the selected area, counting each unit once no matter how many of it are placed; Hitting an enemy afflicted with {{Effects|Nullified}} follows up with Attack 2.",
+			},
+		},
+	},
+	["Cannon Ball"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "The Struggler (Rampage)",
+		obtainment = "The Struggler Unit Trial",
+		passives = {
+			{
+				name = "Grim Dark Reminder",
+				description = "Gains 3000% Damage.",
+			},
+			{
+				name = "Black Swordsman",
+				description = "Buffs {{Element|Unbound}} and {{Element|Cosmic}} ally Damage by 40%; While this unit has Berserker Armor active, it can now bypass Animation Lockout but can only attack every 2 seconds; This unit cannot Crit; when they would Crit, instead perform Attack 1 for 200% damage as a follow up to that attack; {{Effects|Bleed|Bleeding}} enemies in range are {{Effects|Slow|slowed}} by 50%; If this unit would apply a {{Effects|Bleed}} to an Enemy but cannot, instead does a sourceless damage instance for 50% of this unit's damage.",
+			},
+			{
+				name = "Perseverance",
+				description = "Reduces Injury Stack's self-{{Effects|Stun|stun}} from 3 seconds to 1 second per stack; Increases Damage by 10% per injury stack (Additive to other damage bonus); Attacks inflict {{Effects|Destruction}}; Deals 30% more damage to enemies inflicted with {{Effects|Destruction}}.",
+			},
+		},
+	},
+	["Donut"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Clatakiri (Mochi)",
+		obtainment = "Clatakiri Rerun (Floor 25)",
+		passives = {
+			{
+				name = "Loyal Son",
+				description = "Gains 5000% Damage.",
+			},
+			{
+				name = "Bashful Villain",
+				description = "When this unit does Attack 6, each hit of Attack 6 will count as an attack for any on-attack Status Effect or Debuff application (Up to 3 effects applied per enemy per attack) (Effect cannot already be applied).",
+			},
+			{
+				name = "Morality's Mirror",
+				description = "Buffs {{Element|Water}} units Damage by 80%; If a unit has the ability to inflict {{Effects|Wanted}}, buffs their damage by 50% and range by 20%; Enemies affected by {{Effects|Slow|slow}} take 30% more damage from allies that can inflict {{Effects|Wanted}}; Inflicts {{Effects|Wanted}} to enemies who walk onto this unit's sticky Mochi Spot; If the enemy this unit is targeting is not in range of this unit to be attacked, this unit will teleport to that targeted enemy.",
+			},
+		},
+	},
+	["Cell Phone"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Divalo (Requiem)",
+		obtainment = "Occult Hunt",
+		passives = {
+			{
+				name = "Fear Crusher",
+				description = "Gains 5500% Damage.",
+			},
+			{
+				name = "Stolen Time",
+				description = "When this unit attacks, all enemies hit have their time stolen, causing them to skip forward 2 seconds' worth of movement and take 1 attack's worth of damage from all allies in this unit's range (20 Second global cooldown per enemy, counts as a Basic attack for the allies involved); Enemies hit by ally Basic attacks are {{Effects|Slow|slowed}} by 50% for 10 seconds; This unit now gets Complete Erasure on placement and its cooldown is reduced to 180 seconds, while enemies are affected by Complete Erasure they take 30% more damage from {{Element|Cosmic}} allies.",
+			},
+			{
+				name = "Cannot Escape Fate",
+				description = "Buffs {{Element|Cosmic}} allies' Damage by 30% and Range by 10%; Whenever this unit does a basic attack, this unit does 10% damage of that attack to enemies inflicted with {{Effects|Slow}}; Whenever this unit attacks, follow up with Attack 1.",
+			},
+		},
+	},
+	["Monkey King's Circlet"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Rogita (Super 4)",
+		obtainment = "Gold Shop",
+		passives = {
+			{
+				name = "Prankster",
+				description = "Gains 2000% Damage.",
+			},
+			{
+				name = "Time to Get Serious",
+				description = "Buffs {{Element|Blast}} units by 80% Damage; When this unit teleports, it leaves a clone at its previous location for 30 seconds. Clones deal 50% less damage. The clone inherits this unit's passives, familiar, and memoria; Gotchya! follows up every third attack and {{Effects|Slow|slows}} all enemies in range by 50% for 30 seconds; Teleporting {{Effects|Stun|stuns}} all enemies in range for 2 seconds.",
+			},
+			{
+				name = "Goofing Around",
+				description = "Gains Active Endless Me; Gains 50% Damage per active clone; Clones are guaranteed to critically strike and deal 50% more damage to enemies with Overshield; Reduces Dragon Sphere allies' upgrade costs by 30%.",
+			},
+		},
+	},
+	["Sword of Rupture"] = {
+		rarity = "Vanguard",
+		exclusive_unit = "Gilgamesh (King of Heroes)",
+		obtainment = "Gold Shop",
+		passives = {
+			{
+				name = "Filled Arsenal",
+				description = "Gains 8000% Damage.",
+			},
+			{
+				name = "King Leading His People",
+				description = "Buffs {{Element|Holy}} units' Damage by 80%; Buffs {{Group|Crimson Moon}} allies by 50% damage and 20% range; Attacks apply {{Effects|Nullify}}; Active Ability damage bypasses enemy damage reduction, shield, and overshield; After activating Enuma Elish buffs Crit Damage by 50% for 30 seconds; This unit gains the Passive and Active Enuma Elish on placement; Every 10 Follow Up attacks from allies grant 1 NP stack; No longer loses damage for units in range; Myriad Treasures buff cap for damage is increased from 35% to 300%.",
+			},
+			{
+				name = "Gates of Babylon",
+				description = "Gains an NP Stack Amount, every time a non-toggleable Active is used it adds to the NP stack amount by 1 (Up to 30); When Enuma Elish is activated stacks start to reduce at a rate of 1/s attacking a single enemy each time for 100% damage and is guaranteed to crit (Applies on hit effects, targets the strongest enemy); Buffs damage by 10% per NP stack, this buff stays at max value achieved until NP stacks reach zero then resets.",
+			},
+		},
+	},
 		["Petrified Soul"] = {
 		rarity = "Vanguard",
 		exclusive_unit = "Yehowach (Almighty)",
@@ -644,7 +834,7 @@ local data = {
 		},
 	},
 	Harpist = {
-		rarity = "Mythic",
+		rarity = "Secret",
 		obtainment = "Dungeons",
 		passives = {
 			{

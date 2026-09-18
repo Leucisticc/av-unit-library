@@ -136,8 +136,9 @@ TAG_RULES = {
     "stone":     _fx("amp", "Stone",     "Stone.png",     [r"\binflict(?:s|ing)? stone\b", r"\bturn(?:s|ed)? (?:enemies |them )?(?:in)?to stone\b"]),
     "opportunity": _fx("amp", "Opportunity", "Opportunity.png", [r"\bopportunity\b"]),
     "purgatory-flames": _fx("amp", "Purgatory Flames", "Purgatory Flames.png", [r"\bpurgatory flames\b"]),
-    "destruction": _fx("amp", "Destruction", "Destruction.png", [r"\binflicts? destruction\b", r"\bdestruction:\b"]),
+    "destruction": _fx("amp", "Destruction", "Destruction.png", [r"\b(?:inflicts?|appl(?:y|ies)) destruction\b", r"\bdestruction:\b"]),
     "despair":     _fx("amp", "Despair", "Despair.png", [r"\bdespair\b"]),
+    "blight":      _fx("amp", "Blight", "Blight.png", [r"\b(?:inflicts?|appl(?:y|ies)) blight\b", r"\bblight: "]),
     "dmg-taken": {"group": "amp", "label": "Enemies take more damage", "icon": None, "patterns": [r"\btakes? \+?\d+% more (?:damage|dmg)\b", r"\bincreases? the damage (?:they|it) takes?\b", r"\bvulnerab(?:le|ility)\b", r"\breceive \+\d+%", r"\bpurgatory flames\b", r"\bdespair\b"], "suppress": _CONDITION},
 
     # -- Other Effects ------------------------------------------------------------
@@ -190,7 +191,7 @@ TAG_RULES = {
         r"\b(?:any|every) unit [^.;]{0,60}?\bbuffed\b",
     ]},
     # -- Mechanics ------------------------------------------------------------------
-    "dr-bypass":  {"group": "mech", "label": "Ignores damage reduction", "icon": None, "patterns": [r"\b(?:bypass|ignor)(?:e|es|ed|ing)?\b[^.;]{0,25}?\b(?:damage|dmg) (?:reduction|resistance)s?\b", r"\bignores? (?:enemy )?dr\b", r"\binflicts? destruction\b", r"\bdamage reduction (?:amount )?(?:is )?set to 0\b", r"\blowers? the damage reduction\b", r"\bdamage reduction ignore\b", r"\bdamage reduction bypass\b"]},
+    "dr-bypass":  {"group": "mech", "label": "Ignores damage reduction", "icon": None, "patterns": [r"\b(?:bypass|ignor)(?:e|es|ed|ing)?\b[^.;]{0,25}?\b(?:damage|dmg) (?:reduction|resistance)s?\b", r"\bignores? (?:enemy )?dr\b", r"\b(?:inflicts?|appl(?:y|ies)) destruction\b", r"\bdamage reduction (?:amount )?(?:is )?set to 0\b", r"\blowers? the damage reduction\b", r"\bdamage reduction ignore\b", r"\bdamage reduction bypass\b"]},
     "shield-pierce": {"group": "mech", "label": "Anti-shield / vs Overshield", "icon": None, "patterns": [
         r"\b(?:bypass|ignor|remov|destroy|break|pierc|shatter)(?:e|es|ed|ing)?\b[^.;]{0,30}?\b(?:over)?shields?\b",
         r"\b(?:more damage|bonus damage|\+\d+% DMG|\dx damage)[^.;]{0,40}?\b(?:over)?shield(?:ed|s)?\b",
